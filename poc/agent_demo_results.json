@@ -1,0 +1,942 @@
+{
+  "cycles": [
+    {
+      "cycle": 1,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 1,
+        "expired": 0,
+        "new_ingested": 1
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.95
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.3,
+            "new": 0.33
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 1
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.33,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 5
+    },
+    {
+      "cycle": 2,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 1,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.8995
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.33,
+            "new": 0.36300000000000004
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 2
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.36300000000000004,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 10
+    },
+    {
+      "cycle": 3,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 1,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.8485
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.36300000000000004,
+            "new": 0.3993000000000001
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 3
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.3993000000000001,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 15
+    },
+    {
+      "cycle": 4,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 1,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.797
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.3993000000000001,
+            "new": 0.4392300000000001
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 4
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.4392300000000001,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 20
+    },
+    {
+      "cycle": 5,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 1,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.745
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.4392300000000001,
+            "new": 0.48315300000000017
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 5
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.48315300000000017,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 25
+    },
+    {
+      "cycle": 6,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 2,
+        "expired": 0,
+        "new_ingested": 1
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.8212
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.48315300000000017,
+            "new": 0.5314683000000002
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 6
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.5314683000000002,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 30
+    },
+    {
+      "cycle": 7,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 2,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.7695
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.5314683000000002,
+            "new": 0.5846151300000003
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 7
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.5846151300000003,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 35
+    },
+    {
+      "cycle": 8,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 2,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.7172
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.5846151300000003,
+            "new": 0.6430766430000004
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 8
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.6430766430000004,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 40
+    },
+    {
+      "cycle": 9,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 2,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.9967,
+        "n_pivots": 15,
+        "knowledge_strength": 0.6645
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.6430766430000004,
+            "new": 0.7073843073000006
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 9
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.7073843073000006,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 45
+    },
+    {
+      "cycle": 10,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 2,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.9169,
+        "n_pivots": 15,
+        "knowledge_strength": 0.6112
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.7073843073000006,
+            "new": 0.7781227380300006
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 10
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.7781227380300006,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 50
+    },
+    {
+      "cycle": 11,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 1
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 1.0,
+        "n_pivots": 15,
+        "knowledge_strength": 0.6883
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.7781227380300006,
+            "new": 0.8559350118330008
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 11
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.8559350118330008,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 55
+    },
+    {
+      "cycle": 12,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.953,
+        "n_pivots": 15,
+        "knowledge_strength": 0.6353
+      },
+      "self_modify": {
+        "proposals": 1,
+        "applied": [
+          {
+            "param": "reinforcement_boost",
+            "old": 0.8559350118330008,
+            "new": 0.9415285130163009
+          }
+        ]
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 12
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 60
+    },
+    {
+      "cycle": 13,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.8727,
+        "n_pivots": 15,
+        "knowledge_strength": 0.5818
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 13
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 65
+    },
+    {
+      "cycle": 14,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.7917,
+        "n_pivots": 15,
+        "knowledge_strength": 0.5278
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 14
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 70
+    },
+    {
+      "cycle": 15,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.71,
+        "n_pivots": 15,
+        "knowledge_strength": 0.4733
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 15
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 75
+    },
+    {
+      "cycle": 16,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 4,
+        "expired": 0,
+        "new_ingested": 1
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.8269,
+        "n_pivots": 15,
+        "knowledge_strength": 0.5512
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 16
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 80
+    },
+    {
+      "cycle": 17,
+      "perceive": {
+        "nodes": 60,
+        "edges": 213
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 1,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.953,
+        "n_pivots": 15,
+        "knowledge_strength": 0.6353
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 17
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 85
+    },
+    {
+      "cycle": 18,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.8727,
+        "n_pivots": 15,
+        "knowledge_strength": 0.5818
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 18
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 90
+    },
+    {
+      "cycle": 19,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.7917,
+        "n_pivots": 15,
+        "knowledge_strength": 0.5278
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 19
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 95
+    },
+    {
+      "cycle": 20,
+      "perceive": {
+        "nodes": 60,
+        "edges": 212
+      },
+      "detect": {
+        "n_pivots": 15,
+        "n_communities": 3
+      },
+      "knowledge": {
+        "active_entries": 3,
+        "expired": 0,
+        "new_ingested": 0
+      },
+      "action": {
+        "action": "exploit",
+        "confidence": 0.71,
+        "n_pivots": 15,
+        "knowledge_strength": 0.4733
+      },
+      "self_modify": {
+        "proposals": 0,
+        "applied": []
+      },
+      "observer": {
+        "observer_a_edges": 10,
+        "observer_b_edges": 10,
+        "jaccard": 0.25,
+        "disagreement_informative": true,
+        "cycle": 20
+      },
+      "params_snapshot": {
+        "decay_rate": 0.05,
+        "reinforcement_boost": 0.9415285130163009,
+        "protect_k": 5,
+        "alpha": 0.2,
+        "weight_power": 2.0,
+        "theta_consensus": 0.4
+      },
+      "energy_ops": 100
+    }
+  ],
+  "final_state": {
+    "name": "tufe-agent-demo",
+    "cycle": 20,
+    "knowledge_entries": 3,
+    "mean_knowledge_strength": 0.4733,
+    "total_energy_bits": 1363520,
+    "total_landauer_joules": 4.090559999999999e-15,
+    "modifications_proposed": 12,
+    "modifications_applied": 12,
+    "current_params": {
+      "decay_rate": 0.05,
+      "reinforcement_boost": 0.9415285130163009,
+      "protect_k": 5,
+      "alpha": 0.2,
+      "weight_power": 2.0,
+      "theta_consensus": 0.4
+    },
+    "observer_reports": 20,
+    "history_length": 20
+  },
+  "meta_tests": {
+    "query": "ok",
+    "modify_immutable": "REJECTED",
+    "tamper_integrity": "INTEGRITY_OK",
+    "self_eval_blocked": "violations_found"
+  }
+}

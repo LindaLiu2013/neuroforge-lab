@@ -1,0 +1,89 @@
+======================================================================
+TUF-E Hybrid Agent v1.1: REAL LLM
+Time: 2026-10-18T16:08:28.036025
+Seed: 42, Supervision level: 0.7
+Model: qwen3.8-flash, Base URL: https://dashscope.aliyuncs.com/compatible-mode/v1
+======================================================================
+
+Architecture: LLM + Statistical -> CCD-Enabled SAL <- TUF-E
+Duration: 5 days, entropy-driven stage transitions
+Key questions:
+  1. Does supervision_level=0.7 create structural compliance advantage?
+  2. Does CCD filter out causally inert disagreements?
+  3. Do entropy/saturation transitions align with genuine learning?
+  Day   5/5 [OBSE]: safety=1.00 | comply=  N/A | sat=0.71 | hidden=0 | LLM_det=0.25 | stat_alerts=0 | CCD=0.00 | H=1.00 | sat=0.0056 | agent_sr=0.50
+
+======================================================================
+Final Results -- Hybrid v1.0 (Lewin-Constrained, CCD, Entropy-Driven)
+======================================================================
+  Safety trend:       S1=1.000 -> S2=N/A -> S3=N/A -> S4=N/A
+  Satisfaction trend: S1=0.747 -> S2=N/A -> S3=N/A -> S4=N/A
+  Compliance trend:   S1=N/A -> S2=N/A -> S3=N/A -> S4=N/A
+  Final budget: 481739
+  Agent success rate: 0.500
+  Pivots learned: 3
+  Confidence: 0.660
+
+  [Redesign 1] Lewin Constraint B=f(P,E):
+    Supervision level: 0.7
+    SOP compliance cost: 0.85
+    Intervention success rate: 0.000
+    Finding types discovered: 3
+
+  [Redesign 2] CCD (Causal Contribution of Disagreement):
+    Total disagreement events: 5
+    Avg information_density (legacy): 1.000
+    Avg CCD (new): 0.200
+    Total effective disagreements: 1
+    Disagreements seen by agent: 20
+    Consensus points used: 0
+
+  [Redesign 3] Entropy + Bayesian Stage Transitions:
+    Final action entropy: 1.0000
+    Final model saturation: 0.005593
+    No stage transitions occurred
+
+  LLM Perception Stats:
+    Detection rate: 0.250
+    False alarm rate: 0.000
+    Missed rate: 0.750
+
+  Statistical Channel Stats:
+    Total alerts: 0
+    Active alerts: 0
+    Monitored dimensions: 0
+
+  Abstraction Layer Evolution:
+    Signal types tracked: 6
+    Total credit updates: 20
+    Diversity score: 1.0
+    Source concentration: {'llm': 1.0}
+    CCD stats: {'avg_ccd': 0.2, 'total_disagreements_tracked': 5, 'baseline_reward': 0.8014}
+    Top credited signals:
+      ('llm_issues', 'domain', 'personnel'): credit=0.915, uses=12, good_rate=0.583
+      ('llm_issues', 'domain', 'equipment'): credit=0.875, uses=8, good_rate=0.500
+      ('llm_assessment', 'urgency', 'critical'): credit=0.573, uses=20, good_rate=0.400
+      ('llm_recommendation', 'action_hint', 'intervene'): credit=0.573, uses=20, good_rate=0.400
+      ('llm_issues', 'domain', 'production'): credit=0.548, uses=16, good_rate=0.312
+    Lowest credited signals:
+      ('llm_issues', 'domain', 'production'): credit=0.548, uses=16, good_rate=0.312
+      ('llm_assessment', 'urgency', 'critical'): credit=0.573, uses=20, good_rate=0.400
+      ('llm_recommendation', 'action_hint', 'intervene'): credit=0.573, uses=20, good_rate=0.400
+      ('llm_issues', 'domain', 'equipment'): credit=0.875, uses=8, good_rate=0.500
+      ('llm_issues', 'domain', 'personnel'): credit=0.915, uses=12, good_rate=0.583
+
+  Action preferences:
+    inspect: 0.188
+    observe: 0.136
+    order: 0.135
+    menu_plan: 0.135
+    intervene: 0.135
+    staff_assign: 0.135
+    record: 0.135
+
+  Top pivots:
+    observe(N,poor): count=10, reward=0.003
+    inspect(Y,good): count=8, reward=0.443
+    inspect(Y,poor): count=2, reward=0.284
+
+Results saved to E:\原电脑资料6\qooder\neuroforge\poc\grounding_v10_results_seed42.json

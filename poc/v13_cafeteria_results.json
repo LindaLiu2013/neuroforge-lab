@@ -1,0 +1,6652 @@
+[
+  {
+    "seed": 0,
+    "final_stats": {
+      "total_actions": 700,
+      "success_rate": 0.927,
+      "n_confirmed_pivots": 2,
+      "n_private_pivots": 17,
+      "n_private_with_cycles": 13,
+      "n_phase_transitions": 1,
+      "confidence": 0.526,
+      "issues_detected": 2009,
+      "successful_interventions": 96,
+      "top_preferences": [
+        [
+          "inspect",
+          0.439
+        ],
+        [
+          "intervene",
+          0.242
+        ],
+        [
+          "record",
+          0.101
+        ],
+        [
+          "order",
+          0.079
+        ],
+        [
+          "menu_plan",
+          0.066
+        ],
+        [
+          "staff_assign",
+          0.056
+        ],
+        [
+          "observe",
+          0.017
+        ]
+      ],
+      "consensus_summary": {
+        "n_candidates": 41,
+        "n_confirmed": 2,
+        "top_confirmed": [
+          {
+            "key": "('b09', np.str_('order'), 'b06')",
+            "strength": 0.397,
+            "n_confirmers": 2,
+            "action": "order"
+          },
+          {
+            "key": "('b09', np.str_('record'), 'b06')",
+            "strength": 0.385,
+            "n_confirmers": 2,
+            "action": "record"
+          }
+        ]
+      }
+    },
+    "transitions": [
+      {
+        "day": 11,
+        "from": 1,
+        "to": 2,
+        "stats": {
+          "total_actions": 40,
+          "success_rate": 0.5,
+          "n_confirmed_pivots": 0,
+          "n_private_pivots": 5,
+          "n_private_with_cycles": 3,
+          "n_phase_transitions": 0,
+          "confidence": 0.429,
+          "issues_detected": 102,
+          "successful_interventions": 0,
+          "top_preferences": [
+            [
+              "inspect",
+              0.2
+            ],
+            [
+              "order",
+              0.133
+            ],
+            [
+              "menu_plan",
+              0.133
+            ],
+            [
+              "intervene",
+              0.133
+            ],
+            [
+              "staff_assign",
+              0.133
+            ],
+            [
+              "record",
+              0.133
+            ],
+            [
+              "observe",
+              0.133
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 14,
+            "n_confirmed": 0,
+            "top_confirmed": []
+          }
+        }
+      },
+      {
+        "day": 32,
+        "from": 2,
+        "to": 3,
+        "stats": {
+          "total_actions": 166,
+          "success_rate": 0.837,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.539,
+          "issues_detected": 317,
+          "successful_interventions": 16,
+          "top_preferences": [
+            [
+              "inspect",
+              0.217
+            ],
+            [
+              "intervene",
+              0.151
+            ],
+            [
+              "record",
+              0.142
+            ],
+            [
+              "menu_plan",
+              0.135
+            ],
+            [
+              "staff_assign",
+              0.135
+            ],
+            [
+              "order",
+              0.123
+            ],
+            [
+              "observe",
+              0.097
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              },
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.394,
+                "n_confirmers": 2,
+                "action": "record"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "day": 71,
+        "from": 3,
+        "to": 4,
+        "stats": {
+          "total_actions": 400,
+          "success_rate": 0.905,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.544,
+          "issues_detected": 872,
+          "successful_interventions": 52,
+          "top_preferences": [
+            [
+              "inspect",
+              0.282
+            ],
+            [
+              "intervene",
+              0.207
+            ],
+            [
+              "record",
+              0.142
+            ],
+            [
+              "order",
+              0.116
+            ],
+            [
+              "staff_assign",
+              0.104
+            ],
+            [
+              "menu_plan",
+              0.1
+            ],
+            [
+              "observe",
+              0.049
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.394,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "n_phase_transitions": 1,
+    "raf_closure": {
+      "is_raf": false,
+      "coverage_ratio": 0.0
+    },
+    "daily_data": [
+      {
+        "day": 1,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.718,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 2,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.754,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 3,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.725,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 4,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.628,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 5,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.609,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 6,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.611,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 7,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.595,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 8,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.635,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 9,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.625,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 10,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.661,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 11,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.721,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 12,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.688,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 13,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.759,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": true
+      },
+      {
+        "day": 14,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.758,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 15,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.855,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 16,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.856,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 17,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.923,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 18,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.985,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 19,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 20,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 21,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.955,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 22,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.949,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 23,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.982,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 24,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.93,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 25,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.975,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 26,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 27,
+        "safety": 0.44,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 28,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 29,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 30,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.977,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 31,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.887,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 32,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.827,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 33,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.946,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 34,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.938,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 35,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.932,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 36,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 37,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.941,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 38,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 39,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.951,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 40,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 41,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 42,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 43,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.997,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 44,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 45,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 46,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.963,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 47,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 48,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.961,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 49,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.975,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 50,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 51,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 52,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 53,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 54,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 55,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.863,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 56,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.926,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 57,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.861,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 58,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.824,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 59,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.839,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 60,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.879,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 61,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.926,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 62,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.976,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 63,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 64,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 65,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 66,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 67,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 68,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.862,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 69,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.924,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 70,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 71,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 72,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 73,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 74,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 75,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 76,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 77,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 78,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.967,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 79,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 80,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 81,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.902,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 82,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.908,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 83,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 84,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 85,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 86,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 87,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 88,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.973,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 89,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.963,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 90,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 91,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 92,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 93,
+        "safety": 0.44,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 94,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 95,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 96,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 97,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 98,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.911,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 99,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.983,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 100,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.957,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 101,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 102,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.904,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 103,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.975,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 104,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.93,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 105,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.986,
+        "cost_efficiency": 0.893,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 106,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.853,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 107,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.812,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 108,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.989,
+        "cost_efficiency": 0.77,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 109,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.994,
+        "cost_efficiency": 0.735,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 110,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.698,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 111,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 0.663,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 112,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.905,
+        "cost_efficiency": 0.634,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 113,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.935,
+        "cost_efficiency": 0.601,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 114,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.997,
+        "cost_efficiency": 0.56,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 115,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.898,
+        "cost_efficiency": 0.518,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 116,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.857,
+        "cost_efficiency": 0.476,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 117,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.923,
+        "cost_efficiency": 0.442,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 118,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.907,
+        "cost_efficiency": 0.393,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 119,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.939,
+        "cost_efficiency": 0.352,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 120,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.917,
+        "cost_efficiency": 0.317,
+        "hidden_risks": 1,
+        "phase_transition": false
+      }
+    ]
+  },
+  {
+    "seed": 1,
+    "final_stats": {
+      "total_actions": 700,
+      "success_rate": 0.94,
+      "n_confirmed_pivots": 2,
+      "n_private_pivots": 17,
+      "n_private_with_cycles": 13,
+      "n_phase_transitions": 1,
+      "confidence": 0.526,
+      "issues_detected": 2255,
+      "successful_interventions": 63,
+      "top_preferences": [
+        [
+          "inspect",
+          0.614
+        ],
+        [
+          "order",
+          0.106
+        ],
+        [
+          "intervene",
+          0.085
+        ],
+        [
+          "record",
+          0.068
+        ],
+        [
+          "staff_assign",
+          0.064
+        ],
+        [
+          "menu_plan",
+          0.047
+        ],
+        [
+          "observe",
+          0.015
+        ]
+      ],
+      "consensus_summary": {
+        "n_candidates": 41,
+        "n_confirmed": 2,
+        "top_confirmed": [
+          {
+            "key": "('b09', np.str_('record'), 'b06')",
+            "strength": 0.397,
+            "n_confirmers": 2,
+            "action": "record"
+          },
+          {
+            "key": "('b09', np.str_('order'), 'b06')",
+            "strength": 0.394,
+            "n_confirmers": 2,
+            "action": "order"
+          }
+        ]
+      }
+    },
+    "transitions": [
+      {
+        "day": 11,
+        "from": 1,
+        "to": 2,
+        "stats": {
+          "total_actions": 40,
+          "success_rate": 0.475,
+          "n_confirmed_pivots": 0,
+          "n_private_pivots": 5,
+          "n_private_with_cycles": 3,
+          "n_phase_transitions": 0,
+          "confidence": 0.387,
+          "issues_detected": 45,
+          "successful_interventions": 0,
+          "top_preferences": [
+            [
+              "inspect",
+              0.197
+            ],
+            [
+              "order",
+              0.134
+            ],
+            [
+              "menu_plan",
+              0.134
+            ],
+            [
+              "intervene",
+              0.134
+            ],
+            [
+              "staff_assign",
+              0.134
+            ],
+            [
+              "record",
+              0.134
+            ],
+            [
+              "observe",
+              0.134
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 14,
+            "n_confirmed": 0,
+            "top_confirmed": []
+          }
+        }
+      },
+      {
+        "day": 52,
+        "from": 2,
+        "to": 3,
+        "stats": {
+          "total_actions": 286,
+          "success_rate": 0.885,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.507,
+          "issues_detected": 568,
+          "successful_interventions": 15,
+          "top_preferences": [
+            [
+              "inspect",
+              0.329
+            ],
+            [
+              "order",
+              0.147
+            ],
+            [
+              "staff_assign",
+              0.138
+            ],
+            [
+              "record",
+              0.113
+            ],
+            [
+              "menu_plan",
+              0.102
+            ],
+            [
+              "intervene",
+              0.102
+            ],
+            [
+              "observe",
+              0.068
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.394,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "day": 71,
+        "from": 3,
+        "to": 4,
+        "stats": {
+          "total_actions": 400,
+          "success_rate": 0.915,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.533,
+          "issues_detected": 883,
+          "successful_interventions": 31,
+          "top_preferences": [
+            [
+              "inspect",
+              0.375
+            ],
+            [
+              "order",
+              0.145
+            ],
+            [
+              "staff_assign",
+              0.12
+            ],
+            [
+              "intervene",
+              0.112
+            ],
+            [
+              "record",
+              0.107
+            ],
+            [
+              "menu_plan",
+              0.093
+            ],
+            [
+              "observe",
+              0.048
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.394,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "n_phase_transitions": 1,
+    "raf_closure": {
+      "is_raf": false,
+      "coverage_ratio": 0.0
+    },
+    "daily_data": [
+      {
+        "day": 1,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.758,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 2,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.801,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 3,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.799,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 4,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.905,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 5,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.841,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 6,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.834,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 7,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.878,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 8,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.859,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 9,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.812,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 10,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.805,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 11,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.699,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 12,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.853,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 13,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.929,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": true
+      },
+      {
+        "day": 14,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.975,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 15,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.91,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 16,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 17,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.946,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 18,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 19,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 20,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.973,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 21,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 22,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 23,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 24,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 25,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.916,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 26,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 27,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 28,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 29,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.924,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 30,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.961,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 31,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 32,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 33,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 34,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.981,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 35,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 36,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.996,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 37,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 38,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.94,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 39,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 40,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.858,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 41,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.818,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 42,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.893,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 43,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.844,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 44,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.933,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 45,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.981,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 46,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.908,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 47,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 48,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 49,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.986,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 50,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.98,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 51,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.977,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 52,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.966,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 53,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 54,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 55,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.928,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 56,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.927,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 57,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.962,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 58,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.996,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 59,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 60,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.996,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 61,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 62,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.92,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 63,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.896,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 64,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.92,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 65,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.941,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 66,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 67,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 68,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.989,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 69,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 70,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 71,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 72,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.91,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 73,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.836,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 74,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 75,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.851,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 76,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.921,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 77,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.921,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 78,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 79,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.983,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 80,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 81,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 82,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.951,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 83,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.93,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 84,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.903,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 85,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.858,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 86,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.865,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 87,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.894,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 88,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.927,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 89,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.925,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 90,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 91,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.908,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 92,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.968,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 93,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.933,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 94,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.914,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 95,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.915,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 96,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.939,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 97,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.917,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 98,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 99,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 100,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.935,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 101,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.934,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 102,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.983,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 103,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.937,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 104,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.902,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 105,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.862,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 106,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.825,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 107,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.779,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 108,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.995,
+        "cost_efficiency": 0.742,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 109,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.966,
+        "cost_efficiency": 0.704,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 110,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 0.664,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 111,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.62,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 112,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.942,
+        "cost_efficiency": 0.583,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 113,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.927,
+        "cost_efficiency": 0.551,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 114,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.514,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 115,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.468,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 116,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.93,
+        "cost_efficiency": 0.433,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 117,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.864,
+        "cost_efficiency": 0.4,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 118,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.363,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 119,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.321,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 120,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.96,
+        "cost_efficiency": 0.284,
+        "hidden_risks": 5,
+        "phase_transition": false
+      }
+    ]
+  },
+  {
+    "seed": 2,
+    "final_stats": {
+      "total_actions": 700,
+      "success_rate": 0.919,
+      "n_confirmed_pivots": 2,
+      "n_private_pivots": 17,
+      "n_private_with_cycles": 13,
+      "n_phase_transitions": 1,
+      "confidence": 0.54,
+      "issues_detected": 1387,
+      "successful_interventions": 92,
+      "top_preferences": [
+        [
+          "intervene",
+          0.255
+        ],
+        [
+          "inspect",
+          0.167
+        ],
+        [
+          "record",
+          0.14
+        ],
+        [
+          "staff_assign",
+          0.129
+        ],
+        [
+          "observe",
+          0.122
+        ],
+        [
+          "order",
+          0.098
+        ],
+        [
+          "menu_plan",
+          0.089
+        ]
+      ],
+      "consensus_summary": {
+        "n_candidates": 41,
+        "n_confirmed": 2,
+        "top_confirmed": [
+          {
+            "key": "('b09', np.str_('order'), 'b06')",
+            "strength": 0.397,
+            "n_confirmers": 2,
+            "action": "order"
+          },
+          {
+            "key": "('b09', np.str_('record'), 'b06')",
+            "strength": 0.391,
+            "n_confirmers": 2,
+            "action": "record"
+          }
+        ]
+      }
+    },
+    "transitions": [
+      {
+        "day": 11,
+        "from": 1,
+        "to": 2,
+        "stats": {
+          "total_actions": 40,
+          "success_rate": 0.3,
+          "n_confirmed_pivots": 0,
+          "n_private_pivots": 5,
+          "n_private_with_cycles": 3,
+          "n_phase_transitions": 0,
+          "confidence": 0.379,
+          "issues_detected": 33,
+          "successful_interventions": 0,
+          "top_preferences": [
+            [
+              "observe",
+              0.491
+            ],
+            [
+              "inspect",
+              0.103
+            ],
+            [
+              "order",
+              0.081
+            ],
+            [
+              "menu_plan",
+              0.081
+            ],
+            [
+              "intervene",
+              0.081
+            ],
+            [
+              "staff_assign",
+              0.081
+            ],
+            [
+              "record",
+              0.081
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 14,
+            "n_confirmed": 0,
+            "top_confirmed": []
+          }
+        }
+      },
+      {
+        "day": 33,
+        "from": 2,
+        "to": 3,
+        "stats": {
+          "total_actions": 172,
+          "success_rate": 0.791,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.518,
+          "issues_detected": 204,
+          "successful_interventions": 15,
+          "top_preferences": [
+            [
+              "observe",
+              0.399
+            ],
+            [
+              "inspect",
+              0.124
+            ],
+            [
+              "staff_assign",
+              0.101
+            ],
+            [
+              "intervene",
+              0.1
+            ],
+            [
+              "order",
+              0.097
+            ],
+            [
+              "record",
+              0.092
+            ],
+            [
+              "menu_plan",
+              0.087
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              },
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "day": 71,
+        "from": 3,
+        "to": 4,
+        "stats": {
+          "total_actions": 400,
+          "success_rate": 0.887,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.495,
+          "issues_detected": 677,
+          "successful_interventions": 47,
+          "top_preferences": [
+            [
+              "observe",
+              0.256
+            ],
+            [
+              "intervene",
+              0.155
+            ],
+            [
+              "inspect",
+              0.148
+            ],
+            [
+              "staff_assign",
+              0.117
+            ],
+            [
+              "record",
+              0.115
+            ],
+            [
+              "menu_plan",
+              0.108
+            ],
+            [
+              "order",
+              0.1
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              },
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.394,
+                "n_confirmers": 2,
+                "action": "record"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "n_phase_transitions": 1,
+    "raf_closure": {
+      "is_raf": false,
+      "coverage_ratio": 0.0
+    },
+    "daily_data": [
+      {
+        "day": 1,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.726,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 2,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.672,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 3,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.61,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 4,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.678,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 5,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.693,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 6,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.682,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 7,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.721,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 8,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.73,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 9,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.773,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 10,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.802,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 11,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.739,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 12,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.712,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": true
+      },
+      {
+        "day": 13,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.716,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 14,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.715,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 15,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.66,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 16,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.737,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 17,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.84,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 18,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.903,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 19,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.934,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 20,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 21,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 22,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 23,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.987,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 24,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 25,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 26,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.956,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 27,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.838,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 28,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.853,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 29,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.935,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 30,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.968,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 31,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 32,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.959,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 33,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 34,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.997,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 35,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 36,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.961,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 37,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.989,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 38,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 39,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 40,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 41,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 42,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.93,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 43,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.947,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 44,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 45,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 46,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.924,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 47,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 48,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 49,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.929,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 50,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 51,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.953,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 52,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 53,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 54,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 55,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.946,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 56,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 57,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.924,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 58,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 59,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.892,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 60,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.851,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 61,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 62,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 63,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 64,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 65,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 66,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 67,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.976,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 68,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.967,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 69,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.98,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 70,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.974,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 71,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.998,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 72,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 73,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 74,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 75,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 76,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 77,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 78,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.974,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 79,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 80,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.932,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 81,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 82,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.912,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 83,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.946,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 84,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 85,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 86,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 87,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 88,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.989,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 89,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.968,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 90,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 91,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.981,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 92,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.957,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 93,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 94,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.977,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 95,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 96,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 97,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 98,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 99,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 100,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.882,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 101,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.855,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 102,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.901,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 103,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.91,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 104,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.968,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 105,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.933,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 106,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.933,
+        "cost_efficiency": 0.903,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 107,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.904,
+        "cost_efficiency": 0.859,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 108,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.848,
+        "cost_efficiency": 0.826,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 109,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.783,
+        "cost_efficiency": 0.787,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 110,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.735,
+        "cost_efficiency": 0.753,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 111,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.857,
+        "cost_efficiency": 0.711,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 112,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.838,
+        "cost_efficiency": 0.672,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 113,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.914,
+        "cost_efficiency": 0.637,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 114,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.97,
+        "cost_efficiency": 0.591,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 115,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.548,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 116,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.994,
+        "cost_efficiency": 0.506,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 117,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.967,
+        "cost_efficiency": 0.468,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 118,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 0.42,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 119,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.379,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 120,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 0.332,
+        "hidden_risks": 1,
+        "phase_transition": false
+      }
+    ]
+  },
+  {
+    "seed": 3,
+    "final_stats": {
+      "total_actions": 700,
+      "success_rate": 0.924,
+      "n_confirmed_pivots": 2,
+      "n_private_pivots": 17,
+      "n_private_with_cycles": 13,
+      "n_phase_transitions": 1,
+      "confidence": 0.53,
+      "issues_detected": 2077,
+      "successful_interventions": 68,
+      "top_preferences": [
+        [
+          "inspect",
+          0.309
+        ],
+        [
+          "record",
+          0.188
+        ],
+        [
+          "intervene",
+          0.127
+        ],
+        [
+          "observe",
+          0.117
+        ],
+        [
+          "order",
+          0.098
+        ],
+        [
+          "menu_plan",
+          0.086
+        ],
+        [
+          "staff_assign",
+          0.074
+        ]
+      ],
+      "consensus_summary": {
+        "n_candidates": 41,
+        "n_confirmed": 2,
+        "top_confirmed": [
+          {
+            "key": "('b09', np.str_('record'), 'b06')",
+            "strength": 0.397,
+            "n_confirmers": 2,
+            "action": "record"
+          },
+          {
+            "key": "('b09', np.str_('order'), 'b06')",
+            "strength": 0.394,
+            "n_confirmers": 2,
+            "action": "order"
+          }
+        ]
+      }
+    },
+    "transitions": [
+      {
+        "day": 11,
+        "from": 1,
+        "to": 2,
+        "stats": {
+          "total_actions": 40,
+          "success_rate": 0.325,
+          "n_confirmed_pivots": 0,
+          "n_private_pivots": 5,
+          "n_private_with_cycles": 3,
+          "n_phase_transitions": 0,
+          "confidence": 0.372,
+          "issues_detected": 49,
+          "successful_interventions": 0,
+          "top_preferences": [
+            [
+              "observe",
+              0.489
+            ],
+            [
+              "inspect",
+              0.105
+            ],
+            [
+              "order",
+              0.081
+            ],
+            [
+              "menu_plan",
+              0.081
+            ],
+            [
+              "intervene",
+              0.081
+            ],
+            [
+              "staff_assign",
+              0.081
+            ],
+            [
+              "record",
+              0.081
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 14,
+            "n_confirmed": 0,
+            "top_confirmed": []
+          }
+        }
+      },
+      {
+        "day": 32,
+        "from": 2,
+        "to": 3,
+        "stats": {
+          "total_actions": 166,
+          "success_rate": 0.783,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.51,
+          "issues_detected": 272,
+          "successful_interventions": 15,
+          "top_preferences": [
+            [
+              "observe",
+              0.4
+            ],
+            [
+              "inspect",
+              0.134
+            ],
+            [
+              "menu_plan",
+              0.101
+            ],
+            [
+              "intervene",
+              0.101
+            ],
+            [
+              "order",
+              0.096
+            ],
+            [
+              "record",
+              0.09
+            ],
+            [
+              "staff_assign",
+              0.078
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "day": 71,
+        "from": 3,
+        "to": 4,
+        "stats": {
+          "total_actions": 400,
+          "success_rate": 0.882,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.51,
+          "issues_detected": 968,
+          "successful_interventions": 35,
+          "top_preferences": [
+            [
+              "observe",
+              0.255
+            ],
+            [
+              "inspect",
+              0.204
+            ],
+            [
+              "record",
+              0.129
+            ],
+            [
+              "intervene",
+              0.111
+            ],
+            [
+              "menu_plan",
+              0.11
+            ],
+            [
+              "order",
+              0.108
+            ],
+            [
+              "staff_assign",
+              0.083
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "n_phase_transitions": 1,
+    "raf_closure": {
+      "is_raf": false,
+      "coverage_ratio": 0.0
+    },
+    "daily_data": [
+      {
+        "day": 1,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.744,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 2,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.793,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 3,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.802,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 4,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.767,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 5,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.72,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 6,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.68,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 7,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.663,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 8,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.709,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 9,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.657,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 10,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.707,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 11,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.757,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 12,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.986,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": true
+      },
+      {
+        "day": 13,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 14,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 15,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 16,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.909,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 17,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.887,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 18,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.93,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 19,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 20,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 21,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 22,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 23,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 24,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 25,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 26,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.916,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 27,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.887,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 28,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 29,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 30,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.973,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 31,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.934,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 32,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.909,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 33,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 34,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.937,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 35,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 36,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 37,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 38,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.991,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 39,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 40,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 41,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.924,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 42,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.813,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 43,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.889,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 44,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.888,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 45,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.955,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 46,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.898,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 47,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.866,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 48,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.993,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 49,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 50,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 51,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.868,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 52,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.938,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 53,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.928,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 54,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 55,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 56,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.96,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 57,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.945,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 58,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 59,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 60,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 61,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.956,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 62,
+        "safety": 0.44,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 63,
+        "safety": 0.36,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 64,
+        "safety": 0.36,
+        "compliance": null,
+        "satisfaction": 0.944,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 8,
+        "phase_transition": false
+      },
+      {
+        "day": 65,
+        "safety": 0.36,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 66,
+        "safety": 0.36,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 67,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 68,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.996,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 69,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 70,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.952,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 71,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 72,
+        "safety": 0.44,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 73,
+        "safety": 0.36,
+        "compliance": null,
+        "satisfaction": 0.993,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 74,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 7,
+        "phase_transition": false
+      },
+      {
+        "day": 75,
+        "safety": 0.44,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 76,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 0.914,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 77,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 78,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 79,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 80,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 81,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.917,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 82,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.953,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 83,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.982,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 84,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 85,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.927,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 86,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 87,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.991,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 88,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 89,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 90,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 91,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 92,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 93,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 94,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 95,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.962,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 96,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 97,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 98,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.984,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 99,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 100,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 101,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.988,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 102,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 103,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.95,
+        "cost_efficiency": 0.97,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 104,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.917,
+        "cost_efficiency": 0.929,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 105,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.978,
+        "cost_efficiency": 0.894,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 106,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.944,
+        "cost_efficiency": 0.857,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 107,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.928,
+        "cost_efficiency": 0.814,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 108,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.911,
+        "cost_efficiency": 0.779,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 109,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.74,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 110,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.98,
+        "cost_efficiency": 0.705,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 111,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.668,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 112,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.627,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 113,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 0.591,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 114,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.561,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 115,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.945,
+        "cost_efficiency": 0.516,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 116,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.908,
+        "cost_efficiency": 0.476,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 117,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.885,
+        "cost_efficiency": 0.434,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 118,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.396,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 119,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.363,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 120,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.993,
+        "cost_efficiency": 0.332,
+        "hidden_risks": 1,
+        "phase_transition": false
+      }
+    ]
+  },
+  {
+    "seed": 4,
+    "final_stats": {
+      "total_actions": 700,
+      "success_rate": 0.953,
+      "n_confirmed_pivots": 2,
+      "n_private_pivots": 17,
+      "n_private_with_cycles": 13,
+      "n_phase_transitions": 1,
+      "confidence": 0.514,
+      "issues_detected": 2351,
+      "successful_interventions": 88,
+      "top_preferences": [
+        [
+          "inspect",
+          0.493
+        ],
+        [
+          "intervene",
+          0.185
+        ],
+        [
+          "record",
+          0.09
+        ],
+        [
+          "order",
+          0.08
+        ],
+        [
+          "staff_assign",
+          0.071
+        ],
+        [
+          "menu_plan",
+          0.065
+        ],
+        [
+          "observe",
+          0.016
+        ]
+      ],
+      "consensus_summary": {
+        "n_candidates": 41,
+        "n_confirmed": 2,
+        "top_confirmed": [
+          {
+            "key": "('b09', np.str_('record'), 'b06')",
+            "strength": 0.391,
+            "n_confirmers": 2,
+            "action": "record"
+          },
+          {
+            "key": "('b09', np.str_('order'), 'b06')",
+            "strength": 0.391,
+            "n_confirmers": 2,
+            "action": "order"
+          }
+        ]
+      }
+    },
+    "transitions": [
+      {
+        "day": 11,
+        "from": 1,
+        "to": 2,
+        "stats": {
+          "total_actions": 40,
+          "success_rate": 0.65,
+          "n_confirmed_pivots": 0,
+          "n_private_pivots": 5,
+          "n_private_with_cycles": 3,
+          "n_phase_transitions": 0,
+          "confidence": 0.478,
+          "issues_detected": 95,
+          "successful_interventions": 0,
+          "top_preferences": [
+            [
+              "inspect",
+              0.224
+            ],
+            [
+              "order",
+              0.129
+            ],
+            [
+              "menu_plan",
+              0.129
+            ],
+            [
+              "intervene",
+              0.129
+            ],
+            [
+              "staff_assign",
+              0.129
+            ],
+            [
+              "record",
+              0.129
+            ],
+            [
+              "observe",
+              0.129
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 14,
+            "n_confirmed": 0,
+            "top_confirmed": []
+          }
+        }
+      },
+      {
+        "day": 32,
+        "from": 2,
+        "to": 3,
+        "stats": {
+          "total_actions": 166,
+          "success_rate": 0.904,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 16,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.54,
+          "issues_detected": 364,
+          "successful_interventions": 15,
+          "top_preferences": [
+            [
+              "inspect",
+              0.263
+            ],
+            [
+              "intervene",
+              0.139
+            ],
+            [
+              "record",
+              0.139
+            ],
+            [
+              "order",
+              0.13
+            ],
+            [
+              "menu_plan",
+              0.12
+            ],
+            [
+              "staff_assign",
+              0.118
+            ],
+            [
+              "observe",
+              0.092
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 39,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "day": 71,
+        "from": 3,
+        "to": 4,
+        "stats": {
+          "total_actions": 400,
+          "success_rate": 0.948,
+          "n_confirmed_pivots": 2,
+          "n_private_pivots": 17,
+          "n_private_with_cycles": 13,
+          "n_phase_transitions": 1,
+          "confidence": 0.536,
+          "issues_detected": 1030,
+          "successful_interventions": 52,
+          "top_preferences": [
+            [
+              "inspect",
+              0.321
+            ],
+            [
+              "intervene",
+              0.192
+            ],
+            [
+              "record",
+              0.126
+            ],
+            [
+              "order",
+              0.113
+            ],
+            [
+              "staff_assign",
+              0.106
+            ],
+            [
+              "menu_plan",
+              0.096
+            ],
+            [
+              "observe",
+              0.046
+            ]
+          ],
+          "consensus_summary": {
+            "n_candidates": 41,
+            "n_confirmed": 2,
+            "top_confirmed": [
+              {
+                "key": "('b09', np.str_('record'), 'b06')",
+                "strength": 0.397,
+                "n_confirmers": 2,
+                "action": "record"
+              },
+              {
+                "key": "('b09', np.str_('order'), 'b06')",
+                "strength": 0.385,
+                "n_confirmers": 2,
+                "action": "order"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "n_phase_transitions": 1,
+    "raf_closure": {
+      "is_raf": false,
+      "coverage_ratio": 0.0
+    },
+    "daily_data": [
+      {
+        "day": 1,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.719,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 2,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.662,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 3,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.62,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 4,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.636,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 5,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.751,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 6,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.776,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 7,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.678,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 8,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.713,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 9,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.767,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 10,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.82,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 11,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.806,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 12,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.822,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": true
+      },
+      {
+        "day": 13,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.943,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 14,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.905,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 15,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.987,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 16,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 17,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 18,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 19,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.987,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 20,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 21,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 22,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 23,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 6,
+        "phase_transition": false
+      },
+      {
+        "day": 24,
+        "safety": 0.52,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 25,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 26,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 27,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 28,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 29,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.953,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 30,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.966,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 31,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 32,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 33,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.933,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 34,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 35,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.932,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 36,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 37,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 38,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.979,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 39,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 40,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.992,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 41,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 42,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.987,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 43,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.916,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 44,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.909,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 45,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.979,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 46,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 47,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.96,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 48,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 49,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.99,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 50,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.955,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 51,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 52,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 53,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.978,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 54,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 5,
+        "phase_transition": false
+      },
+      {
+        "day": 55,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.977,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 56,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 57,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 58,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 59,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 60,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.994,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 61,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.975,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 62,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 63,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 64,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.992,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 65,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 66,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.963,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 67,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.957,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 68,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.944,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 69,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.945,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 70,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.891,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 71,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.89,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 72,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.935,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 73,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.918,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 74,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.909,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 75,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.898,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 76,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.816,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 77,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.796,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 78,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.828,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 79,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.885,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 80,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.81,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 81,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.827,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 82,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.897,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 83,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.94,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 84,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 85,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.962,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 86,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 87,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.917,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 88,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.951,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 89,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.948,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 90,
+        "safety": 0.6,
+        "compliance": null,
+        "satisfaction": 0.888,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 91,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 0.835,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 92,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.904,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 93,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 94,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.943,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 95,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.96,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 96,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.979,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 97,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 98,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.965,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 99,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 100,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 101,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 102,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.96,
+        "cost_efficiency": 1.0,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 103,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.968,
+        "cost_efficiency": 0.976,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 104,
+        "safety": 1.0,
+        "compliance": null,
+        "satisfaction": 0.975,
+        "cost_efficiency": 0.938,
+        "hidden_risks": 0,
+        "phase_transition": false
+      },
+      {
+        "day": 105,
+        "safety": 0.92,
+        "compliance": null,
+        "satisfaction": 0.972,
+        "cost_efficiency": 0.901,
+        "hidden_risks": 1,
+        "phase_transition": false
+      },
+      {
+        "day": 106,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.929,
+        "cost_efficiency": 0.862,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 107,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.822,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 108,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.958,
+        "cost_efficiency": 0.788,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 109,
+        "safety": 0,
+        "compliance": 0,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.743,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 110,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.913,
+        "cost_efficiency": 0.703,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 111,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.944,
+        "cost_efficiency": 0.669,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 112,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.879,
+        "cost_efficiency": 0.636,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 113,
+        "safety": 0.84,
+        "compliance": null,
+        "satisfaction": 0.852,
+        "cost_efficiency": 0.596,
+        "hidden_risks": 2,
+        "phase_transition": false
+      },
+      {
+        "day": 114,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.893,
+        "cost_efficiency": 0.554,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 115,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 0.942,
+        "cost_efficiency": 0.518,
+        "hidden_risks": 4,
+        "phase_transition": false
+      },
+      {
+        "day": 116,
+        "safety": 0.68,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.486,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 117,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 1.0,
+        "cost_efficiency": 0.452,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 118,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.919,
+        "cost_efficiency": 0.415,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 119,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.912,
+        "cost_efficiency": 0.384,
+        "hidden_risks": 3,
+        "phase_transition": false
+      },
+      {
+        "day": 120,
+        "safety": 0.76,
+        "compliance": null,
+        "satisfaction": 0.961,
+        "cost_efficiency": 0.34,
+        "hidden_risks": 3,
+        "phase_transition": false
+      }
+    ]
+  }
+]

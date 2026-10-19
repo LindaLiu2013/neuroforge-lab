@@ -1,0 +1,66 @@
+{
+  "experiment": "TUF-E v0.2 Validation: Ising Domain v14.1",
+  "timestamp": "2026-10-18T22:38:35.222811",
+  "design": "Agent-driven dynamics, 8x8 lattice, 3-phase temperature protocol",
+  "conditions": {
+    "A_pivot_consensus": {
+      "viability_rate": {
+        "mean": 0.6637,
+        "std": 0.0134
+      },
+      "feasible_volume": {
+        "mean_current": 236.8,
+        "mean_peak": 236.8
+      },
+      "phase_transitions": {
+        "mean_count": 227.6,
+        "total": 1138
+      },
+      "confirmed_pivots": {
+        "mean": 56.8
+      }
+    },
+    "B_pivot_no_consensus": {
+      "viability_rate": {
+        "mean": 0.6969,
+        "std": 0.0148
+      },
+      "feasible_volume": {
+        "mean_current": 1325.0,
+        "mean_peak": 1325.0
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "confirmed_pivots": {
+        "mean": 0.0
+      }
+    },
+    "C_no_pivot_baseline": {
+      "viability_rate": {
+        "mean": 0.6869,
+        "std": 0.0107
+      },
+      "feasible_volume": {
+        "mean_current": 0.0,
+        "mean_peak": 0.0
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "confirmed_pivots": {
+        "mean": 0.0
+      }
+    }
+  },
+  "gc_mapping": {
+    "GC-1": "Site-level flip actions (129 options)",
+    "GC-2": "3 observers: magnetization, correlation, energy",
+    "GC-3": "Pivot decay(0.003) + thermal noise erosion",
+    "GC-4": "Observe->Act->Noise->Observe = work cycle",
+    "GC-5": "Viability = non-trivial structure maintenance",
+    "GC-6": "Ising Hamiltonian immutable"
+  }
+}

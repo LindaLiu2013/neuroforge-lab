@@ -1,0 +1,4783 @@
+{
+  "milestones": [
+    {
+      "day": 10,
+      "stage": "OBSERVATION",
+      "scores": {
+        "day": 10,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.694,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 463803.0
+      },
+      "agent_stats": {
+        "total_actions": 40,
+        "success_rate": 0.5,
+        "n_pivots": 3,
+        "confidence": 0.594,
+        "energy_bits": 10240,
+        "llm_disagreements_seen": 20,
+        "consensus_used": 20,
+        "top_preferences": [
+          [
+            "inspect",
+            0.208
+          ],
+          [
+            "observe",
+            0.136
+          ],
+          [
+            "order",
+            0.131
+          ],
+          [
+            "menu_plan",
+            0.131
+          ],
+          [
+            "intervene",
+            0.131
+          ],
+          [
+            "staff_assign",
+            0.131
+          ],
+          [
+            "record",
+            0.131
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 16,
+            "avg_reward": 0.278
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 4,
+            "avg_reward": 0.377
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 10,
+        "detection_rate": 0.333,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.667
+      },
+      "stat_stats": {
+        "total_alerts": 0,
+        "active_alerts": 0,
+        "monitored_dimensions": 0
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 20,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 20,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.82,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 425012.0
+      },
+      "agent_stats": {
+        "total_actions": 100,
+        "success_rate": 0.8,
+        "n_pivots": 8,
+        "confidence": 0.688,
+        "energy_bits": 25600,
+        "llm_disagreements_seen": 74,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.223
+          ],
+          [
+            "staff_assign",
+            0.145
+          ],
+          [
+            "order",
+            0.138
+          ],
+          [
+            "intervene",
+            0.132
+          ],
+          [
+            "menu_plan",
+            0.131
+          ],
+          [
+            "record",
+            0.124
+          ],
+          [
+            "observe",
+            0.107
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 31,
+            "avg_reward": 0.268
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 12,
+            "avg_reward": 0.365
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 10,
+            "avg_reward": 0.37
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 8,
+            "avg_reward": 0.394
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 8,
+            "avg_reward": 0.4
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 7,
+            "avg_reward": 0.33
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 4,
+            "avg_reward": 0.377
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 20,
+        "detection_rate": 0.338,
+        "false_alarm_rate": 0.15,
+        "missed_rate": 0.662
+      },
+      "stat_stats": {
+        "total_alerts": 6,
+        "active_alerts": 1,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "high",
+              "tufe": "high"
+            },
+            "agreeing_pair": "stat+tufe",
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 30,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 30,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.928,
+        "risks_exposed": 0,
+        "hidden_risks": 3,
+        "budget_remaining": 382376.0
+      },
+      "agent_stats": {
+        "total_actions": 160,
+        "success_rate": 0.875,
+        "n_pivots": 8,
+        "confidence": 0.747,
+        "energy_bits": 40960,
+        "llm_disagreements_seen": 164,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.216
+          ],
+          [
+            "staff_assign",
+            0.163
+          ],
+          [
+            "order",
+            0.157
+          ],
+          [
+            "intervene",
+            0.156
+          ],
+          [
+            "menu_plan",
+            0.122
+          ],
+          [
+            "record",
+            0.104
+          ],
+          [
+            "observe",
+            0.081
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 39,
+            "avg_reward": 0.268
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.389
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 23,
+            "avg_reward": 0.398
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 21,
+            "avg_reward": 0.431
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 14,
+            "avg_reward": 0.414
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 11,
+            "avg_reward": 0.335
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 7,
+            "avg_reward": 0.362
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 30,
+        "detection_rate": 0.34,
+        "false_alarm_rate": 0.133,
+        "missed_rate": 0.66
+      },
+      "stat_stats": {
+        "total_alerts": 37,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 40,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 40,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.986,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 344060.0
+      },
+      "agent_stats": {
+        "total_actions": 220,
+        "success_rate": 0.895,
+        "n_pivots": 9,
+        "confidence": 0.734,
+        "energy_bits": 56320,
+        "llm_disagreements_seen": 278,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.225
+          ],
+          [
+            "staff_assign",
+            0.157
+          ],
+          [
+            "order",
+            0.151
+          ],
+          [
+            "intervene",
+            0.149
+          ],
+          [
+            "menu_plan",
+            0.142
+          ],
+          [
+            "record",
+            0.114
+          ],
+          [
+            "observe",
+            0.062
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 32,
+            "avg_reward": 0.402
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 30,
+            "avg_reward": 0.41
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 27,
+            "avg_reward": 0.44
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 26,
+            "avg_reward": 0.437
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 23,
+            "avg_reward": 0.367
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 16,
+            "avg_reward": 0.334
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 40,
+        "detection_rate": 0.361,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.639
+      },
+      "stat_stats": {
+        "total_alerts": 77,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 50,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 50,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.941,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 305727.0
+      },
+      "agent_stats": {
+        "total_actions": 280,
+        "success_rate": 0.907,
+        "n_pivots": 9,
+        "confidence": 0.736,
+        "energy_bits": 71680,
+        "llm_disagreements_seen": 398,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.195
+          ],
+          [
+            "staff_assign",
+            0.186
+          ],
+          [
+            "intervene",
+            0.167
+          ],
+          [
+            "order",
+            0.152
+          ],
+          [
+            "menu_plan",
+            0.146
+          ],
+          [
+            "record",
+            0.108
+          ],
+          [
+            "observe",
+            0.046
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 46,
+            "avg_reward": 0.416
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 39,
+            "avg_reward": 0.416
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 38,
+            "avg_reward": 0.447
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 35,
+            "avg_reward": 0.445
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 31,
+            "avg_reward": 0.375
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 22,
+            "avg_reward": 0.328
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 50,
+        "detection_rate": 0.374,
+        "false_alarm_rate": 0.08,
+        "missed_rate": 0.626
+      },
+      "stat_stats": {
+        "total_alerts": 112,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 60,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 60,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.918,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 264895.0
+      },
+      "agent_stats": {
+        "total_actions": 340,
+        "success_rate": 0.918,
+        "n_pivots": 9,
+        "confidence": 0.742,
+        "energy_bits": 87040,
+        "llm_disagreements_seen": 518,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.223
+          ],
+          [
+            "staff_assign",
+            0.214
+          ],
+          [
+            "order",
+            0.159
+          ],
+          [
+            "intervene",
+            0.151
+          ],
+          [
+            "menu_plan",
+            0.136
+          ],
+          [
+            "record",
+            0.083
+          ],
+          [
+            "observe",
+            0.033
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 60,
+            "avg_reward": 0.419
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.419
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 44,
+            "avg_reward": 0.448
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 42,
+            "avg_reward": 0.448
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 40,
+            "avg_reward": 0.321
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 33,
+            "avg_reward": 0.376
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 60,
+        "detection_rate": 0.393,
+        "false_alarm_rate": 0.067,
+        "missed_rate": 0.607
+      },
+      "stat_stats": {
+        "total_alerts": 144,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 70,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 70,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 1,
+        "hidden_risks": 0,
+        "budget_remaining": 226577.0
+      },
+      "agent_stats": {
+        "total_actions": 400,
+        "success_rate": 0.925,
+        "n_pivots": 9,
+        "confidence": 0.754,
+        "energy_bits": 102400,
+        "llm_disagreements_seen": 638,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.222
+          ],
+          [
+            "staff_assign",
+            0.222
+          ],
+          [
+            "inspect",
+            0.183
+          ],
+          [
+            "intervene",
+            0.15
+          ],
+          [
+            "menu_plan",
+            0.13
+          ],
+          [
+            "record",
+            0.07
+          ],
+          [
+            "observe",
+            0.024
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 71,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 70,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 53,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 45,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 38,
+            "avg_reward": 0.377
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 70,
+        "detection_rate": 0.413,
+        "false_alarm_rate": 0.071,
+        "missed_rate": 0.587
+      },
+      "stat_stats": {
+        "total_alerts": 183,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 80,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 80,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.977,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 185444.0
+      },
+      "agent_stats": {
+        "total_actions": 460,
+        "success_rate": 0.93,
+        "n_pivots": 9,
+        "confidence": 0.733,
+        "energy_bits": 117760,
+        "llm_disagreements_seen": 758,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.293
+          ],
+          [
+            "staff_assign",
+            0.211
+          ],
+          [
+            "inspect",
+            0.154
+          ],
+          [
+            "intervene",
+            0.153
+          ],
+          [
+            "menu_plan",
+            0.109
+          ],
+          [
+            "record",
+            0.063
+          ],
+          [
+            "observe",
+            0.017
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 89,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 80,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 63,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 55,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 52,
+            "avg_reward": 0.319
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 46,
+            "avg_reward": 0.379
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 80,
+        "detection_rate": 0.43,
+        "false_alarm_rate": 0.087,
+        "missed_rate": 0.57
+      },
+      "stat_stats": {
+        "total_alerts": 221,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 90,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 90,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.918,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 141695.0
+      },
+      "agent_stats": {
+        "total_actions": 520,
+        "success_rate": 0.937,
+        "n_pivots": 9,
+        "confidence": 0.721,
+        "energy_bits": 133120,
+        "llm_disagreements_seen": 872,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.43
+          ],
+          [
+            "staff_assign",
+            0.184
+          ],
+          [
+            "inspect",
+            0.132
+          ],
+          [
+            "intervene",
+            0.106
+          ],
+          [
+            "menu_plan",
+            0.087
+          ],
+          [
+            "record",
+            0.049
+          ],
+          [
+            "observe",
+            0.011
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 114,
+            "avg_reward": 0.417
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 89,
+            "avg_reward": 0.416
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 65,
+            "avg_reward": 0.445
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 63,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 61,
+            "avg_reward": 0.446
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 52,
+            "avg_reward": 0.379
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 90,
+        "detection_rate": 0.442,
+        "false_alarm_rate": 0.089,
+        "missed_rate": 0.558
+      },
+      "stat_stats": {
+        "total_alerts": 260,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 100,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 100,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 0.997,
+        "satisfaction": 0.94,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 99659.0
+      },
+      "agent_stats": {
+        "total_actions": 580,
+        "success_rate": 0.941,
+        "n_pivots": 9,
+        "confidence": 0.749,
+        "energy_bits": 148480,
+        "llm_disagreements_seen": 980,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.604
+          ],
+          [
+            "staff_assign",
+            0.145
+          ],
+          [
+            "inspect",
+            0.079
+          ],
+          [
+            "intervene",
+            0.07
+          ],
+          [
+            "record",
+            0.049
+          ],
+          [
+            "menu_plan",
+            0.048
+          ],
+          [
+            "observe",
+            0.006
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 144,
+            "avg_reward": 0.415
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 101,
+            "avg_reward": 0.415
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 71,
+            "avg_reward": 0.443
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 66,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 62,
+            "avg_reward": 0.441
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 57,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 100,
+        "detection_rate": 0.461,
+        "false_alarm_rate": 0.09,
+        "missed_rate": 0.539
+      },
+      "stat_stats": {
+        "total_alerts": 291,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 110,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 110,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 0.562,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 56185.0
+      },
+      "agent_stats": {
+        "total_actions": 640,
+        "success_rate": 0.939,
+        "n_pivots": 9,
+        "confidence": 0.782,
+        "energy_bits": 163840,
+        "llm_disagreements_seen": 1100,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.768
+          ],
+          [
+            "staff_assign",
+            0.064
+          ],
+          [
+            "record",
+            0.049
+          ],
+          [
+            "intervene",
+            0.045
+          ],
+          [
+            "menu_plan",
+            0.041
+          ],
+          [
+            "inspect",
+            0.031
+          ],
+          [
+            "observe",
+            0.002
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 180,
+            "avg_reward": 0.459
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 106,
+            "avg_reward": 0.411
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 72,
+            "avg_reward": 0.439
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 69,
+            "avg_reward": 0.447
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 68,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 61,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 110,
+        "detection_rate": 0.471,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.529
+      },
+      "stat_stats": {
+        "total_alerts": 331,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+          },
+          {
+            "dimension": "trend_budget",
+            "values": {
+              "llm": "warning",
+              "tufe": "declining"
+            },
+            "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 3,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 120,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 120,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 0.112,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 11250.0
+      },
+      "agent_stats": {
+        "total_actions": 700,
+        "success_rate": 0.944,
+        "n_pivots": 9,
+        "confidence": 0.775,
+        "energy_bits": 179200,
+        "llm_disagreements_seen": 1274,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.843
+          ],
+          [
+            "menu_plan",
+            0.049
+          ],
+          [
+            "record",
+            0.034
+          ],
+          [
+            "staff_assign",
+            0.028
+          ],
+          [
+            "intervene",
+            0.027
+          ],
+          [
+            "inspect",
+            0.019
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 227,
+            "avg_reward": 0.468
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 110,
+            "avg_reward": 0.431
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 74,
+            "avg_reward": 0.451
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 71,
+            "avg_reward": 0.457
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 69,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 65,
+            "avg_reward": 0.397
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 120,
+        "detection_rate": 0.482,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.518
+      },
+      "stat_stats": {
+        "total_alerts": 370,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+          },
+          {
+            "dimension": "trend_budget",
+            "values": {
+              "llm": "critical",
+              "tufe": "declining"
+            },
+            "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 3,
+        "information_density": 1.0
+      }
+    }
+  ],
+  "final": {
+    "agent_stats": {
+      "total_actions": 700,
+      "success_rate": 0.944,
+      "n_pivots": 9,
+      "confidence": 0.775,
+      "energy_bits": 179200,
+      "llm_disagreements_seen": 1274,
+      "consensus_used": 26,
+      "top_preferences": [
+        [
+          "order",
+          0.843
+        ],
+        [
+          "menu_plan",
+          0.049
+        ],
+        [
+          "record",
+          0.034
+        ],
+        [
+          "staff_assign",
+          0.028
+        ],
+        [
+          "intervene",
+          0.027
+        ],
+        [
+          "inspect",
+          0.019
+        ],
+        [
+          "observe",
+          0.0
+        ]
+      ],
+      "top_pivots": [
+        {
+          "action": "order",
+          "success": true,
+          "quality": "good",
+          "count": 227,
+          "avg_reward": 0.468
+        },
+        {
+          "action": "staff_assign",
+          "success": true,
+          "quality": "good",
+          "count": 110,
+          "avg_reward": 0.431
+        },
+        {
+          "action": "intervene",
+          "success": true,
+          "quality": "good",
+          "count": 74,
+          "avg_reward": 0.451
+        },
+        {
+          "action": "menu_plan",
+          "success": true,
+          "quality": "good",
+          "count": 71,
+          "avg_reward": 0.457
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "good",
+          "count": 69,
+          "avg_reward": 0.32
+        },
+        {
+          "action": "record",
+          "success": true,
+          "quality": "good",
+          "count": 65,
+          "avg_reward": 0.397
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "poor",
+          "count": 45,
+          "avg_reward": 0.269
+        },
+        {
+          "action": "observe",
+          "success": false,
+          "quality": "poor",
+          "count": 20,
+          "avg_reward": 0.027
+        }
+      ]
+    },
+    "llm_stats": {
+      "total_perceptions": 120,
+      "detection_rate": 0.482,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.518
+    },
+    "stat_stats": {
+      "total_alerts": 370,
+      "active_alerts": 4,
+      "monitored_dimensions": 7
+    },
+    "score_trends": {
+      "avg_safety_stage1": 0.909,
+      "avg_safety_stage2": 0.915,
+      "avg_safety_stage3": 0.797,
+      "avg_safety_stage4": 0.852,
+      "avg_satisfaction_stage1": 0.722,
+      "avg_satisfaction_stage2": 0.937,
+      "avg_satisfaction_stage3": 0.963,
+      "avg_satisfaction_stage4": 0.963
+    },
+    "final_budget": 11250.0,
+    "total_disagreements": 114,
+    "avg_info_density": 1.0
+  },
+  "stage_transitions": [
+    {
+      "day": 11,
+      "from_stage": 1,
+      "to_stage": 2,
+      "agent_stats_at_transition": {
+        "total_actions": 40,
+        "success_rate": 0.5,
+        "n_pivots": 3,
+        "confidence": 0.594,
+        "energy_bits": 10240,
+        "llm_disagreements_seen": 20,
+        "consensus_used": 20,
+        "top_preferences": [
+          [
+            "inspect",
+            0.208
+          ],
+          [
+            "observe",
+            0.136
+          ],
+          [
+            "order",
+            0.131
+          ],
+          [
+            "menu_plan",
+            0.131
+          ],
+          [
+            "intervene",
+            0.131
+          ],
+          [
+            "staff_assign",
+            0.131
+          ],
+          [
+            "record",
+            0.131
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 16,
+            "avg_reward": 0.278
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 4,
+            "avg_reward": 0.377
+          }
+        ]
+      }
+    },
+    {
+      "day": 28,
+      "from_stage": 2,
+      "to_stage": 3,
+      "agent_stats_at_transition": {
+        "total_actions": 142,
+        "success_rate": 0.859,
+        "n_pivots": 8,
+        "confidence": 0.732,
+        "energy_bits": 36352,
+        "llm_disagreements_seen": 128,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "inspect",
+            0.219
+          ],
+          [
+            "staff_assign",
+            0.157
+          ],
+          [
+            "order",
+            0.151
+          ],
+          [
+            "intervene",
+            0.149
+          ],
+          [
+            "menu_plan",
+            0.125
+          ],
+          [
+            "record",
+            0.111
+          ],
+          [
+            "observe",
+            0.089
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 39,
+            "avg_reward": 0.268
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 21,
+            "avg_reward": 0.373
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 19,
+            "avg_reward": 0.387
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 17,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 12,
+            "avg_reward": 0.405
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 10,
+            "avg_reward": 0.33
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 4,
+            "avg_reward": 0.377
+          }
+        ]
+      }
+    },
+    {
+      "day": 71,
+      "from_stage": 3,
+      "to_stage": 4,
+      "agent_stats_at_transition": {
+        "total_actions": 400,
+        "success_rate": 0.925,
+        "n_pivots": 9,
+        "confidence": 0.754,
+        "energy_bits": 102400,
+        "llm_disagreements_seen": 638,
+        "consensus_used": 26,
+        "top_preferences": [
+          [
+            "order",
+            0.222
+          ],
+          [
+            "staff_assign",
+            0.222
+          ],
+          [
+            "inspect",
+            0.183
+          ],
+          [
+            "intervene",
+            0.15
+          ],
+          [
+            "menu_plan",
+            0.13
+          ],
+          [
+            "record",
+            0.07
+          ],
+          [
+            "observe",
+            0.024
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 71,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 70,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 53,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 45,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 43,
+            "avg_reward": 0.269
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 38,
+            "avg_reward": 0.377
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.027
+          }
+        ]
+      }
+    }
+  ],
+  "consensus_log": [
+    {
+      "day": 1,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "low",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'low', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 2,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "low",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'low', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 8,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 9,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 10,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 11,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 12,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 14,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 15,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 16,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 17,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 18,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 19,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 20,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 21,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 22,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 23,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 24,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 25,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 26,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 27,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 28,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 29,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 30,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 31,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 32,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 33,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 34,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 35,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 36,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 37,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 38,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 39,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 40,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 41,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 42,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 43,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 44,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 45,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 46,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 47,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 48,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 49,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 50,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 51,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 52,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 53,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 54,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 55,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 56,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 57,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 58,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 59,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 60,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 61,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 62,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 63,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 64,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 65,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 66,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 67,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 68,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 69,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 70,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 71,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 72,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 73,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 74,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 75,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 76,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 77,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 78,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 79,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 80,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 81,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 82,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 83,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 84,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 85,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 86,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 87,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 88,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 89,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 90,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 91,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 92,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 93,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 94,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 95,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 96,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 97,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 98,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 99,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 100,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 101,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 102,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 103,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 104,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 105,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 106,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 107,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 108,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 109,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 110,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 111,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 112,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'warning', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 113,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 114,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 115,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 116,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 117,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "三方紧急度全不同: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'} — 最高信息量"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 118,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 119,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 120,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "紧急度判断分歧: {'llm': 'critical', 'tufe': 'high'}"
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget趋势判断分歧: {'llm': 'critical', 'tufe': 'declining'}"
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction趋势判断分歧: {'llm': 'high', 'stat': 'improving'}"
+        }
+      ],
+      "info_density": 1.0
+    }
+  ],
+  "llm_stats_history": [
+    {
+      "total_perceptions": 10,
+      "detection_rate": 0.333,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.667
+    },
+    {
+      "total_perceptions": 20,
+      "detection_rate": 0.338,
+      "false_alarm_rate": 0.15,
+      "missed_rate": 0.662
+    },
+    {
+      "total_perceptions": 30,
+      "detection_rate": 0.34,
+      "false_alarm_rate": 0.133,
+      "missed_rate": 0.66
+    },
+    {
+      "total_perceptions": 40,
+      "detection_rate": 0.361,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.639
+    },
+    {
+      "total_perceptions": 50,
+      "detection_rate": 0.374,
+      "false_alarm_rate": 0.08,
+      "missed_rate": 0.626
+    },
+    {
+      "total_perceptions": 60,
+      "detection_rate": 0.393,
+      "false_alarm_rate": 0.067,
+      "missed_rate": 0.607
+    },
+    {
+      "total_perceptions": 70,
+      "detection_rate": 0.413,
+      "false_alarm_rate": 0.071,
+      "missed_rate": 0.587
+    },
+    {
+      "total_perceptions": 80,
+      "detection_rate": 0.43,
+      "false_alarm_rate": 0.087,
+      "missed_rate": 0.57
+    },
+    {
+      "total_perceptions": 90,
+      "detection_rate": 0.442,
+      "false_alarm_rate": 0.089,
+      "missed_rate": 0.558
+    },
+    {
+      "total_perceptions": 100,
+      "detection_rate": 0.461,
+      "false_alarm_rate": 0.09,
+      "missed_rate": 0.539
+    },
+    {
+      "total_perceptions": 110,
+      "detection_rate": 0.471,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.529
+    },
+    {
+      "total_perceptions": 120,
+      "detection_rate": 0.482,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.518
+    }
+  ]
+}

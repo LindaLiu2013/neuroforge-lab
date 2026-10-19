@@ -1,0 +1,471 @@
+{
+  "experiment_config": {
+    "version": "v1.2",
+    "n_conditions": 3,
+    "n_seeds": 10,
+    "n_episodes_per_seed": 5000,
+    "timestamp": "2026-10-18T19:45:49.440094",
+    "description": "Pivot Recovery Experiment in Arithmetic Domain"
+  },
+  "summary": {
+    "A_full_pivot_consensus": {
+      "n_seeds": 10,
+      "success_rate": {
+        "mean": 0.2347,
+        "std": 0.0043,
+        "min": 0.2266,
+        "max": 0.241,
+        "values": [
+          0.2358,
+          0.2322,
+          0.2378,
+          0.236,
+          0.241,
+          0.2344,
+          0.2304,
+          0.232,
+          0.2406,
+          0.2266
+        ]
+      },
+      "feasible_volume": {
+        "mean_current": 68.9,
+        "mean_peak": 73.8,
+        "std_current": 7.74
+      },
+      "confirmed_pivots": {
+        "mean": 6.9,
+        "std": 2.02
+      },
+      "phase_transitions": {
+        "mean_count": 13.8,
+        "total": 138
+      },
+      "days_without_collapse": {
+        "mean": 1663.0
+      },
+      "feasible_trend_distribution": {
+        "stable": 10
+      },
+      "total_energy": {
+        "mean": 1582733.0
+      },
+      "agent_sr_by_observer": {
+        "magnitude": 0.2347,
+        "symbolic": 0.2347,
+        "temporal": 0.2347
+      },
+      "epistemological_annotations": {
+        "success_rate": "directly_measured",
+        "feasible_volume": "directly_measured",
+        "trend_classification": "AI_inferred(heuristic)",
+        "phase_transition_detection": "directly_measured(betti_numbers)",
+        "phase_transition_interpretation": "AI_inferred",
+        "cross_condition_comparison": "AI_inferred",
+        "confidence_levels": {
+          "raw_metrics": "high",
+          "trend_classification": "medium",
+          "phase_interpretation": "medium",
+          "cross_condition_verdict": "medium"
+        }
+      }
+    },
+    "B_full_pivot_no_consensus": {
+      "n_seeds": 10,
+      "success_rate": {
+        "mean": 0.228,
+        "std": 0.0051,
+        "min": 0.2198,
+        "max": 0.2368,
+        "values": [
+          0.2246,
+          0.23,
+          0.2368,
+          0.2364,
+          0.2276,
+          0.2246,
+          0.2244,
+          0.2264,
+          0.2198,
+          0.2296
+        ]
+      },
+      "feasible_volume": {
+        "mean_current": 70.7,
+        "mean_peak": 70.7,
+        "std_current": 5.83
+      },
+      "confirmed_pivots": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "days_without_collapse": {
+        "mean": 1663.0
+      },
+      "feasible_trend_distribution": {
+        "stable": 10
+      },
+      "total_energy": {
+        "mean": 1582733.0
+      },
+      "agent_sr_by_observer": {
+        "magnitude": 0.228,
+        "symbolic": 0.228,
+        "temporal": 0.228
+      },
+      "epistemological_annotations": {
+        "success_rate": "directly_measured",
+        "feasible_volume": "directly_measured",
+        "trend_classification": "AI_inferred(heuristic)",
+        "phase_transition_detection": "directly_measured(betti_numbers)",
+        "phase_transition_interpretation": "AI_inferred",
+        "cross_condition_comparison": "AI_inferred",
+        "confidence_levels": {
+          "raw_metrics": "high",
+          "trend_classification": "medium",
+          "phase_interpretation": "medium",
+          "cross_condition_verdict": "medium"
+        }
+      }
+    },
+    "C_no_pivot_baseline": {
+      "n_seeds": 10,
+      "success_rate": {
+        "mean": 0.228,
+        "std": 0.0051,
+        "min": 0.2198,
+        "max": 0.2368,
+        "values": [
+          0.2246,
+          0.23,
+          0.2368,
+          0.2364,
+          0.2276,
+          0.2246,
+          0.2244,
+          0.2264,
+          0.2198,
+          0.2296
+        ]
+      },
+      "feasible_volume": {
+        "mean_current": 70.7,
+        "mean_peak": 70.7,
+        "std_current": 5.83
+      },
+      "confirmed_pivots": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "days_without_collapse": {
+        "mean": 1663.0
+      },
+      "feasible_trend_distribution": {
+        "stable": 10
+      },
+      "total_energy": {
+        "mean": 1582733.0
+      },
+      "agent_sr_by_observer": {
+        "magnitude": 0.228,
+        "symbolic": 0.228,
+        "temporal": 0.228
+      },
+      "epistemological_annotations": {
+        "success_rate": "directly_measured",
+        "feasible_volume": "directly_measured",
+        "trend_classification": "AI_inferred(heuristic)",
+        "phase_transition_detection": "directly_measured(betti_numbers)",
+        "phase_transition_interpretation": "AI_inferred",
+        "cross_condition_comparison": "AI_inferred",
+        "confidence_levels": {
+          "raw_metrics": "high",
+          "trend_classification": "medium",
+          "phase_interpretation": "medium",
+          "cross_condition_verdict": "medium"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "A_vs_C": {
+      "sr_difference": 0.0067,
+      "volume_difference": -1.8,
+      "verdict": "pivot_consensus_marginal",
+      "source": "AI_inferred",
+      "confidence": "medium"
+    },
+    "B_vs_C": {
+      "sr_difference": 0.0,
+      "verdict": "pivots_without_consensus_neutral_or_negative",
+      "source": "AI_inferred",
+      "confidence": "medium"
+    },
+    "A_vs_B": {
+      "sr_difference": 0.0067,
+      "verdict": "consensus_marginal",
+      "source": "AI_inferred",
+      "confidence": "medium"
+    }
+  },
+  "raw_seed_results": {
+    "A_full_pivot_consensus": [
+      {
+        "seed": 42,
+        "success_rate": 0.2358,
+        "feasible_volume": 79,
+        "n_confirmed": 5,
+        "n_phase_transitions": 19
+      },
+      {
+        "seed": 179,
+        "success_rate": 0.2322,
+        "feasible_volume": 61,
+        "n_confirmed": 5,
+        "n_phase_transitions": 8
+      },
+      {
+        "seed": 316,
+        "success_rate": 0.2378,
+        "feasible_volume": 74,
+        "n_confirmed": 8,
+        "n_phase_transitions": 13
+      },
+      {
+        "seed": 453,
+        "success_rate": 0.236,
+        "feasible_volume": 63,
+        "n_confirmed": 10,
+        "n_phase_transitions": 7
+      },
+      {
+        "seed": 590,
+        "success_rate": 0.241,
+        "feasible_volume": 77,
+        "n_confirmed": 6,
+        "n_phase_transitions": 23
+      },
+      {
+        "seed": 727,
+        "success_rate": 0.2344,
+        "feasible_volume": 63,
+        "n_confirmed": 9,
+        "n_phase_transitions": 13
+      },
+      {
+        "seed": 864,
+        "success_rate": 0.2304,
+        "feasible_volume": 62,
+        "n_confirmed": 5,
+        "n_phase_transitions": 15
+      },
+      {
+        "seed": 1001,
+        "success_rate": 0.232,
+        "feasible_volume": 59,
+        "n_confirmed": 6,
+        "n_phase_transitions": 3
+      },
+      {
+        "seed": 1138,
+        "success_rate": 0.2406,
+        "feasible_volume": 80,
+        "n_confirmed": 10,
+        "n_phase_transitions": 24
+      },
+      {
+        "seed": 1275,
+        "success_rate": 0.2266,
+        "feasible_volume": 71,
+        "n_confirmed": 5,
+        "n_phase_transitions": 13
+      }
+    ],
+    "B_full_pivot_no_consensus": [
+      {
+        "seed": 42,
+        "success_rate": 0.2246,
+        "feasible_volume": 82,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 179,
+        "success_rate": 0.23,
+        "feasible_volume": 62,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 316,
+        "success_rate": 0.2368,
+        "feasible_volume": 67,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 453,
+        "success_rate": 0.2364,
+        "feasible_volume": 63,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 590,
+        "success_rate": 0.2276,
+        "feasible_volume": 71,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 727,
+        "success_rate": 0.2246,
+        "feasible_volume": 77,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 864,
+        "success_rate": 0.2244,
+        "feasible_volume": 74,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1001,
+        "success_rate": 0.2264,
+        "feasible_volume": 70,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1138,
+        "success_rate": 0.2198,
+        "feasible_volume": 68,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1275,
+        "success_rate": 0.2296,
+        "feasible_volume": 73,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      }
+    ],
+    "C_no_pivot_baseline": [
+      {
+        "seed": 42,
+        "success_rate": 0.2246,
+        "feasible_volume": 82,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 179,
+        "success_rate": 0.23,
+        "feasible_volume": 62,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 316,
+        "success_rate": 0.2368,
+        "feasible_volume": 67,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 453,
+        "success_rate": 0.2364,
+        "feasible_volume": 63,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 590,
+        "success_rate": 0.2276,
+        "feasible_volume": 71,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 727,
+        "success_rate": 0.2246,
+        "feasible_volume": 77,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 864,
+        "success_rate": 0.2244,
+        "feasible_volume": 74,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1001,
+        "success_rate": 0.2264,
+        "feasible_volume": 70,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1138,
+        "success_rate": 0.2198,
+        "feasible_volume": 68,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      },
+      {
+        "seed": 1275,
+        "success_rate": 0.2296,
+        "feasible_volume": 73,
+        "n_confirmed": 0,
+        "n_phase_transitions": 0
+      }
+    ]
+  },
+  "epistemological_framework": {
+    "directly_measured": [
+      "success_rate",
+      "feasible_volume",
+      "betti_numbers",
+      "energy_consumption",
+      "pivot_counts",
+      "collapse_events"
+    ],
+    "ai_inferred": [
+      "trend_classification",
+      "phase_transition_interpretation",
+      "cross_condition_verdicts",
+      "effect_size_judgments"
+    ],
+    "confidence_levels": {
+      "high": "deterministic computation from raw data",
+      "medium": "heuristic/threshold-based classification",
+      "low": "speculative interpretation (none in this report)"
+    }
+  },
+  "drift_prevention_checklist": {
+    "A1_no_reward_maximization": "PASS",
+    "A3_open_action_space": "PASS",
+    "A4_independent_observers": "PASS",
+    "A5_feasibility_metrics": "PASS",
+    "FS_C1_pivot_as_feasible_space": "PASS",
+    "FS_C2_viability_signal": "PASS",
+    "FS_C3_safety_as_non_collapse": "PASS",
+    "FS_C4_contraction_detection": "PASS",
+    "BF_C1_topological_phase_transition": "PASS",
+    "BF_C6_learning_as_topology_change": "PASS",
+    "ME_C1_through_C4_annotations": "PASS"
+  }
+}

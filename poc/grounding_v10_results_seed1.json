@@ -1,0 +1,5250 @@
+{
+  "milestones": [
+    {
+      "day": 10,
+      "stage": "OBSERVATION",
+      "scores": {
+        "day": 10,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.916,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 462668.0
+      },
+      "agent_stats": {
+        "total_actions": 40,
+        "success_rate": 0.525,
+        "n_pivots": 3,
+        "confidence": 0.603,
+        "energy_bits": 10240,
+        "llm_disagreements_seen": 32,
+        "consensus_used": 4,
+        "action_entropy": 0.971,
+        "model_saturation": 0.005717,
+        "finding_types_seen": 7,
+        "intervention_success_rate": 0.0,
+        "top_preferences": [
+          [
+            "inspect",
+            0.213
+          ],
+          [
+            "observe",
+            0.133
+          ],
+          [
+            "order",
+            0.131
+          ],
+          [
+            "menu_plan",
+            0.131
+          ],
+          [
+            "intervene",
+            0.131
+          ],
+          [
+            "staff_assign",
+            0.131
+          ],
+          [
+            "record",
+            0.131
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": 0.009
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 14,
+            "avg_reward": 0.126
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 7,
+            "avg_reward": 0.512
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 10,
+        "detection_rate": 0.565,
+        "false_alarm_rate": 0.0,
+        "missed_rate": 0.435
+      },
+      "stat_stats": {
+        "total_alerts": 0,
+        "active_alerts": 0,
+        "monitored_dimensions": 0
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": 0.06780000000000008,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 0.971,
+      "model_saturation": 0.005717
+    },
+    {
+      "day": 20,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 20,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 426587.0
+      },
+      "agent_stats": {
+        "total_actions": 86,
+        "success_rate": 0.709,
+        "n_pivots": 8,
+        "confidence": 0.674,
+        "energy_bits": 22016,
+        "llm_disagreements_seen": 78,
+        "consensus_used": 4,
+        "action_entropy": 2.2037,
+        "model_saturation": 0.034432,
+        "finding_types_seen": 7,
+        "intervention_success_rate": 1.0,
+        "top_preferences": [
+          [
+            "inspect",
+            0.5
+          ],
+          [
+            "record",
+            0.086
+          ],
+          [
+            "intervene",
+            0.084
+          ],
+          [
+            "menu_plan",
+            0.083
+          ],
+          [
+            "observe",
+            0.083
+          ],
+          [
+            "order",
+            0.082
+          ],
+          [
+            "staff_assign",
+            0.081
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 25,
+            "avg_reward": 0.112
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.849
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 5,
+            "avg_reward": 0.104
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 3,
+            "avg_reward": 0.034
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 2,
+            "avg_reward": -0.028
+          },
+          {
+            "action": "staff_assign",
+            "success": false,
+            "quality": "poor",
+            "count": 1,
+            "avg_reward": -0.15
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 1,
+            "avg_reward": 0.301
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 20,
+        "detection_rate": 0.433,
+        "false_alarm_rate": 0.0,
+        "missed_rate": 0.567
+      },
+      "stat_stats": {
+        "total_alerts": 6,
+        "active_alerts": 1,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "high",
+              "tufe": "high"
+            },
+            "agreeing_pair": "stat+tufe",
+            "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+            "causal_effect": 0.036222222222222156,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 2.2037,
+      "model_saturation": 0.034432
+    },
+    {
+      "day": 30,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 30,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 386950.0
+      },
+      "agent_stats": {
+        "total_actions": 146,
+        "success_rate": 0.808,
+        "n_pivots": 11,
+        "confidence": 0.729,
+        "energy_bits": 37376,
+        "llm_disagreements_seen": 144,
+        "consensus_used": 4,
+        "action_entropy": 1.7166,
+        "model_saturation": 0.011039,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.667,
+        "top_preferences": [
+          [
+            "inspect",
+            0.754
+          ],
+          [
+            "staff_assign",
+            0.049
+          ],
+          [
+            "menu_plan",
+            0.046
+          ],
+          [
+            "intervene",
+            0.045
+          ],
+          [
+            "record",
+            0.037
+          ],
+          [
+            "observe",
+            0.034
+          ],
+          [
+            "order",
+            0.033
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 40,
+            "avg_reward": 0.158
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 40,
+            "avg_reward": 0.958
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 11,
+            "avg_reward": 0.106
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 9,
+            "avg_reward": -0.02
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 8,
+            "avg_reward": 0.031
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 4,
+            "avg_reward": 0.325
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 4,
+            "avg_reward": 0.227
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 30,
+        "detection_rate": 0.428,
+        "false_alarm_rate": 0.033,
+        "missed_rate": 0.572
+      },
+      "stat_stats": {
+        "total_alerts": 21,
+        "active_alerts": 2,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": 0.03324860060414836,
+            "action_changed": false
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+            "causal_effect": 0.03324860060414836,
+            "action_changed": false
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 1.7166,
+      "model_saturation": 0.011039
+    },
+    {
+      "day": 40,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 40,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 347112.0
+      },
+      "agent_stats": {
+        "total_actions": 206,
+        "success_rate": 0.854,
+        "n_pivots": 11,
+        "confidence": 0.612,
+        "energy_bits": 52736,
+        "llm_disagreements_seen": 240,
+        "consensus_used": 4,
+        "action_entropy": 1.9855,
+        "model_saturation": 0.013566,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.667,
+        "top_preferences": [
+          [
+            "inspect",
+            0.791
+          ],
+          [
+            "order",
+            0.048
+          ],
+          [
+            "intervene",
+            0.046
+          ],
+          [
+            "record",
+            0.043
+          ],
+          [
+            "staff_assign",
+            0.041
+          ],
+          [
+            "menu_plan",
+            0.023
+          ],
+          [
+            "observe",
+            0.008
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 59,
+            "avg_reward": 0.791
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 54,
+            "avg_reward": 0.165
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 17,
+            "avg_reward": 0.108
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": -0.022
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 12,
+            "avg_reward": 0.021
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 9,
+            "avg_reward": 0.216
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 5,
+            "avg_reward": 0.329
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 40,
+        "detection_rate": 0.437,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.563
+      },
+      "stat_stats": {
+        "total_alerts": 50,
+        "active_alerts": 2,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": 0.014409037408310454,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 1.9855,
+      "model_saturation": 0.013566
+    },
+    {
+      "day": 50,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 50,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.979,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 304802.0
+      },
+      "agent_stats": {
+        "total_actions": 266,
+        "success_rate": 0.887,
+        "n_pivots": 11,
+        "confidence": 0.68,
+        "energy_bits": 68096,
+        "llm_disagreements_seen": 300,
+        "consensus_used": 4,
+        "action_entropy": 2.0855,
+        "model_saturation": 0.016076,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.75,
+        "top_preferences": [
+          [
+            "inspect",
+            0.788
+          ],
+          [
+            "menu_plan",
+            0.046
+          ],
+          [
+            "intervene",
+            0.045
+          ],
+          [
+            "record",
+            0.042
+          ],
+          [
+            "staff_assign",
+            0.039
+          ],
+          [
+            "order",
+            0.038
+          ],
+          [
+            "observe",
+            0.002
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 82,
+            "avg_reward": 0.769
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 70,
+            "avg_reward": 0.143
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.109
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": -0.021
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": 0.047
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 13,
+            "avg_reward": 0.21
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 9,
+            "avg_reward": 0.342
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 50,
+        "detection_rate": 0.441,
+        "false_alarm_rate": 0.04,
+        "missed_rate": 0.559
+      },
+      "stat_stats": {
+        "total_alerts": 79,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": 0.021426498029551433,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 2.0855,
+      "model_saturation": 0.016076
+    },
+    {
+      "day": 60,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 60,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.902,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 267276.0
+      },
+      "agent_stats": {
+        "total_actions": 326,
+        "success_rate": 0.905,
+        "n_pivots": 11,
+        "confidence": 0.726,
+        "energy_bits": 83456,
+        "llm_disagreements_seen": 360,
+        "consensus_used": 4,
+        "action_entropy": 2.1822,
+        "model_saturation": 0.026421,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.769,
+        "top_preferences": [
+          [
+            "inspect",
+            0.803
+          ],
+          [
+            "intervene",
+            0.049
+          ],
+          [
+            "order",
+            0.038
+          ],
+          [
+            "staff_assign",
+            0.038
+          ],
+          [
+            "record",
+            0.037
+          ],
+          [
+            "menu_plan",
+            0.035
+          ],
+          [
+            "observe",
+            0.001
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 100,
+            "avg_reward": 0.713
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 79,
+            "avg_reward": 0.163
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 33,
+            "avg_reward": 0.099
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 26,
+            "avg_reward": -0.023
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": 0.209
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 18,
+            "avg_reward": 0.06
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 13,
+            "avg_reward": 0.366
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 60,
+        "detection_rate": 0.463,
+        "false_alarm_rate": 0.067,
+        "missed_rate": 0.537
+      },
+      "stat_stats": {
+        "total_alerts": 108,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": 0.0025481614920757067,
+            "action_changed": false
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 2.1822,
+      "model_saturation": 0.026421
+    },
+    {
+      "day": 70,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 70,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 230229.0
+      },
+      "agent_stats": {
+        "total_actions": 386,
+        "success_rate": 0.92,
+        "n_pivots": 11,
+        "confidence": 0.817,
+        "energy_bits": 98816,
+        "llm_disagreements_seen": 420,
+        "consensus_used": 4,
+        "action_entropy": 1.7166,
+        "model_saturation": 0.009045,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.8,
+        "top_preferences": [
+          [
+            "inspect",
+            0.814
+          ],
+          [
+            "staff_assign",
+            0.042
+          ],
+          [
+            "order",
+            0.041
+          ],
+          [
+            "intervene",
+            0.038
+          ],
+          [
+            "record",
+            0.037
+          ],
+          [
+            "menu_plan",
+            0.029
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 116,
+            "avg_reward": 1.074
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 98,
+            "avg_reward": 0.159
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 41,
+            "avg_reward": 0.094
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 28,
+            "avg_reward": -0.022
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.06
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.205
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 14,
+            "avg_reward": 0.367
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 70,
+        "detection_rate": 0.462,
+        "false_alarm_rate": 0.071,
+        "missed_rate": 0.538
+      },
+      "stat_stats": {
+        "total_alerts": 138,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": 0.022878622363388335,
+            "action_changed": false
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 1.7166,
+      "model_saturation": 0.009045
+    },
+    {
+      "day": 80,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 80,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.959,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 193385.0
+      },
+      "agent_stats": {
+        "total_actions": 446,
+        "success_rate": 0.93,
+        "n_pivots": 11,
+        "confidence": 0.9,
+        "energy_bits": 114176,
+        "llm_disagreements_seen": 498,
+        "consensus_used": 4,
+        "action_entropy": 1.2918,
+        "model_saturation": 0.014838,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.824,
+        "top_preferences": [
+          [
+            "inspect",
+            0.835
+          ],
+          [
+            "order",
+            0.048
+          ],
+          [
+            "menu_plan",
+            0.035
+          ],
+          [
+            "staff_assign",
+            0.035
+          ],
+          [
+            "intervene",
+            0.031
+          ],
+          [
+            "record",
+            0.016
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 138,
+            "avg_reward": 1.141
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 117,
+            "avg_reward": 0.155
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.095
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 30,
+            "avg_reward": -0.016
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 29,
+            "avg_reward": 0.053
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 28,
+            "avg_reward": 0.203
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 18,
+            "avg_reward": 0.38
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 80,
+        "detection_rate": 0.465,
+        "false_alarm_rate": 0.087,
+        "missed_rate": 0.535
+      },
+      "stat_stats": {
+        "total_alerts": 171,
+        "active_alerts": 4,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": 0.024314152629986818,
+            "action_changed": true
+          },
+          {
+            "dimension": "trend_satisfaction",
+            "values": {
+              "llm": "high",
+              "stat": "improving"
+            },
+            "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+            "causal_effect": 0.024314152629986818,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 2
+      },
+      "action_entropy": 1.2918,
+      "model_saturation": 0.014838
+    },
+    {
+      "day": 90,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 90,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.922,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 154418.0
+      },
+      "agent_stats": {
+        "total_actions": 506,
+        "success_rate": 0.935,
+        "n_pivots": 11,
+        "confidence": 0.896,
+        "energy_bits": 129536,
+        "llm_disagreements_seen": 588,
+        "consensus_used": 4,
+        "action_entropy": 1.1918,
+        "model_saturation": 0.032766,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.8,
+        "top_preferences": [
+          [
+            "inspect",
+            0.824
+          ],
+          [
+            "record",
+            0.048
+          ],
+          [
+            "order",
+            0.047
+          ],
+          [
+            "intervene",
+            0.046
+          ],
+          [
+            "menu_plan",
+            0.023
+          ],
+          [
+            "staff_assign",
+            0.013
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 157,
+            "avg_reward": 1.138
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 133,
+            "avg_reward": 0.163
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 49,
+            "avg_reward": 0.093
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 37,
+            "avg_reward": -0.029
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 33,
+            "avg_reward": 0.041
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 32,
+            "avg_reward": 0.211
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 21,
+            "avg_reward": 0.383
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 90,
+        "detection_rate": 0.468,
+        "false_alarm_rate": 0.078,
+        "missed_rate": 0.532
+      },
+      "stat_stats": {
+        "total_alerts": 203,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": 0.030151828756514565,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 1.1918,
+      "model_saturation": 0.032766
+    },
+    {
+      "day": 100,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 100,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.936,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 116605.0
+      },
+      "agent_stats": {
+        "total_actions": 566,
+        "success_rate": 0.942,
+        "n_pivots": 11,
+        "confidence": 0.678,
+        "energy_bits": 144896,
+        "llm_disagreements_seen": 648,
+        "consensus_used": 4,
+        "action_entropy": 1.9815,
+        "model_saturation": 0.014219,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.818,
+        "top_preferences": [
+          [
+            "inspect",
+            0.787
+          ],
+          [
+            "order",
+            0.05
+          ],
+          [
+            "record",
+            0.046
+          ],
+          [
+            "menu_plan",
+            0.04
+          ],
+          [
+            "staff_assign",
+            0.04
+          ],
+          [
+            "intervene",
+            0.037
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 175,
+            "avg_reward": 1.052
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 150,
+            "avg_reward": 0.157
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 53,
+            "avg_reward": 0.095
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 44,
+            "avg_reward": -0.028
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 38,
+            "avg_reward": 0.05
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 37,
+            "avg_reward": 0.215
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.383
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 100,
+        "detection_rate": 0.474,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.526
+      },
+      "stat_stats": {
+        "total_alerts": 231,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": 0.006195989791693113,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 1.0,
+        "n_effective_disagreements": 1
+      },
+      "action_entropy": 1.9815,
+      "model_saturation": 0.014219
+    },
+    {
+      "day": 110,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 110,
+        "safety_score": 0,
+        "compliance_score": 0,
+        "cost_efficiency": 0.772,
+        "satisfaction": 1.0,
+        "risks_exposed": 31,
+        "hidden_risks": 0,
+        "budget_remaining": 77201.0
+      },
+      "agent_stats": {
+        "total_actions": 626,
+        "success_rate": 0.942,
+        "n_pivots": 11,
+        "confidence": 0.802,
+        "energy_bits": 160256,
+        "llm_disagreements_seen": 708,
+        "consensus_used": 4,
+        "action_entropy": 1.5166,
+        "model_saturation": 0.025225,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.8,
+        "top_preferences": [
+          [
+            "inspect",
+            0.84
+          ],
+          [
+            "staff_assign",
+            0.045
+          ],
+          [
+            "menu_plan",
+            0.04
+          ],
+          [
+            "order",
+            0.034
+          ],
+          [
+            "record",
+            0.028
+          ],
+          [
+            "intervene",
+            0.013
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 191,
+            "avg_reward": 1.128
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 173,
+            "avg_reward": 0.141
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 59,
+            "avg_reward": 0.093
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 46,
+            "avg_reward": -0.038
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 44,
+            "avg_reward": 0.043
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 41,
+            "avg_reward": 0.21
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.383
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 110,
+        "detection_rate": 0.469,
+        "false_alarm_rate": 0.109,
+        "missed_rate": 0.531
+      },
+      "stat_stats": {
+        "total_alerts": 261,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "stat": "medium",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+            "causal_effect": -0.015631565830773075,
+            "action_changed": false
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 1.5166,
+      "model_saturation": 0.025225
+    },
+    {
+      "day": 120,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 120,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 0.386,
+        "satisfaction": 0.972,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 38570.0
+      },
+      "agent_stats": {
+        "total_actions": 686,
+        "success_rate": 0.946,
+        "n_pivots": 11,
+        "confidence": 0.648,
+        "energy_bits": 175616,
+        "llm_disagreements_seen": 840,
+        "consensus_used": 4,
+        "action_entropy": 1.8438,
+        "model_saturation": 0.012663,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.8,
+        "top_preferences": [
+          [
+            "inspect",
+            0.799
+          ],
+          [
+            "intervene",
+            0.046
+          ],
+          [
+            "record",
+            0.046
+          ],
+          [
+            "staff_assign",
+            0.038
+          ],
+          [
+            "order",
+            0.037
+          ],
+          [
+            "menu_plan",
+            0.035
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 204,
+            "avg_reward": 1.053
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 194,
+            "avg_reward": 0.134
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 66,
+            "avg_reward": 0.088
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 49,
+            "avg_reward": -0.038
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 48,
+            "avg_reward": 0.061
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 48,
+            "avg_reward": 0.205
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 26,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 120,
+        "detection_rate": 0.465,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.535
+      },
+      "stat_stats": {
+        "total_alerts": 291,
+        "active_alerts": 3,
+        "monitored_dimensions": 7
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": -0.07369810571924029,
+            "action_changed": true
+          },
+          {
+            "dimension": "trend_budget",
+            "values": {
+              "llm": "critical",
+              "tufe": "declining"
+            },
+            "info_content": "budget trend disagreement: {'llm': 'critical', 'tufe': 'declining'}",
+            "causal_effect": -0.07369810571924029,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 1.8438,
+      "model_saturation": 0.012663
+    }
+  ],
+  "final": {
+    "agent_stats": {
+      "total_actions": 686,
+      "success_rate": 0.946,
+      "n_pivots": 11,
+      "confidence": 0.648,
+      "energy_bits": 175616,
+      "llm_disagreements_seen": 840,
+      "consensus_used": 4,
+      "action_entropy": 1.8438,
+      "model_saturation": 0.012663,
+      "finding_types_seen": 8,
+      "intervention_success_rate": 0.8,
+      "top_preferences": [
+        [
+          "inspect",
+          0.799
+        ],
+        [
+          "intervene",
+          0.046
+        ],
+        [
+          "record",
+          0.046
+        ],
+        [
+          "staff_assign",
+          0.038
+        ],
+        [
+          "order",
+          0.037
+        ],
+        [
+          "menu_plan",
+          0.035
+        ],
+        [
+          "observe",
+          0.0
+        ]
+      ],
+      "top_pivots": [
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "good",
+          "count": 204,
+          "avg_reward": 1.053
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "poor",
+          "count": 194,
+          "avg_reward": 0.134
+        },
+        {
+          "action": "record",
+          "success": true,
+          "quality": "poor",
+          "count": 66,
+          "avg_reward": 0.088
+        },
+        {
+          "action": "order",
+          "success": true,
+          "quality": "poor",
+          "count": 49,
+          "avg_reward": -0.038
+        },
+        {
+          "action": "menu_plan",
+          "success": true,
+          "quality": "poor",
+          "count": 48,
+          "avg_reward": 0.061
+        },
+        {
+          "action": "staff_assign",
+          "success": true,
+          "quality": "poor",
+          "count": 48,
+          "avg_reward": 0.205
+        },
+        {
+          "action": "intervene",
+          "success": true,
+          "quality": "good",
+          "count": 26,
+          "avg_reward": 0.38
+        },
+        {
+          "action": "observe",
+          "success": false,
+          "quality": "poor",
+          "count": 24,
+          "avg_reward": 0.008
+        }
+      ]
+    },
+    "llm_stats": {
+      "total_perceptions": 120,
+      "detection_rate": 0.465,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.535
+    },
+    "stat_stats": {
+      "total_alerts": 291,
+      "active_alerts": 3,
+      "monitored_dimensions": 7
+    },
+    "score_trends": {
+      "avg_safety_stage1": 0.944,
+      "avg_safety_stage2": 0.933,
+      "avg_safety_stage3": 0.907,
+      "avg_safety_stage4": 0.92,
+      "avg_satisfaction_stage1": 0.881,
+      "avg_satisfaction_stage2": 0.971,
+      "avg_satisfaction_stage3": 0.969,
+      "avg_satisfaction_stage4": 0.966,
+      "avg_compliance_stage1": 0.0,
+      "avg_compliance_stage2": null,
+      "avg_compliance_stage3": null,
+      "avg_compliance_stage4": null
+    },
+    "final_budget": 38570.0,
+    "total_disagreements": 118,
+    "avg_info_density": 1.0,
+    "avg_ccd": 0.356,
+    "total_effective_disagreements": 47,
+    "action_entropy_final": 1.8438,
+    "model_saturation_final": 0.012663,
+    "supervision_level": 0.7,
+    "seed": 1
+  },
+  "stage_transitions": [
+    {
+      "day": 18,
+      "from_stage": 1,
+      "to_stage": 2,
+      "entropy_at_transition": 0.6098,
+      "saturation_at_transition": 0.021507,
+      "agent_stats_at_transition": {
+        "total_actions": 68,
+        "success_rate": 0.647,
+        "n_pivots": 3,
+        "confidence": 0.854,
+        "energy_bits": 17408,
+        "llm_disagreements_seen": 60,
+        "consensus_used": 4,
+        "action_entropy": 0.6098,
+        "model_saturation": 0.021507,
+        "finding_types_seen": 7,
+        "intervention_success_rate": 0.0,
+        "top_preferences": [
+          [
+            "inspect",
+            0.408
+          ],
+          [
+            "observe",
+            0.1
+          ],
+          [
+            "order",
+            0.098
+          ],
+          [
+            "menu_plan",
+            0.098
+          ],
+          [
+            "intervene",
+            0.098
+          ],
+          [
+            "staff_assign",
+            0.098
+          ],
+          [
+            "record",
+            0.098
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.119
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 20,
+            "avg_reward": 0.772
+          }
+        ]
+      }
+    },
+    {
+      "day": 48,
+      "from_stage": 2,
+      "to_stage": 3,
+      "entropy_at_transition": 1.5789,
+      "saturation_at_transition": 0.024475,
+      "agent_stats_at_transition": {
+        "total_actions": 248,
+        "success_rate": 0.879,
+        "n_pivots": 11,
+        "confidence": 0.672,
+        "energy_bits": 63488,
+        "llm_disagreements_seen": 282,
+        "consensus_used": 4,
+        "action_entropy": 1.5789,
+        "model_saturation": 0.024475,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.737,
+        "top_preferences": [
+          [
+            "inspect",
+            0.789
+          ],
+          [
+            "menu_plan",
+            0.048
+          ],
+          [
+            "intervene",
+            0.047
+          ],
+          [
+            "record",
+            0.047
+          ],
+          [
+            "order",
+            0.038
+          ],
+          [
+            "staff_assign",
+            0.029
+          ],
+          [
+            "observe",
+            0.003
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 77,
+            "avg_reward": 0.692
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 65,
+            "avg_reward": 0.161
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 20,
+            "avg_reward": 0.108
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": -0.022
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 13,
+            "avg_reward": 0.031
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 10,
+            "avg_reward": 0.214
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 9,
+            "avg_reward": 0.342
+          }
+        ]
+      }
+    },
+    {
+      "day": 114,
+      "from_stage": 3,
+      "to_stage": 4,
+      "entropy_at_transition": 1.0219,
+      "saturation_at_transition": 0.006687,
+      "agent_stats_at_transition": {
+        "total_actions": 644,
+        "success_rate": 0.944,
+        "n_pivots": 11,
+        "confidence": 0.731,
+        "energy_bits": 164864,
+        "llm_disagreements_seen": 744,
+        "consensus_used": 4,
+        "action_entropy": 1.0219,
+        "model_saturation": 0.006687,
+        "finding_types_seen": 8,
+        "intervention_success_rate": 0.8,
+        "top_preferences": [
+          [
+            "inspect",
+            0.832
+          ],
+          [
+            "menu_plan",
+            0.049
+          ],
+          [
+            "staff_assign",
+            0.048
+          ],
+          [
+            "record",
+            0.044
+          ],
+          [
+            "order",
+            0.02
+          ],
+          [
+            "intervene",
+            0.008
+          ],
+          [
+            "observe",
+            0.0
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 195,
+            "avg_reward": 1.165
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 184,
+            "avg_reward": 0.163
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 60,
+            "avg_reward": 0.092
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "poor",
+            "count": 46,
+            "avg_reward": -0.038
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.034
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "poor",
+            "count": 42,
+            "avg_reward": 0.209
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.383
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 24,
+            "avg_reward": 0.008
+          }
+        ]
+      }
+    }
+  ],
+  "consensus_log": [
+    {
+      "day": 3,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.008800000000000141,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 4,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.0041999999999998705,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 5,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.0050000000000000044,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 6,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.013749999999999929,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 7,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.020199999999999996,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 8,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.2937666666666666,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 9,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.057599999999999985,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 10,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.06780000000000008,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 11,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.05246666666666666,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 12,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.05682000000000009,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 13,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.05665454545454551,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 14,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.034733333333333505,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 15,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.03746153846153866,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 16,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.01938571428571434,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 17,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.032493333333333374,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 18,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.04526249999999998,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 19,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.04279999999999995,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 20,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "high",
+            "tufe": "high"
+          },
+          "agreeing_pair": "stat+tufe",
+          "info_content": "urgency disagreement: {'llm': 'critical', 'stat': 'high', 'tufe': 'high'}",
+          "causal_effect": 0.036222222222222156,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 21,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.03851578947368417,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 22,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.0365899999999999,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 23,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.028960500000000167,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 24,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03331247500000001,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 25,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03044685125000024,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 26,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03012450868750005,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 27,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.2713817167468747,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 28,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03998736909046896,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 29,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.038788000635945674,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 30,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03324860060414836,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.03324860060414836,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 31,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03658617057394087,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.03658617057394087,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 32,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.034756862045243864,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.034756862045243864,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 33,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03301901894298176,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.03301901894298176,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 2
+    },
+    {
+      "day": 34,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.031368067995832694,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.031368067995832694,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 35,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02979966459604111,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.02979966459604111,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 36,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.016309681366239115,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.016309681366239115,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 37,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.005894197297927395,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 38,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.007799487433031049,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 39,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.008009513061379536,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 40,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.014409037408310454,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 41,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.025688585537894992,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 42,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.0158041562610004,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 43,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.28638605155204955,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 44,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.018133251025552966,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 45,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.030026588474275195,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 46,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.027925259050561535,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 47,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02492899609803345,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 48,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.0328825462931317,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 49,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.020238418978475226,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 50,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.021426498029551433,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 51,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.024955173128073826,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 52,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.022107414471670417,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 53,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.273197956251913,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 54,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.028261941560682513,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 55,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.011048844482648645,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 56,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.010696402258516202,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 57,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.0031615821455905913,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 58,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.009996496961689028,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 59,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.003103327886395446,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 60,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.0025481614920757067,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 61,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.0055792465825280635,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 62,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.0017002842534016294,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 63,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.2870152700407316,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 64,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.00986450653869475,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 65,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.023028718788239977,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 66,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.028077282848828045,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 67,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.02667341870638673,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 68,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.025139747771067422,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 69,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.024082760382514,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 70,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.022878622363388335,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 71,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.045734691245218784,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 72,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.04344795668295787,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 73,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.04127555884881007,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 74,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.029211780906369555,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 75,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.037751191861051026,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 76,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.03586363226799849,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 77,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.03407045065459857,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 78,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.029566928121868785,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.029566928121868785,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 2
+    },
+    {
+      "day": 79,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.0194885817157755,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.0194885817157755,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 80,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.024314152629986818,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.024314152629986818,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 2
+    },
+    {
+      "day": 81,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.020498444998487297,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.020498444998487297,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 82,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02767352274856294,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.02767352274856294,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 2
+    },
+    {
+      "day": 83,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.27371015338886495,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": -0.27371015338886495,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 84,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03997535428057819,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.03997535428057819,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 85,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.03797658656654934,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": 0.03797658656654934,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 2
+    },
+    {
+      "day": 86,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02727775723822201,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 87,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.030513869376310843,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 88,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02898817590749525,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 89,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.031738767112120536,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 90,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.030151828756514565,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 91,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.01304423731868909,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 92,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.013192025452754552,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 93,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.018932424180116758,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 94,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.026385802971110928,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 95,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.025066512822555453,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 96,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.023813187181427775,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 97,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.02262252782235641,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 98,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02149140143123862,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 99,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.020416831359676757,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 100,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.006195989791693113,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 101,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.006286190302108419,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 102,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.28122811921299684,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 103,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.030433286747652888,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 104,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.0163116224102704,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 105,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.030496041289756914,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 106,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.02557123922526916,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 107,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.012292677264005847,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 108,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": 0.007278043400805512,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 109,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.0010858587692348376,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 110,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.015631565830773075,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 111,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.3180499875392343,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.3180499875392343,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 112,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.010947488162272645,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.010947488162272645,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 113,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.017000113754158996,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.017000113754158996,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 114,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "stat": "medium",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "three-way urgency disagreement: {'llm': 'critical', 'stat': 'medium', 'tufe': 'high'}",
+          "causal_effect": -0.023950108066451037,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.023950108066451037,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": -0.023950108066451037,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 115,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.06515260266312817,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.06515260266312817,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_satisfaction",
+          "values": {
+            "llm": "high",
+            "stat": "improving"
+          },
+          "info_content": "satisfaction trend disagreement: {'llm': 'high', 'stat': 'improving'}",
+          "causal_effect": -0.06515260266312817,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 116,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.06809497252997176,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.06809497252997176,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 117,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.0780902239034732,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.0780902239034732,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 118,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.07238571270829952,
+          "action_changed": false
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "warning",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'warning', 'tufe': 'declining'}",
+          "causal_effect": -0.07238571270829952,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 119,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.06936642707288443,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'critical', 'tufe': 'declining'}",
+          "causal_effect": -0.06936642707288443,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 120,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.07369810571924029,
+          "action_changed": true
+        },
+        {
+          "dimension": "trend_budget",
+          "values": {
+            "llm": "critical",
+            "tufe": "declining"
+          },
+          "info_content": "budget trend disagreement: {'llm': 'critical', 'tufe': 'declining'}",
+          "causal_effect": -0.07369810571924029,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    }
+  ],
+  "llm_stats_history": [
+    {
+      "total_perceptions": 10,
+      "detection_rate": 0.565,
+      "false_alarm_rate": 0.0,
+      "missed_rate": 0.435
+    },
+    {
+      "total_perceptions": 20,
+      "detection_rate": 0.433,
+      "false_alarm_rate": 0.0,
+      "missed_rate": 0.567
+    },
+    {
+      "total_perceptions": 30,
+      "detection_rate": 0.428,
+      "false_alarm_rate": 0.033,
+      "missed_rate": 0.572
+    },
+    {
+      "total_perceptions": 40,
+      "detection_rate": 0.437,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.563
+    },
+    {
+      "total_perceptions": 50,
+      "detection_rate": 0.441,
+      "false_alarm_rate": 0.04,
+      "missed_rate": 0.559
+    },
+    {
+      "total_perceptions": 60,
+      "detection_rate": 0.463,
+      "false_alarm_rate": 0.067,
+      "missed_rate": 0.537
+    },
+    {
+      "total_perceptions": 70,
+      "detection_rate": 0.462,
+      "false_alarm_rate": 0.071,
+      "missed_rate": 0.538
+    },
+    {
+      "total_perceptions": 80,
+      "detection_rate": 0.465,
+      "false_alarm_rate": 0.087,
+      "missed_rate": 0.535
+    },
+    {
+      "total_perceptions": 90,
+      "detection_rate": 0.468,
+      "false_alarm_rate": 0.078,
+      "missed_rate": 0.532
+    },
+    {
+      "total_perceptions": 100,
+      "detection_rate": 0.474,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.526
+    },
+    {
+      "total_perceptions": 110,
+      "detection_rate": 0.469,
+      "false_alarm_rate": 0.109,
+      "missed_rate": 0.531
+    },
+    {
+      "total_perceptions": 120,
+      "detection_rate": 0.465,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.535
+    }
+  ],
+  "action_entropy_history": [
+    1.0,
+    0.9544,
+    0.9799,
+    0.9544,
+    0.9341,
+    0.8813,
+    0.971,
+    0.971,
+    0.9928,
+    0.971,
+    0.971,
+    1.0,
+    0.9928,
+    0.9341,
+    0.8113,
+    0.7219,
+    0.6098,
+    1.1219,
+    1.419,
+    2.2037,
+    2.2282,
+    2.271,
+    2.4855,
+    2.5219,
+    2.3884,
+    2.1955,
+    1.7166,
+    1.2918,
+    1.2918,
+    1.7166,
+    1.419,
+    1.671,
+    1.8332,
+    1.671,
+    1.7332,
+    1.8438,
+    2.22,
+    2.1464,
+    1.9855,
+    1.9855,
+    1.8815,
+    1.4166,
+    1.154,
+    1.1219,
+    1.2918,
+    1.4568,
+    1.5789,
+    1.5568,
+    1.8332,
+    2.0855,
+    2.1232,
+    1.6166,
+    1.4789,
+    1.8438,
+    2.2037,
+    2.2834,
+    2.1834,
+    2.271,
+    2.3639,
+    2.1822,
+    2.0855,
+    1.9815,
+    1.8805,
+    1.7388,
+    1.9855,
+    1.9192,
+    1.8332,
+    1.5789,
+    1.5789,
+    1.7166,
+    1.4568,
+    1.871,
+    1.1918,
+    1.154,
+    1.0219,
+    1.7166,
+    1.871,
+    1.871,
+    1.571,
+    1.2918,
+    1.871,
+    1.7166,
+    2.0855,
+    2.3219,
+    2.1232,
+    1.6789,
+    1.7332,
+    1.5789,
+    1.419,
+    1.1918,
+    1.419,
+    1.7166,
+    1.419,
+    1.5789,
+    1.5568,
+    1.9815,
+    1.8815,
+    1.871,
+    1.9815,
+    1.9815,
+    1.8192,
+    2.0855,
+    1.871,
+    1.9815,
+    1.6815,
+    1.4789,
+    1.054,
+    1.1918,
+    1.2918,
+    1.5166,
+    1.2568,
+    1.154,
+    1.0219,
+    1.671,
+    2.1464,
+    2.3211,
+    2.3639,
+    2.2842,
+    2.015,
+    1.8438
+  ],
+  "model_saturation_history": [
+    0.0,
+    0.0,
+    0.045198,
+    0.006365,
+    0.008272,
+    0.011306,
+    0.0077,
+    0.012234,
+    0.00916,
+    0.005717,
+    0.00664,
+    0.00999,
+    0.013408,
+    0.018295,
+    0.017903,
+    0.019588,
+    0.021507,
+    0.046762,
+    0.038385,
+    0.034432,
+    0.008127,
+    0.010263,
+    0.026899,
+    0.025094,
+    0.007223,
+    0.019279,
+    0.015584,
+    0.013008,
+    0.01615,
+    0.011039,
+    0.011653,
+    0.005922,
+    0.010441,
+    0.012522,
+    0.007142,
+    0.010262,
+    0.019071,
+    0.012289,
+    0.013933,
+    0.013566,
+    0.014711,
+    0.014973,
+    0.020688,
+    0.01792,
+    0.009988,
+    0.02528,
+    0.024475,
+    0.007401,
+    0.008572,
+    0.016076,
+    0.025242,
+    0.012801,
+    0.013366,
+    0.011357,
+    0.004127,
+    0.003055,
+    0.004225,
+    0.008047,
+    0.010985,
+    0.026421,
+    0.01938,
+    0.015289,
+    0.017127,
+    0.019575,
+    0.011725,
+    0.017663,
+    0.011604,
+    0.018713,
+    0.02235,
+    0.009045,
+    0.011518,
+    0.011742,
+    0.011986,
+    0.006145,
+    0.019175,
+    0.024725,
+    0.021754,
+    0.020117,
+    0.009613,
+    0.014838,
+    0.027406,
+    0.021283,
+    0.005433,
+    0.009733,
+    0.023212,
+    0.024352,
+    0.014671,
+    0.02964,
+    0.038943,
+    0.032766,
+    0.003751,
+    0.011641,
+    0.020483,
+    0.017562,
+    0.016061,
+    0.020363,
+    0.024652,
+    0.015939,
+    0.006032,
+    0.014219,
+    0.007451,
+    0.009085,
+    0.011337,
+    0.012271,
+    0.017288,
+    0.027753,
+    0.021581,
+    0.014104,
+    0.023088,
+    0.025225,
+    0.011983,
+    0.01197,
+    0.006687,
+    0.008819,
+    0.00864,
+    0.014952,
+    0.011183,
+    0.002037,
+    0.018557,
+    0.012663
+  ],
+  "ccd_history": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "supervision_level": 0.7,
+  "seed": 1
+}

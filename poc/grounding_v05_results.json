@@ -1,0 +1,1652 @@
+{
+  "milestones": [
+    {
+      "day": 10,
+      "stage": "OBSERVATION",
+      "scores": {
+        "day": 10,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.632,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 463083.0
+      },
+      "agent_stats": {
+        "total_actions": 40,
+        "success_rate": 0.475,
+        "n_pivots": 3,
+        "confidence": 0.556,
+        "energy_bits": 10240,
+        "top_preferences": [
+          [
+            "inspect",
+            0.196
+          ],
+          [
+            "order",
+            0.134
+          ],
+          [
+            "menu_plan",
+            0.134
+          ],
+          [
+            "intervene",
+            0.134
+          ],
+          [
+            "staff_assign",
+            0.134
+          ],
+          [
+            "record",
+            0.134
+          ],
+          [
+            "observe",
+            0.134
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 16,
+            "avg_reward": 0.244
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 3,
+            "avg_reward": 0.326
+          }
+        ]
+      }
+    },
+    {
+      "day": 20,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 20,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 425924.0
+      },
+      "agent_stats": {
+        "total_actions": 100,
+        "success_rate": 0.79,
+        "n_pivots": 8,
+        "confidence": 0.644,
+        "energy_bits": 25600,
+        "top_preferences": [
+          [
+            "inspect",
+            0.2
+          ],
+          [
+            "menu_plan",
+            0.151
+          ],
+          [
+            "staff_assign",
+            0.151
+          ],
+          [
+            "order",
+            0.136
+          ],
+          [
+            "intervene",
+            0.128
+          ],
+          [
+            "record",
+            0.127
+          ],
+          [
+            "observe",
+            0.108
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 29,
+            "avg_reward": 0.227
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 13,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 12,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 9,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 7,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 6,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 3,
+            "avg_reward": 0.326
+          }
+        ]
+      }
+    },
+    {
+      "day": 30,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 30,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 2,
+        "hidden_risks": 1,
+        "budget_remaining": 385617.0
+      },
+      "agent_stats": {
+        "total_actions": 160,
+        "success_rate": 0.863,
+        "n_pivots": 9,
+        "confidence": 0.662,
+        "energy_bits": 40960,
+        "top_preferences": [
+          [
+            "inspect",
+            0.179
+          ],
+          [
+            "order",
+            0.161
+          ],
+          [
+            "menu_plan",
+            0.153
+          ],
+          [
+            "staff_assign",
+            0.153
+          ],
+          [
+            "record",
+            0.134
+          ],
+          [
+            "intervene",
+            0.132
+          ],
+          [
+            "observe",
+            0.088
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 35,
+            "avg_reward": 0.223
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 24,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 22,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 20,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 15,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 3,
+            "avg_reward": 0.326
+          }
+        ]
+      }
+    },
+    {
+      "day": 40,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 40,
+        "safety_score": 0.6,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 5,
+        "budget_remaining": 345290.0
+      },
+      "agent_stats": {
+        "total_actions": 220,
+        "success_rate": 0.877,
+        "n_pivots": 9,
+        "confidence": 0.6,
+        "energy_bits": 56320,
+        "top_preferences": [
+          [
+            "inspect",
+            0.175
+          ],
+          [
+            "order",
+            0.166
+          ],
+          [
+            "menu_plan",
+            0.156
+          ],
+          [
+            "staff_assign",
+            0.15
+          ],
+          [
+            "record",
+            0.147
+          ],
+          [
+            "intervene",
+            0.133
+          ],
+          [
+            "observe",
+            0.072
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 45,
+            "avg_reward": 0.219
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 33,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 32,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 29,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 28,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 23,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 6,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 50,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 50,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 305273.0
+      },
+      "agent_stats": {
+        "total_actions": 280,
+        "success_rate": 0.904,
+        "n_pivots": 9,
+        "confidence": 0.645,
+        "energy_bits": 71680,
+        "top_preferences": [
+          [
+            "staff_assign",
+            0.188
+          ],
+          [
+            "order",
+            0.17
+          ],
+          [
+            "inspect",
+            0.165
+          ],
+          [
+            "menu_plan",
+            0.155
+          ],
+          [
+            "record",
+            0.139
+          ],
+          [
+            "intervene",
+            0.125
+          ],
+          [
+            "observe",
+            0.057
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 55,
+            "avg_reward": 0.218
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 47,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 43,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 40,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 36,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 29,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 6,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 60,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 60,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.901,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 266592.0
+      },
+      "agent_stats": {
+        "total_actions": 340,
+        "success_rate": 0.915,
+        "n_pivots": 9,
+        "confidence": 0.613,
+        "energy_bits": 87040,
+        "top_preferences": [
+          [
+            "staff_assign",
+            0.189
+          ],
+          [
+            "menu_plan",
+            0.178
+          ],
+          [
+            "inspect",
+            0.166
+          ],
+          [
+            "order",
+            0.163
+          ],
+          [
+            "intervene",
+            0.131
+          ],
+          [
+            "record",
+            0.127
+          ],
+          [
+            "observe",
+            0.046
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 68,
+            "avg_reward": 0.218
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 56,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 49,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 46,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 39,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 8,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 70,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 70,
+        "safety_score": 0.68,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 4,
+        "budget_remaining": 229195.0
+      },
+      "agent_stats": {
+        "total_actions": 400,
+        "success_rate": 0.925,
+        "n_pivots": 9,
+        "confidence": 0.656,
+        "energy_bits": 102400,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.217
+          ],
+          [
+            "order",
+            0.182
+          ],
+          [
+            "staff_assign",
+            0.177
+          ],
+          [
+            "inspect",
+            0.144
+          ],
+          [
+            "record",
+            0.13
+          ],
+          [
+            "intervene",
+            0.114
+          ],
+          [
+            "observe",
+            0.036
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 74,
+            "avg_reward": 0.217
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 65,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 64,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 63,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 58,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 43,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 9,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 80,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 80,
+        "safety_score": 0,
+        "compliance_score": 0,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 37,
+        "hidden_risks": 6,
+        "budget_remaining": 191091.0
+      },
+      "agent_stats": {
+        "total_actions": 460,
+        "success_rate": 0.935,
+        "n_pivots": 9,
+        "confidence": 0.646,
+        "energy_bits": 117760,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.219
+          ],
+          [
+            "staff_assign",
+            0.193
+          ],
+          [
+            "order",
+            0.184
+          ],
+          [
+            "record",
+            0.137
+          ],
+          [
+            "inspect",
+            0.128
+          ],
+          [
+            "intervene",
+            0.112
+          ],
+          [
+            "observe",
+            0.028
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 81,
+            "avg_reward": 0.216
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 76,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 74,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 74,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 71,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 51,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 9,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 90,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 90,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 3,
+        "budget_remaining": 150167.0
+      },
+      "agent_stats": {
+        "total_actions": 520,
+        "success_rate": 0.94,
+        "n_pivots": 9,
+        "confidence": 0.624,
+        "energy_bits": 133120,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.291
+          ],
+          [
+            "order",
+            0.177
+          ],
+          [
+            "staff_assign",
+            0.168
+          ],
+          [
+            "record",
+            0.125
+          ],
+          [
+            "inspect",
+            0.12
+          ],
+          [
+            "intervene",
+            0.098
+          ],
+          [
+            "observe",
+            0.022
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 94,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 93,
+            "avg_reward": 0.217
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 83,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 81,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 79,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 56,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 10,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 100,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 100,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 111067.0
+      },
+      "agent_stats": {
+        "total_actions": 580,
+        "success_rate": 0.943,
+        "n_pivots": 9,
+        "confidence": 0.666,
+        "energy_bits": 148480,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.396
+          ],
+          [
+            "order",
+            0.156
+          ],
+          [
+            "staff_assign",
+            0.149
+          ],
+          [
+            "inspect",
+            0.102
+          ],
+          [
+            "record",
+            0.101
+          ],
+          [
+            "intervene",
+            0.08
+          ],
+          [
+            "observe",
+            0.016
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 117,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 102,
+            "avg_reward": 0.219
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 91,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 89,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 84,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 61,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 12,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 110,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 110,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 0.713,
+        "satisfaction": 0.975,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 71308.0
+      },
+      "agent_stats": {
+        "total_actions": 640,
+        "success_rate": 0.948,
+        "n_pivots": 9,
+        "confidence": 0.663,
+        "energy_bits": 163840,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.509
+          ],
+          [
+            "order",
+            0.14
+          ],
+          [
+            "staff_assign",
+            0.137
+          ],
+          [
+            "record",
+            0.073
+          ],
+          [
+            "inspect",
+            0.07
+          ],
+          [
+            "intervene",
+            0.061
+          ],
+          [
+            "observe",
+            0.01
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 141,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 104,
+            "avg_reward": 0.217
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 103,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 102,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 88,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 66,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 12,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    },
+    {
+      "day": 120,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 120,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 0.312,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 31174.0
+      },
+      "agent_stats": {
+        "total_actions": 700,
+        "success_rate": 0.951,
+        "n_pivots": 9,
+        "confidence": 0.67,
+        "energy_bits": 179200,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.679
+          ],
+          [
+            "order",
+            0.097
+          ],
+          [
+            "staff_assign",
+            0.095
+          ],
+          [
+            "inspect",
+            0.043
+          ],
+          [
+            "record",
+            0.043
+          ],
+          [
+            "intervene",
+            0.038
+          ],
+          [
+            "observe",
+            0.006
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 173,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 112,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 111,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 108,
+            "avg_reward": 0.218
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 91,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 68,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 13,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "agent_stats": {
+      "total_actions": 700,
+      "success_rate": 0.951,
+      "n_pivots": 9,
+      "confidence": 0.67,
+      "energy_bits": 179200,
+      "top_preferences": [
+        [
+          "menu_plan",
+          0.679
+        ],
+        [
+          "order",
+          0.097
+        ],
+        [
+          "staff_assign",
+          0.095
+        ],
+        [
+          "inspect",
+          0.043
+        ],
+        [
+          "record",
+          0.043
+        ],
+        [
+          "intervene",
+          0.038
+        ],
+        [
+          "observe",
+          0.006
+        ]
+      ],
+      "top_pivots": [
+        {
+          "action": "menu_plan",
+          "success": true,
+          "quality": "good",
+          "count": 173,
+          "avg_reward": 0.35
+        },
+        {
+          "action": "order",
+          "success": true,
+          "quality": "good",
+          "count": 112,
+          "avg_reward": 0.32
+        },
+        {
+          "action": "staff_assign",
+          "success": true,
+          "quality": "good",
+          "count": 111,
+          "avg_reward": 0.32
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "poor",
+          "count": 108,
+          "avg_reward": 0.218
+        },
+        {
+          "action": "record",
+          "success": true,
+          "quality": "poor",
+          "count": 91,
+          "avg_reward": 0.28
+        },
+        {
+          "action": "intervene",
+          "success": true,
+          "quality": "good",
+          "count": 68,
+          "avg_reward": 0.35
+        },
+        {
+          "action": "observe",
+          "success": false,
+          "quality": "poor",
+          "count": 21,
+          "avg_reward": 0.0
+        },
+        {
+          "action": "intervene",
+          "success": false,
+          "quality": "poor",
+          "count": 13,
+          "avg_reward": -0.05
+        }
+      ]
+    },
+    "score_trends": {
+      "avg_safety_stage1": 1.0,
+      "avg_safety_stage2": 0.846,
+      "avg_safety_stage3": 0.718,
+      "avg_safety_stage4": 0.727,
+      "avg_satisfaction_stage1": 0.656,
+      "avg_satisfaction_stage2": 0.942,
+      "avg_satisfaction_stage3": 0.981,
+      "avg_satisfaction_stage4": 0.979
+    },
+    "final_budget": 31174.0
+  },
+  "stage_transitions": [
+    {
+      "day": 11,
+      "from_stage": 1,
+      "to_stage": 2,
+      "agent_stats_at_transition": {
+        "total_actions": 40,
+        "success_rate": 0.475,
+        "n_pivots": 3,
+        "confidence": 0.556,
+        "energy_bits": 10240,
+        "top_preferences": [
+          [
+            "inspect",
+            0.196
+          ],
+          [
+            "order",
+            0.134
+          ],
+          [
+            "menu_plan",
+            0.134
+          ],
+          [
+            "intervene",
+            0.134
+          ],
+          [
+            "staff_assign",
+            0.134
+          ],
+          [
+            "record",
+            0.134
+          ],
+          [
+            "observe",
+            0.134
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 16,
+            "avg_reward": 0.244
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 3,
+            "avg_reward": 0.326
+          }
+        ]
+      }
+    },
+    {
+      "day": 30,
+      "from_stage": 2,
+      "to_stage": 3,
+      "agent_stats_at_transition": {
+        "total_actions": 154,
+        "success_rate": 0.857,
+        "n_pivots": 9,
+        "confidence": 0.65,
+        "energy_bits": 39424,
+        "top_preferences": [
+          [
+            "inspect",
+            0.18
+          ],
+          [
+            "order",
+            0.157
+          ],
+          [
+            "menu_plan",
+            0.152
+          ],
+          [
+            "staff_assign",
+            0.149
+          ],
+          [
+            "record",
+            0.137
+          ],
+          [
+            "intervene",
+            0.135
+          ],
+          [
+            "observe",
+            0.09
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 34,
+            "avg_reward": 0.223
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 22,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 20,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 19,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 15,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 3,
+            "avg_reward": 0.326
+          }
+        ]
+      }
+    },
+    {
+      "day": 71,
+      "from_stage": 3,
+      "to_stage": 4,
+      "agent_stats_at_transition": {
+        "total_actions": 400,
+        "success_rate": 0.925,
+        "n_pivots": 9,
+        "confidence": 0.656,
+        "energy_bits": 102400,
+        "top_preferences": [
+          [
+            "menu_plan",
+            0.217
+          ],
+          [
+            "order",
+            0.182
+          ],
+          [
+            "staff_assign",
+            0.177
+          ],
+          [
+            "inspect",
+            0.144
+          ],
+          [
+            "record",
+            0.13
+          ],
+          [
+            "intervene",
+            0.114
+          ],
+          [
+            "observe",
+            0.036
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 74,
+            "avg_reward": 0.217
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 65,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 64,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 63,
+            "avg_reward": 0.32
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "poor",
+            "count": 58,
+            "avg_reward": 0.28
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 43,
+            "avg_reward": 0.35
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.0
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 9,
+            "avg_reward": -0.05
+          }
+        ]
+      }
+    }
+  ]
+}

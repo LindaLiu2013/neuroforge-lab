@@ -1,0 +1,13 @@
+======================================================================
+TUF-E Hybrid Agent v1.1: REAL LLM
+Time: 2026-10-18T16:01:53.596349
+Seed: 42, Supervision level: 0.7
+Model: qwen3.8-flash, Base URL: https://dashscope.aliyuncs.com/compatible-mode/v1
+======================================================================
+
+Architecture: LLM + Statistical -> CCD-Enabled SAL <- TUF-E
+Duration: 5 days, entropy-driven stage transitions
+Key questions:
+  1. Does supervision_level=0.7 create structural compliance advantage?
+  2. Does CCD filter out causally inert disagreements?
+  3. Do entropy/saturation transitions align with genuine learning?

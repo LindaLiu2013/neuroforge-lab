@@ -1,0 +1,182 @@
+{
+  "final_agent_stats": {
+    "total_actions": 124,
+    "success_rate": 0.637,
+    "n_pivots": 5,
+    "confidence": 0.675,
+    "energy_bits": 31744,
+    "llm_disagreements_seen": 116,
+    "consensus_used": 8,
+    "action_entropy": 0.8476,
+    "model_saturation": 0.03187,
+    "finding_types_seen": 6,
+    "intervention_success_rate": 0.0,
+    "top_preferences": [
+      [
+        "inspect",
+        0.71
+      ],
+      [
+        "order",
+        0.05
+      ],
+      [
+        "menu_plan",
+        0.048
+      ],
+      [
+        "intervene",
+        0.048
+      ],
+      [
+        "staff_assign",
+        0.048
+      ],
+      [
+        "record",
+        0.048
+      ],
+      [
+        "observe",
+        0.048
+      ]
+    ],
+    "top_pivots": [
+      {
+        "action": "inspect",
+        "success": true,
+        "quality": "good",
+        "count": 48,
+        "avg_reward": 0.708
+      },
+      {
+        "action": "observe",
+        "success": false,
+        "quality": "poor",
+        "count": 44,
+        "avg_reward": 0.0
+      },
+      {
+        "action": "inspect",
+        "success": true,
+        "quality": "poor",
+        "count": 30,
+        "avg_reward": 0.147
+      },
+      {
+        "action": "intervene",
+        "success": false,
+        "quality": "poor",
+        "count": 1,
+        "avg_reward": -0.1
+      },
+      {
+        "action": "order",
+        "success": true,
+        "quality": "poor",
+        "count": 1,
+        "avg_reward": -0.093
+      }
+    ]
+  },
+  "real_llm_stats": {
+    "total_calls": 30,
+    "successful": 20,
+    "failed": 10,
+    "rate_limited": 0,
+    "success_rate": 0.667
+  },
+  "daily_results": [
+    {
+      "day": 5,
+      "scores": {
+        "day": 5,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.768,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 481939.0
+      },
+      "agent_sr": 0.4,
+      "llm_source": null
+    },
+    {
+      "day": 10,
+      "scores": {
+        "day": 10,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.839,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 464430.0
+      },
+      "agent_sr": 0.5,
+      "llm_source": null
+    },
+    {
+      "day": 15,
+      "scores": {
+        "day": 15,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.933,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 444274.0
+      },
+      "agent_sr": 0.5,
+      "llm_source": "real_llm"
+    },
+    {
+      "day": 20,
+      "scores": {
+        "day": 20,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.807,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 425243.0
+      },
+      "agent_sr": 0.562,
+      "llm_source": "real_llm"
+    },
+    {
+      "day": 25,
+      "scores": {
+        "day": 25,
+        "safety_score": 0,
+        "compliance_score": 0,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.811,
+        "risks_exposed": 24,
+        "hidden_risks": 0,
+        "budget_remaining": 408048.0
+      },
+      "agent_sr": 0.57,
+      "llm_source": "real_llm"
+    },
+    {
+      "day": 30,
+      "scores": {
+        "day": 30,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.782,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 388468.0
+      },
+      "agent_sr": 0.637,
+      "llm_source": "real_llm"
+    }
+  ],
+  "avg_safety": 0.833
+}

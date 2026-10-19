@@ -1,0 +1,78 @@
+{
+  "experiment": "TUF-E v0.2 Validation: Biology Domain v14.2 (NK Network)",
+  "timestamp": "2026-10-18T22:41:48.398806",
+  "design": "NK Boolean network N=12 K=3, 3-phase experiment",
+  "conditions": {
+    "A_pivot_consensus": {
+      "viability_rate": {
+        "mean": 0.9885,
+        "std": 0.016
+      },
+      "mean_fitness": {
+        "mean": 0.4946,
+        "std": 0.0202
+      },
+      "feasible_volume": {
+        "mean_current": 345.4,
+        "mean_peak": 345.4
+      },
+      "phase_transitions": {
+        "mean_count": 88.6,
+        "total": 443
+      },
+      "confirmed_pivots": {
+        "mean": 46.0
+      }
+    },
+    "B_pivot_no_consensus": {
+      "viability_rate": {
+        "mean": 0.9885,
+        "std": 0.0204
+      },
+      "mean_fitness": {
+        "mean": 0.4887,
+        "std": 0.0257
+      },
+      "feasible_volume": {
+        "mean_current": 427.6,
+        "mean_peak": 427.6
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "confirmed_pivots": {
+        "mean": 0.0
+      }
+    },
+    "C_no_pivot_baseline": {
+      "viability_rate": {
+        "mean": 0.9909,
+        "std": 0.0109
+      },
+      "mean_fitness": {
+        "mean": 0.4958,
+        "std": 0.0272
+      },
+      "feasible_volume": {
+        "mean_current": 0.0,
+        "mean_peak": 0.0
+      },
+      "phase_transitions": {
+        "mean_count": 0.0,
+        "total": 0
+      },
+      "confirmed_pivots": {
+        "mean": 0.0
+      }
+    }
+  },
+  "gc_mapping": {
+    "GC-1": "Gene toggle actions (N+1 options)",
+    "GC-2": "3 observers: state_pattern, fitness, dynamics",
+    "GC-3": "Pivot decay(0.003) + environmental perturbation",
+    "GC-4": "Observe->Toggle->BooleanUpdate->Perturb->Observe = work cycle",
+    "GC-5": "Viability = fitness in [0.3, 0.7] (survival, not optimization)",
+    "GC-6": "NK landscape topology + Boolean update rules immutable"
+  }
+}

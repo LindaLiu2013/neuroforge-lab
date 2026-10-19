@@ -1,0 +1,42 @@
+[
+  {
+    "keep_ratio": 1.0,
+    "significance_recall": 1.0,
+    "oracle_recall": 1.0,
+    "ph_auto_recall": 1.0,
+    "ph_efficiency_vs_oracle": 1.0,
+    "time_ms": 20.0
+  },
+  {
+    "keep_ratio": 0.95,
+    "significance_recall": 0.0,
+    "oracle_recall": 1.0,
+    "ph_auto_recall": 1.0,
+    "ph_efficiency_vs_oracle": 1.0,
+    "time_ms": 19.0
+  },
+  {
+    "keep_ratio": 0.9,
+    "significance_recall": 0.0,
+    "oracle_recall": 1.0,
+    "ph_auto_recall": 1.0,
+    "ph_efficiency_vs_oracle": 1.0,
+    "time_ms": 19.6
+  },
+  {
+    "keep_ratio": 0.8,
+    "significance_recall": 0.0,
+    "oracle_recall": 1.0,
+    "ph_auto_recall": 1.0,
+    "ph_efficiency_vs_oracle": 1.0,
+    "time_ms": 18.5
+  },
+  {
+    "keep_ratio": 0.6,
+    "significance_recall": 0.0,
+    "oracle_recall": 1.0,
+    "ph_auto_recall": 1.0,
+    "ph_efficiency_vs_oracle": 1.0,
+    "time_ms": 19.6
+  }
+]

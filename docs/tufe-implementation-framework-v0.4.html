@@ -1,0 +1,193 @@
+<div id="tufe-framework" style="font-family: var(--font-sans, sans-serif); color: var(--seed-fg); padding: 16px; max-width: 920px; margin: 0 auto;">
+
+<style>
+  #tufe-framework { font-size: 13px; line-height: 1.6; }
+  #tufe-framework h2 { font-size: 17px; font-weight: 500; margin: 0 0 2px; text-align: center; }
+  #tufe-framework .sub { text-align: center; color: var(--seed-muted); font-size: 12px; margin-bottom: 18px; }
+  #tufe-framework svg { width: 100%; height: auto; display: block; }
+  .ft { font-size: 11px; fill: var(--seed-fg); font-weight: 500; }
+  .fs { font-size: 9px; fill: var(--seed-muted); }
+  .fl { font-size: 9px; fill: var(--seed-muted); }
+  .fh { font-size: 10px; fill: var(--seed-fg); font-weight: 500; }
+  .fd { font-size: 8px; fill: var(--seed-muted); }
+  .fw { font-size: 9px; fill: #b8860b; font-weight: 500; }
+  .fr { font-size: 9px; fill: #c0392b; font-weight: 500; }
+  .fg { font-size: 9px; fill: #5a8a6a; font-weight: 500; }
+  .fb { font-size: 9px; fill: #5b7fa5; font-weight: 500; }
+</style>
+
+<h2>TUF-E Agent Implementation Framework v0.4</h2>
+<p class="sub">三层可行性 · 预判结构 · 从已验证到未探索</p>
+
+<svg viewBox="0 0 880 750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#5a8a6a"/></marker>
+    <marker id="a2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#b8860b"/></marker>
+    <marker id="a3" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#8b5cf6"/></marker>
+    <marker id="a4" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto"><path d="M0,0 L7,2.5 L0,5Z" fill="#5b7fa5"/></marker>
+  </defs>
+
+  <!-- ===== TIER 1: IMPLEMENTABLE NOW ===== -->
+  <rect x="20" y="15" width="840" height="215" rx="8" fill="var(--fill-2)" stroke="#5a8a6a" stroke-width="1.5" opacity="0.25"/>
+  <text x="40" y="38" class="fg" style="font-size:12px;">TIER 1: 已可实现 (Existing Tech) — 用现有技术可搭建原型</text>
+
+  <!-- T1 Module A: Topology Protection -->
+  <rect x="40" y="50" width="190" height="160" rx="6" fill="var(--card-bg)" stroke="#5a8a6a" stroke-width="1"/>
+  <text x="135" y="72" text-anchor="middle" class="ft">拓扑保护引擎</text>
+  <text x="135" y="85" text-anchor="middle" class="fs">Topology Protection Engine</text>
+  <line x1="55" y1="92" x2="215" y2="92" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="55" y="108" class="fd">• EXP-001~004 已验证</text>
+  <text x="55" y="122" class="fd">• 多信号融合枢机检测</text>
+  <text x="55" y="136" class="fd">• persistence barcode 监控</text>
+  <text x="55" y="150" class="fd">• C2-B1~B4 禁止操作检查</text>
+  <text x="55" y="168" class="fd">• 工具: ripser + networkx</text>
+  <text x="55" y="186" class="fg">状态: CONFIRMED ✓</text>
+  <text x="55" y="200" class="fd">对应约束: C2, P3</text>
+
+  <!-- T1 Module B: Multi-Projection Consensus -->
+  <rect x="250" y="50" width="190" height="160" rx="6" fill="var(--card-bg)" stroke="#5a8a6a" stroke-width="1"/>
+  <text x="345" y="72" text-anchor="middle" class="ft">多投影共识模块</text>
+  <text x="345" y="85" text-anchor="middle" class="fs">Multi-Projection Consensus</text>
+  <line x1="265" y1="92" x2="425" y2="92" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="265" y="108" class="fd">• ≥2个独立表示/模型</text>
+  <text x="265" y="122" class="fd">• Jaccard/z-score 共识度量</text>
+  <text x="265" y="136" class="fd">• 共识阈值 θ_consensus</text>
+  <text x="265" y="150" class="fd">• 非共识标记为"未确认"</text>
+  <text x="265" y="168" class="fd">• 工具: 异构embedding</text>
+  <text x="265" y="186" class="fg">状态: 原理验证 ✓</text>
+  <text x="265" y="200" class="fd">对应约束: C3, Q0.5</text>
+
+  <!-- T1 Module C: Energy Tracking -->
+  <rect x="460" y="50" width="190" height="160" rx="6" fill="var(--card-bg)" stroke="#5a8a6a" stroke-width="1"/>
+  <text x="555" y="72" text-anchor="middle" class="ft">能量预算追踪器</text>
+  <text x="555" y="85" text-anchor="middle" class="fs">Energy Budget Tracker</text>
+  <line x1="475" y1="92" x2="635" y2="92" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="475" y="108" class="fd">• GPU/CPU 功耗API读取</text>
+  <text x="475" y="122" class="fd">• 操作级能耗估算账本</text>
+  <text x="475" y="136" class="fd">• Landauer下限基准</text>
+  <text x="475" y="150" class="fd">• 低能量降级模式+警告</text>
+  <text x="475" y="168" class="fd">• 工具: pynvml / RAPL</text>
+  <text x="475" y="186" class="fg">状态: API可用 ✓</text>
+  <text x="475" y="200" class="fd">对应约束: P1, P2</text>
+
+  <!-- T1 Module D: Layer Separation -->
+  <rect x="670" y="50" width="175" height="160" rx="6" fill="var(--card-bg)" stroke="#5a8a6a" stroke-width="1"/>
+  <text x="757" y="72" text-anchor="middle" class="ft">层级分离框架</text>
+  <text x="757" y="85" text-anchor="middle" class="fs">Layer Separation</text>
+  <line x1="685" y1="92" x2="830" y2="92" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="685" y="108" class="fd">• 元层: 独立进程/容器</text>
+  <text x="685" y="122" class="fd">• 对象层: 无元层写权限</text>
+  <text x="685" y="136" class="fd">• IPC单向通道(只读)</text>
+  <text x="685" y="150" class="fd">• C5违规自动拦截</text>
+  <text x="685" y="168" class="fd">• 工具: OS sandbox</text>
+  <text x="685" y="186" class="fg">状态: 软件级可行 ✓</text>
+  <text x="685" y="200" class="fd">对应约束: C5, P6</text>
+
+  <!-- ===== TIER 2: ENGINEERING BREAKTHROUGH ===== -->
+  <rect x="20" y="250" width="840" height="215" rx="8" fill="var(--fill-3)" stroke="#b8860b" stroke-width="1.5" opacity="0.25"/>
+  <text x="40" y="273" class="fw" style="font-size:12px;">TIER 2: 需工程突破 (Principle Clear, Engineering Open) — 原理清楚但实现未做过</text>
+
+  <!-- T2 Module E: Dissipative Knowledge -->
+  <rect x="40" y="285" width="250" height="160" rx="6" fill="var(--card-bg)" stroke="#b8860b" stroke-width="1"/>
+  <text x="165" y="307" text-anchor="middle" class="ft">耗散知识库</text>
+  <text x="165" y="320" text-anchor="middle" class="fs">Dissipative Knowledge Store</text>
+  <line x1="55" y1="327" x2="275" y2="327" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="55" y="343" class="fd">• 知识 = 持续刷新的动态模式</text>
+  <text x="55" y="357" class="fd">• 停止能量输入 → 知识衰减</text>
+  <text x="55" y="371" class="fd">• 脉冲神经网络(SNN)天然适配</text>
+  <text x="55" y="385" class="fd">• 神经形态芯片: Loihi/NorthPole</text>
+  <text x="55" y="399" class="fd">• 或: 振荡电路相位锁定</text>
+  <text x="55" y="417" class="fw">状态: 硬件存在, 集成未做</text>
+  <text x="55" y="431" class="fd">对应约束: P1, C2, 枢机功能层</text>
+
+  <!-- T2 Module F: Online Learning -->
+  <rect x="310" y="285" width="250" height="160" rx="6" fill="var(--card-bg)" stroke="#b8860b" stroke-width="1"/>
+  <text x="435" y="307" text-anchor="middle" class="ft">在线自修改循环</text>
+  <text x="435" y="320" text-anchor="middle" class="fs">Online Self-Modification Loop</text>
+  <line x1="325" y1="327" x2="545" y2="327" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="325" y="343" class="fd">• 运行时修改自身结构/规则</text>
+  <text x="325" y="357" class="fd">• 受元层监督(C5约束)</text>
+  <text x="325" y="371" class="fd">• 可微编程 + self-modifying code</text>
+  <text x="325" y="385" class="fd">• 每次修改触发拓扑不变量检查</text>
+  <text x="325" y="399" class="fd">• 修改日志不可篡改(审计)</text>
+  <text x="325" y="417" class="fw">状态: 组件存在, 组装未做</text>
+  <text x="325" y="431" class="fd">对应约束: C2, C5, 工作协议R6</text>
+
+  <!-- T2 Module G: Category Theory Pivot -->
+  <rect x="580" y="285" width="265" height="160" rx="6" fill="var(--card-bg)" stroke="#b8860b" stroke-width="1"/>
+  <text x="712" y="307" text-anchor="middle" class="ft">范畴论枢机形式化</text>
+  <text x="712" y="320" text-anchor="middle" class="fs">Category-Theoretic Pivot Detection</text>
+  <line x1="595" y1="327" x2="830" y2="327" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="595" y="343" class="fd">• 系统行为建模为幺半群范畴</text>
+  <text x="595" y="357" class="fd">• 枢机 = 不可分解态射</text>
+  <text x="595" y="371" class="fd">• 素分解算法判定不可再分性</text>
+  <text x="595" y="385" class="fd">• 资源理论表达热力学约束</text>
+  <text x="595" y="399" class="fd">• 数学成熟, 算法转化未做</text>
+  <text x="595" y="417" class="fw">状态: 数学就绪, 工程空白</text>
+  <text x="595" y="431" class="fd">对应约束: 枢机结构层, Q0.3-Q0.4</text>
+
+  <!-- ===== TIER 3: UNCERTAIN ===== -->
+  <rect x="20" y="485" width="840" height="195" rx="8" fill="var(--fill-1)" stroke="#8b5cf6" stroke-width="1.5" opacity="0.25"/>
+  <text x="40" y="508" class="fb" style="font-size:12px; fill:#8b5cf6;">TIER 3: 可行性未知 (Open Research) — 概念清楚但实现路径不确定</text>
+
+  <!-- T3 Module H: Hardware Meta-Layer -->
+  <rect x="40" y="520" width="250" height="140" rx="6" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="165" y="542" text-anchor="middle" class="ft">物理级元层隔离</text>
+  <text x="165" y="555" text-anchor="middle" class="fs">Hardware Meta-Layer Isolation</text>
+  <line x1="55" y1="562" x2="275" y2="562" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="55" y="578" class="fd">• 独立处理器/FPGA运行元层</text>
+  <text x="55" y="592" class="fd">• 硬件级只读存储元规则</text>
+  <text x="55" y="606" class="fd">• C5从"约定"升级为"物理定律"</text>
+  <text x="55" y="620" class="fd">• 成本/周期/定制难度未知</text>
+  <text x="55" y="638" class="fr">状态: 需要定制硬件研究</text>
+  <text x="55" y="652" class="fd">对应约束: C5 (物理强制执行)</text>
+
+  <!-- T3 Module I: Cross-Species Validation -->
+  <rect x="310" y="520" width="250" height="140" rx="6" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="435" y="542" text-anchor="middle" class="ft">异构观察者交叉验证</text>
+  <text x="435" y="555" text-anchor="middle" class="fs">Heterogeneous Observer Protocol</text>
+  <line x1="325" y1="562" x2="545" y2="562" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="325" y="578" class="fd">• 人+AI对同一枢机的共识协议</text>
+  <text x="325" y="592" class="fd">• 感知方式不可还原如何对齐?</text>
+  <text x="325" y="606" class="fd">• 需要"翻译层"还是"共享界面"?</text>
+  <text x="325" y="620" class="fd">• L4缺口核心: 数据→图的映射</text>
+  <text x="325" y="638" class="fr">状态: 概念存在, 方法不存在</text>
+  <text x="325" y="652" class="fd">对应约束: C3, Q0.5, L4</text>
+
+  <!-- T3 Module J: Irreducibility Computation -->
+  <rect x="580" y="520" width="265" height="140" rx="6" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="712" y="542" text-anchor="middle" class="ft">不可再分性实际判定</text>
+  <text x="712" y="555" text-anchor="middle" class="fs">Irreducibility Decision Procedure</text>
+  <line x1="595" y1="562" x2="830" y2="562" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <text x="595" y="578" class="fd">• 范畴论素分解的计算复杂度?</text>
+  <text x="595" y="592" class="fd">• 指数级 → 需要近似判据</text>
+  <text x="595" y="606" class="fd">• 近似精度 vs 枢机丢失率?</text>
+  <text x="595" y="620" class="fd">• 可能需要新的复杂性理论</text>
+  <text x="595" y="638" class="fr">状态: 理论开放问题</text>
+  <text x="595" y="652" class="fd">对应约束: 枢机结构层, Q0.4</text>
+
+  <!-- DEPENDENCY ARROWS -->
+  <!-- T1 → T2 -->
+  <path d="M135,210 L135,240 L165,283" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a2)"/>
+  <path d="M345,210 L345,240 L435,283" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a2)"/>
+  <path d="M757,210 L757,240 L712,283" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a2)"/>
+
+  <!-- T2 → T3 -->
+  <path d="M165,445 L165,475 L165,518" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a3)"/>
+  <path d="M435,445 L435,475 L435,518" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a3)"/>
+  <path d="M712,445 L712,475 L712,518" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,2" fill="none" marker-end="url(#a3)"/>
+
+  <!-- LEGEND -->
+  <rect x="20" y="700" width="840" height="40" rx="6" fill="var(--inset-bg)" stroke="var(--border-subtle)" stroke-width="0.5"/>
+  <circle cx="50" cy="720" r="5" fill="#5a8a6a"/>
+  <text x="62" y="724" class="fs">Tier 1: 已可实现</text>
+  <circle cx="180" cy="720" r="5" fill="#b8860b"/>
+  <text x="192" y="724" class="fs">Tier 2: 需工程突破</text>
+  <circle cx="330" cy="720" r="5" fill="#8b5cf6"/>
+  <text x="342" y="724" class="fs">Tier 3: 可行性未知</text>
+  <line x1="470" y1="720" x2="500" y2="720" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#a2)"/>
+  <text x="510" y="724" class="fs">依赖关系 (上层是下层前提)</text>
+  <text x="700" y="724" class="fs" style="fill:var(--seed-muted);">虚线箭头 = 前置条件</text>
+
+</svg>
+</div>

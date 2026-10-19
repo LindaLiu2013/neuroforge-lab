@@ -1,0 +1,921 @@
+{
+  "exp_id": "EXP-001",
+  "timestamp": "2026-10-18T01:32:07.818653",
+  "completed": "2026-10-18T01:32:09.945232",
+  "parameters": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "keep_ratios": [
+      1.0,
+      0.95,
+      0.9,
+      0.8,
+      0.6
+    ],
+    "n_per_basin": 30,
+    "n_basins": 2,
+    "n_bridge_edges": 5,
+    "fusion_formula": "wr * br * (0.5 if cc else 1.0)",
+    "n_protect": "max(n_communities * 3, 8)",
+    "louvain_seed": 42
+  },
+  "aggregate": {
+    "mean_efficiency": 0.86,
+    "median_efficiency": 0.8,
+    "std_efficiency": 0.1281,
+    "min_efficiency": 0.6,
+    "max_efficiency": 1.0
+  },
+  "ratio_stats": {
+    "1.0": {
+      "sig_mean": 1.0,
+      "oracle_mean": 1.0,
+      "ph_mean": 1.0,
+      "eff_mean": 1.0,
+      "eff_std": 0.0
+    },
+    "0.95": {
+      "sig_mean": 0.0,
+      "oracle_mean": 1.0,
+      "ph_mean": 0.86,
+      "eff_mean": 0.86,
+      "eff_std": 0.1281
+    },
+    "0.9": {
+      "sig_mean": 0.0,
+      "oracle_mean": 1.0,
+      "ph_mean": 0.86,
+      "eff_mean": 0.86,
+      "eff_std": 0.1281
+    },
+    "0.8": {
+      "sig_mean": 0.0,
+      "oracle_mean": 1.0,
+      "ph_mean": 0.86,
+      "eff_mean": 0.86,
+      "eff_std": 0.1281
+    },
+    "0.6": {
+      "sig_mean": 0.0,
+      "oracle_mean": 1.0,
+      "ph_mean": 0.86,
+      "eff_mean": 0.86,
+      "eff_std": 0.1281
+    }
+  },
+  "success_criteria": {
+    "c1_mean_eff_ge_070": {
+      "value": 0.86,
+      "pass": 1
+    },
+    "c2_min_eff_ge_040": {
+      "value": 0.6,
+      "pass": 1
+    },
+    "c3_wilcoxon": {
+      "0.95": {
+        "p_value": 6.4e-05,
+        "ph_gt_sig": 1,
+        "pass": true
+      },
+      "0.9": {
+        "p_value": 6.4e-05,
+        "ph_gt_sig": 1,
+        "pass": true
+      },
+      "0.8": {
+        "p_value": 6.4e-05,
+        "ph_gt_sig": 1,
+        "pass": true
+      },
+      "0.6": {
+        "p_value": 6.4e-05,
+        "ph_gt_sig": 1,
+        "pass": true
+      }
+    },
+    "overall": "CONFIRMED"
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "n_nodes": 60,
+      "n_edges": 342,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.11,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 1,
+      "n_nodes": 60,
+      "n_edges": 347,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 2,
+      "n_nodes": 60,
+      "n_edges": 356,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.6
+    },
+    {
+      "seed": 3,
+      "n_nodes": 60,
+      "n_edges": 353,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 4,
+      "n_nodes": 60,
+      "n_edges": 351,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.12,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 5,
+      "n_nodes": 60,
+      "n_edges": 365,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 6,
+      "n_nodes": 60,
+      "n_edges": 340,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 7,
+      "n_nodes": 60,
+      "n_edges": 367,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.11,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 8,
+      "n_nodes": 60,
+      "n_edges": 335,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.09,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 9,
+      "n_nodes": 60,
+      "n_edges": 353,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 10,
+      "n_nodes": 60,
+      "n_edges": 370,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.11,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 11,
+      "n_nodes": 60,
+      "n_edges": 368,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 12,
+      "n_nodes": 60,
+      "n_edges": 353,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 13,
+      "n_nodes": 60,
+      "n_edges": 352,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 14,
+      "n_nodes": 60,
+      "n_edges": 350,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.6,
+          "efficiency": 0.6
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.6
+    },
+    {
+      "seed": 15,
+      "n_nodes": 60,
+      "n_edges": 327,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.09,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 16,
+      "n_nodes": 60,
+      "n_edges": 351,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 17,
+      "n_nodes": 60,
+      "n_edges": 356,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 1.0
+    },
+    {
+      "seed": 18,
+      "n_nodes": 60,
+      "n_edges": 355,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.1,
+      "avg_efficiency": 0.8
+    },
+    {
+      "seed": 19,
+      "n_nodes": 60,
+      "n_edges": 342,
+      "n_true_bridges": 5,
+      "keep_ratios": {
+        "1.0": {
+          "significance_recall": 1.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 1.0,
+          "efficiency": 1.0
+        },
+        "0.95": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.9": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.8": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        },
+        "0.6": {
+          "significance_recall": 0.0,
+          "oracle_recall": 1.0,
+          "ph_auto_recall": 0.8,
+          "efficiency": 0.8
+        }
+      },
+      "time_s": 0.18,
+      "avg_efficiency": 0.8
+    }
+  ]
+}

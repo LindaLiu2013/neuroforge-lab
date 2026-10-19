@@ -1,0 +1,1313 @@
+{
+  "milestones": [
+    {
+      "episode": 80,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.1387,
+          "1": 0.115,
+          "2": 0.1334,
+          "3": 0.1184,
+          "4": 0.1203,
+          "5": 0.1214,
+          "6": 0.1175,
+          "7": 0.1353
+        },
+        "true_pivot_count": 6,
+        "true_composition_count": 1,
+        "op_graph_edges": 4,
+        "total_attempts": 78,
+        "total_successes": 7,
+        "success_rate": 0.0897,
+        "energy_bits": 8992,
+        "self_model_accuracy": 0.8877
+      },
+      "self_model": {
+        "confidence": 0.7283333333333332,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 6,
+        "n_compositions": 1,
+        "mean_pivot_strength": 0.221,
+        "top_pivots": [
+          {
+            "pattern": "tiny_pos->op_2->medium_pos",
+            "strength": 0.318,
+            "successes": 2,
+            "uses": 3
+          },
+          {
+            "pattern": "tiny_pos->op_7->small_pos",
+            "strength": 0.238,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_7->small_pos",
+            "strength": 0.226,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_0->small_pos",
+            "strength": 0.208,
+            "successes": 1,
+            "uses": 2
+          },
+          {
+            "pattern": "tiny_pos->op_1->tiny_pos",
+            "strength": 0.17,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_2->medium_pos",
+            "strength": 0.168,
+            "successes": 1,
+            "uses": 2
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              0,
+              7
+            ],
+            "strength": 0.188,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "composition_attempts": {
+          "(3, 6)": {
+            "uses": 3,
+            "successes": 0
+          },
+          "(2, 6)": {
+            "uses": 2,
+            "successes": 0
+          },
+          "(4, 6)": {
+            "uses": 2,
+            "successes": 0
+          },
+          "(0, 5)": {
+            "uses": 2,
+            "successes": 0
+          },
+          "(3, 5)": {
+            "uses": 2,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 160,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.1794,
+          "1": 0.1167,
+          "2": 0.1295,
+          "3": 0.1073,
+          "4": 0.1131,
+          "5": 0.1131,
+          "6": 0.1142,
+          "7": 0.1267
+        },
+        "true_pivot_count": 5,
+        "true_composition_count": 1,
+        "op_graph_edges": 8,
+        "total_attempts": 159,
+        "total_successes": 16,
+        "success_rate": 0.1006,
+        "energy_bits": 18144,
+        "self_model_accuracy": 0.9059
+      },
+      "self_model": {
+        "confidence": 0.6908333333333333,
+        "known_pivots": 3,
+        "known_compositions": 2
+      },
+      "pivot_summary": {
+        "n_pivots": 5,
+        "n_compositions": 1,
+        "mean_pivot_strength": 0.253,
+        "top_pivots": [
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.502,
+            "successes": 4,
+            "uses": 7
+          },
+          {
+            "pattern": "small_pos->op_0->medium_pos",
+            "strength": 0.232,
+            "successes": 2,
+            "uses": 6
+          },
+          {
+            "pattern": "small_pos->op_2->medium_pos",
+            "strength": 0.21,
+            "successes": 2,
+            "uses": 3
+          },
+          {
+            "pattern": "tiny_pos->op_2->medium_pos",
+            "strength": 0.18,
+            "successes": 2,
+            "uses": 4
+          },
+          {
+            "pattern": "small_pos->op_1->small_pos",
+            "strength": 0.142,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              1,
+              0
+            ],
+            "strength": 0.092,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "composition_attempts": {
+          "(0, 7)": {
+            "uses": 14,
+            "successes": 1
+          },
+          "(7, 7)": {
+            "uses": 6,
+            "successes": 0
+          },
+          "(3, 6)": {
+            "uses": 3,
+            "successes": 0
+          },
+          "(2, 6)": {
+            "uses": 2,
+            "successes": 0
+          },
+          "(4, 6)": {
+            "uses": 2,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 240,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.22,
+          "1": 0.1123,
+          "2": 0.1223,
+          "3": 0.1016,
+          "4": 0.1076,
+          "5": 0.1095,
+          "6": 0.1083,
+          "7": 0.1184
+        },
+        "true_pivot_count": 5,
+        "true_composition_count": 0,
+        "op_graph_edges": 9,
+        "total_attempts": 240,
+        "total_successes": 31,
+        "success_rate": 0.1292,
+        "energy_bits": 27424,
+        "self_model_accuracy": 0.897
+      },
+      "self_model": {
+        "confidence": 0.7008333333333333,
+        "known_pivots": 3,
+        "known_compositions": 1
+      },
+      "pivot_summary": {
+        "n_pivots": 5,
+        "n_compositions": 0,
+        "mean_pivot_strength": 0.319,
+        "top_pivots": [
+          {
+            "pattern": "small_pos->op_0->medium_pos",
+            "strength": 0.588,
+            "successes": 6,
+            "uses": 18
+          },
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.424,
+            "successes": 7,
+            "uses": 24
+          },
+          {
+            "pattern": "small_pos->op_0->small_pos",
+            "strength": 0.308,
+            "successes": 3,
+            "uses": 10
+          },
+          {
+            "pattern": "tiny_pos->op_0->tiny_pos",
+            "strength": 0.172,
+            "successes": 2,
+            "uses": 8
+          },
+          {
+            "pattern": "small_pos->op_2->medium_pos",
+            "strength": 0.102,
+            "successes": 2,
+            "uses": 3
+          }
+        ],
+        "top_compositions": [],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 34,
+            "successes": 3
+          },
+          "(0, 7)": {
+            "uses": 14,
+            "successes": 1
+          },
+          "(7, 7)": {
+            "uses": 6,
+            "successes": 0
+          },
+          "(3, 6)": {
+            "uses": 3,
+            "successes": 0
+          },
+          "(2, 6)": {
+            "uses": 2,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 320,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2924,
+          "1": 0.1048,
+          "2": 0.1042,
+          "3": 0.0932,
+          "4": 0.097,
+          "5": 0.1005,
+          "6": 0.0991,
+          "7": 0.1088
+        },
+        "true_pivot_count": 6,
+        "true_composition_count": 1,
+        "op_graph_edges": 10,
+        "total_attempts": 318,
+        "total_successes": 47,
+        "success_rate": 0.1478,
+        "energy_bits": 37632,
+        "self_model_accuracy": 0.9122
+      },
+      "self_model": {
+        "confidence": 0.7249999999999999,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 6,
+        "n_compositions": 1,
+        "mean_pivot_strength": 0.353,
+        "top_pivots": [
+          {
+            "pattern": "small_pos->op_0->medium_pos",
+            "strength": 0.724,
+            "successes": 15,
+            "uses": 61
+          },
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.62,
+            "successes": 10,
+            "uses": 32
+          },
+          {
+            "pattern": "small_pos->op_0->small_pos",
+            "strength": 0.29,
+            "successes": 5,
+            "uses": 22
+          },
+          {
+            "pattern": "tiny_pos->op_0->medium_pos",
+            "strength": 0.218,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_1->small_pos",
+            "strength": 0.154,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_0->tiny_pos",
+            "strength": 0.114,
+            "successes": 1,
+            "uses": 5
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              0,
+              0
+            ],
+            "strength": 0.54,
+            "successes": 5,
+            "uses": 10
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 63,
+            "successes": 9
+          },
+          "(0, 7)": {
+            "uses": 15,
+            "successes": 1
+          },
+          "(0, 0, 0)": {
+            "uses": 13,
+            "successes": 0
+          },
+          "(7, 7)": {
+            "uses": 6,
+            "successes": 0
+          },
+          "(3, 6)": {
+            "uses": 3,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 400,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2778,
+          "1": 0.0995,
+          "2": 0.1152,
+          "3": 0.0936,
+          "4": 0.0989,
+          "5": 0.1046,
+          "6": 0.1016,
+          "7": 0.1088
+        },
+        "true_pivot_count": 9,
+        "true_composition_count": 2,
+        "op_graph_edges": 13,
+        "total_attempts": 399,
+        "total_successes": 61,
+        "success_rate": 0.1529,
+        "energy_bits": 48256,
+        "self_model_accuracy": 0.9244
+      },
+      "self_model": {
+        "confidence": 0.8,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 9,
+        "n_compositions": 2,
+        "mean_pivot_strength": 0.295,
+        "top_pivots": [
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.512,
+            "successes": 11,
+            "uses": 38
+          },
+          {
+            "pattern": "small_pos->op_0->medium_pos",
+            "strength": 0.466,
+            "successes": 16,
+            "uses": 72
+          },
+          {
+            "pattern": "tiny_pos->op_1->tiny_neg",
+            "strength": 0.34,
+            "successes": 2,
+            "uses": 2
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_pos",
+            "strength": 0.334,
+            "successes": 3,
+            "uses": 7
+          },
+          {
+            "pattern": "small_pos->op_2->medium_pos",
+            "strength": 0.246,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_1->small_pos",
+            "strength": 0.246,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_1->small_neg",
+            "strength": 0.194,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_2->large_pos",
+            "strength": 0.162,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              0,
+              0
+            ],
+            "strength": 0.412,
+            "successes": 6,
+            "uses": 18
+          },
+          {
+            "ops": [
+              1,
+              0,
+              2
+            ],
+            "strength": 0.112,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 71,
+            "successes": 10
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          },
+          "(0, 0, 0)": {
+            "uses": 16,
+            "successes": 0
+          },
+          "(0, 7)": {
+            "uses": 15,
+            "successes": 1
+          },
+          "(1, 0, 0)": {
+            "uses": 8,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 480,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2622,
+          "1": 0.0891,
+          "2": 0.115,
+          "3": 0.0997,
+          "4": 0.1073,
+          "5": 0.1113,
+          "6": 0.1014,
+          "7": 0.1141
+        },
+        "true_pivot_count": 12,
+        "true_composition_count": 3,
+        "op_graph_edges": 17,
+        "total_attempts": 480,
+        "total_successes": 71,
+        "success_rate": 0.1479,
+        "energy_bits": 59040,
+        "self_model_accuracy": 0.9095
+      },
+      "self_model": {
+        "confidence": 0.8,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 12,
+        "n_compositions": 3,
+        "mean_pivot_strength": 0.228,
+        "top_pivots": [
+          {
+            "pattern": "tiny_pos->op_1->tiny_neg",
+            "strength": 0.352,
+            "successes": 3,
+            "uses": 4
+          },
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.344,
+            "successes": 11,
+            "uses": 40
+          },
+          {
+            "pattern": "medium_pos->op_0->medium_pos",
+            "strength": 0.312,
+            "successes": 2,
+            "uses": 4
+          },
+          {
+            "pattern": "small_pos->op_1->small_neg",
+            "strength": 0.298,
+            "successes": 2,
+            "uses": 3
+          },
+          {
+            "pattern": "small_pos->op_0->medium_pos",
+            "strength": 0.238,
+            "successes": 16,
+            "uses": 76
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_pos",
+            "strength": 0.226,
+            "successes": 4,
+            "uses": 13
+          },
+          {
+            "pattern": "small_pos->op_2->tiny_pos",
+            "strength": 0.186,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_1->small_neg",
+            "strength": 0.176,
+            "successes": 2,
+            "uses": 4
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              0,
+              0
+            ],
+            "strength": 0.304,
+            "successes": 6,
+            "uses": 18
+          },
+          {
+            "ops": [
+              2,
+              3,
+              4
+            ],
+            "strength": 0.116,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "ops": [
+              1,
+              1
+            ],
+            "strength": 0.108,
+            "successes": 1,
+            "uses": 2
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 71,
+            "successes": 10
+          },
+          "(0, 1)": {
+            "uses": 31,
+            "successes": 1
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          },
+          "(0, 0, 0)": {
+            "uses": 16,
+            "successes": 0
+          },
+          "(0, 7)": {
+            "uses": 15,
+            "successes": 1
+          }
+        }
+      }
+    },
+    {
+      "episode": 560,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.252,
+          "1": 0.0623,
+          "2": 0.1236,
+          "3": 0.0965,
+          "4": 0.1189,
+          "5": 0.1234,
+          "6": 0.1001,
+          "7": 0.1232
+        },
+        "true_pivot_count": 9,
+        "true_composition_count": 1,
+        "op_graph_edges": 19,
+        "total_attempts": 558,
+        "total_successes": 75,
+        "success_rate": 0.1344,
+        "energy_bits": 70336,
+        "self_model_accuracy": 0.9148
+      },
+      "self_model": {
+        "confidence": 0.8066666666666668,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 9,
+        "n_compositions": 1,
+        "mean_pivot_strength": 0.172,
+        "top_pivots": [
+          {
+            "pattern": "tiny_pos->op_0->tiny_pos",
+            "strength": 0.338,
+            "successes": 2,
+            "uses": 3
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_pos",
+            "strength": 0.242,
+            "successes": 5,
+            "uses": 15
+          },
+          {
+            "pattern": "tiny_pos->op_1->tiny_pos",
+            "strength": 0.218,
+            "successes": 2,
+            "uses": 7
+          },
+          {
+            "pattern": "small_pos->op_1->small_neg",
+            "strength": 0.192,
+            "successes": 1,
+            "uses": 2
+          },
+          {
+            "pattern": "tiny_pos->op_1->tiny_neg",
+            "strength": 0.158,
+            "successes": 3,
+            "uses": 7
+          },
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.12,
+            "successes": 11,
+            "uses": 44
+          },
+          {
+            "pattern": "small_pos->op_1->small_pos",
+            "strength": 0.114,
+            "successes": 2,
+            "uses": 11
+          },
+          {
+            "pattern": "medium_pos->op_0->medium_pos",
+            "strength": 0.088,
+            "successes": 2,
+            "uses": 8
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              1,
+              1,
+              0
+            ],
+            "strength": 0.208,
+            "successes": 2,
+            "uses": 6
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 77,
+            "successes": 10
+          },
+          "(1, 1)": {
+            "uses": 34,
+            "successes": 2
+          },
+          "(0, 1)": {
+            "uses": 31,
+            "successes": 1
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          },
+          "(0, 0, 0)": {
+            "uses": 20,
+            "successes": 0
+          }
+        }
+      }
+    },
+    {
+      "episode": 640,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2828,
+          "1": 0.0528,
+          "2": 0.1215,
+          "3": 0.0981,
+          "4": 0.1201,
+          "5": 0.124,
+          "6": 0.0869,
+          "7": 0.1137
+        },
+        "true_pivot_count": 7,
+        "true_composition_count": 2,
+        "op_graph_edges": 20,
+        "total_attempts": 639,
+        "total_successes": 86,
+        "success_rate": 0.1346,
+        "energy_bits": 81696,
+        "self_model_accuracy": 0.9079
+      },
+      "self_model": {
+        "confidence": 0.7725,
+        "known_pivots": 3,
+        "known_compositions": 1
+      },
+      "pivot_summary": {
+        "n_pivots": 7,
+        "n_compositions": 2,
+        "mean_pivot_strength": 0.25,
+        "top_pivots": [
+          {
+            "pattern": "medium_pos->op_0->medium_pos",
+            "strength": 0.808,
+            "successes": 8,
+            "uses": 22
+          },
+          {
+            "pattern": "tiny_pos->op_0->medium_pos",
+            "strength": 0.232,
+            "successes": 2,
+            "uses": 6
+          },
+          {
+            "pattern": "medium_pos->op_0->large_pos",
+            "strength": 0.218,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_0->small_pos",
+            "strength": 0.164,
+            "successes": 1,
+            "uses": 2
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_pos",
+            "strength": 0.134,
+            "successes": 5,
+            "uses": 15
+          },
+          {
+            "pattern": "tiny_pos->op_1->tiny_pos",
+            "strength": 0.11,
+            "successes": 2,
+            "uses": 7
+          },
+          {
+            "pattern": "small_pos->op_1->small_neg",
+            "strength": 0.084,
+            "successes": 1,
+            "uses": 2
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              0,
+              0
+            ],
+            "strength": 0.24,
+            "successes": 5,
+            "uses": 24
+          },
+          {
+            "ops": [
+              1,
+              1,
+              0
+            ],
+            "strength": 0.1,
+            "successes": 2,
+            "uses": 6
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 112,
+            "successes": 15
+          },
+          "(1, 1)": {
+            "uses": 34,
+            "successes": 2
+          },
+          "(0, 1)": {
+            "uses": 31,
+            "successes": 1
+          },
+          "(0, 0, 0)": {
+            "uses": 28,
+            "successes": 0
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          }
+        }
+      }
+    },
+    {
+      "episode": 720,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2979,
+          "1": 0.031,
+          "2": 0.1217,
+          "3": 0.1,
+          "4": 0.1232,
+          "5": 0.1277,
+          "6": 0.083,
+          "7": 0.1155
+        },
+        "true_pivot_count": 7,
+        "true_composition_count": 3,
+        "op_graph_edges": 20,
+        "total_attempts": 720,
+        "total_successes": 97,
+        "success_rate": 0.1347,
+        "energy_bits": 93280,
+        "self_model_accuracy": 0.9033
+      },
+      "self_model": {
+        "confidence": 0.7691666666666667,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 7,
+        "n_compositions": 3,
+        "mean_pivot_strength": 0.298,
+        "top_pivots": [
+          {
+            "pattern": "medium_pos->op_0->medium_pos",
+            "strength": 0.79,
+            "successes": 12,
+            "uses": 43
+          },
+          {
+            "pattern": "tiny_pos->op_0->tiny_pos",
+            "strength": 0.258,
+            "successes": 2,
+            "uses": 5
+          },
+          {
+            "pattern": "small_pos->op_1->small_pos",
+            "strength": 0.246,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_neg",
+            "strength": 0.246,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_7->small_pos",
+            "strength": 0.238,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_0->medium_pos",
+            "strength": 0.198,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "medium_pos->op_0->large_pos",
+            "strength": 0.11,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              1,
+              1
+            ],
+            "strength": 0.196,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "ops": [
+              0,
+              0
+            ],
+            "strength": 0.188,
+            "successes": 3,
+            "uses": 13
+          },
+          {
+            "ops": [
+              0,
+              0,
+              7
+            ],
+            "strength": 0.088,
+            "successes": 1,
+            "uses": 4
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 137,
+            "successes": 18
+          },
+          "(0, 0, 0)": {
+            "uses": 39,
+            "successes": 0
+          },
+          "(1, 1)": {
+            "uses": 37,
+            "successes": 3
+          },
+          "(0, 1)": {
+            "uses": 31,
+            "successes": 1
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          }
+        }
+      }
+    },
+    {
+      "episode": 800,
+      "true_state": {
+        "true_preferences": {
+          "0": 0.2899,
+          "1": 0.0234,
+          "2": 0.123,
+          "3": 0.1017,
+          "4": 0.1257,
+          "5": 0.1306,
+          "6": 0.0829,
+          "7": 0.1228
+        },
+        "true_pivot_count": 6,
+        "true_composition_count": 1,
+        "op_graph_edges": 24,
+        "total_attempts": 798,
+        "total_successes": 104,
+        "success_rate": 0.1303,
+        "energy_bits": 104064,
+        "self_model_accuracy": 0.904
+      },
+      "self_model": {
+        "confidence": 0.7249999999999999,
+        "known_pivots": 3,
+        "known_compositions": 3
+      },
+      "pivot_summary": {
+        "n_pivots": 6,
+        "n_compositions": 1,
+        "mean_pivot_strength": 0.276,
+        "top_pivots": [
+          {
+            "pattern": "medium_pos->op_0->medium_pos",
+            "strength": 0.686,
+            "successes": 16,
+            "uses": 67
+          },
+          {
+            "pattern": "small_pos->op_7->small_pos",
+            "strength": 0.284,
+            "successes": 2,
+            "uses": 2
+          },
+          {
+            "pattern": "tiny_pos->op_4->tiny_pos",
+            "strength": 0.226,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "small_pos->op_5->small_pos",
+            "strength": 0.226,
+            "successes": 1,
+            "uses": 1
+          },
+          {
+            "pattern": "tiny_pos->op_0->tiny_pos",
+            "strength": 0.154,
+            "successes": 5,
+            "uses": 23
+          },
+          {
+            "pattern": "small_pos->op_1->tiny_neg",
+            "strength": 0.082,
+            "successes": 1,
+            "uses": 3
+          }
+        ],
+        "top_compositions": [
+          {
+            "ops": [
+              7,
+              4,
+              5
+            ],
+            "strength": 0.176,
+            "successes": 1,
+            "uses": 1
+          }
+        ],
+        "composition_attempts": {
+          "(0, 0)": {
+            "uses": 167,
+            "successes": 20
+          },
+          "(0, 0, 0)": {
+            "uses": 51,
+            "successes": 2
+          },
+          "(1, 1)": {
+            "uses": 40,
+            "successes": 3
+          },
+          "(0, 1)": {
+            "uses": 31,
+            "successes": 1
+          },
+          "(1, 0)": {
+            "uses": 27,
+            "successes": 1
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "true_state": {
+      "true_preferences": {
+        "0": 0.2922,
+        "1": 0.023,
+        "2": 0.1226,
+        "3": 0.1014,
+        "4": 0.1254,
+        "5": 0.1303,
+        "6": 0.0827,
+        "7": 0.1224
+      },
+      "true_pivot_count": 7,
+      "true_composition_count": 2,
+      "op_graph_edges": 24,
+      "total_attempts": 800,
+      "total_successes": 105,
+      "success_rate": 0.1313,
+      "energy_bits": 104704,
+      "self_model_accuracy": 0.9022
+    },
+    "pivot_summary": {
+      "n_pivots": 7,
+      "n_compositions": 2,
+      "mean_pivot_strength": 0.314,
+      "top_pivots": [
+        {
+          "pattern": "medium_pos->op_0->medium_pos",
+          "strength": 0.682,
+          "successes": 16,
+          "uses": 67
+        },
+        {
+          "pattern": "small_pos->op_0->small_pos",
+          "strength": 0.396,
+          "successes": 2,
+          "uses": 2
+        },
+        {
+          "pattern": "small_pos->op_7->small_pos",
+          "strength": 0.28,
+          "successes": 2,
+          "uses": 2
+        },
+        {
+          "pattern": "small_pos->op_0->medium_pos",
+          "strength": 0.246,
+          "successes": 1,
+          "uses": 1
+        },
+        {
+          "pattern": "tiny_pos->op_4->tiny_pos",
+          "strength": 0.222,
+          "successes": 1,
+          "uses": 1
+        },
+        {
+          "pattern": "small_pos->op_5->small_pos",
+          "strength": 0.222,
+          "successes": 1,
+          "uses": 1
+        },
+        {
+          "pattern": "tiny_pos->op_0->tiny_pos",
+          "strength": 0.15,
+          "successes": 5,
+          "uses": 23
+        }
+      ],
+      "top_compositions": [
+        {
+          "ops": [
+            0,
+            0,
+            0
+          ],
+          "strength": 0.196,
+          "successes": 1,
+          "uses": 1
+        },
+        {
+          "ops": [
+            7,
+            4,
+            5
+          ],
+          "strength": 0.172,
+          "successes": 1,
+          "uses": 1
+        }
+      ],
+      "composition_attempts": {
+        "(0, 0)": {
+          "uses": 167,
+          "successes": 20
+        },
+        "(0, 0, 0)": {
+          "uses": 52,
+          "successes": 3
+        },
+        "(1, 1)": {
+          "uses": 40,
+          "successes": 3
+        },
+        "(0, 1)": {
+          "uses": 31,
+          "successes": 1
+        },
+        "(1, 0)": {
+          "uses": 27,
+          "successes": 1
+        }
+      }
+    },
+    "self_model": {
+      "confidence": 0.7625,
+      "known_pivots": [
+        {
+          "pattern": "small_pos->op_0->small_pos",
+          "strength": 0.396
+        },
+        {
+          "pattern": "small_pos->op_0->medium_pos",
+          "strength": 0.246
+        },
+        {
+          "pattern": "medium_pos->op_0->medium_pos",
+          "strength": 0.682
+        }
+      ],
+      "known_compositions": [
+        {
+          "ops": [
+            0,
+            0
+          ],
+          "strength": 0.345
+        },
+        {
+          "ops": [
+            7,
+            5
+          ],
+          "strength": 0.222
+        },
+        {
+          "ops": [
+            4,
+            4
+          ],
+          "strength": 0.222
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "self_confidence": 0.7625,
+    "actual_accuracy": 0.9022,
+    "confidence_accuracy_gap": 0.1397,
+    "self_pivot_estimate": 3,
+    "true_pivot_count": 7,
+    "calibration": "calibrated"
+  },
+  "version_comparison": {
+    "v0.1": {
+      "success_rate": 0.198,
+      "pivots": 3,
+      "compositions": 0,
+      "self_model": "none"
+    },
+    "v0.2": {
+      "success_rate": 0.213,
+      "pivots": 4,
+      "compositions": 1,
+      "self_model": "lossy_fixed_conf"
+    },
+    "v0.3": {
+      "success_rate": 0.1313,
+      "pivots": 7,
+      "compositions": 2,
+      "self_model": "calibrated(gap=0.140)"
+    }
+  }
+}

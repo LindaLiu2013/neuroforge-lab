@@ -1,0 +1,284 @@
+{
+  "modules": {
+    "hardware_meta": {
+      "query_latency_ns": 1061322800,
+      "modify_enforced": true,
+      "tamper_integrity": "INTEGRITY_OK",
+      "timing": {
+        "mean_ns": 4985.0,
+        "std_ns": 2478.6,
+        "min_ns": 2400,
+        "max_ns": 9400,
+        "samples": 20
+      },
+      "time_ms": 1170.7
+    },
+    "heterogeneous_observer": {
+      "observer_a_hits": 0,
+      "observer_b_hits": 6,
+      "true_bridges": 6,
+      "edge_jaccard": 0.0,
+      "rank_correlation": 0.0,
+      "n_common": 0,
+      "disagreement_informative": true,
+      "signature_agreement": {
+        "n_edges": 1.0,
+        "n_nodes": 1.0
+      },
+      "time_ms": 33.5
+    },
+    "irreducibility_scaling": [
+      {
+        "n_nodes": 30,
+        "n_edges": 97,
+        "exact_mean_ms": 10.5,
+        "local_mean_ms": 1.0,
+        "speedup": 10.51,
+        "local_precision": 0.9727,
+        "local_recall": 1.0
+      },
+      {
+        "n_nodes": 60,
+        "n_edges": 356,
+        "exact_mean_ms": 139.7,
+        "local_mean_ms": 12.4,
+        "speedup": 11.27,
+        "local_precision": 1.0,
+        "local_recall": 1.0
+      },
+      {
+        "n_nodes": 100,
+        "n_edges": 984,
+        "exact_mean_ms": 2194.1,
+        "local_mean_ms": 171.9,
+        "speedup": 12.76,
+        "local_precision": 0.9939,
+        "local_recall": 1.0
+      },
+      {
+        "n_nodes": 150,
+        "n_edges": 2239,
+        "exact_mean_ms": 11937.6,
+        "local_mean_ms": 777.8,
+        "speedup": 15.35,
+        "local_precision": 0.9982,
+        "local_recall": 1.0
+      }
+    ],
+    "real_data": {
+      "basic_stats": {
+        "n_nodes": 50,
+        "n_edges": 13,
+        "density": 0.0106,
+        "avg_degree": 0.52,
+        "connected_components": 37
+      },
+      "pivot_analysis": {
+        "top_betweenness_edges": [
+          {
+            "edge": [
+              "collections",
+              "contextlib"
+            ],
+            "score": 0.022
+          },
+          {
+            "edge": [
+              "aifc",
+              "collections"
+            ],
+            "score": 0.0163
+          },
+          {
+            "edge": [
+              "ast",
+              "contextlib"
+            ],
+            "score": 0.0163
+          },
+          {
+            "edge": [
+              "cgi",
+              "collections"
+            ],
+            "score": 0.0163
+          },
+          {
+            "edge": [
+              "aifc",
+              "chunk"
+            ],
+            "score": 0.009
+          },
+          {
+            "edge": [
+              "ast",
+              "enum"
+            ],
+            "score": 0.009
+          },
+          {
+            "edge": [
+              "asynchat",
+              "collections"
+            ],
+            "score": 0.009
+          },
+          {
+            "edge": [
+              "cgi",
+              "email"
+            ],
+            "score": 0.009
+          },
+          {
+            "edge": [
+              "collections",
+              "configparser"
+            ],
+            "score": 0.009
+          },
+          {
+            "edge": [
+              "collections",
+              "difflib"
+            ],
+            "score": 0.009
+          }
+        ],
+        "top_degree_nodes": [
+          {
+            "node": "collections",
+            "centrality": 0.1429
+          },
+          {
+            "node": "aifc",
+            "centrality": 0.0408
+          },
+          {
+            "node": "ast",
+            "centrality": 0.0408
+          },
+          {
+            "node": "cgi",
+            "centrality": 0.0408
+          },
+          {
+            "node": "contextlib",
+            "centrality": 0.0408
+          },
+          {
+            "node": "tufe_exp001_robustness",
+            "centrality": 0.0204
+          },
+          {
+            "node": "asynchat",
+            "centrality": 0.0204
+          },
+          {
+            "node": "chunk",
+            "centrality": 0.0204
+          },
+          {
+            "node": "code",
+            "centrality": 0.0204
+          },
+          {
+            "node": "codeop",
+            "centrality": 0.0204
+          }
+        ]
+      },
+      "community_analysis": {
+        "n_communities": 40,
+        "sizes": [
+          5,
+          3,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "largest_members": [
+          [
+            "collections",
+            "configparser",
+            "asynchat",
+            "difflib",
+            "doctest"
+          ],
+          [
+            "enum",
+            "ast",
+            "contextlib"
+          ],
+          [
+            "tufe_exp001_robustness",
+            "datetime"
+          ]
+        ]
+      },
+      "known_critical_found": [
+        "collections",
+        "abc"
+      ],
+      "time_ms": 734.4
+    }
+  },
+  "feasibility": {
+    "hardware_meta": {
+      "verdict": "FEASIBLE_WITH_OS_PRIMITIVES",
+      "note": "Pipe-based isolation achieves hardware-like enforcement without custom hardware. True ROM requires FPGA/TEE but software simulation captures the constraint semantics."
+    },
+    "heterogeneous_observer": {
+      "verdict": "PROTOCOL_DEFINED_PARTIAL_ANSWER",
+      "note": "Structural agreement measurable (Jaccard=0.0). Disagreement IS informative when observers have genuinely different perception functions. Full human-AI protocol needs interface design beyond PoC scope."
+    },
+    "irreducibility_scaling": {
+      "verdict": "APPROXIMATION_VIABLE",
+      "max_exact_nodes": 150,
+      "best_local_speedup": 15.35,
+      "avg_local_precision": 0.9912,
+      "avg_local_recall": 1.0,
+      "note": "Exact feasible up to ~150 nodes (<30s). Local-k approximation gives 15.3x speedup with P=0.991/R=1.000. For >500 nodes, sampling-based methods needed."
+    },
+    "real_data": {
+      "verdict": "PARTIAL_L4_BRIDGE",
+      "note": "Python stdlib import graph successfully analyzed. Pivot detection produces interpretable results on real data. Full L4 solution (arbitrary data → graph protocol) remains open."
+    }
+  }
+}

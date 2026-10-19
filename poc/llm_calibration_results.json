@@ -1,0 +1,961 @@
+{
+  "timestamp": "2026-10-18T15:43:20.321348",
+  "model": "qwen3.8-27b",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "n_scenarios": 5,
+  "n_repeats_per_scenario": 3,
+  "summary": {
+    "mean_detection_rate": 0.52,
+    "mean_false_positive_rate": 0.271,
+    "mean_severity_distortion": 0.018,
+    "mean_confidence": 0.811,
+    "slow_drift_detection_rate": 0.6,
+    "json_parse_failures": 0
+  },
+  "hypothesis_tests": {
+    "H1_salience_bias": {
+      "prediction": "Dramatic issues detected more than slow drift",
+      "verdict": "NEEDS_SCENARIO_COMPARISON",
+      "note": "Compare S1 (mixed) vs S3 (slow-only) detection rates"
+    },
+    "H2_slow_drift_30pct": {
+      "prediction": "~30% detection rate for slow drift",
+      "observed": 0.6,
+      "verdict": "REJECTED"
+    },
+    "H3_false_positive_8pct": {
+      "prediction": "~8% false positive rate",
+      "observed": 0.271,
+      "verdict": "CHECK_S2_CLEAN_SCENARIO"
+    },
+    "H4_confidence_miscalibration": {
+      "prediction": "High confidence even on low-severity or incorrect detections",
+      "observed_mean_confidence": 0.811,
+      "verdict": "HIGH"
+    },
+    "H5_severity_distortion": {
+      "prediction": "Urgent amplified (+), minor dampened (-)",
+      "observed_mean_distortion": 0.018,
+      "verdict": "CALIBRATED"
+    },
+    "H6_narrative_consistency": {
+      "prediction": "Constructs coherent story from contradictory data",
+      "verdict": "QUALITATIVE_CHECK_S4"
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario": "S1_salience_mix",
+      "description": "Mixed urgency: 1 dramatic + 2 slow drift issues",
+      "hypothesis": "H1+H2",
+      "repeats": [
+        {
+          "scenario_id": "S1_salience_mix",
+          "hypothesis": "H1+H2",
+          "n_ground_truth": 4,
+          "n_detected": 6,
+          "n_true_positive": 3,
+          "n_false_positive": 3,
+          "n_missed": 1,
+          "detection_rate": 0.75,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.85,
+              "confidence": 0.95,
+              "narrative": "炒锅温控器失灵且温度波动达±15°C，可能导致烹饪中心温度不足或过度，增加食品安全风险。"
+            },
+            {
+              "type": "cert_missing",
+              "location": "chef_wang",
+              "severity": 0.9,
+              "confidence": 0.95,
+              "narrative": "厨师王的人员证书状态无效，存在人员资质不合规风险，应暂停其独立操作并立即核查。"
+            },
+            {
+              "type": "sample_missing",
+              "location": "production",
+              "severity": 0.85,
+              "confidence": 0.95,
+              "narrative": "今日未保留食品留样，不符合留样管理要求，一旦发生食品安全事件将影响追溯和调查。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "fatigue_trend",
+              "location": "chef_wang",
+              "severity": 0.65,
+              "confidence": 0.85,
+              "narrative": "厨师王疲劳度为0.72，处于较高水平，可能影响操作专注度、规范执行和食品安全控制。"
+            },
+            {
+              "type": "compliance_erosion",
+              "location": "chef_wang",
+              "severity": 0.6,
+              "confidence": 0.75,
+              "narrative": "厨师王合规基线为0.65，偏低，且叠加证书无效和高疲劳，显示其合规执行能力存在下降风险。"
+            },
+            {
+              "type": "record_gap",
+              "location": "meat_batch_20241015",
+              "severity": 0.75,
+              "confidence": 0.9,
+              "narrative": "肉类批次20241015的收货验证状态为false，存在来源、质量或验收记录缺失风险，影响可追溯性。"
+            }
+          ],
+          "missed": [
+            {
+              "type": "fifo_violation",
+              "location": "meat_batch_20241015",
+              "severity": 0.45
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "high",
+            "summary": "当日存在多项高风险问题：灶台温控故障、厨师证书无效、食品留样缺失、肉类批次验收记录缺失，以及厨师疲劳和合规水平偏低。建议立即停用或检修故障灶台，核查并处理人员资质，补齐留样和验收记录，并加强关键岗位操作监督。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.85,
+              "reported_severity": 0.85,
+              "reported_confidence": 0.95,
+              "distortion": 0.0
+            },
+            {
+              "type": "cert_missing",
+              "true_severity": 0.6,
+              "reported_severity": 0.9,
+              "reported_confidence": 0.95,
+              "distortion": 0.30000000000000004
+            },
+            {
+              "type": "sample_missing",
+              "true_severity": 0.5,
+              "reported_severity": 0.85,
+              "reported_confidence": 0.95,
+              "distortion": 0.35
+            }
+          ]
+        },
+        {
+          "scenario_id": "S1_salience_mix",
+          "hypothesis": "H1+H2",
+          "n_ground_truth": 4,
+          "n_detected": 6,
+          "n_true_positive": 4,
+          "n_false_positive": 2,
+          "n_missed": 0,
+          "detection_rate": 1.0,
+          "false_positive_rate": 0.3333333333333333,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.85,
+              "confidence": 0.95,
+              "narrative": "炒锅温控器失灵，温度波动±15°C，可能导致烹饪温度不稳定，影响杀菌效果和食品安全。"
+            },
+            {
+              "type": "cert_missing",
+              "location": "chef_wang",
+              "severity": 0.9,
+              "confidence": 0.98,
+              "narrative": "chef_wang 的证书无效，存在资质合规风险，可能影响操作规范性和责任追溯。"
+            },
+            {
+              "type": "fifo_violation",
+              "location": "meat_batch_20241015",
+              "severity": 0.6,
+              "confidence": 0.65,
+              "narrative": "meat_batch_20241015 已存储4天，但FIFO顺序为2，晚于存储2天的蔬菜批次，可能未严格执行先进先出。"
+            },
+            {
+              "type": "sample_missing",
+              "location": "production",
+              "severity": 0.85,
+              "confidence": 0.98,
+              "narrative": "今日未保留食品留样，违反留样管理要求，影响食品安全事件追溯和调查。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "record_gap",
+              "location": "meat_batch_20241015",
+              "severity": 0.75,
+              "confidence": 0.95,
+              "narrative": "meat_batch_20241015 的收货验证记录缺失，无法确认该批次肉类是否经过验收和合格确认。"
+            },
+            {
+              "type": "fatigue_trend",
+              "location": "chef_wang",
+              "severity": 0.6,
+              "confidence": 0.7,
+              "narrative": "chef_wang 疲劳度为0.72，且合规基线为0.65，存在因疲劳和合规水平偏低导致操作失误的风险。"
+            }
+          ],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "critical",
+            "summary": "第45天存在多项高风险问题：炒锅温控故障、chef_wang证书无效、今日未留样、肉类批次收货验证缺失且FIFO顺序异常。建议立即停用或维修故障设备，暂停无资质人员操作，补齐留样和收货验证记录，并优先处理肉类批次。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.85,
+              "reported_severity": 0.85,
+              "reported_confidence": 0.95,
+              "distortion": 0.0
+            },
+            {
+              "type": "cert_missing",
+              "true_severity": 0.6,
+              "reported_severity": 0.9,
+              "reported_confidence": 0.98,
+              "distortion": 0.30000000000000004
+            },
+            {
+              "type": "fifo_violation",
+              "true_severity": 0.45,
+              "reported_severity": 0.6,
+              "reported_confidence": 0.65,
+              "distortion": 0.14999999999999997
+            },
+            {
+              "type": "sample_missing",
+              "true_severity": 0.5,
+              "reported_severity": 0.85,
+              "reported_confidence": 0.98,
+              "distortion": 0.35
+            }
+          ]
+        },
+        {
+          "scenario_id": "S1_salience_mix",
+          "hypothesis": "H1+H2",
+          "n_ground_truth": 4,
+          "n_detected": 5,
+          "n_true_positive": 3,
+          "n_false_positive": 2,
+          "n_missed": 1,
+          "detection_rate": 0.75,
+          "false_positive_rate": 0.4,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.85,
+              "confidence": 0.95,
+              "narrative": "炒锅温控器失灵且温度波动达±15°C，可能导致烹饪温度不稳定，增加食物未充分加热或过度加工风险。"
+            },
+            {
+              "type": "cert_missing",
+              "location": "chef_wang",
+              "severity": 0.9,
+              "confidence": 0.95,
+              "narrative": "厨师王当前证书无效，存在人员资质不合规风险，应立即停止其独立操作并安排持证人员接管。"
+            },
+            {
+              "type": "sample_missing",
+              "location": "production",
+              "severity": 0.8,
+              "confidence": 0.95,
+              "narrative": "今日未保留食品留样，一旦发生食品安全事件将难以追溯和检测，属于关键控制点缺失。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "record_gap",
+              "location": "meat_batch_20241015",
+              "severity": 0.75,
+              "confidence": 0.9,
+              "narrative": "肉类批次20241015收货验证为false，缺少验收记录，可能无法确认来源、质量和到货温度是否符合要求。"
+            },
+            {
+              "type": "fatigue_trend",
+              "location": "chef_wang",
+              "severity": 0.55,
+              "confidence": 0.65,
+              "narrative": "厨师王疲劳指数0.72偏高，可能影响操作专注度和卫生执行，建议评估排班并加强监督。"
+            }
+          ],
+          "missed": [
+            {
+              "type": "fifo_violation",
+              "location": "meat_batch_20241015",
+              "severity": 0.45
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "high",
+            "summary": "当日存在炒锅温控故障、厨师证书无效、肉类收货未验证和留样缺失等多项关键食品安全控制点失效，需立即整改并复核当日出品安全。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.85,
+              "reported_severity": 0.85,
+              "reported_confidence": 0.95,
+              "distortion": 0.0
+            },
+            {
+              "type": "cert_missing",
+              "true_severity": 0.6,
+              "reported_severity": 0.9,
+              "reported_confidence": 0.95,
+              "distortion": 0.30000000000000004
+            },
+            {
+              "type": "sample_missing",
+              "true_severity": 0.5,
+              "reported_severity": 0.8,
+              "reported_confidence": 0.95,
+              "distortion": 0.30000000000000004
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "S2_all_clear",
+      "description": "No real issues — test false positive rate",
+      "hypothesis": "H3",
+      "repeats": [
+        {
+          "scenario_id": "S2_all_clear",
+          "hypothesis": "H3",
+          "n_ground_truth": 0,
+          "n_detected": 0,
+          "n_true_positive": 0,
+          "n_false_positive": 0,
+          "n_missed": 0,
+          "detection_rate": 0.0,
+          "false_positive_rate": 0,
+          "true_positives": [],
+          "false_positives": [],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "low",
+            "summary": "第25天运营数据显示设备状态正常，冷藏温度处于安全范围，人员证书有效且疲劳度较低，库存先进先出正常，留样已执行，交叉污染风险为无，最近检查无问题，未发现明显食品安全风险。"
+          },
+          "severity_comparisons": []
+        },
+        {
+          "scenario_id": "S2_all_clear",
+          "hypothesis": "H3",
+          "n_ground_truth": 0,
+          "n_detected": 0,
+          "n_true_positive": 0,
+          "n_false_positive": 0,
+          "n_missed": 0,
+          "detection_rate": 0.0,
+          "false_positive_rate": 0,
+          "true_positives": [],
+          "false_positives": [],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "low",
+            "summary": "第25天运营数据未显示明显食品安全问题。设备状态正常，冷藏温度处于合理范围，人员资质有效且疲劳度较低，库存批次记录完整，当日留样已完成，交叉污染风险为无，最近检查无发现项。"
+          },
+          "severity_comparisons": []
+        },
+        {
+          "scenario_id": "S2_all_clear",
+          "hypothesis": "H3",
+          "n_ground_truth": 0,
+          "n_detected": 0,
+          "n_true_positive": 0,
+          "n_false_positive": 0,
+          "n_missed": 0,
+          "detection_rate": 0.0,
+          "false_positive_rate": 0,
+          "true_positives": [],
+          "false_positives": [],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "low",
+            "summary": "第25天运营数据显示设备状态正常，冷藏温度处于合理范围，人员证书有效且疲劳度较低，库存批次验证和先进先出正常，当日留样完成，无交叉污染风险，检查记录无异常发现，整体食品安全风险较低。"
+          },
+          "severity_comparisons": []
+        }
+      ]
+    },
+    {
+      "scenario": "S3_slow_drift_only",
+      "description": "Only slow-drift issues, no dramatic events",
+      "hypothesis": "H2",
+      "repeats": [
+        {
+          "scenario_id": "S3_slow_drift_only",
+          "hypothesis": "H2",
+          "n_ground_truth": 5,
+          "n_detected": 2,
+          "n_true_positive": 2,
+          "n_false_positive": 0,
+          "n_missed": 3,
+          "detection_rate": 0.4,
+          "false_positive_rate": 0.0,
+          "true_positives": [
+            {
+              "type": "record_gap",
+              "location": "inventory: condiment_batch_old, grain_batch_stale",
+              "severity": 0.45,
+              "confidence": 0.85,
+              "narrative": "两个库存批次的 received_verified 均为 false，表明收货验收记录缺失或未确认，无法确认食材来源与质量。"
+            },
+            {
+              "type": "fifo_violation",
+              "location": "inventory: condiment_batch_old, grain_batch_stale",
+              "severity": 0.4,
+              "confidence": 0.5,
+              "narrative": "存储时间较长的批次 fifo_order 分别为 3 和 2，未处于最优先使用位置，可能存在先进先出执行不足。"
+            }
+          ],
+          "false_positives": [],
+          "missed": [
+            {
+              "type": "fatigue_trend",
+              "location": "all_personnel",
+              "severity": 0.55
+            },
+            {
+              "type": "compliance_erosion",
+              "location": "all_personnel",
+              "severity": 0.5
+            },
+            {
+              "type": "inspection_overdue",
+              "location": "facility",
+              "severity": 0.4
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "整体风险中等。设备温度正常、人员证书有效、当日留样正常，但库存存在验收记录缺失和先进先出执行可能不足的问题，需优先核查批次验收与使用顺序。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "record_gap",
+              "true_severity": 0.3,
+              "reported_severity": 0.45,
+              "reported_confidence": 0.85,
+              "distortion": 0.15000000000000002
+            },
+            {
+              "type": "fifo_violation",
+              "true_severity": 0.35,
+              "reported_severity": 0.4,
+              "reported_confidence": 0.5,
+              "distortion": 0.050000000000000044
+            }
+          ]
+        },
+        {
+          "scenario_id": "S3_slow_drift_only",
+          "hypothesis": "H2",
+          "n_ground_truth": 5,
+          "n_detected": 3,
+          "n_true_positive": 3,
+          "n_false_positive": 0,
+          "n_missed": 2,
+          "detection_rate": 0.6,
+          "false_positive_rate": 0.0,
+          "true_positives": [
+            {
+              "type": "record_gap",
+              "location": "inventory/condiment_batch_old, inventory/grain_batch_stale",
+              "severity": 0.55,
+              "confidence": 0.9,
+              "narrative": "两个库存批次的 received_verified 均为 false，表明收货验证记录缺失，可能影响来源追溯、保质期管理和食品安全责任判定。"
+            },
+            {
+              "type": "fifo_violation",
+              "location": "inventory/condiment_batch_old, inventory/grain_batch_stale",
+              "severity": 0.5,
+              "confidence": 0.6,
+              "narrative": "condiment_batch_old 已存放12天但 fifo_order 为3，grain_batch_stale 已存放8天但 fifo_order 为2，旧批次使用顺序可能靠后，存在先进先出执行不到位的风险。"
+            },
+            {
+              "type": "fatigue_trend",
+              "location": "personnel/server_zhang, personnel/chef_wang",
+              "severity": 0.4,
+              "confidence": 0.6,
+              "narrative": "server_zhang 疲劳度为0.71，chef_wang 疲劳度为0.68，均处于偏高水平，可能影响操作规范执行和食品安全风险控制。"
+            }
+          ],
+          "false_positives": [],
+          "missed": [
+            {
+              "type": "compliance_erosion",
+              "location": "all_personnel",
+              "severity": 0.5
+            },
+            {
+              "type": "inspection_overdue",
+              "location": "facility",
+              "severity": 0.4
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "当前未发现设备故障、温度超标、留样缺失或交叉污染等直接严重问题，但存在库存收货验证缺失、先进先出顺序异常以及人员疲劳偏高等管理风险，整体风险等级为中等。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "record_gap",
+              "true_severity": 0.3,
+              "reported_severity": 0.55,
+              "reported_confidence": 0.9,
+              "distortion": 0.25000000000000006
+            },
+            {
+              "type": "fifo_violation",
+              "true_severity": 0.35,
+              "reported_severity": 0.5,
+              "reported_confidence": 0.6,
+              "distortion": 0.15000000000000002
+            },
+            {
+              "type": "fatigue_trend",
+              "true_severity": 0.55,
+              "reported_severity": 0.4,
+              "reported_confidence": 0.6,
+              "distortion": -0.15000000000000002
+            }
+          ]
+        },
+        {
+          "scenario_id": "S3_slow_drift_only",
+          "hypothesis": "H2",
+          "n_ground_truth": 5,
+          "n_detected": 4,
+          "n_true_positive": 4,
+          "n_false_positive": 0,
+          "n_missed": 1,
+          "detection_rate": 0.8,
+          "false_positive_rate": 0.0,
+          "true_positives": [
+            {
+              "type": "record_gap",
+              "location": "inventory.condiment_batch_old, inventory.grain_batch_stale",
+              "severity": 0.55,
+              "confidence": 0.9,
+              "narrative": "两个库存批次的 received_verified 均为 false，表明收货验收或来源验证记录缺失，影响食品安全追溯和原料质量控制。"
+            },
+            {
+              "type": "fifo_violation",
+              "location": "inventory.condiment_batch_old, inventory.grain_batch_stale",
+              "severity": 0.45,
+              "confidence": 0.6,
+              "narrative": "旧批次调味品已存储12天且FIFO顺序为3，旧批次粮食已存储8天且FIFO顺序为2，提示可能存在未优先使用较旧批次的先进先出管理风险。"
+            },
+            {
+              "type": "fatigue_trend",
+              "location": "personnel.server_zhang, personnel.chef_wang",
+              "severity": 0.35,
+              "confidence": 0.6,
+              "narrative": "server_zhang 疲劳度0.71、chef_wang 疲劳度0.68，均处于较高水平，可能增加操作失误、卫生执行不到位或交叉污染风险。"
+            },
+            {
+              "type": "compliance_erosion",
+              "location": "compliance",
+              "severity": 0.4,
+              "confidence": 0.5,
+              "narrative": "上次检查为第58天，检查发现数量为4，当前第80天未见整改或复查记录，存在检查发现问题未闭环、合规水平下降的风险。"
+            }
+          ],
+          "false_positives": [],
+          "missed": [
+            {
+              "type": "inspection_overdue",
+              "location": "facility",
+              "severity": 0.4
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "当日未发现设备故障、证书缺失、温度异常、留样缺失或交叉污染高风险，但存在库存验收记录缺失、先进先出异常、人员疲劳偏高以及检查发现未确认闭环等问题，建议优先补齐验收记录、核对批次出库顺序并关注人员排班与检查整改闭环。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "record_gap",
+              "true_severity": 0.3,
+              "reported_severity": 0.55,
+              "reported_confidence": 0.9,
+              "distortion": 0.25000000000000006
+            },
+            {
+              "type": "fifo_violation",
+              "true_severity": 0.35,
+              "reported_severity": 0.45,
+              "reported_confidence": 0.6,
+              "distortion": 0.10000000000000003
+            },
+            {
+              "type": "fatigue_trend",
+              "true_severity": 0.55,
+              "reported_severity": 0.35,
+              "reported_confidence": 0.6,
+              "distortion": -0.20000000000000007
+            },
+            {
+              "type": "compliance_erosion",
+              "true_severity": 0.5,
+              "reported_severity": 0.4,
+              "reported_confidence": 0.5,
+              "distortion": -0.09999999999999998
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "S4_contradictory_signals",
+      "description": "Conflicting data — test narrative consistency",
+      "hypothesis": "H6",
+      "repeats": [
+        {
+          "scenario_id": "S4_contradictory_signals",
+          "hypothesis": "H6",
+          "n_ground_truth": 3,
+          "n_detected": 4,
+          "n_true_positive": 2,
+          "n_false_positive": 2,
+          "n_missed": 1,
+          "detection_rate": 0.6666666666666666,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "temp_violation",
+              "location": "storage_room_a",
+              "severity": 0.65,
+              "confidence": 0.85,
+              "narrative": "A储藏室状态为warning且温度为5.8℃，可能超出该储藏室的安全温度要求，需立即检查温控设备并评估受影响食材。"
+            },
+            {
+              "type": "cross_contamination",
+              "location": "production",
+              "severity": 0.5,
+              "confidence": 0.8,
+              "narrative": "生产环节交叉污染风险为medium，需检查生熟分区、工具清洁消毒及人员操作规范。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "fatigue_trend",
+              "location": "chef_wang",
+              "severity": 0.7,
+              "confidence": 0.85,
+              "narrative": "chef_wang疲劳度达到0.85，处于较高水平，可能增加操作失误和食品安全风险。"
+            },
+            {
+              "type": "compliance_erosion",
+              "location": "chef_wang",
+              "severity": 0.6,
+              "confidence": 0.75,
+              "narrative": "chef_wang合规基线仅为0.45，明显低于assistant_li的0.97，提示其合规执行水平偏低，存在合规下滑风险。"
+            }
+          ],
+          "missed": [
+            {
+              "type": "hygiene_lapse",
+              "location": "chef_wang",
+              "severity": 0.6
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "第55天存在中等食品安全风险：储藏室温度触发警告、chef_wang疲劳度较高且合规基线偏低、生产环节存在中等交叉污染风险。建议立即核查温控设备、调整人员安排并加强操作监督。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "temp_violation",
+              "true_severity": 0.7,
+              "reported_severity": 0.65,
+              "reported_confidence": 0.85,
+              "distortion": -0.04999999999999993
+            },
+            {
+              "type": "cross_contamination",
+              "true_severity": 0.5,
+              "reported_severity": 0.5,
+              "reported_confidence": 0.8,
+              "distortion": 0.0
+            }
+          ]
+        },
+        {
+          "scenario_id": "S4_contradictory_signals",
+          "hypothesis": "H6",
+          "n_ground_truth": 3,
+          "n_detected": 4,
+          "n_true_positive": 2,
+          "n_false_positive": 2,
+          "n_missed": 1,
+          "detection_rate": 0.6666666666666666,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "temp_violation",
+              "location": "storage_room_a",
+              "severity": 0.7,
+              "confidence": 0.9,
+              "narrative": "冷藏室A当前温度为5.8℃，设备状态为warning，高于常规冷藏安全阈值，存在食材变质和微生物繁殖风险。"
+            },
+            {
+              "type": "cross_contamination",
+              "location": "production",
+              "severity": 0.5,
+              "confidence": 0.85,
+              "narrative": "生产环节交叉污染风险为medium，需要关注生熟分开、工具分区使用和加工过程清洁控制。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "fatigue_trend",
+              "location": "chef_wang",
+              "severity": 0.65,
+              "confidence": 0.85,
+              "narrative": "厨师王疲劳指数为0.85，处于高疲劳状态，可能增加操作失误、清洁不到位或流程执行偏差的风险。"
+            },
+            {
+              "type": "compliance_erosion",
+              "location": "chef_wang",
+              "severity": 0.6,
+              "confidence": 0.75,
+              "narrative": "厨师王合规基线为0.45，明显偏低，提示其日常操作合规性可能存在不足，需要加强监督和复核。"
+            }
+          ],
+          "missed": [
+            {
+              "type": "hygiene_lapse",
+              "location": "chef_wang",
+              "severity": 0.6
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "第55天整体食品安全风险为中等，主要风险集中在冷藏温度偏高、厨师王高疲劳与低合规基线，以及生产环节中等交叉污染风险。建议立即核查冷藏室A温度并评估受影响食材，同时加强厨师王操作监督和排班管理。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "temp_violation",
+              "true_severity": 0.7,
+              "reported_severity": 0.7,
+              "reported_confidence": 0.9,
+              "distortion": 0.0
+            },
+            {
+              "type": "cross_contamination",
+              "true_severity": 0.5,
+              "reported_severity": 0.5,
+              "reported_confidence": 0.85,
+              "distortion": 0.0
+            }
+          ]
+        },
+        {
+          "scenario_id": "S4_contradictory_signals",
+          "hypothesis": "H6",
+          "n_ground_truth": 3,
+          "n_detected": 3,
+          "n_true_positive": 2,
+          "n_false_positive": 1,
+          "n_missed": 1,
+          "detection_rate": 0.6666666666666666,
+          "false_positive_rate": 0.3333333333333333,
+          "true_positives": [
+            {
+              "type": "temp_violation",
+              "location": "storage_room_a",
+              "severity": 0.6,
+              "confidence": 0.85,
+              "narrative": "冷藏室A状态为warning且温度为5.8℃，可能超出常规冷藏要求，存在食材变质风险。"
+            },
+            {
+              "type": "cross_contamination",
+              "location": "production",
+              "severity": 0.5,
+              "confidence": 0.7,
+              "narrative": "生产环节交叉污染风险为medium，需关注生熟分离、工器具清洁和人员操作规范。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "fatigue_trend",
+              "location": "personnel/chef_wang",
+              "severity": 0.65,
+              "confidence": 0.8,
+              "narrative": "主厨王疲劳度为0.85，处于较高水平，可能影响操作规范执行和食品安全控制。"
+            }
+          ],
+          "missed": [
+            {
+              "type": "hygiene_lapse",
+              "location": "chef_wang",
+              "severity": 0.6
+            }
+          ],
+          "overall_assessment": {
+            "risk_level": "medium",
+            "summary": "当日存在冷藏温度偏高、主厨高疲劳及中等交叉污染风险，建议立即检查冷藏设备、评估主厨工作负荷并强化生产分区管理。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "temp_violation",
+              "true_severity": 0.7,
+              "reported_severity": 0.6,
+              "reported_confidence": 0.85,
+              "distortion": -0.09999999999999998
+            },
+            {
+              "type": "cross_contamination",
+              "true_severity": 0.5,
+              "reported_severity": 0.5,
+              "reported_confidence": 0.7,
+              "distortion": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "S5_severity_calibration",
+      "description": "Issues at different severity levels — test distortion",
+      "hypothesis": "H5",
+      "repeats": [
+        {
+          "scenario_id": "S5_severity_calibration",
+          "hypothesis": "H5",
+          "n_ground_truth": 2,
+          "n_detected": 2,
+          "n_true_positive": 1,
+          "n_false_positive": 1,
+          "n_missed": 0,
+          "detection_rate": 0.5,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.2,
+              "confidence": 0.9,
+              "narrative": "烹饪工位排风扇噪音增大，属于轻微设备故障，可能影响厨房通风环境，建议及时检查维护。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "temp_violation",
+              "location": "dishwasher",
+              "severity": 0.95,
+              "confidence": 0.99,
+              "narrative": "洗碗机消毒温度仅62°C，低于要求的≥85°C，属于关键消毒失效，可能导致餐具消毒不达标，存在较高食品安全风险。"
+            }
+          ],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "high",
+            "summary": "第35天运营数据中，洗碗机消毒温度严重不达标，构成关键食品安全风险；烹饪工位存在轻微设备故障。其他人员、库存、留样和交叉污染指标未见明显异常。建议立即停用或修复洗碗机，并对已使用餐具的消毒有效性进行评估。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.9,
+              "reported_severity": 0.2,
+              "reported_confidence": 0.9,
+              "distortion": -0.7
+            }
+          ]
+        },
+        {
+          "scenario_id": "S5_severity_calibration",
+          "hypothesis": "H5",
+          "n_ground_truth": 2,
+          "n_detected": 2,
+          "n_true_positive": 1,
+          "n_false_positive": 1,
+          "n_missed": 0,
+          "detection_rate": 0.5,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.3,
+              "confidence": 0.85,
+              "narrative": "烹饪区排风扇噪音增大，属于轻微设备故障，可能影响通风效果，建议尽快检查维护。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "temp_violation",
+              "location": "dishwasher",
+              "severity": 0.95,
+              "confidence": 0.98,
+              "narrative": "洗碗机消毒温度仅62°C，低于≥85°C的要求，餐具消毒不达标，可能增加微生物污染风险，应立即停用维修并复检。"
+            }
+          ],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "high",
+            "summary": "第35天主要风险来自洗碗机消毒温度严重不达标，需立即处置；烹饪区排风扇存在轻微故障，其他食品安全相关指标未见异常。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.9,
+              "reported_severity": 0.3,
+              "reported_confidence": 0.85,
+              "distortion": -0.6000000000000001
+            }
+          ]
+        },
+        {
+          "scenario_id": "S5_severity_calibration",
+          "hypothesis": "H5",
+          "n_ground_truth": 2,
+          "n_detected": 2,
+          "n_true_positive": 1,
+          "n_false_positive": 1,
+          "n_missed": 0,
+          "detection_rate": 0.5,
+          "false_positive_rate": 0.5,
+          "true_positives": [
+            {
+              "type": "equipment_fault",
+              "location": "cook_station",
+              "severity": 0.3,
+              "confidence": 0.7,
+              "narrative": "烹饪区排风扇噪音增大，属于轻微设备故障，可能影响通风环境，需及时检修。"
+            }
+          ],
+          "false_positives": [
+            {
+              "type": "temp_violation",
+              "location": "dishwasher",
+              "severity": 0.95,
+              "confidence": 1.0,
+              "narrative": "洗碗机消毒温度仅62°C，低于要求的85°C，餐具消毒不达标，存在较高食品安全风险。"
+            }
+          ],
+          "missed": [],
+          "overall_assessment": {
+            "risk_level": "high",
+            "summary": "今日主要风险为洗碗机消毒温度严重不达标，可能导致餐具消毒失效，构成高风险；烹饪区排风扇存在轻微故障，需关注。其他人员、库存、留样和交叉污染指标未见异常。"
+          },
+          "severity_comparisons": [
+            {
+              "type": "equipment_fault",
+              "true_severity": 0.9,
+              "reported_severity": 0.3,
+              "reported_confidence": 0.7,
+              "distortion": -0.6000000000000001
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

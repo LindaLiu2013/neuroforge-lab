@@ -1,0 +1,111 @@
+{
+  "modules": {
+    "dissipative_knowledge": {
+      "entries_ingested": 50,
+      "at_cutoff": 45,
+      "final_active": 0,
+      "steady_state": true,
+      "forgetting_works": true,
+      "mean_strength": 0,
+      "total_energy_bits": 0,
+      "time_ms": 2.0
+    },
+    "self_modification": {
+      "valid_applied": true,
+      "immutable_rejected": true,
+      "range_rejected": true,
+      "degradation_rolled_back": true,
+      "total_proposals": 4,
+      "by_status": {
+        "APPLIED": 2,
+        "REJECTED": 2
+      },
+      "time_ms": 0.0
+    },
+    "category_pivot": {
+      "category_hits": 5,
+      "heuristic_hits": 5,
+      "true_bridges": 5,
+      "overlap": 7,
+      "cat_only": 28,
+      "heur_only": 3,
+      "cat_efficiency": 1.0,
+      "cat_pivot_count": 35,
+      "heur_pivot_count": 10,
+      "time_ms": 172.2
+    },
+    "weak_link_consensus": {
+      "n_projections": 6,
+      "confirmed_edges": 20,
+      "bridges_in_consensus": 5,
+      "true_bridges": 5,
+      "projection_weights": {
+        "inverse_weight": 2.0,
+        "community_bridge": 2.0,
+        "structural_hole": 2.0,
+        "persistence_aware": 2.0,
+        "betweenness": 1.0,
+        "pagerank": 1.0
+      },
+      "theta": 0.4,
+      "time_ms": 452.8
+    }
+  },
+  "integration": {
+    "all_pass": true,
+    "checks": [
+      {
+        "name": "A: Steady State",
+        "pass": true,
+        "detail": "active entries maintained between cycles 10-70"
+      },
+      {
+        "name": "A: Forgetting",
+        "pass": true,
+        "detail": "45→0 after energy cutoff"
+      },
+      {
+        "name": "B: Valid Apply",
+        "pass": true,
+        "detail": "decay_rate modified successfully"
+      },
+      {
+        "name": "B: Immutable Block",
+        "pass": true,
+        "detail": "min_viability modification rejected"
+      },
+      {
+        "name": "B: Range Check",
+        "pass": true,
+        "detail": "alpha=2.0 out of range rejected"
+      },
+      {
+        "name": "B: Degradation Rollback",
+        "pass": true,
+        "detail": "perf ratio=0.5"
+      },
+      {
+        "name": "C: Cat Pivot Detection",
+        "pass": true,
+        "detail": "5/5 hits"
+      },
+      {
+        "name": "D: Weak-Link Consensus",
+        "pass": true,
+        "detail": "5/5 bridges captured"
+      }
+    ]
+  },
+  "comparison": {
+    "category_hits": 5,
+    "heuristic_hits": 5,
+    "true_bridges": 5,
+    "overlap": 7,
+    "cat_only": 28,
+    "heur_only": 3,
+    "cat_efficiency": 1.0,
+    "cat_pivot_count": 35,
+    "heur_pivot_count": 10,
+    "time_ms": 172.2
+  }
+}

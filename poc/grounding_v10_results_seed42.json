@@ -1,0 +1,368 @@
+{
+  "milestones": [
+    {
+      "day": 5,
+      "stage": "OBSERVATION",
+      "scores": {
+        "day": 5,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.709,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 481739.0
+      },
+      "agent_stats": {
+        "total_actions": 20,
+        "success_rate": 0.5,
+        "n_pivots": 3,
+        "confidence": 0.66,
+        "energy_bits": 5120,
+        "llm_disagreements_seen": 20,
+        "consensus_used": 0,
+        "action_entropy": 1.0,
+        "model_saturation": 0.005593,
+        "finding_types_seen": 3,
+        "intervention_success_rate": 0.0,
+        "top_preferences": [
+          [
+            "inspect",
+            0.188
+          ],
+          [
+            "observe",
+            0.136
+          ],
+          [
+            "order",
+            0.135
+          ],
+          [
+            "menu_plan",
+            0.135
+          ],
+          [
+            "intervene",
+            0.135
+          ],
+          [
+            "staff_assign",
+            0.135
+          ],
+          [
+            "record",
+            0.135
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 10,
+            "avg_reward": 0.003
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 8,
+            "avg_reward": 0.443
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 2,
+            "avg_reward": 0.284
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 1,
+        "detection_rate": 0.25,
+        "false_alarm_rate": 0.0,
+        "missed_rate": 0.75,
+        "real_llm": {
+          "total_calls": 5,
+          "successful": 4,
+          "failed": 1,
+          "rate_limited": 0,
+          "success_rate": 0.8
+        }
+      },
+      "stat_stats": {
+        "total_alerts": 0,
+        "active_alerts": 0,
+        "monitored_dimensions": 0
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "values": {
+              "llm": "critical",
+              "tufe": "high"
+            },
+            "agreeing_pair": null,
+            "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+            "causal_effect": -0.007133333333333214,
+            "action_changed": true
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 1,
+        "information_density": 1.0,
+        "ccd": 0.0,
+        "n_effective_disagreements": 0
+      },
+      "action_entropy": 1.0,
+      "model_saturation": 0.005593
+    }
+  ],
+  "final": {
+    "agent_stats": {
+      "total_actions": 20,
+      "success_rate": 0.5,
+      "n_pivots": 3,
+      "confidence": 0.66,
+      "energy_bits": 5120,
+      "llm_disagreements_seen": 20,
+      "consensus_used": 0,
+      "action_entropy": 1.0,
+      "model_saturation": 0.005593,
+      "finding_types_seen": 3,
+      "intervention_success_rate": 0.0,
+      "top_preferences": [
+        [
+          "inspect",
+          0.188
+        ],
+        [
+          "observe",
+          0.136
+        ],
+        [
+          "order",
+          0.135
+        ],
+        [
+          "menu_plan",
+          0.135
+        ],
+        [
+          "intervene",
+          0.135
+        ],
+        [
+          "staff_assign",
+          0.135
+        ],
+        [
+          "record",
+          0.135
+        ]
+      ],
+      "top_pivots": [
+        {
+          "action": "observe",
+          "success": false,
+          "quality": "poor",
+          "count": 10,
+          "avg_reward": 0.003
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "good",
+          "count": 8,
+          "avg_reward": 0.443
+        },
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "poor",
+          "count": 2,
+          "avg_reward": 0.284
+        }
+      ]
+    },
+    "llm_stats": {
+      "total_perceptions": 1,
+      "detection_rate": 0.25,
+      "false_alarm_rate": 0.0,
+      "missed_rate": 0.75,
+      "real_llm": {
+        "total_calls": 5,
+        "successful": 4,
+        "failed": 1,
+        "rate_limited": 0,
+        "success_rate": 0.8
+      }
+    },
+    "stat_stats": {
+      "total_alerts": 0,
+      "active_alerts": 0,
+      "monitored_dimensions": 0
+    },
+    "score_trends": {
+      "avg_safety_stage1": 1.0,
+      "avg_safety_stage2": null,
+      "avg_safety_stage3": null,
+      "avg_safety_stage4": null,
+      "avg_satisfaction_stage1": 0.747,
+      "avg_satisfaction_stage2": null,
+      "avg_satisfaction_stage3": null,
+      "avg_satisfaction_stage4": null,
+      "avg_compliance_stage1": null,
+      "avg_compliance_stage2": null,
+      "avg_compliance_stage3": null,
+      "avg_compliance_stage4": null
+    },
+    "final_budget": 481739.0,
+    "total_disagreements": 5,
+    "avg_info_density": 1.0,
+    "avg_ccd": 0.2,
+    "total_effective_disagreements": 1,
+    "action_entropy_final": 1.0,
+    "model_saturation_final": 0.005593,
+    "supervision_level": 0.7,
+    "seed": 42
+  },
+  "stage_transitions": [],
+  "consensus_log": [
+    {
+      "day": 1,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}"
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 2,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.8033999999999999,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 1.0,
+      "n_effective_disagreements": 1
+    },
+    {
+      "day": 3,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.0029999999999998916,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 4,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": 0.0036999999999999256,
+          "action_changed": false
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    },
+    {
+      "day": 5,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "values": {
+            "llm": "critical",
+            "tufe": "high"
+          },
+          "agreeing_pair": null,
+          "info_content": "urgency disagreement: {'llm': 'critical', 'tufe': 'high'}",
+          "causal_effect": -0.007133333333333214,
+          "action_changed": true
+        }
+      ],
+      "information_density": 1.0,
+      "ccd": 0.0,
+      "n_effective_disagreements": 0
+    }
+  ],
+  "llm_stats_history": [
+    {
+      "total_perceptions": 1,
+      "detection_rate": 0.25,
+      "false_alarm_rate": 0.0,
+      "missed_rate": 0.75,
+      "real_llm": {
+        "total_calls": 5,
+        "successful": 4,
+        "failed": 1,
+        "rate_limited": 0,
+        "success_rate": 0.8
+      }
+    }
+  ],
+  "action_entropy_history": [
+    0.8113,
+    0.9544,
+    0.9799,
+    0.9544,
+    1.0
+  ],
+  "model_saturation_history": [
+    0.0,
+    0.0,
+    0.043551,
+    0.00335,
+    0.005593
+  ],
+  "ccd_history": [
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "supervision_level": 0.7,
+  "seed": 42
+}

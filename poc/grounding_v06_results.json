@@ -1,0 +1,4652 @@
+{
+  "milestones": [
+    {
+      "day": 10,
+      "stage": "OBSERVATION",
+      "scores": {
+        "day": 10,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.864,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 463431.0
+      },
+      "agent_stats": {
+        "total_actions": 40,
+        "success_rate": 0.475,
+        "n_pivots": 3,
+        "confidence": 0.615,
+        "energy_bits": 10240,
+        "llm_disagreements_seen": 60,
+        "consensus_used": 20,
+        "top_preferences": [
+          [
+            "inspect",
+            0.214
+          ],
+          [
+            "observe",
+            0.145
+          ],
+          [
+            "order",
+            0.128
+          ],
+          [
+            "menu_plan",
+            0.128
+          ],
+          [
+            "intervene",
+            0.128
+          ],
+          [
+            "staff_assign",
+            0.128
+          ],
+          [
+            "record",
+            0.128
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 18,
+            "avg_reward": 0.354
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 1,
+            "avg_reward": 0.25
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 10,
+        "detection_rate": 0.324,
+        "false_alarm_rate": 0.1,
+        "missed_rate": 0.676
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 20,
+      "stage": "RULE_INTERNALIZATION",
+      "scores": {
+        "day": 20,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 424115.0
+      },
+      "agent_stats": {
+        "total_actions": 100,
+        "success_rate": 0.76,
+        "n_pivots": 9,
+        "confidence": 0.711,
+        "energy_bits": 25600,
+        "llm_disagreements_seen": 168,
+        "consensus_used": 32,
+        "top_preferences": [
+          [
+            "inspect",
+            0.227
+          ],
+          [
+            "order",
+            0.155
+          ],
+          [
+            "staff_assign",
+            0.137
+          ],
+          [
+            "intervene",
+            0.126
+          ],
+          [
+            "record",
+            0.122
+          ],
+          [
+            "menu_plan",
+            0.121
+          ],
+          [
+            "observe",
+            0.112
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 28,
+            "avg_reward": 0.331
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 14,
+            "avg_reward": 0.414
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 10,
+            "avg_reward": 0.417
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 7,
+            "avg_reward": 0.444
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 7,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 6,
+            "avg_reward": 0.442
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 4,
+            "avg_reward": 0.258
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 20,
+        "detection_rate": 0.331,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.669
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 30,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 30,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 385066.0
+      },
+      "agent_stats": {
+        "total_actions": 160,
+        "success_rate": 0.844,
+        "n_pivots": 9,
+        "confidence": 0.719,
+        "energy_bits": 40960,
+        "llm_disagreements_seen": 282,
+        "consensus_used": 38,
+        "top_preferences": [
+          [
+            "inspect",
+            0.247
+          ],
+          [
+            "order",
+            0.168
+          ],
+          [
+            "staff_assign",
+            0.133
+          ],
+          [
+            "intervene",
+            0.131
+          ],
+          [
+            "menu_plan",
+            0.129
+          ],
+          [
+            "record",
+            0.109
+          ],
+          [
+            "observe",
+            0.084
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 43,
+            "avg_reward": 0.314
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 25,
+            "avg_reward": 0.418
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 18,
+            "avg_reward": 0.412
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 16,
+            "avg_reward": 0.444
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 16,
+            "avg_reward": 0.445
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 13,
+            "avg_reward": 0.371
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 4,
+            "avg_reward": 0.258
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 30,
+        "detection_rate": 0.331,
+        "false_alarm_rate": 0.033,
+        "missed_rate": 0.669
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 40,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 40,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.976,
+        "risks_exposed": 0,
+        "hidden_risks": 3,
+        "budget_remaining": 346786.0
+      },
+      "agent_stats": {
+        "total_actions": 220,
+        "success_rate": 0.877,
+        "n_pivots": 9,
+        "confidence": 0.71,
+        "energy_bits": 56320,
+        "llm_disagreements_seen": 396,
+        "consensus_used": 44,
+        "top_preferences": [
+          [
+            "inspect",
+            0.293
+          ],
+          [
+            "order",
+            0.161
+          ],
+          [
+            "staff_assign",
+            0.133
+          ],
+          [
+            "menu_plan",
+            0.127
+          ],
+          [
+            "intervene",
+            0.121
+          ],
+          [
+            "record",
+            0.102
+          ],
+          [
+            "observe",
+            0.062
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 61,
+            "avg_reward": 0.315
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 33,
+            "avg_reward": 0.414
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 27,
+            "avg_reward": 0.417
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 24,
+            "avg_reward": 0.441
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 22,
+            "avg_reward": 0.447
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 21,
+            "avg_reward": 0.373
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 6,
+            "avg_reward": 0.02
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 40,
+        "detection_rate": 0.322,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.678
+      },
+      "consensus": {
+        "consensus": {},
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 0,
+        "n_disagreements": 2,
+        "information_density": 1.0
+      }
+    },
+    {
+      "day": 50,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 50,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.963,
+        "risks_exposed": 1,
+        "hidden_risks": 2,
+        "budget_remaining": 308039.0
+      },
+      "agent_stats": {
+        "total_actions": 280,
+        "success_rate": 0.886,
+        "n_pivots": 9,
+        "confidence": 0.703,
+        "energy_bits": 71680,
+        "llm_disagreements_seen": 516,
+        "consensus_used": 74,
+        "top_preferences": [
+          [
+            "inspect",
+            0.304
+          ],
+          [
+            "order",
+            0.174
+          ],
+          [
+            "staff_assign",
+            0.139
+          ],
+          [
+            "menu_plan",
+            0.13
+          ],
+          [
+            "intervene",
+            0.114
+          ],
+          [
+            "record",
+            0.092
+          ],
+          [
+            "observe",
+            0.047
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 74,
+            "avg_reward": 0.319
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 44,
+            "avg_reward": 0.418
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 37,
+            "avg_reward": 0.419
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 33,
+            "avg_reward": 0.446
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 28,
+            "avg_reward": 0.448
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 27,
+            "avg_reward": 0.376
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 11,
+            "avg_reward": 0.033
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 50,
+        "detection_rate": 0.343,
+        "false_alarm_rate": 0.04,
+        "missed_rate": 0.657
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 60,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 60,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.957,
+        "risks_exposed": 0,
+        "hidden_risks": 3,
+        "budget_remaining": 267695.0
+      },
+      "agent_stats": {
+        "total_actions": 340,
+        "success_rate": 0.9,
+        "n_pivots": 9,
+        "confidence": 0.691,
+        "energy_bits": 87040,
+        "llm_disagreements_seen": 636,
+        "consensus_used": 128,
+        "top_preferences": [
+          [
+            "inspect",
+            0.376
+          ],
+          [
+            "order",
+            0.161
+          ],
+          [
+            "staff_assign",
+            0.125
+          ],
+          [
+            "menu_plan",
+            0.123
+          ],
+          [
+            "intervene",
+            0.102
+          ],
+          [
+            "record",
+            0.081
+          ],
+          [
+            "observe",
+            0.033
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 96,
+            "avg_reward": 0.317
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 52,
+            "avg_reward": 0.419
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 44,
+            "avg_reward": 0.419
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 41,
+            "avg_reward": 0.448
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 34,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 34,
+            "avg_reward": 0.378
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 13,
+            "avg_reward": 0.036
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 60,
+        "detection_rate": 0.352,
+        "false_alarm_rate": 0.033,
+        "missed_rate": 0.648
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 70,
+      "stage": "RECOMPOSITION",
+      "scores": {
+        "day": 70,
+        "safety_score": 0.52,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.988,
+        "risks_exposed": 0,
+        "hidden_risks": 6,
+        "budget_remaining": 229384.0
+      },
+      "agent_stats": {
+        "total_actions": 400,
+        "success_rate": 0.91,
+        "n_pivots": 9,
+        "confidence": 0.686,
+        "energy_bits": 102400,
+        "llm_disagreements_seen": 756,
+        "consensus_used": 188,
+        "top_preferences": [
+          [
+            "inspect",
+            0.459
+          ],
+          [
+            "order",
+            0.154
+          ],
+          [
+            "menu_plan",
+            0.108
+          ],
+          [
+            "staff_assign",
+            0.097
+          ],
+          [
+            "intervene",
+            0.093
+          ],
+          [
+            "record",
+            0.066
+          ],
+          [
+            "observe",
+            0.023
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 119,
+            "avg_reward": 0.316
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 62,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 48,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 48,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 42,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 40,
+            "avg_reward": 0.379
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": 0.039
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 70,
+        "detection_rate": 0.367,
+        "false_alarm_rate": 0.057,
+        "missed_rate": 0.633
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 80,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 80,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 3,
+        "budget_remaining": 188446.0
+      },
+      "agent_stats": {
+        "total_actions": 460,
+        "success_rate": 0.922,
+        "n_pivots": 9,
+        "confidence": 0.726,
+        "energy_bits": 117760,
+        "llm_disagreements_seen": 876,
+        "consensus_used": 242,
+        "top_preferences": [
+          [
+            "inspect",
+            0.512
+          ],
+          [
+            "order",
+            0.138
+          ],
+          [
+            "menu_plan",
+            0.099
+          ],
+          [
+            "staff_assign",
+            0.091
+          ],
+          [
+            "intervene",
+            0.085
+          ],
+          [
+            "record",
+            0.058
+          ],
+          [
+            "observe",
+            0.016
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 138,
+            "avg_reward": 0.318
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 70,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 57,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 56,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 48,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": 0.039
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 80,
+        "detection_rate": 0.373,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.627
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 90,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 90,
+        "safety_score": 0.76,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 0.998,
+        "risks_exposed": 1,
+        "hidden_risks": 2,
+        "budget_remaining": 149332.0
+      },
+      "agent_stats": {
+        "total_actions": 520,
+        "success_rate": 0.931,
+        "n_pivots": 9,
+        "confidence": 0.683,
+        "energy_bits": 133120,
+        "llm_disagreements_seen": 996,
+        "consensus_used": 302,
+        "top_preferences": [
+          [
+            "inspect",
+            0.704
+          ],
+          [
+            "order",
+            0.08
+          ],
+          [
+            "menu_plan",
+            0.067
+          ],
+          [
+            "intervene",
+            0.05
+          ],
+          [
+            "staff_assign",
+            0.049
+          ],
+          [
+            "record",
+            0.042
+          ],
+          [
+            "observe",
+            0.008
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 178,
+            "avg_reward": 0.315
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 74,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 64,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 59,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 54,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 50,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": 0.039
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 90,
+        "detection_rate": 0.384,
+        "false_alarm_rate": 0.056,
+        "missed_rate": 0.616
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 100,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 100,
+        "safety_score": 0.92,
+        "compliance_score": null,
+        "cost_efficiency": 1.0,
+        "satisfaction": 1.0,
+        "risks_exposed": 0,
+        "hidden_risks": 1,
+        "budget_remaining": 110618.0
+      },
+      "agent_stats": {
+        "total_actions": 580,
+        "success_rate": 0.933,
+        "n_pivots": 9,
+        "confidence": 0.671,
+        "energy_bits": 148480,
+        "llm_disagreements_seen": 1116,
+        "consensus_used": 362,
+        "top_preferences": [
+          [
+            "inspect",
+            0.768
+          ],
+          [
+            "staff_assign",
+            0.05
+          ],
+          [
+            "record",
+            0.05
+          ],
+          [
+            "intervene",
+            0.047
+          ],
+          [
+            "menu_plan",
+            0.042
+          ],
+          [
+            "order",
+            0.039
+          ],
+          [
+            "observe",
+            0.004
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 211,
+            "avg_reward": 0.318
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 75,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 72,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 63,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 60,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 55,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 18,
+            "avg_reward": 0.042
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 100,
+        "detection_rate": 0.394,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.606
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 110,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 110,
+        "safety_score": 1.0,
+        "compliance_score": null,
+        "cost_efficiency": 0.722,
+        "satisfaction": 0.989,
+        "risks_exposed": 0,
+        "hidden_risks": 0,
+        "budget_remaining": 72216.0
+      },
+      "agent_stats": {
+        "total_actions": 640,
+        "success_rate": 0.939,
+        "n_pivots": 9,
+        "confidence": 0.701,
+        "energy_bits": 163840,
+        "llm_disagreements_seen": 1236,
+        "consensus_used": 422,
+        "top_preferences": [
+          [
+            "inspect",
+            0.782
+          ],
+          [
+            "intervene",
+            0.047
+          ],
+          [
+            "order",
+            0.046
+          ],
+          [
+            "staff_assign",
+            0.044
+          ],
+          [
+            "record",
+            0.042
+          ],
+          [
+            "menu_plan",
+            0.037
+          ],
+          [
+            "observe",
+            0.001
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 251,
+            "avg_reward": 0.319
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 78,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 77,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 67,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 66,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 57,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 18,
+            "avg_reward": 0.042
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 110,
+        "detection_rate": 0.399,
+        "false_alarm_rate": 0.045,
+        "missed_rate": 0.601
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "production",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    },
+    {
+      "day": 120,
+      "stage": "HABITUATION_DECLINE",
+      "scores": {
+        "day": 120,
+        "safety_score": 0.84,
+        "compliance_score": null,
+        "cost_efficiency": 0.325,
+        "satisfaction": 0.909,
+        "risks_exposed": 0,
+        "hidden_risks": 2,
+        "budget_remaining": 32468.0
+      },
+      "agent_stats": {
+        "total_actions": 700,
+        "success_rate": 0.943,
+        "n_pivots": 9,
+        "confidence": 0.676,
+        "energy_bits": 179200,
+        "llm_disagreements_seen": 1356,
+        "consensus_used": 482,
+        "top_preferences": [
+          [
+            "inspect",
+            0.771
+          ],
+          [
+            "menu_plan",
+            0.049
+          ],
+          [
+            "staff_assign",
+            0.048
+          ],
+          [
+            "record",
+            0.048
+          ],
+          [
+            "intervene",
+            0.046
+          ],
+          [
+            "order",
+            0.037
+          ],
+          [
+            "observe",
+            0.001
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 286,
+            "avg_reward": 0.317
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 83,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 79,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 72,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 71,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 64,
+            "avg_reward": 0.38
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 19,
+            "avg_reward": 0.042
+          }
+        ]
+      },
+      "llm_stats": {
+        "total_perceptions": 120,
+        "detection_rate": 0.408,
+        "false_alarm_rate": 0.05,
+        "missed_rate": 0.592
+      },
+      "consensus": {
+        "consensus": {
+          "domains": {
+            "shared": [
+              "equipment"
+            ],
+            "agreement": true
+          }
+        },
+        "disagreements": [
+          {
+            "dimension": "urgency",
+            "llm_value": "critical",
+            "tufe_value": "high",
+            "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+          },
+          {
+            "dimension": "domain_focus",
+            "llm_only": [
+              "inventory",
+              "personnel"
+            ],
+            "tufe_only": [],
+            "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+          }
+        ],
+        "n_agreements": 1,
+        "n_disagreements": 2,
+        "information_density": 0.6666666666666666
+      }
+    }
+  ],
+  "final": {
+    "agent_stats": {
+      "total_actions": 700,
+      "success_rate": 0.943,
+      "n_pivots": 9,
+      "confidence": 0.676,
+      "energy_bits": 179200,
+      "llm_disagreements_seen": 1356,
+      "consensus_used": 482,
+      "top_preferences": [
+        [
+          "inspect",
+          0.771
+        ],
+        [
+          "menu_plan",
+          0.049
+        ],
+        [
+          "staff_assign",
+          0.048
+        ],
+        [
+          "record",
+          0.048
+        ],
+        [
+          "intervene",
+          0.046
+        ],
+        [
+          "order",
+          0.037
+        ],
+        [
+          "observe",
+          0.001
+        ]
+      ],
+      "top_pivots": [
+        {
+          "action": "inspect",
+          "success": true,
+          "quality": "good",
+          "count": 286,
+          "avg_reward": 0.317
+        },
+        {
+          "action": "order",
+          "success": true,
+          "quality": "good",
+          "count": 83,
+          "avg_reward": 0.42
+        },
+        {
+          "action": "menu_plan",
+          "success": true,
+          "quality": "good",
+          "count": 79,
+          "avg_reward": 0.45
+        },
+        {
+          "action": "intervene",
+          "success": true,
+          "quality": "good",
+          "count": 72,
+          "avg_reward": 0.45
+        },
+        {
+          "action": "staff_assign",
+          "success": true,
+          "quality": "good",
+          "count": 71,
+          "avg_reward": 0.42
+        },
+        {
+          "action": "record",
+          "success": true,
+          "quality": "good",
+          "count": 64,
+          "avg_reward": 0.38
+        },
+        {
+          "action": "observe",
+          "success": false,
+          "quality": "poor",
+          "count": 21,
+          "avg_reward": 0.08
+        },
+        {
+          "action": "intervene",
+          "success": false,
+          "quality": "poor",
+          "count": 19,
+          "avg_reward": 0.042
+        }
+      ]
+    },
+    "llm_stats": {
+      "total_perceptions": 120,
+      "detection_rate": 0.408,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.592
+    },
+    "score_trends": {
+      "avg_safety_stage1": 0.909,
+      "avg_safety_stage2": 0.924,
+      "avg_safety_stage3": 0.662,
+      "avg_safety_stage4": 0.775,
+      "avg_satisfaction_stage1": 0.785,
+      "avg_satisfaction_stage2": 0.986,
+      "avg_satisfaction_stage3": 0.978,
+      "avg_satisfaction_stage4": 0.973
+    },
+    "final_budget": 32468.0,
+    "total_disagreements": 120,
+    "avg_info_density": 0.76
+  },
+  "stage_transitions": [
+    {
+      "day": 11,
+      "from_stage": 1,
+      "to_stage": 2,
+      "agent_stats_at_transition": {
+        "total_actions": 40,
+        "success_rate": 0.475,
+        "n_pivots": 3,
+        "confidence": 0.615,
+        "energy_bits": 10240,
+        "llm_disagreements_seen": 60,
+        "consensus_used": 20,
+        "top_preferences": [
+          [
+            "inspect",
+            0.214
+          ],
+          [
+            "observe",
+            0.145
+          ],
+          [
+            "order",
+            0.128
+          ],
+          [
+            "menu_plan",
+            0.128
+          ],
+          [
+            "intervene",
+            0.128
+          ],
+          [
+            "staff_assign",
+            0.128
+          ],
+          [
+            "record",
+            0.128
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 18,
+            "avg_reward": 0.354
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 1,
+            "avg_reward": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "day": 29,
+      "from_stage": 2,
+      "to_stage": 3,
+      "agent_stats_at_transition": {
+        "total_actions": 148,
+        "success_rate": 0.831,
+        "n_pivots": 9,
+        "confidence": 0.714,
+        "energy_bits": 37888,
+        "llm_disagreements_seen": 258,
+        "consensus_used": 38,
+        "top_preferences": [
+          [
+            "inspect",
+            0.244
+          ],
+          [
+            "order",
+            0.161
+          ],
+          [
+            "staff_assign",
+            0.137
+          ],
+          [
+            "intervene",
+            0.134
+          ],
+          [
+            "menu_plan",
+            0.123
+          ],
+          [
+            "record",
+            0.112
+          ],
+          [
+            "observe",
+            0.089
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 40,
+            "avg_reward": 0.315
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 22,
+            "avg_reward": 0.417
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 17,
+            "avg_reward": 0.411
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 15,
+            "avg_reward": 0.444
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 13,
+            "avg_reward": 0.442
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 12,
+            "avg_reward": 0.371
+          },
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "poor",
+            "count": 4,
+            "avg_reward": 0.258
+          }
+        ]
+      }
+    },
+    {
+      "day": 71,
+      "from_stage": 3,
+      "to_stage": 4,
+      "agent_stats_at_transition": {
+        "total_actions": 400,
+        "success_rate": 0.91,
+        "n_pivots": 9,
+        "confidence": 0.686,
+        "energy_bits": 102400,
+        "llm_disagreements_seen": 756,
+        "consensus_used": 188,
+        "top_preferences": [
+          [
+            "inspect",
+            0.459
+          ],
+          [
+            "order",
+            0.154
+          ],
+          [
+            "menu_plan",
+            0.108
+          ],
+          [
+            "staff_assign",
+            0.097
+          ],
+          [
+            "intervene",
+            0.093
+          ],
+          [
+            "record",
+            0.066
+          ],
+          [
+            "observe",
+            0.023
+          ]
+        ],
+        "top_pivots": [
+          {
+            "action": "inspect",
+            "success": true,
+            "quality": "good",
+            "count": 119,
+            "avg_reward": 0.316
+          },
+          {
+            "action": "order",
+            "success": true,
+            "quality": "good",
+            "count": 62,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "staff_assign",
+            "success": true,
+            "quality": "good",
+            "count": 48,
+            "avg_reward": 0.42
+          },
+          {
+            "action": "menu_plan",
+            "success": true,
+            "quality": "good",
+            "count": 48,
+            "avg_reward": 0.449
+          },
+          {
+            "action": "intervene",
+            "success": true,
+            "quality": "good",
+            "count": 42,
+            "avg_reward": 0.45
+          },
+          {
+            "action": "record",
+            "success": true,
+            "quality": "good",
+            "count": 40,
+            "avg_reward": 0.379
+          },
+          {
+            "action": "observe",
+            "success": false,
+            "quality": "poor",
+            "count": 21,
+            "avg_reward": 0.08
+          },
+          {
+            "action": "intervene",
+            "success": false,
+            "quality": "poor",
+            "count": 15,
+            "avg_reward": 0.039
+          }
+        ]
+      }
+    }
+  ],
+  "consensus_log": [
+    {
+      "day": 1,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "low",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 2,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "low",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 3,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 4,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 5,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 6,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 7,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 8,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 9,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 10,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 11,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 12,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 13,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 14,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 15,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 16,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 17,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 18,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 19,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 20,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 21,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 22,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 23,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 24,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 25,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 26,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 27,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 28,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 29,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 30,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 31,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 32,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 33,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 34,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 35,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 36,
+      "disagreements": [
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.5
+    },
+    {
+      "day": 37,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 38,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 39,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 40,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 41,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 42,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 43,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 44,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 45,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 46,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 47,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [
+            "equipment"
+          ],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 48,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 49,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 50,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 51,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 52,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 53,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [
+            "equipment"
+          ],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 54,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 55,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 56,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 57,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 58,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 59,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 60,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 61,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 62,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 63,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 64,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 65,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 66,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 67,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 68,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 69,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 70,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 71,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [
+            "equipment"
+          ],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 1.0
+    },
+    {
+      "day": 72,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 73,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 74,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 75,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 76,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 77,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 78,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 79,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 80,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 81,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 82,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 83,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 84,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 85,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 86,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 87,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 88,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 89,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 90,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 91,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 92,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 93,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 94,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 95,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 96,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 97,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 98,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 99,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 100,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 101,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 102,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 103,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 104,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 105,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 106,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 107,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 108,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 109,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 110,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 111,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 112,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "production",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 113,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 114,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 115,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 116,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 117,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 118,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 119,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    },
+    {
+      "day": 120,
+      "disagreements": [
+        {
+          "dimension": "urgency",
+          "llm_value": "critical",
+          "tufe_value": "high",
+          "info_content": "LLM和TUF-E对紧急程度判断不同，可能反映感知vs结构的差异"
+        },
+        {
+          "dimension": "domain_focus",
+          "llm_only": [
+            "inventory",
+            "personnel"
+          ],
+          "tufe_only": [],
+          "info_content": "关注领域不同——LLM偏向可叙述的问题，TUF-E偏向结构性信号"
+        }
+      ],
+      "info_density": 0.6666666666666666
+    }
+  ],
+  "llm_stats_history": [
+    {
+      "total_perceptions": 10,
+      "detection_rate": 0.324,
+      "false_alarm_rate": 0.1,
+      "missed_rate": 0.676
+    },
+    {
+      "total_perceptions": 20,
+      "detection_rate": 0.331,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.669
+    },
+    {
+      "total_perceptions": 30,
+      "detection_rate": 0.331,
+      "false_alarm_rate": 0.033,
+      "missed_rate": 0.669
+    },
+    {
+      "total_perceptions": 40,
+      "detection_rate": 0.322,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.678
+    },
+    {
+      "total_perceptions": 50,
+      "detection_rate": 0.343,
+      "false_alarm_rate": 0.04,
+      "missed_rate": 0.657
+    },
+    {
+      "total_perceptions": 60,
+      "detection_rate": 0.352,
+      "false_alarm_rate": 0.033,
+      "missed_rate": 0.648
+    },
+    {
+      "total_perceptions": 70,
+      "detection_rate": 0.367,
+      "false_alarm_rate": 0.057,
+      "missed_rate": 0.633
+    },
+    {
+      "total_perceptions": 80,
+      "detection_rate": 0.373,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.627
+    },
+    {
+      "total_perceptions": 90,
+      "detection_rate": 0.384,
+      "false_alarm_rate": 0.056,
+      "missed_rate": 0.616
+    },
+    {
+      "total_perceptions": 100,
+      "detection_rate": 0.394,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.606
+    },
+    {
+      "total_perceptions": 110,
+      "detection_rate": 0.399,
+      "false_alarm_rate": 0.045,
+      "missed_rate": 0.601
+    },
+    {
+      "total_perceptions": 120,
+      "detection_rate": 0.408,
+      "false_alarm_rate": 0.05,
+      "missed_rate": 0.592
+    }
+  ]
+}

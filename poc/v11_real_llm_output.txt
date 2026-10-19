@@ -1,0 +1,15 @@
+Day  5/30 [OBSE]: safety=1.00 comply=None sat=0.77 hidden=0 LLM_src=? det=3 fp=0 sr=0.40 api_ok=4/5
+Day 10/30 [OBSE]: safety=1.00 comply=None sat=0.84 hidden=0 LLM_src=? det=8 fp=0 sr=0.50 api_ok=5/10
+Day 15/30 [OBSE]: safety=1.00 comply=None sat=0.93 hidden=0 LLM_src=real_llm det=6 fp=12 sr=0.50 api_ok=8/15
+Day 20/30 [OBSE]: safety=1.00 comply=None sat=0.81 hidden=0 LLM_src=real_llm det=7 fp=4 sr=0.56 api_ok=12/20
+Day 25/30 [OBSE]: safety=0.00 comply=0 sat=0.81 hidden=0 LLM_src=real_llm det=9 fp=3 sr=0.57 api_ok=15/25
+STAGE 1->2 at day 29
+Day 30/30 [RULE]: safety=1.00 comply=None sat=0.78 hidden=0 LLM_src=real_llm det=6 fp=7 sr=0.64 api_ok=20/30
+
+=== FINAL RESULTS ===
+Agent SR: 0.637
+Avg safety: 0.833
+Real LLM calls: 20/30 (67%)
+Rate limited: 0
+Failed: 10
+Results saved to v11_real_llm_30day.json

@@ -1,0 +1,37 @@
+[
+  {
+    "keep_ratio": 1.0,
+    "significance_recall": 1.0,
+    "topology_aware_recall": 1.0,
+    "gap": 0.0,
+    "time_ms": 1.0
+  },
+  {
+    "keep_ratio": 0.95,
+    "significance_recall": 0.0,
+    "topology_aware_recall": 1.0,
+    "gap": 1.0,
+    "time_ms": 1.0
+  },
+  {
+    "keep_ratio": 0.9,
+    "significance_recall": 0.0,
+    "topology_aware_recall": 1.0,
+    "gap": 1.0,
+    "time_ms": 0.0
+  },
+  {
+    "keep_ratio": 0.8,
+    "significance_recall": 0.0,
+    "topology_aware_recall": 1.0,
+    "gap": 1.0,
+    "time_ms": 1.0
+  },
+  {
+    "keep_ratio": 0.6,
+    "significance_recall": 0.0,
+    "topology_aware_recall": 1.0,
+    "gap": 1.0,
+    "time_ms": 0.0
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "modules": {
+    "topology_protection": {
+      "persistence_features": 59,
+      "median_persistence": 2.7021,
+      "pivot_candidates": 10,
+      "true_bridge_hits": 5,
+      "c2_violations": 8,
+      "time_ms": 1.0
+    },
+    "multi_projection": {
+      "n_projections": 4,
+      "confirmed_edges": 2,
+      "unconfirmed_edges": 2040,
+      "jaccard_pairs": {
+        "betweenness_vs_pagerank": 0.0,
+        "betweenness_vs_jaccard": 0.0,
+        "betweenness_vs_adamic_adar": 0.0,
+        "pagerank_vs_jaccard": 0.0526,
+        "pagerank_vs_adamic_adar": 0.0,
+        "jaccard_vs_adamic_adar": 0.0
+      },
+      "bridges_in_consensus": 0,
+      "time_ms": 20.5
+    },
+    "energy_tracker": {
+      "baseline_cpu": 11.8,
+      "baseline_memory": 42.8,
+      "operations_logged": 3,
+      "total_bits": 156800,
+      "landauer_joules": 4.704e-16,
+      "status": "NORMAL"
+    }
+  },
+  "integration": {
+    "all_pass": true,
+    "checks": [
+      {
+        "name": "Topology Protection",
+        "pass": true,
+        "detail": "pivot hits=5"
+      },
+      {
+        "name": "C2 Violation Detection",
+        "pass": true,
+        "detail": "violations=8"
+      },
+      {
+        "name": "Multi-Projection Consensus",
+        "pass": true,
+        "detail": "confirmed=2"
+      },
+      {
+        "name": "Energy Tracking",
+        "pass": true,
+        "detail": "ops=3"
+      },
+      {
+        "name": "Layer Separation: Query",
+        "pass": true,
+        "detail": "ok"
+      },
+      {
+        "name": "Layer Separation: Block Modify",
+        "pass": true,
+        "detail": "REJECTED"
+      },
+      {
+        "name": "Layer Separation: Flag Self-Eval",
+        "pass": true,
+        "detail": "violations_found"
+      }
+    ]
+  },
+  "c5_tests": [
+    {
+      "test": "query_rules",
+      "result": "ok"
+    },
+    {
+      "test": "modify_immutable",
+      "result": "REJECTED",
+      "violation": true
+    },
+    {
+      "test": "self_evaluation",
+      "result": "violations_found",
+      "violations": [
+        "C5-B1: Object layer evaluating its own output"
+      ]
+    },
+    {
+      "test": "normal_operation",
+      "result": "clean"
+    }
+  ]
+}

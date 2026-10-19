@@ -1,0 +1,341 @@
+{
+  "milestones": [
+    {
+      "episode": 60,
+      "condition": "consensus",
+      "system_sr": 0.0833,
+      "confirmed_pivots": 1,
+      "agent_srs": [
+        0.0833,
+        0.0833,
+        0.0833
+      ]
+    },
+    {
+      "episode": 120,
+      "condition": "consensus",
+      "system_sr": 0.0833,
+      "confirmed_pivots": 4,
+      "agent_srs": [
+        0.0833,
+        0.0833,
+        0.0833
+      ]
+    },
+    {
+      "episode": 180,
+      "condition": "consensus",
+      "system_sr": 0.1056,
+      "confirmed_pivots": 5,
+      "agent_srs": [
+        0.1056,
+        0.1056,
+        0.1056
+      ]
+    },
+    {
+      "episode": 240,
+      "condition": "consensus",
+      "system_sr": 0.1208,
+      "confirmed_pivots": 6,
+      "agent_srs": [
+        0.1208,
+        0.1208,
+        0.1208
+      ]
+    },
+    {
+      "episode": 300,
+      "condition": "consensus",
+      "system_sr": 0.1233,
+      "confirmed_pivots": 8,
+      "agent_srs": [
+        0.1233,
+        0.1233,
+        0.1233
+      ]
+    },
+    {
+      "episode": 360,
+      "condition": "consensus",
+      "system_sr": 0.1278,
+      "confirmed_pivots": 5,
+      "agent_srs": [
+        0.1278,
+        0.1278,
+        0.1278
+      ]
+    },
+    {
+      "episode": 420,
+      "condition": "consensus",
+      "system_sr": 0.15,
+      "confirmed_pivots": 8,
+      "agent_srs": [
+        0.15,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "episode": 480,
+      "condition": "consensus",
+      "system_sr": 0.1667,
+      "confirmed_pivots": 8,
+      "agent_srs": [
+        0.1667,
+        0.1667,
+        0.1667
+      ]
+    },
+    {
+      "episode": 540,
+      "condition": "consensus",
+      "system_sr": 0.1778,
+      "confirmed_pivots": 7,
+      "agent_srs": [
+        0.1778,
+        0.1778,
+        0.1778
+      ]
+    },
+    {
+      "episode": 600,
+      "condition": "consensus",
+      "system_sr": 0.18,
+      "confirmed_pivots": 5,
+      "agent_srs": [
+        0.18,
+        0.18,
+        0.18
+      ]
+    }
+  ],
+  "final": {
+    "consensus": {
+      "agent_stats": [
+        {
+          "agent_id": "A",
+          "observer_type": "magnitude",
+          "total_attempts": 600,
+          "total_successes": 108,
+          "success_rate": 0.18,
+          "n_private_pivots": 19,
+          "top_preferences": {
+            "0": 0.998,
+            "1": 0.0005,
+            "2": 0.0004,
+            "3": 0.0002,
+            "4": 0.0002,
+            "5": 0.0004,
+            "6": 0.0002,
+            "7": 0.0002
+          },
+          "energy_bits": 64000
+        },
+        {
+          "agent_id": "B",
+          "observer_type": "symbolic",
+          "total_attempts": 600,
+          "total_successes": 108,
+          "success_rate": 0.18,
+          "n_private_pivots": 15,
+          "top_preferences": {
+            "0": 0.9966,
+            "1": 0.0012,
+            "2": 0.0005,
+            "3": 0.0003,
+            "4": 0.0003,
+            "5": 0.0005,
+            "6": 0.0003,
+            "7": 0.0003
+          },
+          "energy_bits": 64000
+        },
+        {
+          "agent_id": "C",
+          "observer_type": "temporal",
+          "total_attempts": 600,
+          "total_successes": 108,
+          "success_rate": 0.18,
+          "n_private_pivots": 13,
+          "top_preferences": {
+            "0": 0.9968,
+            "1": 0.0008,
+            "2": 0.0007,
+            "3": 0.0002,
+            "4": 0.0003,
+            "5": 0.0005,
+            "6": 0.0004,
+            "7": 0.0003
+          },
+          "energy_bits": 64000
+        }
+      ],
+      "consensus": {
+        "n_candidates": 31,
+        "n_confirmed": 5,
+        "top_confirmed": [
+          {
+            "key": "('tiny', 0, 'small')",
+            "strength": 0.244,
+            "n_confirmers": 2,
+            "ops": [
+              0
+            ]
+          },
+          {
+            "key": "('small', 0, 'small')",
+            "strength": 0.244,
+            "n_confirmers": 3,
+            "ops": [
+              0
+            ]
+          },
+          {
+            "key": "('small', 0, 'medium')",
+            "strength": 0.244,
+            "n_confirmers": 2,
+            "ops": [
+              0
+            ]
+          },
+          {
+            "key": "('medium', 0, 'medium')",
+            "strength": 0.244,
+            "n_confirmers": 2,
+            "ops": [
+              0
+            ]
+          },
+          {
+            "key": "('tiny', 0, 'tiny')",
+            "strength": 0.244,
+            "n_confirmers": 2,
+            "ops": [
+              0
+            ]
+          }
+        ]
+      },
+      "system_success_rate": 0.18,
+      "total_energy": 192000
+    },
+    "no_consensus": {
+      "agent_stats": [
+        {
+          "agent_id": "A",
+          "observer_type": "magnitude",
+          "total_attempts": 600,
+          "total_successes": 89,
+          "success_rate": 0.1483,
+          "n_private_pivots": 32,
+          "top_preferences": {
+            "0": 0.6898,
+            "1": 0.0442,
+            "2": 0.1356,
+            "3": 0.0176,
+            "4": 0.0131,
+            "5": 0.0394,
+            "6": 0.0343,
+            "7": 0.026
+          },
+          "energy_bits": 64000
+        },
+        {
+          "agent_id": "B",
+          "observer_type": "symbolic",
+          "total_attempts": 600,
+          "total_successes": 89,
+          "success_rate": 0.1483,
+          "n_private_pivots": 23,
+          "top_preferences": {
+            "0": 0.6002,
+            "1": 0.0866,
+            "2": 0.1362,
+            "3": 0.0298,
+            "4": 0.0171,
+            "5": 0.0514,
+            "6": 0.0448,
+            "7": 0.0339
+          },
+          "energy_bits": 64000
+        },
+        {
+          "agent_id": "C",
+          "observer_type": "temporal",
+          "total_attempts": 600,
+          "total_successes": 89,
+          "success_rate": 0.1483,
+          "n_private_pivots": 20,
+          "top_preferences": {
+            "0": 0.5739,
+            "1": 0.0552,
+            "2": 0.1953,
+            "3": 0.0219,
+            "4": 0.0164,
+            "5": 0.0491,
+            "6": 0.0557,
+            "7": 0.0325
+          },
+          "energy_bits": 64000
+        }
+      ],
+      "consensus": {
+        "n_confirmed": 0
+      },
+      "system_success_rate": 0.1483,
+      "total_energy": 192000
+    },
+    "single_agent": {
+      "success_rate": 0.1133,
+      "attempts": 600,
+      "successes": 68,
+      "n_private_pivots": 32,
+      "energy_bits": 64000
+    }
+  },
+  "comparison": {
+    "consensus_sr": 0.18,
+    "no_consensus_sr": 0.1483,
+    "single_sr": 0.1133,
+    "consensus_boost": 0.0667,
+    "consensus_vs_no": 0.0317,
+    "verdict": "CONSENSUS HELPS",
+    "confirmed_pivots": 5,
+    "energy_consensus": 192000,
+    "energy_single": 64000
+  },
+  "version_comparison": {
+    "v0.1": {
+      "sr": 0.198,
+      "type": "single",
+      "consensus": false
+    },
+    "v0.2": {
+      "sr": 0.213,
+      "type": "single+lossy_self",
+      "consensus": false
+    },
+    "v0.3": {
+      "sr": 0.131,
+      "type": "single+composition",
+      "consensus": false
+    },
+    "v0.4_consensus": {
+      "sr": 0.18,
+      "type": "multi-agent+consensus",
+      "consensus": true
+    },
+    "v0.4_no_consensus": {
+      "sr": 0.1483,
+      "type": "multi-agent",
+      "consensus": false
+    },
+    "v0.4_single": {
+      "sr": 0.1133,
+      "type": "single_baseline",
+      "consensus": false
+    }
+  }
+}
