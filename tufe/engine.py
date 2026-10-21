@@ -159,12 +159,16 @@ class TUFEAgent:
     The agent does NOT optimize a reward function. It maintains viability.
     """
 
-    def __init__(self, domain: DomainSpec, seed: int = 42, exact_addressing: bool = False):
+    def __init__(self, domain: DomainSpec, seed: int = 42, exact_addressing: bool = False,
+                 address_key_fn=None):
         self.domain = domain
         self.rng = np.random.default_rng(seed)
 
         # SC-1 state-sufficient causal memory (v1.2 experiment channel)
         self.exact_addressing = exact_addressing
+        # SC-2 addressing granularity (v1.3): address_key_fn maps raw_obs -> key.
+        # None => full-state exact key; a coarse fn => skeleton addressing (M2).
+        self.address_key_fn = address_key_fn
         self.exact_mem: dict[str, dict[int, tuple[int, int]]] = {}
         self.exact_fires = 0
         self.exact_fire_viable = 0
@@ -272,7 +276,8 @@ class TUFEAgent:
                 obs_buckets.append(obs_spec.discretize(raw))
             else:
                 obs_buckets.append('b00')
-        state_key = repr(sorted((k, repr(v)) for k, v in raw_obs.items()))
+        state_key = (self.address_key_fn(raw_obs) if self.address_key_fn is not None
+                     else repr(sorted((k, repr(v)) for k, v in raw_obs.items())))
 
         # Step 2: Choose action
         action_id = self.choose_action(obs_buckets, state_key)

@@ -516,12 +516,13 @@ class RegexDomain(DomainSpec):
         {'desc': 'email-like', 'pos': ['a@b.c', 'x@y.z', 'me@co.uk'], 'neg': ['abc', '@bc', 'a@c']},
     ]
 
-    def __init__(self, seed=42):
+    def __init__(self, seed=42, task_duration=200, dissipation_rate=0.05):
         self.rng = np.random.default_rng(seed)
         self._current_pattern = ''
         self._current_task_idx = 0
         self._cycles_on_task = 0
-        self._task_duration = 200
+        self._task_duration = task_duration
+        self._dissipation_rate = dissipation_rate
         self._task_order = list(range(len(self.TASKS)))
         self.rng.shuffle(self._task_order)
 
@@ -579,7 +580,7 @@ class RegexDomain(DomainSpec):
         return state.get('viable', False)
 
     def apply_dissipation(self) -> None:
-        if self.rng.random() < 0.05 and self._current_pattern:
+        if self._dissipation_rate > 0 and self.rng.random() < self._dissipation_rate and self._current_pattern:
             self._current_pattern = self._current_pattern[:-1]
 
     def meta_rules(self) -> dict[str, Any]:
