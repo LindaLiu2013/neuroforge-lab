@@ -597,3 +597,47 @@ class RegexDomain(DomainSpec):
             return {'match_rate': round(match_rate, 3), 'reject_rate': round(reject_rate, 3)}
         except re.error:
             return {'match_rate': 0.0, 'reject_rate': 1.0}
+
+
+class RegexOpenDomain(RegexDomain):
+    """
+    GC-1 treatment arm (v1.1 falsifiable test): open operation space.
+
+    Identical to RegexDomain in observers, viability rule, dissipation,
+    tasks and meta-rules; only ACTIONS differs. Five generic regex
+    constructors are added so the causal-transformation set can express
+    combinations the designer did not pre-plan. If GC-1 holds, this arm
+    must show viability rise and pivot emergence where the closed arm
+    shows none.
+    """
+
+    ACTIONS = RegexDomain.ACTIONS + [
+        ('append_upper_class', lambda p, _: p + '[A-Z]'),
+        ('append_space', lambda p, _: p + r'\s'),
+        ('append_punct_class', lambda p, _: p + r'[^\w\s]'),
+        ('append_literal_at', lambda p, _: p + '@'),
+        ('append_literal_dot', lambda p, _: p + r'\.'),
+    ]
+
+    def name(self) -> str:
+        return "RegexOpen"
+
+
+class RegexLoopDomain(RegexOpenDomain):
+    """
+    v1.1 GC-1 arm C: operation space with maintain and repair transforms.
+
+    Adds identity (hold) and last-token removal (trim) to the open
+    constructor set. Without a state-preserving transform the causal loop
+    cannot close: any viable pattern is destroyed by the next action, so
+    the dissipative steady state (pivot function layer) is unexpressible
+    no matter how rich the constructors are.
+    """
+
+    ACTIONS = RegexOpenDomain.ACTIONS + [
+        ('hold', lambda p, _: p),
+        ('trim_last', lambda p, _: p[:-1]),
+    ]
+
+    def name(self) -> str:
+        return "RegexLoop"
