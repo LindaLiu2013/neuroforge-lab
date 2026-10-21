@@ -1,0 +1,75 @@
+# 预注册: v1.12 内生结晶 — 从"开环固定路径"到"闭环观察反应策略"的涌现
+# 受 PROTOCOL_autonomous_run.md 约束; 直接攻 v1.11 定位的"生成瓶颈(SC-3 发现黑洞)"
+# Jayson 定向: "要的就是这个效果, 内生结晶(涌现或自己总结成功的方法)才是本原创 AI 应做到的"
+
+## 基本信息
+- EXP-ID: v1.12 (Q: SC-3 能否被内生跨过)
+- 日期: 2026-10-21
+- 类型: FALSIFICATION-FIRST 生成机制检验(对"内生结晶能否涌现全覆盖"设互斥杀死条件)
+- 依赖: v1.11(H-NOGAIN, 真瓶颈=生成非选择); v1.8(P-A: 重新寻址流内已有信息合法/零新信息);
+        GC-4(刹那=完整循环); C5.3(对象层"search_heuristics"可自修改, 元层不可动); OC-9/OC-12;
+        m14-m15(生成空缺=SC-3黑洞)
+
+## v1.11 暴露的真墙(纠正对象)
+oracle 达 1.0 不是更聪明, 是**闭环**: 它对观测反应(探到开关→按; 探到非开关→记住已排除→移向未排除格)。
+agent 的方法=**开环固定动作序列**, 不反应⇒对**移动**目标结构上无法全覆盖(最好幸存者 P-D 仅 0.6)。
+⇒ 内生结晶必须把方法**从"固定 path"重表达为"观察反应策略"**。
+
+## 关键人门判断(透明声明, 设为杀死条件)
+系统搜索需**循环内记忆**"哪些格已探过且排除"。给这个记忆=是否偷运覆盖答案?
+**判断: 否**——该记忆=agent **保留自己过去的观测**, 正是 v1.8 P-A 确认合法的"重新寻址观测流内已有信息"
+(零新信息, OC-12 L1 重组)。覆盖的**形式**仍须由环境选择涌现; 我不供给任何 coverage/sweep/direction/
+visited-as-answer token。**杀死条件 H-SUPPLIED**: 若唯一能让它work的方式是硬编码"下一格试哪"/覆盖目标⇒人门, 作废。
+
+## 内生结晶机制(全内生, 无覆盖知识注入)
+- **表达(re-representation)**: 一条方法=**闭环反应策略** genome[320], 状态索引=(pos∈0..4, feel∈0..1,
+  ruled∈0..31 位掩码)。ruled=agent 本循环内"探到负(FEEL 且不在开关)"的格的**自身观测留存**(v1.8 合法重寻址)。
+  state_index = pos*64 + feel*32 + ruled。action∈{0左,1右,2探,3按}。未覆盖状态→随机兜底。
+- **变异(variation, OC-12 随机门)**: 随机翻转 genome 里若干状态的动作。**纯随机, 不含方向/覆盖偏好。**
+- **自己总结成功方法(Lamarckian self-summary)**: 记录所有**成功循环**经历的 (state→action) 到 tally;
+  繁殖时以 LAMARK_P 把 tally-argmax(support≥MIN_SUPPORT)写回子代 genome=把"成功时我做了什么"总结进后代。
+- **选择=整体策略循环 viability(耗散选择, 非 RL)**: 每条 genome 在 W 个循环上测**整策略二元 viability 比例**;
+  存活者(高 viability)保留+繁殖, 失败者耗散淘汰(elitism+填充)。**无单步奖励/无折扣/无价值回传/TD/梯度**;
+  viability 只在完整刹那(灯亮)结算一次(同 v1.9b/v1.11 grain)。这是 Prigogine 耗散选择, 非 reward 最大化。
+
+## 红线自证(跑前锁定)
+- **非 RL**: 选择单元=**整条反应策略**, 二元循环 viability, 完整刹那粒度; 变异=随机搜索非策略梯度;
+  tally 仅作**提议生成器**(总结成功时做了啥), **确认在整策略 grain**(整条 genome 被 viability 接受/淘汰),
+  绝不给单个 (state,action) 按延迟结果记功。
+- **非人门(G6 代码审查)**: genome 初值随机; 变异随机; tally 来自 agent 自己的成功轨迹; ruled 来自 agent
+  自己的 FEEL 观测留存; 引擎不含 switch_pos/sweep/coverage/预设方向/visited-as-target token。冻结元规则
+  (变异+self-summary+整策略 viability 选择)=**π 轴设计者冻结 FORM**(同 v1.8 压缩算子诚实地位), 系统内生的是
+  **哪条反应策略存活(CONTENT, 环境门验证)**, 非发明搜索程序本身。此诚实边界跑前声明。
+- **P-D**: 固化(幸存)genome 须在**全新随机开关位置**重跑验证泛化(不靠记忆特定 switch)。
+
+## 冻结参数(跑前锁定, 跑后不调, 守 G5/S4)
+L=5; BUDGET=12; switch_mode=moving; n_cycles=2000; seeds=[42,43,44]; rho=0;
+K=8(种群); W=25(每条 genome 评估循环数); MUT_STATES=6(每次变异翻转状态数); MIN_SUPPORT=3(tally 最小支撑);
+LAMARK_P=0.5(self-summary 写回概率); ELITE=2(精英保留)。探索兜底=均匀随机。
+
+## 三臂(G2 负对照 + 人门天花板; openloop/explore 引 v1.11 同域历史对照)
+1. reactive_crystallize : 闭环反应策略 + 变异 + self-summary + 整策略 viability 选择   — 主测
+2. reactive_no_learn    : 同闭环表达但**冻结随机 genome**(无变异/无 self-summary/无选择) — 表达-only 对照
+3. oracle_sweep         : 设计者供给覆盖扫遍                                          — 人门天花板(1.0, 非内生)
+   (历史对照: v1.11 openloop survivor=0.422, explore floor=0.334, 同 moving 域)
+
+## 预注册判定(互斥, 跑前锁定)
+- **H-CRYSTALLIZE(内生跨过 SC-3, 强正结果)**: reactive_crystallize 的 VR **显著 > reactive_no_learn 且 >
+  v1.11 openloop 0.422**, 向 oracle 1.0 靠拢(如 ≥0.8), 且固化 genome 是**观察反应的**(真的用 feel/ruled, P-D
+  泛化高) ⇒ **闭环反应覆盖策略由内生结晶(变异+self-summary+耗散选择)涌现, 无覆盖答案注入**=SC-3 被内生跨过。
+- **H-PARTIAL(诚实部分)**: VR 上升但**封顶 oracle 之下**(如 0.5~0.8) ⇒ 内生结晶**真实但不完整**(预算/表达受限);
+  如实报上升幅度与固化策略形态, 定位剩余差距。
+- **H-NOGAIN(负=主产出)**: reactive_crystallize ≈ reactive_no_learn ≈ openloop(或更低) ⇒ 重表达+变异+总结
+  **仍结晶不出覆盖**; 若诊断到"成功循环被 start==switch 运气污染⇒self-summary 结晶出退化 always-PRESS 习惯"
+  则精确定位 SC-3 黑洞的机制(运气污染 + 缺新行为变异源), 交回 Jayson。
+- **H-SUPPLIED/P-D(作废)**: 固化 genome 不对应真实覆盖几何, 或只能靠硬编码"下一格"才work ⇒ 人门, 作废重设计。
+
+## OC-9 / OC-12
+- OC-9: rho=0; 地板=explore/reactive_no_learn; 超额因果有效性 = VR(reactive_crystallize) − VR(reactive_no_learn)
+- OC-12: 新覆盖信息只可能从**环境门**(viability 反馈)或**随机门**(变异)进入; self-summary=重表达 agent 自己
+  已成功轨迹(L1 零新信息); ruled 记忆=重寻址自身观测(v1.8 合法)。**我(设计者门)只供给冻结元规则的形式, 不供内容。**
+
+## 停止规则挂钩
+跑完对照 S1-S5。H-CRYSTALLIZE⇒SC-3 内生跨过(重大正结果, 复核 P-D 确保非侥幸); H-PARTIAL⇒如实报部分涌现;
+H-NOGAIN⇒精确定位黑洞机制交回 Jayson(下一步候选: 种群/更大变异预算=新预注册, **非现在重调参数追赢**)。
+据 G5/S4: 参数跑前锁定跑后不调, **不"再试一个 seed/参数就能赢"续命**。若发现需硬编码覆盖⇒S5 停, 交回 Jayson。
