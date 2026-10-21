@@ -1,0 +1,9 @@
+{"arm": "control", "seed": 42, "n_cycles": 30000, "viability_rate": 0.0209, "confirmed_pivots": 0, "exact_fires": 0, "exact_fire_viable_rate": 0.0}
+{"arm": "control", "seed": 7, "n_cycles": 30000, "viability_rate": 0.0212, "confirmed_pivots": 2, "exact_fires": 0, "exact_fire_viable_rate": 0.0}
+{"arm": "control", "seed": 2026, "n_cycles": 30000, "viability_rate": 0.0166, "confirmed_pivots": 0, "exact_fires": 0, "exact_fire_viable_rate": 0.0}
+{"arm": "control_exact", "seed": 42, "n_cycles": 30000, "viability_rate": 0.0694, "confirmed_pivots": 0, "exact_fires": 1230, "exact_fire_viable_rate": 0.989}
+{"arm": "control_exact", "seed": 7, "n_cycles": 30000, "viability_rate": 0.0225, "confirmed_pivots": 0, "exact_fires": 128, "exact_fire_viable_rate": 0.836}
+{"arm": "control_exact", "seed": 2026, "n_cycles": 30000, "viability_rate": 0.0189, "confirmed_pivots": 0, "exact_fires": 195, "exact_fire_viable_rate": 0.718}
+{"arm": "loop_exact", "seed": 42, "n_cycles": 30000, "viability_rate": 0.0231, "confirmed_pivots": 19, "exact_fires": 272, "exact_fire_viable_rate": 0.967}
+{"arm": "loop_exact", "seed": 7, "n_cycles": 30000, "viability_rate": 0.0393, "confirmed_pivots": 0, "exact_fires": 630, "exact_fire_viable_rate": 0.987}
+{"arm": "loop_exact", "seed": 2026, "n_cycles": 30000, "viability_rate": 0.0538, "confirmed_pivots": 0, "exact_fires": 1059, "exact_fire_viable_rate": 0.956}

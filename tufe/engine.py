@@ -159,9 +159,16 @@ class TUFEAgent:
     The agent does NOT optimize a reward function. It maintains viability.
     """
 
-    def __init__(self, domain: DomainSpec, seed: int = 42):
+    def __init__(self, domain: DomainSpec, seed: int = 42, exact_addressing: bool = False):
         self.domain = domain
         self.rng = np.random.default_rng(seed)
+
+        # SC-1 state-sufficient causal memory (v1.2 experiment channel)
+        self.exact_addressing = exact_addressing
+        self.exact_mem: dict[str, dict[int, tuple[int, int]]] = {}
+        self.exact_fires = 0
+        self.exact_fire_viable = 0
+        self._exact_fire_pending = False
 
         # Auto-detect consensability and configure consensus (CL-2, CL-4)
         cons_config = domain.consensus_config()
@@ -200,14 +207,28 @@ class TUFEAgent:
         self.viable_cycles = 0
         self.cycle_log: list[dict] = []
 
-    def choose_action(self, obs_buckets: list[str]) -> int:
+    def choose_action(self, obs_buckets: list[str], state_key: str | None = None) -> int:
         """
         Select action using pivot guidance or exploration.
 
         If confirmed pivots match current observation, use them (40% prob).
         Otherwise, sample from learned preferences with exploration noise.
+        With exact_addressing, a state-sufficient causal memory replays
+        first (SC-1): the full state key addresses (state -> action) records
+        whose viability rate is already established.
         """
         n_actions = self.domain.action_space_size()
+
+        if self.exact_addressing and state_key is not None:
+            rec = self.exact_mem.get(state_key)
+            if rec:
+                candidates = [(v / n, aid) for aid, (n, v) in rec.items()
+                              if n >= 3 and v >= 0.5 * n]
+                if candidates and self.rng.random() < 0.8:
+                    self.exact_fires += 1
+                    self._exact_fire_pending = True
+                    return int(max(candidates)[1])
+
         confirmed = self.knowledge.get_confirmed()
 
         # Pivot-guided selection
@@ -251,9 +272,10 @@ class TUFEAgent:
                 obs_buckets.append(obs_spec.discretize(raw))
             else:
                 obs_buckets.append('b00')
+        state_key = repr(sorted((k, repr(v)) for k, v in raw_obs.items()))
 
         # Step 2: Choose action
-        action_id = self.choose_action(obs_buckets)
+        action_id = self.choose_action(obs_buckets, state_key)
 
         # Step 3: Execute
         result = self.domain.act(action_id)
@@ -275,6 +297,13 @@ class TUFEAgent:
         viable = self.domain.assess_viability(result.post_state)
         if viable:
             self.viable_cycles += 1
+        if self._exact_fire_pending:
+            self.exact_fire_viable += 1 if viable else 0
+            self._exact_fire_pending = False
+        if self.exact_addressing:
+            rec = self.exact_mem.setdefault(state_key, {})
+            n, v = rec.get(action_id, (0, 0))
+            rec[action_id] = (n + 1, v + (1 if viable else 0))
 
         # Step 7: Update knowledge
         # Update preferences based on viability (NOT reward)
