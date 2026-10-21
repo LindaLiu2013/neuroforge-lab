@@ -1,0 +1,147 @@
+# PRE-REGISTRATION — v1.13 chemostat: sustainable endogenous crystallization
+# COMMITTED BEFORE ANY RESULTS (anti-HARKing). Do not edit after running.
+#
+# Author frame: NON-TELEOLOGICAL. This study deliberately abandons the dark-room
+# (retired by Jayson: mission complete — it proved a sliver of endogenous
+# crystallization is possible). The dark-room frame was teleological (win/lose per
+# cycle, VR, oracle-1.0 ceiling, fitness=keep-winners) = the reward-maximization
+# drift TUF-E forbids [FS-C2, A1, A5]. Here:
+#   - The agent has NO goal, NO target, NO oracle, and does NOT know its future.
+#   - viability = self-maintenance (internal free-energy budget stays > 0), P1.2,
+#     NOT task-goal achievement.
+#   - capability CRYSTALLIZES AS A BYPRODUCT of maintaining itself; the environment
+#     does the work (M8 food set / M12 minimum internal work).
+#   - learning signal = feasible-space dynamics (shrink/expand), NOT reward [FS-C2].
+#   - measured by OC-9 excess causal validity + feasible-space volume + survival +
+#     minting continuity, NEVER by win-rate or gap-to-oracle.
+#
+# Model = artificial autocatalytic chemistry (Prigogine dissipative structure / RAF-set):
+#   environment = a flux field over N_CH channels; true_pattern is a bitmask that
+#     random-walks (each step, w.p. DRIFT toggle one random channel). DRIFT is the
+#     only swept parameter. Pattern is RANDOM — nothing encodes an answer.
+#   agent = a set of ops (catalysts). Each op has:
+#     mask  : which channels it couples to (success if mask & true_pattern != 0)
+#     conc  : concentration (dissipative — decays every step, grows on fire-viable)
+#     n, v  : fire count / successful-coupling count (for consolidation)
+#   step (one 刹那 / complete work cycle):
+#     1 sense: sensed = true_pattern with per-bit lossy noise (P4), constant across arms
+#     2 fire: among ops triggered by sensed (op.mask & sensed != 0), sample one w.p.
+#       proportional to conc (MASS-ACTION kinetics — no objective function, no choice
+#       to maximize; abundant catalysts simply drive more flux). If none triggered,
+#       fire a random op (baseline exploration).
+#     3 couple: budget -= ACT_COST; if op.mask & true_pattern != 0 -> budget += GAIN
+#       (v+=1, conc grows) else (n+=1, wasted, conc decays)
+#     4 dissipate: budget -= DECAY (P1.2). budget<=0 -> DEAD.
+#     5 variation (RANDOMNESS DOOR, OC-12): w.p. VAR_P mint a candidate op by
+#       mutating/composing existing ops. Candidate starts at low conc; must prove
+#       fire-viable to grow, else decays out.
+#     6 forgetting (P1.2 dissipative): every op conc *= CONC_DECAY; ops < CONC_MIN
+#       removed. Knowledge persists ONLY if continuously re-maintained.
+#   No op is hand-written to match the drift. Base ops are random. Composition is
+#   generic (mask union / xor / single-bit flip). No curriculum hints the pattern.
+#
+# Central falsifiable claim:
+#   A SUSTAINABLE steady state of endogenous crystallization exists only in a BAND of
+#   environmental drift rate. Mechanism = competition between the consolidation
+#   timescale (~MIN_N fires to prove an op) and the drift timescale (~1/DRIFT).
+#     DRIFT=0     -> pattern fixed. Base couplers consolidate; no NEW info (OC-12) so
+#                    minting yields nothing genuinely new -> FROZEN (trivial steady
+#                    state: survives, minting->0, excess->background = learning illusion,
+#                    LUCA-at-vent).
+#     DRIFT in band -> pattern drifts slowly enough to consolidate but fast enough that
+#                    each new pattern is genuinely new info (environment door) ->
+#                    continuous minting that TRACKS drift; feasible volume held above
+#                    critical by turnover; excess causal validity stays positive
+#                    = SUSTAINABLE GROWTH (the answer to Jayson's question).
+#     DRIFT high  -> ops obsolete before they can consolidate -> nothing stabilizes ->
+#                    budget collapses -> DEATH.
+#
+# ========================= PRE-REGISTERED PREDICTIONS =========================
+# (all metrics defined in METRICS below; judgments decided BEFORE seeing numbers)
+#
+# P-BAND (core): THERE EXISTS a non-empty interval of DRIFT over which ALL THREE hold
+#   simultaneously across the run:
+#     (a) survival_rate >= 0.9 (agent self-maintains to horizon), AND
+#     (b) minting continuity: consolidated-new-op rate in the SECOND HALF of the run
+#         is >= 0.5x its rate in the first productive quarter (does NOT decay to ~0), AND
+#     (c) OC-9 excess causal validity (live-repertoire coupling rate - background rho)
+#         stays >= EXCESS_MARGIN in the second half.
+#   AND at least one of (a)/(b)/(c) FAILS at both DRIFT=0 and at the highest DRIFT.
+#
+# P-FROZEN: at DRIFT=0, minting_rate -> ~0 after an initial transient (second-half
+#   consolidated-new-op rate < 0.2x first-quarter) AND excess causal validity
+#   <= FROZEN_MARGIN (new ops are no better than background = learning illusion).
+#   Survival is HIGH (frozen LUCA-at-vent survives on its fixed couplers).
+#
+# P-COLLAPSE: at the highest DRIFT, survival_rate <= 0.5 (median feasible volume -> 0 /
+#   death before horizon).
+#
+# P-SUSTAIN (the "stable sustainable STATE" claim): inside the band, feasible-space
+#   volume V(t) reaches a STATISTICAL STEADY STATE in the second half — bounded
+#   fluctuation around a non-zero mean, |normalized slope| < SLOPE_EPS, NOT monotone
+#   collapse and NOT monotone unbounded growth — and is MAINTAINED to horizon WITHOUT
+#   any external propping (no re-seeding, no oracle, no hand-fed ops).
+#
+# P-OC12 (information accounting): the band's genuine minting (positive excess) is
+#   driven by the ENVIRONMENT DOOR (drift injects new patterns). Prediction: excess
+#   causal validity at DRIFT=0 is <= at DRIFT=band even though DRIFT=0 has more time to
+#   consolidate. If DRIFT=0 produced MORE genuine new coupling than the band, OC-12 is
+#   violated -> investigate as bug-or-big-finding, DO NOT tune away.
+#
+# ========================= KILL CONDITIONS / GUARDS =========================
+# K-NONTELEOLOGY: VOID if any result is reported by win-rate, VR-vs-oracle, or
+#   gap-to-ceiling. The oracle arm is DELIBERATELY ABSENT. Metrics are only: survival,
+#   feasible-space volume, minting continuity, OC-9 excess causal validity.
+# K-HUMAN-DOOR: VOID if the band appears ONLY because a hand-written op / curriculum
+#   encodes the drift pattern. Guard: base ops random, composition generic, drift
+#   random-walk, agent has no target. If I catch myself adding ANY component that could
+#   encode the answer -> stop, report, do not ship.
+# K-NO-TUNE-TO-WIN (S4/G5): if no band appears (always frozen or always collapsing),
+#   report H-NOBAND honestly. Do NOT re-sweep drift / seeds / params to manufacture a
+#   band. One pre-registered DRIFT grid, one run.
+# K-BACKGROUND-HONESTY: background rho for OC-9 must come from a FROZEN-RANDOM control
+#   arm run under the SAME drift, not a hand-picked constant.
+#
+# ========================= ARMS =========================
+# drift grid (per-step toggle prob): 0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40
+# seeds per arm: 4   (single-seed conclusions forbidden — v1.6 lesson)
+# horizon: 4000 steps/run
+# controls: frozen_random (ops fixed random, no minting/consolidation) at each drift
+#   -> supplies background rho for OC-9.
+#
+# ========================= METRICS (feasibility, not optimality) =========================
+# survival_rate      : fraction of seeds alive at horizon (budget>0 throughout)
+# feasible_volume V  : count of live ops (conc >= CONC_MIN) — FS-C3 viable-space proxy
+# coupling_coverage  : over trailing window, fraction of steps where >=1 live op would
+#                      couple to the TRUE pattern (can the repertoire sustain itself now)
+# minting_rate(t)    : consolidated genuinely-new ops per window (new = couples to a
+#                      pattern its parents could not)
+# excess_causal_validity (OC-9): live-repertoire coupling rate - frozen_random rho
+# steady_state class : PLATEAU / COLLAPSE / FROZEN / UNBOUNDED from V(t) second-half
+#                      slope + variance + minting tail
+#
+# ========================= JUDGMENTS =========================
+# H-SUSTAINABLE-BAND : P-BAND and P-SUSTAIN and P-FROZEN and P-COLLAPSE all hold.
+#   -> ANSWER to Jayson: sustainable crystallization = non-equilibrium steady state
+#      maintained inside a drift band; too-slow freezes (learning illusion), too-fast
+#      collapses. Method = keep the environment doing work at a rate matched to the
+#      consolidation timescale.
+# H-PARTIAL          : a band exists for SOME but not all of (a)/(b)/(c); or steady
+#      state is bounded but drifts down slowly. Report which sub-claim failed.
+# H-NOBAND           : no interval satisfies P-BAND (monotone, or always frozen, or
+#      always collapsing). Honest negative; the "sustainable state" may need a
+#      mechanism absent here.
+# H-SUPPLIED         : VOID via K-HUMAN-DOOR or K-NONTELEOLOGY (result is an artifact of
+#      an answer-encoding component or a teleological metric). Do not claim success.
+#
+# Thresholds (frozen now): EXCESS_MARGIN=0.05, FROZEN_MARGIN=0.02, SLOPE_EPS=0.10,
+#   survival high >=0.9, collapse <=0.5, minting-tail ratio 0.5 (band) / 0.2 (frozen).
+# ============================================================================
+
+study: v1.13_chemostat_sustainable_crystallization
+date_preregistered: 2026-10-21
+frame: non_teleological_dissipative_structure
+swept_parameter: drift
+grid: [0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40]
+seeds: 4
+horizon: 4000
