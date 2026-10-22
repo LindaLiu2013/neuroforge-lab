@@ -1,0 +1,102 @@
+==========================================================================
+v1.15 SKELETON-ADDRESSING GRANULARITY LADDER + PATH PROVENANCE
+==========================================================================
+
+[K-DISCRIMINATES] headroom=0.665 (oracle=1.000, best-fixed=0.335)
+  HEADROOM_MIN=0.15 -> PASS
+
+--- seed 42 (20000 cycles) ---
+  A0 random           = 0.139
+  A1 no-op (id)       = 0.019
+  A2 best-fixed       = 0.336  (action sub)  <- CEILING
+  G0_bandit           = 0.317  fire_rate=0.000 fire-viable=  n/a  V=319
+  G1_exact            = 0.340  fire_rate=0.219 fire-viable=1.000  V=319
+  G2_skel64           = 0.590  fire_rate=0.532 fire-viable=0.869  V=390
+  G3_skel8            = 0.433  fire_rate=0.371 fire-viable=0.763  V=376
+  G4_skel_target_only = 0.671  fire_rate=0.795 fire-viable=0.763  V=357
+
+--- seed 43 (20000 cycles) ---
+  A0 random           = 0.132
+  A1 no-op (id)       = 0.017
+  A2 best-fixed       = 0.335  (action add)  <- CEILING
+  G0_bandit           = 0.318  fire_rate=0.000 fire-viable=  n/a  V=334
+  G1_exact            = 0.407  fire_rate=0.260 fire-viable=1.000  V=317
+  G2_skel64           = 0.647  fire_rate=0.592 fire-viable=0.885  V=399
+  G3_skel8            = 0.401  fire_rate=0.329 fire-viable=0.789  V=379
+  G4_skel_target_only = 0.668  fire_rate=0.790 fire-viable=0.765  V=347
+
+--- seed 44 (20000 cycles) ---
+  A0 random           = 0.133
+  A1 no-op (id)       = 0.017
+  A2 best-fixed       = 0.339  (action add)  <- CEILING
+  G0_bandit           = 0.317  fire_rate=0.000 fire-viable=  n/a  V=293
+  G1_exact            = 0.345  fire_rate=0.220 fire-viable=1.000  V=291
+  G2_skel64           = 0.627  fire_rate=0.558 fire-viable=0.894  V=398
+  G3_skel8            = 0.448  fire_rate=0.412 fire-viable=0.752  V=388
+  G4_skel_target_only = 0.673  fire_rate=0.796 fire-viable=0.763  V=350
+
+--- seed 45 (20000 cycles) ---
+  A0 random           = 0.135
+  A1 no-op (id)       = 0.016
+  A2 best-fixed       = 0.335  (action sub)  <- CEILING
+  G0_bandit           = 0.310  fire_rate=0.000 fire-viable=  n/a  V=260
+  G1_exact            = 0.363  fire_rate=0.228 fire-viable=1.000  V=292
+  G2_skel64           = 0.643  fire_rate=0.567 fire-viable=0.893  V=390
+  G3_skel8            = 0.417  fire_rate=0.351 fire-viable=0.779  V=379
+  G4_skel_target_only = 0.668  fire_rate=0.797 fire-viable=0.759  V=361
+
+--- seed 46 (20000 cycles) ---
+  A0 random           = 0.139
+  A1 no-op (id)       = 0.017
+  A2 best-fixed       = 0.334  (action mul)  <- CEILING
+  G0_bandit           = 0.315  fire_rate=0.000 fire-viable=  n/a  V=331
+  G1_exact            = 0.379  fire_rate=0.233 fire-viable=1.000  V=358
+  G2_skel64           = 0.641  fire_rate=0.580 fire-viable=0.890  V=399
+  G3_skel8            = 0.424  fire_rate=0.353 fire-viable=0.787  V=371
+  G4_skel_target_only = 0.600  fire_rate=0.630 fire-viable=0.799  V=379
+
+==========================================================================
+AGGREGATE (mean +/- sd over 5 seeds) ¡ª ALL ARMS IN ONE TABLE
+==========================================================================
+  arm                          viability   fire_rate   fire-viable     vs A2
+  --------------------------------------------------------------------------
+  A0_random                  0.136¡À0.000           -             -   -0.200
+  A1_noop                    0.017¡À0.000           -             -   -0.319
+  A2_best_fixed              0.336¡À0.000           -             -   +0.000
+  G0_bandit                  0.315¡À0.003       0.000             -   -0.020
+  G1_exact                   0.367¡À0.024       0.232         1.000   +0.031
+  G2_skel64                  0.630¡À0.021       0.566         0.886   +0.294 *
+  G3_skel8                   0.425¡À0.016       0.363         0.774   +0.089
+  G4_skel_target_only        0.656¡À0.028       0.762         0.770   +0.320 *
+
+  A2 state-blind CEILING = 0.336   ADV_MARGIN = 0.1   (* = clears ceiling by margin)
+
+  P-COVERAGE (fire-rate G1<G2<G3): 0.232<0.566<0.363 -> FAIL
+  P-PRECISION-COST (fire-viable G1>G2>G3): 1.000>0.886>0.774 -> PASS
+
+  P-INTERIOR-OPTIMUM: G* = G4_skel_target_only (viability 0.656)
+    beats A2 ceiling by >= 0.1: +0.320 -> YES
+    beats G1 exact (0.367): YES
+    beats G0 bandit (0.315): YES
+    -> P-INTERIOR-OPTIMUM PASS
+
+  P-EXCESS (OC-9): G* fire-viable 0.770 - rho(A0) 0.136 = +0.634 -> PASS (min 0.05)
+
+==========================================================================
+PATH PROVENANCE for G* = G4_skel_target_only (instruments; post-hoc ruler, NEVER reward)
+==========================================================================
+  (a) COLD-START: empty address table at t=0, no op channel, no answer channel.
+      viability = environment (result==target) only. -> guarantee holds by construction.
+  (b) CROSS-SEED RE-DERIVATION: consistency=1.0 (4/4 populated groups agree in >=4/5 seeds)
+      cut 0.7 -> PASS (environmental attractor)
+  (c) POST-HOC OP-RECOVERY (seed-0 map): class=CONVERGENT agreement=1.0 (4/4 determinate groups)
+      POST-HOC OP-RECOVERY (cross-seed modal map): class=CONVERGENT agreement=1.0 (4/4 determinate groups)
+      NOTE: descriptive ruler only. Not used for viability, reward, or selection.
+      HONEST LIMIT: arithmetic is single-step -> 'path' = one action -> provenance thin.
+
+==========================================================================
+JUDGMENT (decided BEFORE seeing numbers, per prereg)
+==========================================================================
+  VERDICT: H-OPTIMUM
+
+  wrote poc/v15_results.json

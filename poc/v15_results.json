@@ -1,0 +1,331 @@
+{
+  "study": "v15_skeleton_granularity_ladder_and_provenance",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "cycles": 20000,
+  "headroom_seed0": 0.66516,
+  "aggregate": {
+    "A0_random": {
+      "mean": 0.13564,
+      "sd": 0.0
+    },
+    "A1_noop": {
+      "mean": 0.017159999999999998,
+      "sd": 0.0
+    },
+    "A2_best_fixed": {
+      "mean": 0.33579000000000003,
+      "sd": 0.0
+    },
+    "G0_bandit": {
+      "mean": 0.31545999999999996,
+      "sd": 0.0029078170506412655
+    },
+    "G1_exact": {
+      "mean": 0.36662,
+      "sd": 0.024460940292637973
+    },
+    "G2_skel64": {
+      "mean": 0.6295900000000001,
+      "sd": 0.020859827420187358
+    },
+    "G3_skel8": {
+      "mean": 0.42463999999999996,
+      "sd": 0.015750377773247205
+    },
+    "G4_skel_target_only": {
+      "mean": 0.65607,
+      "sd": 0.028127719424084145
+    }
+  },
+  "fire_stats": {
+    "G1_exact": {
+      "fire_rate": 0.23182999999999998,
+      "fire_viable_rate": 1.0
+    },
+    "G2_skel64": {
+      "fire_rate": 0.56577,
+      "fire_viable_rate": 0.8862504081152647
+    },
+    "G3_skel8": {
+      "fire_rate": 0.36324999999999996,
+      "fire_viable_rate": 0.7739526992745007
+    },
+    "G4_skel_target_only": {
+      "fire_rate": 0.76178,
+      "fire_viable_rate": 0.7698600969010319
+    }
+  },
+  "predictions": {
+    "P_COVERAGE": false,
+    "P_PRECISION_COST": true,
+    "P_INTERIOR_OPTIMUM": true,
+    "P_EXCESS": true,
+    "gstar": "G4_skel_target_only",
+    "gstar_viability": 0.65607,
+    "oc9_excess": 0.6342200969010319
+  },
+  "provenance": {
+    "cold_start": "guaranteed_by_construction",
+    "cross_seed": {
+      "consistency": 1.0,
+      "n_populated": 4,
+      "n_consistent": 4,
+      "need_seeds": 4
+    },
+    "P_CROSS_SEED": true,
+    "op_recovery_seed0": {
+      "class": "CONVERGENT",
+      "agreement": 1.0,
+      "n_populated": 4,
+      "n_determinate": 4,
+      "n_agree": 4
+    },
+    "op_recovery_modal": {
+      "class": "CONVERGENT",
+      "agreement": 1.0,
+      "n_populated": 4,
+      "n_determinate": 4,
+      "n_agree": 4
+    },
+    "honest_limit": "arithmetic_single_step_path_thin"
+  },
+  "verdict": "H-OPTIMUM",
+  "per_seed": {
+    "42": {
+      "A0_random": 0.13935,
+      "A1_noop": 0.0188,
+      "A2_best_fixed": 0.3356,
+      "A2_best_action": 1,
+      "G0_bandit": {
+        "viability_rate": 0.31715,
+        "confirmed_pivots": 170,
+        "feasible_volume": 319,
+        "exact_fires": 0,
+        "fire_rate": 0.0,
+        "fire_viable_rate": null
+      },
+      "G1_exact": {
+        "viability_rate": 0.3396,
+        "confirmed_pivots": 196,
+        "feasible_volume": 319,
+        "exact_fires": 4377,
+        "fire_rate": 0.21885,
+        "fire_viable_rate": 1.0
+      },
+      "G2_skel64": {
+        "viability_rate": 0.5901,
+        "confirmed_pivots": 389,
+        "feasible_volume": 390,
+        "exact_fires": 10649,
+        "fire_rate": 0.53245,
+        "fire_viable_rate": 0.8691895952671612
+      },
+      "G3_skel8": {
+        "viability_rate": 0.4329,
+        "confirmed_pivots": 313,
+        "feasible_volume": 376,
+        "exact_fires": 7429,
+        "fire_rate": 0.37145,
+        "fire_viable_rate": 0.7625521604522816
+      },
+      "G4_skel_target_only": {
+        "viability_rate": 0.6715,
+        "confirmed_pivots": 357,
+        "feasible_volume": 357,
+        "exact_fires": 15906,
+        "fire_rate": 0.7953,
+        "fire_viable_rate": 0.7631082610335722
+      }
+    },
+    "43": {
+      "A0_random": 0.1322,
+      "A1_noop": 0.0169,
+      "A2_best_fixed": 0.3353,
+      "A2_best_action": 0,
+      "G0_bandit": {
+        "viability_rate": 0.31845,
+        "confirmed_pivots": 218,
+        "feasible_volume": 334,
+        "exact_fires": 0,
+        "fire_rate": 0.0,
+        "fire_viable_rate": null
+      },
+      "G1_exact": {
+        "viability_rate": 0.40685,
+        "confirmed_pivots": 260,
+        "feasible_volume": 317,
+        "exact_fires": 5201,
+        "fire_rate": 0.26005,
+        "fire_viable_rate": 1.0
+      },
+      "G2_skel64": {
+        "viability_rate": 0.6471,
+        "confirmed_pivots": 396,
+        "feasible_volume": 399,
+        "exact_fires": 11832,
+        "fire_rate": 0.5916,
+        "fire_viable_rate": 0.8846348884381339
+      },
+      "G3_skel8": {
+        "viability_rate": 0.401,
+        "confirmed_pivots": 308,
+        "feasible_volume": 379,
+        "exact_fires": 6577,
+        "fire_rate": 0.32885,
+        "fire_viable_rate": 0.7889615326136536
+      },
+      "G4_skel_target_only": {
+        "viability_rate": 0.66845,
+        "confirmed_pivots": 347,
+        "feasible_volume": 347,
+        "exact_fires": 15807,
+        "fire_rate": 0.79035,
+        "fire_viable_rate": 0.7645979629278168
+      }
+    },
+    "44": {
+      "A0_random": 0.13265,
+      "A1_noop": 0.01665,
+      "A2_best_fixed": 0.3392,
+      "A2_best_action": 0,
+      "G0_bandit": {
+        "viability_rate": 0.3169,
+        "confirmed_pivots": 149,
+        "feasible_volume": 293,
+        "exact_fires": 0,
+        "fire_rate": 0.0,
+        "fire_viable_rate": null
+      },
+      "G1_exact": {
+        "viability_rate": 0.34495,
+        "confirmed_pivots": 191,
+        "feasible_volume": 291,
+        "exact_fires": 4394,
+        "fire_rate": 0.2197,
+        "fire_viable_rate": 1.0
+      },
+      "G2_skel64": {
+        "viability_rate": 0.627,
+        "confirmed_pivots": 396,
+        "feasible_volume": 398,
+        "exact_fires": 11164,
+        "fire_rate": 0.5582,
+        "fire_viable_rate": 0.894034396273737
+      },
+      "G3_skel8": {
+        "viability_rate": 0.4483,
+        "confirmed_pivots": 303,
+        "feasible_volume": 388,
+        "exact_fires": 8239,
+        "fire_rate": 0.41195,
+        "fire_viable_rate": 0.7517902658089574
+      },
+      "G4_skel_target_only": {
+        "viability_rate": 0.6729,
+        "confirmed_pivots": 349,
+        "feasible_volume": 350,
+        "exact_fires": 15924,
+        "fire_rate": 0.7962,
+        "fire_viable_rate": 0.7631876412961568
+      }
+    },
+    "45": {
+      "A0_random": 0.13515,
+      "A1_noop": 0.01615,
+      "A2_best_fixed": 0.33455,
+      "A2_best_action": 1,
+      "G0_bandit": {
+        "viability_rate": 0.3102,
+        "confirmed_pivots": 92,
+        "feasible_volume": 260,
+        "exact_fires": 0,
+        "fire_rate": 0.0,
+        "fire_viable_rate": null
+      },
+      "G1_exact": {
+        "viability_rate": 0.36255,
+        "confirmed_pivots": 220,
+        "feasible_volume": 292,
+        "exact_fires": 4554,
+        "fire_rate": 0.2277,
+        "fire_viable_rate": 1.0
+      },
+      "G2_skel64": {
+        "viability_rate": 0.6426,
+        "confirmed_pivots": 389,
+        "feasible_volume": 390,
+        "exact_fires": 11330,
+        "fire_rate": 0.5665,
+        "fire_viable_rate": 0.8931156222418358
+      },
+      "G3_skel8": {
+        "viability_rate": 0.4174,
+        "confirmed_pivots": 311,
+        "feasible_volume": 379,
+        "exact_fires": 7024,
+        "fire_rate": 0.3512,
+        "fire_viable_rate": 0.7793280182232346
+      },
+      "G4_skel_target_only": {
+        "viability_rate": 0.66755,
+        "confirmed_pivots": 361,
+        "feasible_volume": 361,
+        "exact_fires": 15950,
+        "fire_rate": 0.7975,
+        "fire_viable_rate": 0.7591849529780564
+      }
+    },
+    "46": {
+      "A0_random": 0.13885,
+      "A1_noop": 0.0173,
+      "A2_best_fixed": 0.3343,
+      "A2_best_action": 2,
+      "G0_bandit": {
+        "viability_rate": 0.3146,
+        "confirmed_pivots": 164,
+        "feasible_volume": 331,
+        "exact_fires": 0,
+        "fire_rate": 0.0,
+        "fire_viable_rate": null
+      },
+      "G1_exact": {
+        "viability_rate": 0.37915,
+        "confirmed_pivots": 290,
+        "feasible_volume": 358,
+        "exact_fires": 4657,
+        "fire_rate": 0.23285,
+        "fire_viable_rate": 1.0
+      },
+      "G2_skel64": {
+        "viability_rate": 0.64115,
+        "confirmed_pivots": 396,
+        "feasible_volume": 399,
+        "exact_fires": 11602,
+        "fire_rate": 0.5801,
+        "fire_viable_rate": 0.890277538355456
+      },
+      "G3_skel8": {
+        "viability_rate": 0.4236,
+        "confirmed_pivots": 314,
+        "feasible_volume": 371,
+        "exact_fires": 7056,
+        "fire_rate": 0.3528,
+        "fire_viable_rate": 0.7871315192743764
+      },
+      "G4_skel_target_only": {
+        "viability_rate": 0.59995,
+        "confirmed_pivots": 379,
+        "feasible_volume": 379,
+        "exact_fires": 12591,
+        "fire_rate": 0.62955,
+        "fire_viable_rate": 0.7992216662695576
+      }
+    }
+  }
+}
