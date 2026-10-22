@@ -1,0 +1,271 @@
+# PRE-REGISTRATION — v1.17 chemostat: does a RETENTION-DEFAULT reservoir (no acute
+# execution of a partially-matching coupler) dissolve the v1.16 openness<->trackability wall?
+# COMMITTED BEFORE ANY RESULTS (anti-HARKing). Do not edit after running.
+#
+# Author frame: NON-TELEOLOGICAL, inherited verbatim from v1.13 / v1.16. The agent has NO
+# goal, NO target, NO oracle, and does NOT know its future. viability = self-maintenance
+# (internal free-energy budget stays > 0), NOT task-goal achievement. capability CRYSTALLIZES
+# AS A BYPRODUCT of keeping itself coupled to a drifting flux. learning signal = feasible-space
+# dynamics, NOT reward [FS-C2]. Measured by OC-9 excess causal validity + survival + coverage +
+# feasible volume + minting continuity + reservoir diversity, NEVER by win-rate or gap-to-oracle.
+# The oracle arm is DELIBERATELY ABSENT.
+#
+# ===================== WHY THIS STUDY (the v1.16 wall, re-diagnosed) =====================
+# v1.16 result was H-NO-ISOLATION: BOTH worlds (SMALL N=8 saturable, OPEN N=64 unsaturable)
+# DIED at every drift>0; only drift=0 survived. The instrument could not even pose the
+# saturation-vs-openness contrast, because a prior failure killed both arms.
+# v1.16 mechanism diagnosis (第一档 measured, docs/tufe-design-language-v03.md §v1.16):
+#   a weight-2 SPECIFIC coupler that PARTIALLY overlaps the drifted pattern is triggered by
+#   sensing -> fires -> is not a subset -> FAILS -> is punished (conc -= CONC_DOWN = 0.6, and
+#   CONC_INIT = 0.6) -> drops below CONC_MIN = 0.3 -> is DELETED. Under local drift most held
+#   couplers partially overlap, so the repertoire EXECUTES ITSELF: feasible volume V collapses
+#   40 -> 1..4 (the smoking gun in v116_run.log), faster than re-minting can replace it, and the
+#   energy budget (B0=25, net -1.0..-1.3/step) exhausts in ~20..40 steps.
+#
+# THIS IS NOT A LAW OF NATURE — IT IS A RULE CHOICE, AND THE CHOICE VIOLATES TUF-E CONSTRAINTS.
+# Anchoring (actual re-read of the constraint docs, per drift-prevention protocol Step 1) found
+# the v1.16 acute deletion rule conflicts with the following POSITIVE (L0/L1) authorities:
+#   [P2.1  Landauer]      "retain vs delete -> DEFAULT TO RETAIN; a deletion must record a reason
+#                          and be auditable." A single failed fire executing a coupler is an
+#                          un-audited, non-default deletion.
+#   [P2-B1]               FORBIDS "un-audited mass information deletion (thermodynamic waste +
+#                          MAY LOSE PIVOTS)." v1.16's V:40->1 collapse IS un-audited mass deletion.
+#   [C2.3]                candidate pivots "MUST NOT be silently deleted by any SINGLE operation."
+#                          A single failed fire is exactly one operation deleting a coupler.
+#   [FS-C2 / FS-C4]       learning signal = whether the FEASIBLE SPACE shrinks; feasible space
+#                          shrinking toward critical = DANGER, and "oscillating near an optimum
+#                          while the feasible space keeps shrinking = DEGENERATION, not convergence."
+#                          v1.16's V-collapse is precisely this degeneration signature.
+#   [DS-C2 / P1.2]        BUT: when a knowledge structure's energy source is cut it MUST enter an
+#                          EXPLICIT DECAY (not be silently kept). => the reservoir must still be a
+#                          DISSIPATIVE structure (use-it-or-lose-it), NOT a frozen store.
+# => v1.17 CORRECTS the deletion rule toward retention-default WHILE PRESERVING slow dissipation.
+#    This is a constraint-driven CORRECTION, not a parameter search for a survivable world.
+#
+# ===================== HYPOTHESIS SOURCE (biology — NOT positive justification) ===========
+# Per standing discipline, biological analogy is a HYPOTHESIS SOURCE / reference frame ONLY and
+# is NEVER a positive justification (positive justification = the L0/L1 authorities above). The
+# correction above is independently motivated by microbial evolution (Jayson's intuition check):
+#   - bet-hedging / persister cells: a population MAINTAINS a diverse reservoir of variants that
+#     are CURRENTLY disadvantageous, precisely so it survives FUTURE change; it does NOT execute
+#     them for present disutility. (v1.16 executed them -> self-destruction.)
+#   - quasispecies: the UNIT OF SELECTION is a cloud of diverse genomes, not one specialist.
+#   - standing variation + recombination/HGT: adaptation reuses PRE-EXISTING rare variants and
+#     recombines general MODULES; a pruned repertoire has no raw material to recombine.
+# These say the SAME thing the L0/L1 constraints say: do not delete-for-present-disutility; keep a
+# dissipative diverse reservoir. Biology motivates; L0/L1 justify. [K-BIOLOGY-NOT-PROOF guards.]
+#
+# ===================== MECHANISM (what changes vs v1.16, and what is HELD) ================
+# SINGLE swept structural variable = the ACUTE PUNISHMENT applied to a coupler on a FAILED fire.
+# A monotone 3-rung ladder (dose-response, not a binary on/off):
+#   ACUTE     : on failure, conc -= 0.6  (= CONC_INIT). ONE failed fire deletes. [v1.16 baseline]
+#   SOFT      : on failure, conc -= 0.1. ONE failed fire SURVIVES WITH MARGIN (0.6->0.5 >> 0.3);
+#               ~3 consecutive failures delete. A genuine grace period, still down-weights selection.
+#   RESERVOIR : on failure, conc -= 0.0  (NO acute execution). A coupler is removed ONLY by the
+#               GLOBAL dissipative decay (conc *= CONC_DECAY = 0.997/step) when it is NOT
+#               reinforced -> ~231 steps from 0.6 to CONC_MIN=0.3. This is the pure bet-hedging
+#               reservoir: use-it-or-lose-it dissipation PRESERVED [DS-C2], acute execution REMOVED.
+# Rung rationale (frozen pre-run, NOT tuned): ACUTE = the v1.16 value; SOFT = "a single failure
+# survives with margin" (the largest round penalty below the (CONC_INIT-CONC_MIN)=0.3 deletion
+# margin); RESERVOIR = "no acute penalty, decay-only." The PREDICTION IS ABOUT THE MONOTONE TREND
+# (dose-response), NOT about any single rung winning. Adding a 4th rung to prettify the trend is
+# the tuning trap -> forbidden [K-NO-TUNE-TO-WIN].
+#
+# EVERYTHING ELSE IS HELD IDENTICAL TO v1.16 (which held v1.13's physical constants):
+#   - physical/energy constants: DECAY, GAIN, ACT_COST, B0, BUDGET_MAX, HORIZON, WINDOW,
+#     CONC_INIT, CONC_UP, CONC_DECAY, CONC_MIN, MAX_OPS, N_BASE_OPS, VAR_P, MIN_N, VIABLE_RATIO.
+#     => survival threshold coupling = (DECAY+ACT_COST)/GAIN = 0.4333 is UNCHANGED. The reservoir
+#     grants NO free success: survival still REQUIRES a coupler that is a subset of the true
+#     pattern to fire >= 43.33% of the time. So RESERVOIR cannot pass trivially.
+#   - world structure: ops = weight-2 subset couplers; environment = weight-3 patterns; drift =
+#     local random walk (swap ONE channel w.p. drift); sensing = constant-difficulty (ONE error
+#     w.p. SENSE_P=0.30); variation = weight-2-preserving LOCAL (single swap 0.6 / recombination 0.4).
+#   - worlds: SMALL (N_CH=8) and OPEN (N_CH=64), BOTH carried over from v1.16 (world is a HELD
+#     factor, punishment is the NEW swept variable). The world x punishment INTERACTION is the key
+#     scientific question (does the reservoir fix SMALL's collapse but not OPEN's trackability?).
+#   - cold-start guarantee (one coupler matches the INITIAL pattern, identical both worlds, never
+#     refreshed), drift grid, seeds.
+#
+# ===================== PRE-RUN COMBINATORIAL / SANITY CHECK (FROZEN, zero runs) ============
+# Inherited v1.16 facts (unchanged, since energy constants and world structure are held):
+#   survival threshold coupling = 0.4333; random weight-2 coupling = 0.1071 (SMALL) / 0.0015 (OPEN),
+#   both < threshold => a NON-adapting agent DIES in both worlds (no free environmental rescue,
+#   P1.2 preserved). The reservoir does NOT change these numbers (it changes deletion, not energy).
+# Reservoir-lifetime sanity (design-time arithmetic, not a run):
+#   an unreinforced coupler decays 0.6*0.997^t; reaches CONC_MIN=0.3 at t = ln(0.5)/ln(0.997)
+#   ~= 231 steps << HORIZON=4000 => the reservoir is a genuine DISSIPATIVE structure (turns over),
+#   NOT a frozen hoard. K-RETAIN-AUDIT verifies this empirically (V must not pin at MAX_OPS with
+#   an all-dead repertoire; unused couplers must actually decay out).
+# Trackability caveat (honest, pre-registered as the reason OPEN may STILL die): in OPEN (64
+#   channels) a LOCAL single-swap variation must guess the ONE drifted-in channel among ~63 to
+#   rebuild a matching coupler -> minting CANNOT track fast drift. So the reservoir is predicted
+#   to help SMALL (8 channels, minting can track) MORE than OPEN. If RESERVOIR fixes SMALL but
+#   OPEN still dies, that ISOLATES legs: leg (2) retention-reservoir removes the punishment
+#   collapse, but OPEN additionally needs leg (1) compositional hierarchy / general modules
+#   (v1.16 registered leg 1) to TRACK an open world. That is a real result, not a failure.
+# If a post-run result contradicts the frozen energy/combinatorics above, treat as BUG-or-BIG-
+#   FINDING, report, DO NOT tune away.
+#
+# ========================= PRE-REGISTERED PREDICTIONS =========================
+# (metrics in METRICS below; judgments decided BEFORE seeing numbers)
+#
+# P-DOSE-RESPONSE (core causal claim): at MATCHED (world, drift), survival improves MONOTONICALLY
+#   as the acute penalty decreases: survival(ACUTE) <= survival(SOFT) <= survival(RESERVOIR), and
+#   the survival-band WIDTH (number of drifts with survival >= SURVIVAL_HIGH) is non-decreasing
+#   ACUTE -> SOFT -> RESERVOIR. A monotone dose-response is stronger evidence than a binary flip.
+#
+# P-RESERVOIR-SMALL-BAND: in SMALL there EXISTS a non-empty drift interval (drift>0) where
+#   RESERVOIR survives (survival >= SURVIVAL_HIGH=0.9) but ACUTE died (survival <= 0.5) — the
+#   reservoir lets the agent ride out transient partial-overlap mismatches that ACUTE executed.
+#   NOTE (honest): in SMALL, MAX_OPS=40 > C(8,2)=28, so a surviving RESERVOIR agent may HOLD all
+#   pairs -> coverage >= SATURATION_CUT (0.90) and minting FREEZES = the F1 SATURATION signature.
+#   That is a CORRECT F1 reproduction (survives-but-saturates), NOT sustainable crystallization.
+#
+# P-RESERVOIR-OPEN (the F1-lift test, may FAIL honestly): in OPEN there EXISTS a drift interval
+#   where RESERVOIR survives (>= 0.9) AND coverage stays BELOW saturation (< 0.90) AND minting
+#   SUSTAINS (2nd-half new-mask rate >= SUSTAIN_TAIL_RATIO=0.5x first-productive-quarter) AND OC-9
+#   excess >= EXCESS_MARGIN (0.05). If this holds, leg (2) ALONE dissolves the v1.16 wall in the
+#   OPEN world => F1 is attackable by retention-reservoir. If OPEN still dies at all drifts (the
+#   trackability caveat above), P-RESERVOIR-OPEN FAILS and leg (1) is registered as still-required.
+#
+# P-RESERVOIR-DIVERSITY (mechanism provenance): RESERVOIR holds a STRICTLY MORE DIVERSE repertoire
+#   than ACUTE at matched (world, drift) — higher distinct-mask count and higher persister_fraction
+#   (live ops that are currently NON-coupling but RETAINED). This is the direct instrument proving
+#   the reservoir is actually maintained (not just that survival changed).
+#
+# P-OC12 (information accounting): at drift=0 EVERY arm freezes minting (new-mask rate -> 0): no
+#   environment door -> the pattern is fixed -> after consolidating couplers for it, no genuinely
+#   new info arrives. The reservoir does NOT manufacture novelty from nothing [OC-12]. (At drift=0
+#   all arms also survive, as in v1.16 — the cold-start coupler keeps coupling to the fixed pattern.)
+#
+# ========================= KILL CONDITIONS / GUARDS =========================
+# K-NO-TUNE-TO-WIN (S4/G5): ALL v1.13/v1.16 physical + energy constants, the world structure
+#   (weights, drift walk, sensing, variation, cold-start), the drift grid, and the seeds are HELD
+#   IDENTICAL. The ONLY swept structural variable is the ACUTE PUNISHMENT (3 pre-registered rungs).
+#   ONE grid, ONE seed set, ONE run. If RESERVOIR dies at all drifts in both worlds, report
+#   H-NO-RESCUE; do NOT re-tune the energy budget / cold-start / variation / CONC_MIN / MAX_OPS to
+#   manufacture a band, and do NOT add a 4th penalty rung.
+# K-NONTELEOLOGY: VOID if any result is reported by win-rate, VR-vs-oracle, or gap-to-ceiling. The
+#   oracle arm is ABSENT. Metrics are only: survival, coverage, feasible volume, minting continuity,
+#   reservoir diversity, OC-9 excess causal validity.
+# K-RETAIN-AUDIT (NEW, from P2.1/P2-B1/DS-C2): the RESERVOIR arm must NOT be "keep everything
+#   forever." Deletion via SUSTAINED non-reinforcement (global decay) must remain active, so the
+#   reservoir is a DISSIPATIVE structure. AUDIT: report V(t); if V pins at MAX_OPS with near-zero
+#   coverage (an all-dead hoard) OR reservoir diversity does not turn over, flag as a design defect
+#   (frozen store, violates DS-C2), DO NOT claim the reservoir works. VOID the positive claim.
+# K-HUMAN-DOOR: VOID if a survival band appears ONLY because a hand-written op / curriculum encodes
+#   the drift pattern. Guard: base ops random, variation generic (local swap / recombination), drift
+#   random-walk, agent has no target, cold-start gives only an INITIAL-pattern coupler (never a
+#   future one). If I catch myself adding ANY component that could encode the answer -> stop, report.
+# K-BIOLOGY-NOT-PROOF: VOID if the report justifies the reservoir by "bacteria do it." Biology is
+#   the hypothesis source; the justification in any report MUST be the L0/L1 authorities (P2.1,
+#   P2-B1, C2.3, FS-C2/C4, DS-C2) plus the MEASURED dose-response, never the analogy.
+# K-COLD-START-HONESTY: the cold-start guarantee couples to the INITIAL pattern ONLY, applied
+#   IDENTICALLY to both worlds, never refreshed after t=0. VOID if re-applied mid-run or if it
+#   encodes the drift direction.
+# K-OC12: minting must be driven by the ENVIRONMENT DOOR (drift). Predicted by P-OC12 (all arms
+#   freeze at drift=0). Sustained-minting-at-drift=0 is a red flag, not a win.
+# K-BACKGROUND-HONESTY: background rho for OC-9 comes from a FROZEN_RANDOM control arm under the
+#   SAME world and SAME drift. The frozen arm has NO punishment and NO adaptation, so it is
+#   IDENTICAL across the three penalty rungs -> run ONCE per (world, drift, seed) and reuse (this is
+#   honest, not a shortcut: the rung variable does not touch the frozen arm). In OPEN the frozen
+#   control dies early by construction (random coupling 0.0015 << 0.4333); its coupling rate over
+#   its short pre-death life is the honest background rho (itself evidence adaptation is necessary).
+#
+# ========================= ARMS =========================
+# punishment ladder (the single swept structural variable): ACUTE(0.6), SOFT(0.1), RESERVOIR(0.0)
+# worlds (HELD factor from v1.16): SMALL (N_CH=8), OPEN (N_CH=64)
+# drift grid (per-step swap prob), IDENTICAL to v1.13/v1.16: [0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40]
+# seeds per cell: 4  [42,43,44,45]  (single-seed conclusions forbidden — v1.6 lesson)
+# horizon: 4000 steps/run
+# controls: frozen_random (fixed random weight-2 repertoire, uniform firing, no minting/consolidation/
+#   op-dissipation/punishment, NO cold-start refresh) at each (world, drift) -> background rho for OC-9.
+# run counts: adaptive = 3 rungs x 2 worlds x 7 drifts x 4 seeds = 168 runs.
+#             frozen control = 2 worlds x 7 drifts x 4 seeds = 56 runs (shared across rungs).
+#             total = 224 runs.
+#
+# ========================= METRICS (feasibility, not optimality) =========================
+# survival_rate       : fraction of seeds alive at horizon (budget>0 throughout)
+# coupling_coverage   : over trailing window, fraction of steps where >=1 live op is a weight-2
+#                       SUBSET of the TRUE pattern (can the repertoire sustain itself NOW). The
+#                       direct F1 saturation diagnostic (v1.13/v1.16 `coverage`).
+# feasible_volume V   : count of live ops (conc >= CONC_MIN) — FS-C3 viable-space proxy; V(t) slope
+#                       is the degeneration-vs-maintenance signal [FS-C4] and the K-RETAIN-AUDIT input.
+# reservoir_diversity : distinct masks held (mean over 2nd half) + persister_fraction (live ops that
+#                       are currently NON-coupling to the true pattern but RETAINED). NEW in v1.17 —
+#                       the direct instrument for "is the diverse reservoir actually maintained."
+# minting_rate(t)     : consolidated genuinely-new ops per window (new_mask = mask not live at mint
+#                       time, v1.16 semantics); mint_tail = 2nd-half rate / first-productive-quarter rate.
+# excess_causal_validity (OC-9): live-repertoire coupling rate - frozen_random rho (same world, drift)
+# steady_state class  : PLATEAU / COLLAPSE / FROZEN / SATURATED / UNBOUNDED from V(t) 2nd-half slope +
+#                       variance + coverage + minting tail (v1.13 classifier, extended with SATURATED).
+#
+# ========================= JUDGMENTS =========================
+# H-RESERVOIR-LIFTS-WALL : P-RESERVOIR-OPEN holds (OPEN survives at some drift>0 with coverage<0.90,
+#   sustained minting, excess>=0.05) AND P-DOSE-RESPONSE holds AND K-RETAIN-AUDIT passes.
+#   -> leg (2) retention-reservoir ALONE dissolves the v1.16 openness<->trackability wall in the OPEN
+#      world. FIRST positive on the F1 attack (blueprint §三 leg 1 "学不完的环境" becomes reachable).
+#      The v1.16 tension was a RULE artifact (acute deletion), not a structural law. Method recorded.
+# H-RESERVOIR-SMALL-ONLY : P-RESERVOIR-SMALL-BAND holds (SMALL gets a survival band, but SATURATES:
+#   coverage>=0.90 / minting frozen = F1 signature) while OPEN still DIES at all drift>0.
+#   -> leg (2) removes the PUNISHMENT-COLLAPSE (v1.16 death) and reproduces F1-as-SATURATION cleanly in
+#      SMALL, but OPEN additionally needs leg (1) (compositional hierarchy / general modules) to TRACK
+#      an open world. TENSION PARTIALLY DISSOLVED; leg (1) registered as still-required (v1.18). This
+#      is the pre-registered LIKELY outcome (trackability caveat), a real result, not a failure.
+# H-NO-RESCUE : RESERVOIR dies at all drift>0 in BOTH worlds (like ACUTE), no monotone band.
+#   -> the acute punishment was NOT the binding bottleneck; the constraint is adaptation SPEED /
+#      minting-trackability (feeds F2 and leg (1)). Honest negative: retention-reservoir is
+#      INSUFFICIENT. Report; do NOT re-tune energy. v1.16 diagnosis was incomplete.
+# H-TRIVIAL-OR-BUG : RESERVOIR survives at ALL drifts in OPEN with coverage>=0.90 sustained, OR
+#   V pins at MAX_OPS with an all-dead hoard (K-RETAIN-AUDIT fail), OR excess<0 (below frozen rho).
+#   -> suspicious free-rescue / frozen-store / implementation bug. Investigate, report, DO NOT celebrate.
+# H-NO-ISOLATION : the dose-response is non-monotone in a way that indicates the rungs did not differ
+#   as designed (e.g. SOFT == ACUTE exactly because of the decay/threshold interaction) — a calibration
+#   defect. Report as a design defect, do NOT claim the reservoir lifted or failed.
+#
+# Thresholds (frozen now, IDENTICAL semantics to v1.13/v1.16 where shared):
+#   EXCESS_MARGIN = 0.05          (OC-9 excess must stay positive by this margin)
+#   SATURATION_CUT = 0.90         (coverage >= this = saturated; < this = open/unsaturated)
+#   SUSTAIN_TAIL_RATIO = 0.5      (sustained: 2nd-half minting >= 0.5x first productive quarter)
+#   FROZEN_TAIL_RATIO = 0.2       (frozen: 2nd-half minting < 0.2x first productive quarter)
+#   survival high >= 0.9 ; collapse <= 0.5 ; SLOPE_EPS = 0.10 (steady-state normalized slope)
+#   PUNISH_RUNGS = {ACUTE: 0.6, SOFT: 0.1, RESERVOIR: 0.0}   (acute conc penalty on a failed fire)
+# ============================================================================
+
+study: v117_retention_reservoir_f1_attack
+date_preregistered: 2026-10-22
+frame: non_teleological_dissipative_structure_inherited_v113_v116
+target_blocker: F1_saturation_ceiling__v116_openness_trackability_wall
+swept_structural_variable: acute_punishment_on_failed_fire
+hypothesis_source_biology_NON_JUSTIFICATION:
+  mechanisms:
+    - bet_hedging_persister_cells: maintain a diverse reservoir of currently-disadvantageous variants
+    - quasispecies: unit of selection is a diverse cloud, not one specialist
+    - standing_variation_recombination_HGT: adaptation reuses pre-existing variants + recombines general modules
+  note: biology MOTIVATES; it is NEVER the positive justification. See K-BIOLOGY-NOT-PROOF.
+positive_justification_L0_L1:
+  authorities:
+    - P2.1_landauer: default to retain; deletion must be audited
+    - P2-B1: no un-audited mass deletion (may lose pivots) — v1.16 V:40->1 violates this
+    - C2.3: candidate pivots must not be silently deleted by a single operation
+    - FS-C2: learning signal = feasible-space shrinkage, not reward
+    - FS-C4: feasible space shrinking while oscillating = degeneration, not convergence
+    - DS-C2_P1.2: reservoir must still dissipate (use-it-or-lose-it), NOT a frozen store
+punishment_arms:
+  ACUTE:     {conc_penalty_on_fail: 0.6, failures_to_delete_from_init: 1, note: v1.16 baseline}
+  SOFT:      {conc_penalty_on_fail: 0.1, failures_to_delete_from_init: 3, note: single failure survives with margin}
+  RESERVOIR: {conc_penalty_on_fail: 0.0, failures_to_delete_from_init: decay_only, note: "no acute execution; global decay only (~231 steps)"}
+worlds_HELD_from_v116:
+  SMALL: {n_ch: 8,  saturable: true,  total_couplers_C_n_2: 28,   coverage_ub_hold40: 1.0000, random_coupling: 0.1071}
+  OPEN:  {n_ch: 64, saturable: false, total_couplers_C_n_2: 2016, coverage_ub_hold40: 0.0595, random_coupling: 0.0015}
+op_weight: 2
+pattern_weight: 3
+survival_threshold_coupling: 0.4333
+reservoir_lifetime_steps_unreinforced: 231
+grid: [0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40]
+seeds: 4
+seed_values: [42, 43, 44, 45]
+horizon: 4000
+adaptive_runs: 168
+frozen_control_runs: 56
+total_runs: 224
