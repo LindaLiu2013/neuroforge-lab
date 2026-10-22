@@ -1,0 +1,135 @@
+# PRE-REGISTRATION — v1.1: does a STATE-DEPENDENT pivot learner beat a state-blind bandit?
+# COMMITTED BEFORE ANY RESULTS (anti-HARKing). Do not edit after running.
+#
+# WHY THIS STUDY. An external peer review of the published v1.0 release (Oct 2026,
+# verified line-by-line against tufe/engine.py + tufe/examples.py) found the bundled
+# demos do NOT demonstrate learning: Arithmetic's target is unobservable (viability
+# chance-capped ~1/3, a fixed "always-add" matches the agent); Ising sits BELOW a
+# random-flip baseline; NK's [0.3,0.7] band is passed by random and no-op (~98%); and
+# the shipped default path is effectively a STATE-BLIND BANDIT (preference vector
+# indexed only by action_id, binary viability multiplier), with "phase transitions"
+# that are Betti churn. Reviewer's ask #4 is the credibility bar:
+#   >> show ONE domain where a STATE-DEPENDENT pivot learner beats random, no-op,
+#      best-fixed-action, AND a state-blind bandit — all reported together. <<
+# This prereg makes that the core falsifiable claim and folds F1/F2 (from v1.13) beneath it.
+#
+# NON-TELEOLOGY GUARD (the drift we keep catching — 4th drift was teleology/win-lose).
+# We are NOT trying to "make TUF-E win." We are fixing a BROKEN TASK and a MEANINGLESS
+# METRIC, then reporting whatever happens — including if the state-dependent learner
+# still loses. Concretely:
+#   - Exposing the Arithmetic TARGET is giving the agent a SENSING CHANNEL for an
+#     environmental regularity, NOT an oracle of the answer. The agent is never told
+#     WHICH operation is correct; it must discover the (operands,target)->op coupling
+#     through practice. viability = "did I keep my problem-solving capability"
+#     = self-maintenance in this domain, P1.2. This is reviewer ask #1, not reward-hacking.
+#   - The learning signal stays VIABILITY-SPACE MAINTENANCE, not reward maximization
+#     [FS-C2, C5, A1, A5]. We do not add a score-to-maximize.
+#   - No hand-coded state->action map is injected (K-HUMAN-DOOR below).
+#
+# ========================= THE DISCRIMINATING TASK =========================
+# New domain ArithmeticObservableDomain (added, NOT mutating released ArithmeticDomain,
+# so the v1.0 negative stays reproducible). Per trial: draw a,b; draw true op from a
+# FIXED-WEIGHT but STATE-DEPENDENT rule (the correct op is a deterministic function of
+# the observed (a,b,target)); target = op(a,b). observe() returns operands AND target.
+# assess_viability = |result - target| < eps. 8 ops (add/sub/mul/div/neg/abs/sqr/id).
+#
+# TASK-DESIGN INVARIANT (must hold or the test is VOID — K-DISCRIMINATES):
+#   the optimal action DIFFERS across states, so a state-blind policy is strictly
+#   dominated. Quantify the STATE-CONDITIONAL HEADROOM:
+#     headroom = mean_over_states( max_action P(viable|state,action) )
+#                - max_action( mean_over_states P(viable|state,action) )
+#   headroom is the most a state-conditional policy can gain over the BEST possible
+#   fixed action. We require headroom >= HEADROOM_MIN. If headroom < HEADROOM_MIN the
+#   task cannot separate a bandit from a state-learner -> redesign task, DO NOT proceed.
+#
+# ========================= ARMS (all five, same seeds/cycles, one table) =========================
+# A0 random          : uniform random action.
+# A1 no-op           : always a single fixed action (id).
+# A2 best-fixed      : the BEST state-blind ceiling = single fixed action with highest
+#                      empirical viability (honest post-hoc max over the 8 fixed
+#                      actions; this is the theoretical max for ANY state-blind policy).
+# A3 bandit (shipped): TUFEAgent(exact_addressing=False) — the released v1.0 engine.
+# A4 state-dependent : TUFEAgent(exact_addressing=True, address_key_fn=full-state key)
+#                      — TUF-E's state-conditional pivot machinery turned ON.
+# CONTROL for OC-9   : frozen_random arm (address table filled with random actions, no
+#                      consolidation) at the same task -> supplies background rho.
+# seeds: [42,43,44,45,46]  (5; single-seed conclusions forbidden — v1.6 lesson)
+# cycles: 20000 per arm per seed; report_every 1000.
+#
+# ========================= PRE-REGISTERED PREDICTIONS =========================
+# P-HEADROOM: the task's state-conditional headroom >= HEADROOM_MIN (design check,
+#   computed from the task generative rule BEFORE any agent runs).
+# P-BANDIT-CEILING (core): A4 (state-dependent) viability > A2 (best-fixed = state-blind
+#   ceiling) by >= ADV_MARGIN, averaged over seeds. This is the load-bearing claim:
+#   only a genuinely state-conditional learner can exceed the best fixed action.
+# P-ALL-BASELINES: A4 > A0 (random), A4 > A1 (no-op), A4 > A2 (best-fixed), A4 > A3
+#   (shipped bandit), each by >= ADV_MARGIN, all in ONE reported table.
+# P-EXCESS (OC-9): A4's excess causal validity (fire-viable rate - frozen_random rho)
+#   >= EXCESS_MARGIN in the second half -> the state-conditional addressing carries real
+#   causal validity, not lucky replay.
+# P-F1 (saturation, folded from v1.13): report A4's feasible-space volume trajectory
+#   V(t) and saturation time. Prediction: on THIS small (8-op, bounded-operand) task the
+#   feasible space SATURATES (V(t) plateaus) — the F1 ceiling. If it saturates, that is
+#   the v1.13 finding reappearing non-teleologically and we report it, NOT hide it.
+#   A state-conditional learner can still beat the bandit ceiling on a saturating task;
+#   saturation bounds HOW MUCH headroom it can convert, it does not void the comparison.
+# P-F2 (over-specialization, SECONDARY / optional drift arm): add a target-map drift arm
+#   (the state->op rule slowly changes). Prediction from v1.13 F2: U-shaped fragility —
+#   the state-conditional learner is MOST fragile at MODERATE drift (over-specializes,
+#   then caught by an adverse regime whose dwell exceeds re-consolidation time), robust
+#   at both extremes. Marked SECONDARY: reported for continuity with v1.13, NOT used to
+#   rescue a failed P-BANDIT-CEILING.
+#
+# ========================= KILL CONDITIONS / GUARDS =========================
+# K-DISCRIMINATES: VOID if P-HEADROOM fails (task can't separate bandit from
+#   state-learner). Fix the TASK, re-preregister; do not run agents on a non-discriminating task.
+# K-HUMAN-DOOR: VOID if A4's advantage comes from any injected state->action map, seeded
+#   address table, curriculum hint, or oracle of the correct op. Guard: A4 starts empty,
+#   discovers couplings only by practice; base addressing filled ONLY from the agent's own
+#   viable cycles. If I catch myself encoding the answer -> stop, report, do not ship.
+# K-NO-TUNE-TO-WIN (S4/G5): ONE pre-registered cycle count, ONE seed set, ONE ADV_MARGIN.
+#   If A4 does NOT beat the bandit ceiling, report H-NOADV honestly. Do NOT re-sweep
+#   cycles/seeds/address-granularity/pivot-guided-prob to manufacture a win.
+# K-BASELINE-TOGETHER: all five arms (A0..A4) MUST appear in the same table, same seeds,
+#   same cycles. Reporting A4 alone, or dropping an inconvenient baseline, is VOID.
+# K-HONEST-LOSS: an H-NOADV outcome is a valid, publishable result (feeds SC-1/SC-2 on
+#   state-sufficient addressing). "错误也是学习的一种方式" — a clean negative here is
+#   worth more than a tuned win.
+#
+# ========================= JUDGMENTS (decided BEFORE seeing numbers) =========================
+# H-PIVOT-WINS : P-HEADROOM & P-BANDIT-CEILING & P-ALL-BASELINES & P-EXCESS all hold.
+#   -> FIRST positive demonstration that state-dependent pivots beat a state-blind bandit
+#      and the state-blind ceiling, with all baselines reported. Answers reviewer ask #4.
+# H-PARTIAL    : A4 > A2 (beats the state-blind ceiling) but fails one of P-ALL-BASELINES
+#   margins or P-EXCESS. Report exactly which sub-claim failed and by how much.
+# H-NOADV      : A4 <= A2 (state-dependent machinery adds no advantage on this task).
+#   Honest negative. Do NOT re-tune. Diagnose (addressing granularity? pivot confirmation
+#   too slow within 20k? bandit already at ceiling because headroom small in practice?)
+#   and hand back to Jayson (S5).
+# H-SUPPLIED   : VOID via K-HUMAN-DOOR (advantage is injected). Retract, do not claim.
+#
+# Thresholds (FROZEN now): HEADROOM_MIN=0.15, ADV_MARGIN=0.10, EXCESS_MARGIN=0.05.
+# Report: viability_rate for A0..A4 (mean±sd over 5 seeds), headroom, A4 excess causal
+#   validity, A4 feasible-space volume trajectory + saturation time, and (secondary) the
+#   F2 drift-arm fragility curve. Every number beside its baseline. No number alone.
+# ============================================================================
+
+study: v11_state_dependent_pivot_vs_bandit
+date_preregistered: 2026-10-21
+frame: non_teleological_fix_task_and_metric_not_agent
+core_claim: state_dependent_pivot_beats_state_blind_bandit_and_best_fixed_action
+domain: ArithmeticObservableDomain  # target exposed = sensing channel, NOT oracle
+arms: [A0_random, A1_noop, A2_best_fixed, A3_bandit_shipped, A4_state_dependent]
+control: frozen_random  # supplies OC-9 background rho
+seeds: [42, 43, 44, 45, 46]
+cycles: 20000
+report_every: 1000
+thresholds:
+  HEADROOM_MIN: 0.15
+  ADV_MARGIN: 0.10
+  EXCESS_MARGIN: 0.05
+judgments: [H-PIVOT-WINS, H-PARTIAL, H-NOADV, H-SUPPLIED]
+folded_in:
+  F1_saturation: report A4 feasible-space volume trajectory + saturation time
+  F2_over_specialization: SECONDARY drift arm, U-shaped fragility, cannot rescue P-BANDIT-CEILING
+red_line: fix_tasks_and_metrics_not_scores__report_honestly_even_if_learner_loses
