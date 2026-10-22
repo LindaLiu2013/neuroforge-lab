@@ -4,6 +4,20 @@
 
 TUF-E (Thermodynamic Universal Framework for Emergence) is not another reinforcement learning library. It implements a fundamentally different approach to machine learning: instead of optimizing a reward function, the agent learns by maintaining its own viability under thermodynamic constraints. Knowledge emerges as dissipative structures — it exists only while actively maintained, and stops existing when maintenance ceases.
 
+> ## ⚠️ Honest status (read this first)
+>
+> **This repository is a research framework with an open hypothesis — not a validated learner.**
+>
+> The theory (pivot three-layer ontology, dissipative knowledge, cross-observer consensus) and the `DomainSpec` interface are the substantive contribution. The **bundled demo domains do NOT yet demonstrate that pivot-based learning beats simple baselines.** An external peer review (Oct 2026) ran the released `TUFEAgent` against trivial controls and found:
+>
+> - **ArithmeticDomain**: the correct answer is *unobservable by design* (the target is never shown), so viability is capped near 1/3 by chance. A "always-add" control matches the agent.
+> - **NKDomain**: the viability band `[0.3, 0.7]` is passed by *random* and *do-nothing* policies (~98%), so the high viability rate proves nothing about learning.
+> - **IsingDomain**: the agent's viability is *below* a random-flip baseline — consensus currently hurts in this continuous domain.
+> - The released engine's default path is effectively a **state-blind bandit** with a binary viability update; state-conditional pivot machinery exists but is off-by-default or a minority path.
+> - "Phase transitions" counted in earlier notes are **Betti-number churn**, not validated topological reorganization.
+>
+> We are keeping this text public rather than quietly editing it away. See [Known limitations](#known-limitations--what-v11-must-show) and the pre-registered `v1.1` experiment that must make a state-dependent pivot learner beat *all* of: random, no-op, best-fixed-action, and a state-blind bandit — reported together, honestly, even if it loses.
+
 ## What makes TUF-E different?
 
 | | Reinforcement Learning | LLMs | TUF-E |
@@ -87,11 +101,26 @@ The six growth conditions (GC-1 through GC-6) from the TUF-E Design Language are
 
 ## Built-in Example Domains
 
-Three reference implementations demonstrate different causal structure types:
+Four reference implementations demonstrate different causal structure types. **Treat their viability rates as unvalidated until read against a baseline** (see [Known limitations](#known-limitations--what-v11-must-show)):
 
-- **ArithmeticDomain**: Discrete exact causality, high consensability
-- **IsingDomain**: Continuous probabilistic causality, low consensability
-- **NKDomain**: Combinatorial epistatic causality, medium consensability
+- **ArithmeticDomain**: Discrete exact causality, high consensability. *(Demo caveat: the target is currently unobservable, so viability is chance-capped near 1/3.)*
+- **IsingDomain**: Continuous probabilistic causality, low consensability. *(Demo caveat: agent viability currently sits below a random-flip baseline.)*
+- **NKDomain**: Combinatorial epistatic causality, medium consensability. *(Demo caveat: the `[0.3, 0.7]` viability band is passed by random/no-op policies.)*
+- **RegexDomain** (plus `RegexOpenDomain`, `RegexLoopDomain` GC-1 arms): pattern-construction learning over a 12-action regex builder. This is the domain where the agent is meant to *build* programs; it is also the one that most exposed the open-operation-space question (GC-1).
+
+## Known limitations — what v1.1 must show
+
+The released `v1.0` numbers were reported as viability rates **without baselines**, which made trivially-passable tasks look like learning. The honest comparison the peer review ran (5000 cycles, seed 0):
+
+| Domain | TUF-E | Random | No-op | Best fixed action |
+|---|---|---|---|---|
+| Arithmetic | 0.305 | 0.136 | 0.020 | 0.339 (always-add) |
+| Ising | 0.451 | 0.657 | 0.413 | 0.349 |
+| NK | 0.966 | 0.981 | 0.986 | 0.969 |
+
+Read plainly: on Arithmetic the agent is *below* a fixed action; on Ising it is *below* random; on NK everything passes so the number is meaningless. **None of these demonstrate that pivot-based learning works.** That is the gap `v1.1` is pre-registered to close: one domain where a *state-dependent* pivot learner beats random, no-op, best-fixed-action, **and** a state-blind bandit, with all five numbers reported together.
+
+Other engineering corrections folded into this release cycle: the report key is `report['viability_rate']` (a flat float) — not `report['viability']['rate']` as an earlier release note showed; `pyproject.toml` status is now `2 - Pre-Alpha` (it previously and incorrectly claimed `4 - Beta`).
 
 ## Installation
 
