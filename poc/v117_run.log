@@ -1,0 +1,234 @@
+SMALL ACUTE     drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=2   coupling=0.980 rho=0.315 excess=+0.665
+SMALL SOFT      drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=2   coupling=0.979 rho=0.315 excess=+0.664
+SMALL RESERVOIR drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=1   coupling=0.971 rho=0.315 excess=+0.656
+SMALL ACUTE     drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=1   coupling=0.977 rho=0.225 excess=+0.752
+SMALL SOFT      drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=0   coupling=0.980 rho=0.225 excess=+0.755
+SMALL RESERVOIR drift=0.0   seed=43 alive=True  surv=4000  V=37  newmask=1   coupling=0.974 rho=0.225 excess=+0.749
+SMALL ACUTE     drift=0.0   seed=44 alive=True  surv=4000  V=40  newmask=0   coupling=0.977 rho=0.138 excess=+0.839
+SMALL SOFT      drift=0.0   seed=44 alive=True  surv=4000  V=40  newmask=0   coupling=0.974 rho=0.138 excess=+0.836
+SMALL RESERVOIR drift=0.0   seed=44 alive=True  surv=4000  V=40  newmask=1   coupling=0.966 rho=0.138 excess=+0.828
+SMALL ACUTE     drift=0.0   seed=45 alive=True  surv=4000  V=40  newmask=0   coupling=0.973 rho=0.281 excess=+0.692
+SMALL SOFT      drift=0.0   seed=45 alive=True  surv=4000  V=38  newmask=0   coupling=0.975 rho=0.281 excess=+0.694
+SMALL RESERVOIR drift=0.0   seed=45 alive=True  surv=4000  V=39  newmask=1   coupling=0.978 rho=0.281 excess=+0.697
+SMALL ACUTE     drift=0.005 seed=42 alive=False surv=485   V=35  newmask=1   coupling=0.665 rho=0.244 excess=+0.420
+SMALL SOFT      drift=0.005 seed=42 alive=False surv=223   V=40  newmask=1   coupling=0.652 rho=0.244 excess=+0.407
+SMALL RESERVOIR drift=0.005 seed=42 alive=False surv=1062  V=37  newmask=1   coupling=0.879 rho=0.244 excess=+0.634
+SMALL ACUTE     drift=0.005 seed=43 alive=False surv=355   V=29  newmask=0   coupling=0.815 rho=0.138 excess=+0.677
+SMALL SOFT      drift=0.005 seed=43 alive=False surv=429   V=40  newmask=0   coupling=0.814 rho=0.138 excess=+0.676
+SMALL RESERVOIR drift=0.005 seed=43 alive=False surv=469   V=39  newmask=0   coupling=0.806 rho=0.138 excess=+0.668
+SMALL ACUTE     drift=0.005 seed=44 alive=False surv=263   V=26  newmask=0   coupling=0.754 rho=0.233 excess=+0.521
+SMALL SOFT      drift=0.005 seed=44 alive=False surv=266   V=37  newmask=0   coupling=0.738 rho=0.233 excess=+0.505
+SMALL RESERVOIR drift=0.005 seed=44 alive=False surv=699   V=40  newmask=0   coupling=0.869 rho=0.233 excess=+0.636
+SMALL ACUTE     drift=0.005 seed=45 alive=False surv=1460  V=37  newmask=1   coupling=0.912 rho=0.161 excess=+0.751
+SMALL SOFT      drift=0.005 seed=45 alive=False surv=371   V=40  newmask=0   coupling=0.798 rho=0.161 excess=+0.637
+SMALL RESERVOIR drift=0.005 seed=45 alive=False surv=359   V=39  newmask=0   coupling=0.781 rho=0.161 excess=+0.619
+SMALL ACUTE     drift=0.02  seed=42 alive=False surv=318   V=38  newmask=1   coupling=0.652 rho=0.233 excess=+0.419
+SMALL SOFT      drift=0.02  seed=42 alive=False surv=160   V=33  newmask=0   coupling=0.596 rho=0.233 excess=+0.364
+SMALL RESERVOIR drift=0.02  seed=42 alive=False surv=160   V=37  newmask=0   coupling=0.584 rho=0.233 excess=+0.351
+SMALL ACUTE     drift=0.02  seed=43 alive=False surv=487   V=33  newmask=0   coupling=0.807 rho=0.233 excess=+0.575
+SMALL SOFT      drift=0.02  seed=43 alive=False surv=209   V=37  newmask=1   coupling=0.586 rho=0.233 excess=+0.353
+SMALL RESERVOIR drift=0.02  seed=43 alive=False surv=306   V=35  newmask=2   coupling=0.498 rho=0.233 excess=+0.266
+SMALL ACUTE     drift=0.02  seed=44 alive=False surv=297   V=22  newmask=3   coupling=0.520 rho=0.233 excess=+0.288
+SMALL SOFT      drift=0.02  seed=44 alive=False surv=97    V=22  newmask=0   coupling=0.418 rho=0.233 excess=+0.186
+SMALL RESERVOIR drift=0.02  seed=44 alive=False surv=95    V=27  newmask=0   coupling=0.417 rho=0.233 excess=+0.184
+SMALL ACUTE     drift=0.02  seed=45 alive=False surv=35    V=6   newmask=0   coupling=0.222 rho=0.045 excess=+0.177
+SMALL SOFT      drift=0.02  seed=45 alive=False surv=248   V=37  newmask=0   coupling=0.478 rho=0.045 excess=+0.432
+SMALL RESERVOIR drift=0.02  seed=45 alive=False surv=127   V=27  newmask=0   coupling=0.492 rho=0.045 excess=+0.447
+SMALL ACUTE     drift=0.05  seed=42 alive=False surv=165   V=26  newmask=1   coupling=0.633 rho=0.244 excess=+0.388
+SMALL SOFT      drift=0.05  seed=42 alive=False surv=163   V=34  newmask=1   coupling=0.585 rho=0.244 excess=+0.341
+SMALL RESERVOIR drift=0.05  seed=42 alive=False surv=275   V=36  newmask=1   coupling=0.428 rho=0.244 excess=+0.183
+SMALL ACUTE     drift=0.05  seed=43 alive=False surv=96    V=7   newmask=0   coupling=0.402 rho=0.233 excess=+0.170
+SMALL SOFT      drift=0.05  seed=43 alive=False surv=105   V=23  newmask=0   coupling=0.472 rho=0.233 excess=+0.239
+SMALL RESERVOIR drift=0.05  seed=43 alive=False surv=105   V=26  newmask=0   coupling=0.453 rho=0.233 excess=+0.220
+SMALL ACUTE     drift=0.05  seed=44 alive=False surv=114   V=24  newmask=0   coupling=0.443 rho=0.194 excess=+0.249
+SMALL SOFT      drift=0.05  seed=44 alive=False surv=141   V=30  newmask=0   coupling=0.408 rho=0.194 excess=+0.214
+SMALL RESERVOIR drift=0.05  seed=44 alive=False surv=136   V=38  newmask=0   coupling=0.409 rho=0.194 excess=+0.214
+SMALL ACUTE     drift=0.05  seed=45 alive=False surv=135   V=11  newmask=1   coupling=0.474 rho=0.314 excess=+0.160
+SMALL SOFT      drift=0.05  seed=45 alive=False surv=106   V=27  newmask=1   coupling=0.486 rho=0.314 excess=+0.172
+SMALL RESERVOIR drift=0.05  seed=45 alive=False surv=53    V=17  newmask=1   coupling=0.278 rho=0.314 excess=-0.037
+SMALL ACUTE     drift=0.1   seed=42 alive=False surv=202   V=26  newmask=0   coupling=0.571 rho=0.244 excess=+0.327
+SMALL SOFT      drift=0.1   seed=42 alive=False surv=180   V=31  newmask=0   coupling=0.387 rho=0.244 excess=+0.142
+SMALL RESERVOIR drift=0.1   seed=42 alive=False surv=100   V=30  newmask=0   coupling=0.347 rho=0.244 excess=+0.102
+SMALL ACUTE     drift=0.1   seed=43 alive=False surv=28    V=1   newmask=0   coupling=0.158 rho=0.000 excess=+0.158
+SMALL SOFT      drift=0.1   seed=43 alive=False surv=33    V=9   newmask=0   coupling=0.176 rho=0.000 excess=+0.176
+SMALL RESERVOIR drift=0.1   seed=43 alive=False surv=26    V=12  newmask=0   coupling=0.111 rho=0.000 excess=+0.111
+SMALL ACUTE     drift=0.1   seed=44 alive=False surv=127   V=9   newmask=0   coupling=0.367 rho=0.194 excess=+0.173
+SMALL SOFT      drift=0.1   seed=44 alive=False surv=88    V=22  newmask=0   coupling=0.337 rho=0.194 excess=+0.143
+SMALL RESERVOIR drift=0.1   seed=44 alive=False surv=95    V=27  newmask=1   coupling=0.344 rho=0.194 excess=+0.149
+SMALL ACUTE     drift=0.1   seed=45 alive=False surv=151   V=5   newmask=1   coupling=0.403 rho=0.083 excess=+0.319
+SMALL SOFT      drift=0.1   seed=45 alive=False surv=173   V=29  newmask=0   coupling=0.385 rho=0.083 excess=+0.302
+SMALL RESERVOIR drift=0.1   seed=45 alive=False surv=132   V=36  newmask=0   coupling=0.368 rho=0.083 excess=+0.285
+SMALL ACUTE     drift=0.2   seed=42 alive=False surv=42    V=1   newmask=0   coupling=0.250 rho=0.297 excess=-0.047
+SMALL SOFT      drift=0.2   seed=42 alive=False surv=76    V=17  newmask=0   coupling=0.325 rho=0.297 excess=+0.028
+SMALL RESERVOIR drift=0.2   seed=42 alive=False surv=30    V=12  newmask=0   coupling=0.161 rho=0.297 excess=-0.136
+SMALL ACUTE     drift=0.2   seed=43 alive=False surv=53    V=5   newmask=1   coupling=0.382 rho=0.111 excess=+0.271
+SMALL SOFT      drift=0.2   seed=43 alive=False surv=72    V=20  newmask=0   coupling=0.315 rho=0.111 excess=+0.204
+SMALL RESERVOIR drift=0.2   seed=43 alive=False surv=67    V=22  newmask=0   coupling=0.309 rho=0.111 excess=+0.198
+SMALL ACUTE     drift=0.2   seed=44 alive=False surv=38    V=2   newmask=0   coupling=0.229 rho=0.111 excess=+0.117
+SMALL SOFT      drift=0.2   seed=44 alive=False surv=120   V=23  newmask=0   coupling=0.364 rho=0.111 excess=+0.253
+SMALL RESERVOIR drift=0.2   seed=44 alive=False surv=132   V=32  newmask=0   coupling=0.368 rho=0.111 excess=+0.257
+SMALL ACUTE     drift=0.2   seed=45 alive=False surv=30    V=3   newmask=0   coupling=0.190 rho=0.211 excess=-0.020
+SMALL SOFT      drift=0.2   seed=45 alive=False surv=21    V=8   newmask=0   coupling=0.045 rho=0.211 excess=-0.165
+SMALL RESERVOIR drift=0.2   seed=45 alive=False surv=21    V=6   newmask=0   coupling=0.045 rho=0.211 excess=-0.165
+SMALL ACUTE     drift=0.4   seed=42 alive=False surv=26    V=2   newmask=0   coupling=0.125 rho=0.138 excess=-0.013
+SMALL SOFT      drift=0.4   seed=42 alive=False surv=86    V=21  newmask=0   coupling=0.333 rho=0.138 excess=+0.195
+SMALL RESERVOIR drift=0.4   seed=42 alive=False surv=21    V=9   newmask=0   coupling=0.045 rho=0.138 excess=-0.092
+SMALL ACUTE     drift=0.4   seed=43 alive=False surv=30    V=1   newmask=0   coupling=0.182 rho=0.138 excess=+0.044
+SMALL SOFT      drift=0.4   seed=43 alive=False surv=35    V=6   newmask=0   coupling=0.194 rho=0.138 excess=+0.057
+SMALL RESERVOIR drift=0.4   seed=43 alive=False surv=39    V=9   newmask=0   coupling=0.225 rho=0.138 excess=+0.087
+SMALL ACUTE     drift=0.4   seed=44 alive=False surv=31    V=1   newmask=0   coupling=0.185 rho=0.083 excess=+0.102
+SMALL SOFT      drift=0.4   seed=44 alive=False surv=37    V=10  newmask=0   coupling=0.211 rho=0.083 excess=+0.127
+SMALL RESERVOIR drift=0.4   seed=44 alive=False surv=30    V=12  newmask=0   coupling=0.161 rho=0.083 excess=+0.078
+SMALL ACUTE     drift=0.4   seed=45 alive=False surv=44    V=4   newmask=0   coupling=0.333 rho=0.138 excess=+0.195
+SMALL SOFT      drift=0.4   seed=45 alive=False surv=30    V=12  newmask=0   coupling=0.161 rho=0.138 excess=+0.023
+SMALL RESERVOIR drift=0.4   seed=45 alive=False surv=30    V=13  newmask=0   coupling=0.161 rho=0.138 excess=+0.023
+OPEN  ACUTE     drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=0   coupling=0.993 rho=0.552 excess=+0.441
+OPEN  SOFT      drift=0.0   seed=42 alive=True  surv=4000  V=39  newmask=0   coupling=0.993 rho=0.552 excess=+0.440
+OPEN  RESERVOIR drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=0   coupling=0.988 rho=0.552 excess=+0.436
+OPEN  ACUTE     drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=0   coupling=0.991 rho=0.975 excess=+0.016
+OPEN  SOFT      drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=0   coupling=0.993 rho=0.975 excess=+0.018
+OPEN  RESERVOIR drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=0   coupling=0.993 rho=0.975 excess=+0.018
+OPEN  ACUTE     drift=0.0   seed=44 alive=True  surv=4000  V=39  newmask=0   coupling=0.994 rho=0.975 excess=+0.019
+OPEN  SOFT      drift=0.0   seed=44 alive=True  surv=4000  V=38  newmask=0   coupling=0.992 rho=0.975 excess=+0.017
+OPEN  RESERVOIR drift=0.0   seed=44 alive=True  surv=4000  V=39  newmask=0   coupling=0.991 rho=0.975 excess=+0.016
+OPEN  ACUTE     drift=0.0   seed=45 alive=True  surv=4000  V=30  newmask=0   coupling=0.995 rho=0.978 excess=+0.017
+OPEN  SOFT      drift=0.0   seed=45 alive=True  surv=4000  V=35  newmask=0   coupling=0.993 rho=0.978 excess=+0.015
+OPEN  RESERVOIR drift=0.0   seed=45 alive=True  surv=4000  V=33  newmask=0   coupling=0.991 rho=0.978 excess=+0.013
+OPEN  ACUTE     drift=0.005 seed=42 alive=False surv=787   V=35  newmask=0   coupling=0.937 rho=0.780 excess=+0.156
+OPEN  SOFT      drift=0.005 seed=42 alive=False surv=1269  V=40  newmask=0   coupling=0.955 rho=0.780 excess=+0.175
+OPEN  RESERVOIR drift=0.005 seed=42 alive=False surv=1360  V=36  newmask=0   coupling=0.957 rho=0.780 excess=+0.176
+OPEN  ACUTE     drift=0.005 seed=43 alive=False surv=1127  V=34  newmask=0   coupling=0.951 rho=0.921 excess=+0.031
+OPEN  SOFT      drift=0.005 seed=43 alive=False surv=1134  V=38  newmask=0   coupling=0.950 rho=0.921 excess=+0.029
+OPEN  RESERVOIR drift=0.005 seed=43 alive=False surv=371   V=40  newmask=0   coupling=0.859 rho=0.921 excess=-0.062
+OPEN  ACUTE     drift=0.005 seed=44 alive=False surv=564   V=36  newmask=0   coupling=0.911 rho=0.877 excess=+0.034
+OPEN  SOFT      drift=0.005 seed=44 alive=False surv=564   V=37  newmask=0   coupling=0.911 rho=0.877 excess=+0.034
+OPEN  RESERVOIR drift=0.005 seed=44 alive=False surv=569   V=39  newmask=0   coupling=0.910 rho=0.877 excess=+0.033
+OPEN  ACUTE     drift=0.005 seed=45 alive=False surv=110   V=21  newmask=0   coupling=0.688 rho=0.398 excess=+0.289
+OPEN  SOFT      drift=0.005 seed=45 alive=False surv=109   V=22  newmask=0   coupling=0.590 rho=0.398 excess=+0.192
+OPEN  RESERVOIR drift=0.005 seed=45 alive=False surv=103   V=24  newmask=0   coupling=0.471 rho=0.398 excess=+0.072
+OPEN  ACUTE     drift=0.02  seed=42 alive=False surv=141   V=25  newmask=0   coupling=0.720 rho=0.130 excess=+0.589
+OPEN  SOFT      drift=0.02  seed=42 alive=False surv=81    V=20  newmask=0   coupling=0.434 rho=0.130 excess=+0.304
+OPEN  RESERVOIR drift=0.02  seed=42 alive=False surv=80    V=24  newmask=0   coupling=0.407 rho=0.130 excess=+0.277
+OPEN  ACUTE     drift=0.02  seed=43 alive=False surv=72    V=20  newmask=0   coupling=0.594 rho=0.409 excess=+0.185
+OPEN  SOFT      drift=0.02  seed=43 alive=False surv=66    V=23  newmask=0   coupling=0.548 rho=0.409 excess=+0.139
+OPEN  RESERVOIR drift=0.02  seed=43 alive=False surv=61    V=22  newmask=0   coupling=0.536 rho=0.409 excess=+0.127
+OPEN  ACUTE     drift=0.02  seed=44 alive=False surv=41    V=11  newmask=0   coupling=0.320 rho=0.500 excess=-0.180
+OPEN  SOFT      drift=0.02  seed=44 alive=False surv=37    V=13  newmask=0   coupling=0.216 rho=0.500 excess=-0.284
+OPEN  RESERVOIR drift=0.02  seed=44 alive=False surv=33    V=11  newmask=0   coupling=0.182 rho=0.500 excess=-0.318
+OPEN  ACUTE     drift=0.02  seed=45 alive=False surv=50    V=10  newmask=0   coupling=0.625 rho=0.115 excess=+0.510
+OPEN  SOFT      drift=0.02  seed=45 alive=False surv=50    V=13  newmask=0   coupling=0.625 rho=0.115 excess=+0.510
+OPEN  RESERVOIR drift=0.02  seed=45 alive=False surv=50    V=13  newmask=0   coupling=0.625 rho=0.115 excess=+0.510
+OPEN  ACUTE     drift=0.05  seed=42 alive=False surv=28    V=9   newmask=0   coupling=0.286 rho=0.143 excess=+0.143
+OPEN  SOFT      drift=0.05  seed=42 alive=False surv=24    V=9   newmask=0   coupling=0.083 rho=0.143 excess=-0.060
+OPEN  RESERVOIR drift=0.05  seed=42 alive=False surv=24    V=10  newmask=0   coupling=0.083 rho=0.143 excess=-0.060
+OPEN  ACUTE     drift=0.05  seed=43 alive=False surv=43    V=10  newmask=0   coupling=0.471 rho=0.517 excess=-0.046
+OPEN  SOFT      drift=0.05  seed=43 alive=False surv=71    V=14  newmask=1   coupling=0.435 rho=0.517 excess=-0.082
+OPEN  RESERVOIR drift=0.05  seed=43 alive=False surv=66    V=19  newmask=1   coupling=0.323 rho=0.517 excess=-0.194
+OPEN  ACUTE     drift=0.05  seed=44 alive=False surv=85    V=25  newmask=0   coupling=0.452 rho=0.325 excess=+0.127
+OPEN  SOFT      drift=0.05  seed=44 alive=False surv=39    V=16  newmask=0   coupling=0.350 rho=0.325 excess=+0.025
+OPEN  RESERVOIR drift=0.05  seed=44 alive=False surv=36    V=13  newmask=0   coupling=0.226 rho=0.325 excess=-0.099
+OPEN  ACUTE     drift=0.05  seed=45 alive=False surv=106   V=19  newmask=0   coupling=0.690 rho=0.233 excess=+0.458
+OPEN  SOFT      drift=0.05  seed=45 alive=False surv=86    V=27  newmask=0   coupling=0.415 rho=0.233 excess=+0.182
+OPEN  RESERVOIR drift=0.05  seed=45 alive=False surv=89    V=28  newmask=0   coupling=0.486 rho=0.233 excess=+0.253
+OPEN  ACUTE     drift=0.1   seed=42 alive=False surv=46    V=13  newmask=0   coupling=0.323 rho=0.370 excess=-0.048
+OPEN  SOFT      drift=0.1   seed=42 alive=False surv=42    V=17  newmask=0   coupling=0.244 rho=0.370 excess=-0.126
+OPEN  RESERVOIR drift=0.1   seed=42 alive=False surv=42    V=17  newmask=0   coupling=0.244 rho=0.370 excess=-0.126
+OPEN  ACUTE     drift=0.1   seed=43 alive=False surv=61    V=19  newmask=0   coupling=0.778 rho=0.818 excess=-0.040
+OPEN  SOFT      drift=0.1   seed=43 alive=False surv=60    V=19  newmask=0   coupling=0.667 rho=0.818 excess=-0.152
+OPEN  RESERVOIR drift=0.1   seed=43 alive=False surv=60    V=19  newmask=0   coupling=0.667 rho=0.818 excess=-0.152
+OPEN  ACUTE     drift=0.1   seed=44 alive=False surv=35    V=10  newmask=0   coupling=0.357 rho=0.328 excess=+0.029
+OPEN  SOFT      drift=0.1   seed=44 alive=False surv=31    V=12  newmask=0   coupling=0.167 rho=0.328 excess=-0.162
+OPEN  RESERVOIR drift=0.1   seed=44 alive=False surv=30    V=10  newmask=0   coupling=0.161 rho=0.328 excess=-0.167
+OPEN  ACUTE     drift=0.1   seed=45 alive=False surv=32    V=8   newmask=0   coupling=0.250 rho=0.115 excess=+0.135
+OPEN  SOFT      drift=0.1   seed=45 alive=False surv=28    V=8   newmask=0   coupling=0.138 rho=0.115 excess=+0.023
+OPEN  RESERVOIR drift=0.1   seed=45 alive=False surv=28    V=9   newmask=0   coupling=0.138 rho=0.115 excess=+0.023
+OPEN  ACUTE     drift=0.2   seed=42 alive=False surv=37    V=7   newmask=0   coupling=0.300 rho=0.400 excess=-0.100
+OPEN  SOFT      drift=0.2   seed=42 alive=False surv=35    V=11  newmask=0   coupling=0.231 rho=0.400 excess=-0.169
+OPEN  RESERVOIR drift=0.2   seed=42 alive=False surv=35    V=11  newmask=0   coupling=0.231 rho=0.400 excess=-0.169
+OPEN  ACUTE     drift=0.2   seed=43 alive=False surv=31    V=7   newmask=0   coupling=0.333 rho=0.167 excess=+0.167
+OPEN  SOFT      drift=0.2   seed=43 alive=False surv=30    V=13  newmask=0   coupling=0.300 rho=0.167 excess=+0.133
+OPEN  RESERVOIR drift=0.2   seed=43 alive=False surv=26    V=12  newmask=0   coupling=0.120 rho=0.167 excess=-0.047
+OPEN  ACUTE     drift=0.2   seed=44 alive=False surv=23    V=5   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  SOFT      drift=0.2   seed=44 alive=False surv=22    V=7   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  RESERVOIR drift=0.2   seed=44 alive=False surv=19    V=9   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  ACUTE     drift=0.2   seed=45 alive=False surv=23    V=7   newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  SOFT      drift=0.2   seed=45 alive=False surv=23    V=13  newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  RESERVOIR drift=0.2   seed=45 alive=False surv=23    V=13  newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  ACUTE     drift=0.4   seed=42 alive=False surv=23    V=6   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  SOFT      drift=0.4   seed=42 alive=False surv=23    V=7   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  RESERVOIR drift=0.4   seed=42 alive=False surv=21    V=8   newmask=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  ACUTE     drift=0.4   seed=43 alive=False surv=23    V=7   newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  SOFT      drift=0.4   seed=43 alive=False surv=21    V=11  newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  RESERVOIR drift=0.4   seed=43 alive=False surv=20    V=12  newmask=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  ACUTE     drift=0.4   seed=44 alive=False surv=30    V=9   newmask=0   coupling=0.250 rho=0.188 excess=+0.062
+OPEN  SOFT      drift=0.4   seed=44 alive=False surv=28    V=9   newmask=0   coupling=0.167 rho=0.188 excess=-0.021
+OPEN  RESERVOIR drift=0.4   seed=44 alive=False surv=28    V=10  newmask=0   coupling=0.167 rho=0.188 excess=-0.021
+OPEN  ACUTE     drift=0.4   seed=45 alive=False surv=68    V=6   newmask=0   coupling=0.500 rho=0.091 excess=+0.409
+OPEN  SOFT      drift=0.4   seed=45 alive=False surv=66    V=17  newmask=0   coupling=0.429 rho=0.091 excess=+0.338
+OPEN  RESERVOIR drift=0.4   seed=45 alive=False surv=64    V=15  newmask=0   coupling=0.367 rho=0.091 excess=+0.276
+
+============= PER-CELL METRICS (median/mean over 4 seeds) =============
+world rung      drift  surv  cov2h  mint   excess   Vfin  dist2h  pers2h  class     
+SMALL ACUTE     0.0    1.00  1.000  0.50   +0.737   40.0  12.86   0.394   SUSTAINED 
+SMALL ACUTE     0.005  0.00  0.000  0.00   +0.592   31.8  0.00    0.000   COLLAPSE  
+SMALL ACUTE     0.02   0.00  0.000  0.00   +0.365   24.8  0.00    0.000   COLLAPSE  
+SMALL ACUTE     0.05   0.00  0.000  0.00   +0.242   17.0  0.00    0.000   COLLAPSE  
+SMALL ACUTE     0.1    0.00  0.000  0.00   +0.244   10.2  0.00    0.000   COLLAPSE  
+SMALL ACUTE     0.2    0.00  0.000  0.00   +0.080   2.8   0.00    0.000   COLLAPSE  
+SMALL ACUTE     0.4    0.00  0.000  None   +0.082   2.0   0.00    0.000   COLLAPSE  
+SMALL SOFT      0.0    1.00  1.000  0.50   +0.737   39.5  13.24   0.400   SUSTAINED 
+SMALL SOFT      0.005  0.00  0.000  0.00   +0.556   39.2  0.00    0.000   COLLAPSE  
+SMALL SOFT      0.02   0.00  0.000  0.00   +0.334   32.2  0.00    0.000   COLLAPSE  
+SMALL SOFT      0.05   0.00  0.000  0.00   +0.241   28.5  0.00    0.000   COLLAPSE  
+SMALL SOFT      0.1    0.00  0.000  None   +0.191   22.8  0.00    0.000   COLLAPSE  
+SMALL SOFT      0.2    0.00  0.000  None   +0.080   17.0  0.00    0.000   COLLAPSE  
+SMALL SOFT      0.4    0.00  0.000  None   +0.101   12.2  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.0    1.00  1.000  0.00   +0.733   39.0  14.93   0.494   SATURATED 
+SMALL RESERVOIR 0.005  0.00  0.000  0.00   +0.639   38.8  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.02   0.00  0.000  0.00   +0.312   31.5  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.05   0.00  0.000  0.00   +0.145   29.2  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.1    0.00  0.000  0.00   +0.162   26.2  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.2    0.00  0.000  None   +0.039   18.0  0.00    0.000   COLLAPSE  
+SMALL RESERVOIR 0.4    0.00  0.000  None   +0.024   10.8  0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.0    1.00  1.000  None   +0.123   37.2  34.38   0.954   SATURATED 
+OPEN  ACUTE     0.005  0.00  0.000  None   +0.127   31.5  0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.02   0.00  0.000  None   +0.276   16.5  0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.05   0.00  0.000  None   +0.170   15.8  0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.1    0.00  0.000  None   +0.019   12.5  0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.2    0.00  0.000  None   +0.002   6.5   0.00    0.000   COLLAPSE  
+OPEN  ACUTE     0.4    0.00  0.000  None   +0.103   7.0   0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.0    1.00  1.000  None   +0.123   38.0  34.65   0.969   SATURATED 
+OPEN  SOFT      0.005  0.00  0.000  None   +0.107   34.2  0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.02   0.00  0.000  None   +0.167   17.2  0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.05   0.00  0.000  0.00   +0.016   16.5  0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.1    0.00  0.000  None   -0.104   14.0  0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.2    0.00  0.000  None   -0.024   11.0  0.00    0.000   COLLAPSE  
+OPEN  SOFT      0.4    0.00  0.000  None   +0.065   11.0  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.0    1.00  1.000  None   +0.121   38.0  34.96   0.968   SATURATED 
+OPEN  RESERVOIR 0.005  0.00  0.000  None   +0.055   34.8  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.02   0.00  0.000  None   +0.149   17.5  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.05   0.00  0.000  0.00   -0.025   17.5  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.1    0.00  0.000  None   -0.106   13.8  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.2    0.00  0.000  None   -0.069   11.2  0.00    0.000   COLLAPSE  
+OPEN  RESERVOIR 0.4    0.00  0.000  None   +0.049   11.2  0.00    0.000   COLLAPSE  
+
+============= PROVISIONAL JUDGMENT (audit against prereg) =============
+  H: H-NO-RESCUE
+  P-DOSE-RESPONSE: True
+  band_monotone: True
+  per_cell_monotone_violations: 0/14
+  band_width: {'SMALL|ACUTE': 1, 'SMALL|SOFT': 1, 'SMALL|RESERVOIR': 1, 'OPEN|ACUTE': 1, 'OPEN|SOFT': 1, 'OPEN|RESERVOIR': 1}
+  P-RESERVOIR-SMALL-BAND: False
+  small_band_drifts: []
+  P-RESERVOIR-OPEN: False
+  open_sustain_drifts: []
+  P-RESERVOIR-DIVERSITY: False
+  diversity_wins: 0/12
+  P-OC12: True
+  K-RETAIN-AUDIT-PASS: True
+  retain_flags: []
+  open_res_all_die: True
+  small_res_all_die: True
+  res_survives_all_open: False
+
+wrote 168 adaptive runs to v117_results.jsonl and v117_summary.json
