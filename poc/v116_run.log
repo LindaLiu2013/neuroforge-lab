@@ -1,0 +1,88 @@
+SMALL drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=2   novel=9   coupling=0.980 rho=0.315 excess=+0.665
+SMALL drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=1   novel=2   coupling=0.977 rho=0.225 excess=+0.752
+SMALL drift=0.0   seed=44 alive=True  surv=4000  V=40  newmask=0   novel=3   coupling=0.977 rho=0.138 excess=+0.839
+SMALL drift=0.0   seed=45 alive=True  surv=4000  V=40  newmask=0   novel=2   coupling=0.973 rho=0.281 excess=+0.692
+SMALL drift=0.005 seed=42 alive=False surv=485   V=35  newmask=1   novel=1   coupling=0.665 rho=0.244 excess=+0.420
+SMALL drift=0.005 seed=43 alive=False surv=355   V=29  newmask=0   novel=0   coupling=0.815 rho=0.138 excess=+0.677
+SMALL drift=0.005 seed=44 alive=False surv=263   V=26  newmask=0   novel=0   coupling=0.754 rho=0.233 excess=+0.521
+SMALL drift=0.005 seed=45 alive=False surv=1460  V=37  newmask=1   novel=1   coupling=0.912 rho=0.161 excess=+0.751
+SMALL drift=0.02  seed=42 alive=False surv=318   V=38  newmask=1   novel=1   coupling=0.652 rho=0.233 excess=+0.419
+SMALL drift=0.02  seed=43 alive=False surv=487   V=33  newmask=0   novel=0   coupling=0.807 rho=0.233 excess=+0.575
+SMALL drift=0.02  seed=44 alive=False surv=297   V=22  newmask=3   novel=4   coupling=0.520 rho=0.233 excess=+0.288
+SMALL drift=0.02  seed=45 alive=False surv=35    V=6   newmask=0   novel=0   coupling=0.222 rho=0.045 excess=+0.177
+SMALL drift=0.05  seed=42 alive=False surv=165   V=26  newmask=1   novel=1   coupling=0.633 rho=0.244 excess=+0.388
+SMALL drift=0.05  seed=43 alive=False surv=96    V=7   newmask=0   novel=0   coupling=0.402 rho=0.233 excess=+0.170
+SMALL drift=0.05  seed=44 alive=False surv=114   V=24  newmask=0   novel=0   coupling=0.443 rho=0.194 excess=+0.249
+SMALL drift=0.05  seed=45 alive=False surv=135   V=11  newmask=1   novel=1   coupling=0.474 rho=0.314 excess=+0.160
+SMALL drift=0.1   seed=42 alive=False surv=202   V=26  newmask=0   novel=1   coupling=0.571 rho=0.244 excess=+0.327
+SMALL drift=0.1   seed=43 alive=False surv=28    V=1   newmask=0   novel=0   coupling=0.158 rho=0.000 excess=+0.158
+SMALL drift=0.1   seed=44 alive=False surv=127   V=9   newmask=0   novel=0   coupling=0.367 rho=0.194 excess=+0.173
+SMALL drift=0.1   seed=45 alive=False surv=151   V=5   newmask=1   novel=1   coupling=0.403 rho=0.083 excess=+0.319
+SMALL drift=0.2   seed=42 alive=False surv=42    V=1   newmask=0   novel=0   coupling=0.250 rho=0.297 excess=-0.047
+SMALL drift=0.2   seed=43 alive=False surv=53    V=5   newmask=1   novel=1   coupling=0.382 rho=0.111 excess=+0.271
+SMALL drift=0.2   seed=44 alive=False surv=38    V=2   newmask=0   novel=0   coupling=0.229 rho=0.111 excess=+0.117
+SMALL drift=0.2   seed=45 alive=False surv=30    V=3   newmask=0   novel=0   coupling=0.190 rho=0.211 excess=-0.020
+SMALL drift=0.4   seed=42 alive=False surv=26    V=2   newmask=0   novel=0   coupling=0.125 rho=0.138 excess=-0.013
+SMALL drift=0.4   seed=43 alive=False surv=30    V=1   newmask=0   novel=0   coupling=0.182 rho=0.138 excess=+0.044
+SMALL drift=0.4   seed=44 alive=False surv=31    V=1   newmask=0   novel=0   coupling=0.185 rho=0.083 excess=+0.102
+SMALL drift=0.4   seed=45 alive=False surv=44    V=4   newmask=0   novel=0   coupling=0.333 rho=0.138 excess=+0.195
+OPEN  drift=0.0   seed=42 alive=True  surv=4000  V=40  newmask=0   novel=0   coupling=0.993 rho=0.552 excess=+0.441
+OPEN  drift=0.0   seed=43 alive=True  surv=4000  V=40  newmask=0   novel=0   coupling=0.991 rho=0.975 excess=+0.016
+OPEN  drift=0.0   seed=44 alive=True  surv=4000  V=39  newmask=0   novel=0   coupling=0.994 rho=0.975 excess=+0.019
+OPEN  drift=0.0   seed=45 alive=True  surv=4000  V=30  newmask=0   novel=0   coupling=0.995 rho=0.978 excess=+0.017
+OPEN  drift=0.005 seed=42 alive=False surv=787   V=35  newmask=0   novel=0   coupling=0.937 rho=0.780 excess=+0.156
+OPEN  drift=0.005 seed=43 alive=False surv=1127  V=34  newmask=0   novel=0   coupling=0.951 rho=0.921 excess=+0.031
+OPEN  drift=0.005 seed=44 alive=False surv=564   V=36  newmask=0   novel=0   coupling=0.911 rho=0.877 excess=+0.034
+OPEN  drift=0.005 seed=45 alive=False surv=110   V=21  newmask=0   novel=0   coupling=0.688 rho=0.398 excess=+0.289
+OPEN  drift=0.02  seed=42 alive=False surv=141   V=25  newmask=0   novel=0   coupling=0.720 rho=0.130 excess=+0.589
+OPEN  drift=0.02  seed=43 alive=False surv=72    V=20  newmask=0   novel=0   coupling=0.594 rho=0.409 excess=+0.185
+OPEN  drift=0.02  seed=44 alive=False surv=41    V=11  newmask=0   novel=0   coupling=0.320 rho=0.500 excess=-0.180
+OPEN  drift=0.02  seed=45 alive=False surv=50    V=10  newmask=0   novel=0   coupling=0.625 rho=0.115 excess=+0.510
+OPEN  drift=0.05  seed=42 alive=False surv=28    V=9   newmask=0   novel=0   coupling=0.286 rho=0.143 excess=+0.143
+OPEN  drift=0.05  seed=43 alive=False surv=43    V=10  newmask=0   novel=0   coupling=0.471 rho=0.517 excess=-0.046
+OPEN  drift=0.05  seed=44 alive=False surv=85    V=25  newmask=0   novel=0   coupling=0.452 rho=0.325 excess=+0.127
+OPEN  drift=0.05  seed=45 alive=False surv=106   V=19  newmask=0   novel=0   coupling=0.690 rho=0.233 excess=+0.458
+OPEN  drift=0.1   seed=42 alive=False surv=46    V=13  newmask=0   novel=0   coupling=0.323 rho=0.370 excess=-0.048
+OPEN  drift=0.1   seed=43 alive=False surv=61    V=19  newmask=0   novel=0   coupling=0.778 rho=0.818 excess=-0.040
+OPEN  drift=0.1   seed=44 alive=False surv=35    V=10  newmask=0   novel=0   coupling=0.357 rho=0.328 excess=+0.029
+OPEN  drift=0.1   seed=45 alive=False surv=32    V=8   newmask=0   novel=0   coupling=0.250 rho=0.115 excess=+0.135
+OPEN  drift=0.2   seed=42 alive=False surv=37    V=7   newmask=0   novel=0   coupling=0.300 rho=0.400 excess=-0.100
+OPEN  drift=0.2   seed=43 alive=False surv=31    V=7   newmask=0   novel=0   coupling=0.333 rho=0.167 excess=+0.167
+OPEN  drift=0.2   seed=44 alive=False surv=23    V=5   newmask=0   novel=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  drift=0.2   seed=45 alive=False surv=23    V=7   newmask=0   novel=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  drift=0.4   seed=42 alive=False surv=23    V=6   newmask=0   novel=0   coupling=0.000 rho=0.000 excess=+0.000
+OPEN  drift=0.4   seed=43 alive=False surv=23    V=7   newmask=0   novel=0   coupling=0.000 rho=0.059 excess=-0.059
+OPEN  drift=0.4   seed=44 alive=False surv=30    V=9   newmask=0   novel=0   coupling=0.250 rho=0.188 excess=+0.062
+OPEN  drift=0.4   seed=45 alive=False surv=68    V=6   newmask=0   novel=0   coupling=0.500 rho=0.091 excess=+0.409
+
+================= PER-CELL METRICS (median/mean over 4 seeds) =================
+world drift  surv  cov2h  mint_tail  excess   newmask  slope2h  
+SMALL 0.0    1.00  1.000  0.50       +0.737   0.8      +0.001   
+SMALL 0.005  0.00  0.000  0.00       +0.592   0.5      +0.000   
+SMALL 0.02   0.00  0.000  0.00       +0.365   1.0      +0.000   
+SMALL 0.05   0.00  0.000  0.00       +0.242   0.5      +0.000   
+SMALL 0.1    0.00  0.000  0.00       +0.244   0.2      +0.000   
+SMALL 0.2    0.00  0.000  0.00       +0.080   0.2      +0.000   
+SMALL 0.4    0.00  0.000  None       +0.082   0.0      +0.000   
+OPEN  0.0    1.00  1.000  None       +0.123   0.0      +0.000   
+OPEN  0.005  0.00  0.000  None       +0.127   0.0      +0.000   
+OPEN  0.02   0.00  0.000  None       +0.276   0.0      +0.000   
+OPEN  0.05   0.00  0.000  None       +0.170   0.0      +0.000   
+OPEN  0.1    0.00  0.000  None       +0.019   0.0      +0.000   
+OPEN  0.2    0.00  0.000  None       +0.002   0.0      +0.000   
+OPEN  0.4    0.00  0.000  None       +0.103   0.0      +0.000   
+
+================= PROVISIONAL JUDGMENT (audit against prereg) =================
+  H: H-NO-ISOLATION
+  P-F1-SMALL-SATURATES: False
+  saturating_drifts: []
+  P-F1-OPEN-SUSTAINS: False
+  sustaining_drifts: []
+  P-CONTRAST: False
+  P-OC12: True
+  open_all_die: False
+  open_surv_frozen: False
+  small_nosat: False
+  open_sat: True
+
+wrote 56 runs to v116_results.jsonl and v116_summary.json
