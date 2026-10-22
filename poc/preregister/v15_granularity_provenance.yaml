@@ -1,0 +1,140 @@
+# PRE-REGISTRATION — v1.15: skeleton-addressing granularity ladder + path provenance
+# COMMITTED BEFORE ANY RESULTS (anti-HARKing). Do not edit after running.
+#
+# NUMBERING: files use `v15_*` = research-log v1.15; it is the continuation of the
+# PACKAGE-v1.1 credibility program (reviewer ask #4). The doc's §v1.1 is the unrelated
+# GC-1 study; this is logged as §v1.15. Two schemes, explicitly reconciled.
+#
+# ========================= WHY THIS STUDY (anchored, not from memory) =========================
+# v1.14 (committed a18f64b) tested EXACT full-state addressing on ArithmeticObservableDomain
+#   -> H-NOADV: fire-viable=1.000 (mechanism causally perfect) but fires only 22-26%
+#   (each of ~1083 states needs the same correct action sampled >=3 successful times; 20k
+#   cycles gives ~18 visits/state) -> overall viability 0.367 vs state-blind ceiling 0.336,
+#   short of ADV_MARGIN=0.10. Diagnosis: bottleneck = COVERAGE, not MECHANISM (= SC-1).
+# v1.3 (memory v13-sc2-results) ALREADY CONFIRMED SC-2 on the REGEX domain: coarse skeleton
+#   keys psi=(match_rate, reject_rate) lifted VR 2-6.5x over bucket-only, fire-viable 0.95+.
+#   BUT regex is MULTI-STEP, so its VR capped at ~0.10 by SC-3 (DISCOVERY bottleneck: can
+#   maintain what it finds, cannot reliably discover multi-step viable patterns). And v1.3
+#   never reported the full baseline set (random/no-op/best-fixed/bandit) ask #4 requires.
+# => The open, non-redundant question: on a SINGLE-STEP domain (arithmetic) where SC-3 does
+#   NOT bind, does the SC-2 skeleton-granularity mechanism lift coverage enough to clear the
+#   state-blind ceiling by the pre-registered margin, against the FULL baseline set? This is
+#   a NEW hypothesis (interior-optimum granularity beats ceiling), NOT a re-sweep of v1.14's
+#   failed exact arm (which would violate K-NO-TUNE-TO-WIN).
+#
+# ========================= NON-TELEOLOGY / NO-ORACLE GUARDS =========================
+# - viability comes from the ENVIRONMENT only: result == target (an objective environmental
+#   fact). NEVER from "matches the LLM/human known answer". The LLM/human path is a POST-HOC
+#   descriptive ruler, never a reward, never a viability criterion (boundary memory
+#   llm-design-time-vs-runtime-boundary: "尺子不做判分标准").
+# - agent is NEVER told which op is correct; it discovers the (skeleton -> action) coupling
+#   by its own viable practice. Cold start, empty address table.
+# - K-HUMAN-DOOR (critical here): the skeleton key is a GENERIC coarse magnitude binning of
+#   the OBSERVED quantities (a, b, target), chosen as fixed ROUND magnitude thresholds
+#   WITHOUT reference to the op rule or to op-discriminating boundaries. It GROUPS states;
+#   it does NOT encode which action is correct per group. The op-recovering structure must
+#   EMERGE from viability selection (verified post-hoc), not be built into the key. If any
+#   key function is found to encode the answer -> VOID, retract.
+#
+# ========================= ARMS (granularity ladder + full baselines, one table) =========================
+# Same task (ArithmeticObservableDomain, v11), same seeds, same cycles as v1.14 for comparability.
+# A0 random          : uniform random action
+# A1 no-op           : always id
+# A2 best-fixed      : best single fixed action = STATE-BLIND CEILING
+# G0 bandit (shipped): TUFEAgent(exact_addressing=False)
+# G1 exact           : TUFEAgent(exact_addressing=True, address_key_fn=None)  [= v1.14 A4]
+# G2 skel-64         : address_key_fn = 4-bin magnitude bins of (a,b,target) -> 64 groups
+# G3 skel-8          : 2-bin magnitude bins of (a,b,target) -> 8 groups
+# G4 skel-target-only: 4-bin magnitude of TARGET alone (ignore operands) -> 4 groups
+# Bin thresholds (FROZEN, generic round magnitudes, NOT op-derived):
+#   a,b in [1,19]: 4-bin edges at 5,10,15 ; 2-bin edge at 10
+#   target: 4-bin edges at 10,50,150 ; 2-bin edge at 30
+# seeds: [42,43,44,45,46] (5). cycles: 20000. report_every: 1000.
+#
+# ========================= PRE-REGISTERED PREDICTIONS =========================
+# P-COVERAGE: fire rate (fraction of cycles the address table fires) is MONOTONE-INCREASING
+#   as granularity coarsens G1 < G2 < G3 (coarser groups fill the n>=3 threshold faster).
+# P-PRECISION-COST: fire-viable is MONOTONE-DECREASING as granularity coarsens (within a
+#   coarser group the correct action varies more) -> there is a granularity/precision tradeoff.
+# P-INTERIOR-OPTIMUM (CORE): there EXISTS an intermediate granularity G* in {G2,G3,G4} whose
+#   overall viability exceeds A2 (state-blind ceiling) by >= ADV_MARGIN=0.10 AND exceeds G1
+#   (exact) AND exceeds G0 (bandit). i.e. coverage gain outweighs precision loss at some
+#   interior grain -> a CLEAN positive answer to reviewer ask #4, all baselines in one table.
+# P-EXCESS (OC-9): G*'s excess causal validity (fire-viable - background rho=A0) >= EXCESS_MARGIN=0.05.
+# P-PROVENANCE (path provenance, the new dimension):
+#   (a) COLD-START guarantee holds by construction (no op channel, no answer channel, empty
+#       table at t=0) -> the win cannot be a copy. Architectural, asserted in code review.
+#   (b) CROSS-SEED RE-DERIVATION: G*'s consolidated skeleton->dominant-action map is
+#       STRUCTURALLY CONSISTENT across the 5 seeds (same dominant action for the same
+#       skeleton group in >= 4/5 seeds for >= 70% of populated groups) -> the recovered
+#       structure is an ENVIRONMENTAL ATTRACTOR (autonomous convergence), not a per-seed fluke.
+#   (c) POST-HOC OP-RECOVERY classification (descriptive ONLY, never reward): compare G*'s
+#       skeleton->action map to the true op-determining relation. Classify:
+#         CONVERGENT   : recovers the same functional relation the human/LLM path uses
+#                        (skeleton group -> correct op matches the true relation on most groups)
+#         EQUIFINAL    : same viability outcome but a different internal grouping->action structure
+#         DIVERGENT    : neither
+#   HONEST LIMIT (stated up front): arithmetic is SINGLE-STEP, so its "path" is one action —
+#   provenance here is thin. The instruments (cold-start, cross-seed re-derivation) are the
+#   reusable part; RICH multi-step path provenance belongs to a construction domain (regex /
+#   dark-room) and is registered as the NEXT step, not claimed here.
+#
+# ========================= KILL CONDITIONS / GUARDS =========================
+# K-DISCRIMINATES: task headroom already established at 0.665 in v1.14 (>= HEADROOM_MIN 0.15).
+#   Re-assert from the same generative rule before running agents; VOID if it fails.
+# K-HUMAN-DOOR: VOID if any skeleton key encodes the op or the op-discriminating relation.
+#   Guard: bins are fixed ROUND magnitude thresholds (above), answer-agnostic; op-recovery must
+#   EMERGE (checked by P-PROVENANCE(c)). If I catch answer-encoding in a key -> stop, report.
+# K-NO-TUNE-TO-WIN (S4/G5): ONE pre-registered ladder, ONE seed set, ONE ADV_MARGIN, ONE run.
+#   If no interior granularity clears the ceiling, report H-EXACT-BEST or H-NOADV honestly.
+#   Do NOT add finer/coarser bins, change thresholds, cycles, or seeds to manufacture a win.
+# K-BASELINE-TOGETHER: A0,A1,A2,G0,G1,G2,G3,G4 all in the SAME table, same seeds/cycles.
+# K-VIABILITY-SOURCE: viability is environment-defined (result==target) only. VOID if any arm's
+#   viability or reward references an LLM/human answer.
+#
+# ========================= JUDGMENTS (decided BEFORE seeing numbers) =========================
+# H-OPTIMUM      : P-INTERIOR-OPTIMUM and P-EXCESS hold -> FIRST clean positive for ask #4:
+#   a state-conditional (skeleton) pivot learner beats random, no-op, best-fixed, AND the
+#   state-blind bandit, all in one table. Report provenance class. Register SC-2 as confirmed
+#   on a single-step domain and the granularity optimum as a measured quantity.
+# H-EXACT-BEST   : G1 (exact) >= every coarser arm -> coverage was NOT the fixable bottleneck
+#   via granularity here; contradicts SC-2's generality. Honest negative; diagnose.
+# H-COARSE-MONOTONE: viability monotone-increasing with coarseness and G4 (coarsest) wins ->
+#   precision cost did NOT materialize; SUSPICIOUS -> trigger K-HUMAN-DOOR audit before claiming.
+# H-NOADV        : no arm beats A2 by ADV_MARGIN -> skeleton granularity does not clear the
+#   state-blind ceiling on this task. Honest negative (feeds SC-2/SC-3). No re-sweep.
+#
+# Thresholds (FROZEN): ADV_MARGIN=0.10, EXCESS_MARGIN=0.05, HEADROOM_MIN=0.15,
+#   cross-seed consistency >= 0.70 of populated groups agreeing in >= 4/5 seeds.
+# Report: viability for all 8 arms (mean±sd, 5 seeds), fire rate + fire-viable per arm,
+#   feasible volume, OC-9 excess for G*, provenance class + cross-seed consistency,
+#   the granularity ladder curve. Every number beside its baseline. No number alone.
+# ============================================================================
+
+study: v15_skeleton_granularity_ladder_and_provenance
+date_preregistered: 2026-10-22
+frame: non_teleological__viability_from_environment__llm_is_posthoc_ruler_only
+core_claim: interior_granularity_skeleton_pivot_beats_state_blind_ceiling_and_bandit
+domain: ArithmeticObservableDomain  # single-step -> SC-3 discovery does NOT bind
+task: expose_target_as_sensing_channel_not_oracle
+arms: [A0_random, A1_noop, A2_best_fixed, G0_bandit, G1_exact, G2_skel64, G3_skel8, G4_skel_target_only]
+control: frozen_random  # OC-9 background rho (= A0)
+seeds: [42, 43, 44, 45, 46]
+cycles: 20000
+report_every: 1000
+bin_thresholds_frozen:
+  a_b_4bin: [5, 10, 15]
+  a_b_2bin: [10]
+  target_4bin: [10, 50, 150]
+  target_2bin: [30]
+thresholds:
+  ADV_MARGIN: 0.10
+  EXCESS_MARGIN: 0.05
+  HEADROOM_MIN: 0.15
+  cross_seed_agreement: 0.70
+judgments: [H-OPTIMUM, H-EXACT-BEST, H-COARSE-MONOTONE, H-NOADV]
+provenance:
+  instruments: [cold_start_guarantee, cross_seed_rederivation, posthoc_op_recovery_classification]
+  classes: [CONVERGENT, EQUIFINAL, DIVERGENT]
+  honest_limit: arithmetic_single_step_path_is_thin__rich_provenance_needs_multistep_domain_next
+red_line: skeleton_keys_are_generic_magnitude_bins_not_answer_encoding__fix_task_and_metric_not_scores__report_honestly_even_if_learner_loses
