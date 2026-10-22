@@ -1,0 +1,156 @@
+{
+  "study": "v11_state_dependent_pivot_vs_bandit",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "cycles": 20000,
+  "headroom_seed0": 0.66516,
+  "aggregate": {
+    "A0_random": 0.13564,
+    "A1_noop": 0.017159999999999998,
+    "A2_best_fixed": 0.33579000000000003,
+    "A3_bandit": 0.31545999999999996,
+    "A4_state_dependent": 0.36662,
+    "A4_sd": 0.024460940292637973,
+    "A4_fire_viable": 1.0,
+    "oc9_excess": 0.86436
+  },
+  "per_seed": {
+    "42": {
+      "A0_random": 0.13935,
+      "A1_noop": 0.0188,
+      "A2_best_fixed": 0.3356,
+      "A2_best_action": 1,
+      "A3_bandit": {
+        "viability_rate": 0.31715,
+        "confirmed_pivots": 170,
+        "feasible_volume": 319,
+        "exact_fires": 0,
+        "fire_viable_rate": null
+      },
+      "A4_state_dependent": {
+        "viability_rate": 0.3396,
+        "confirmed_pivots": 196,
+        "feasible_volume": 319,
+        "exact_fires": 4377,
+        "fire_viable_rate": 1.0
+      }
+    },
+    "43": {
+      "A0_random": 0.1322,
+      "A1_noop": 0.0169,
+      "A2_best_fixed": 0.3353,
+      "A2_best_action": 0,
+      "A3_bandit": {
+        "viability_rate": 0.31845,
+        "confirmed_pivots": 218,
+        "feasible_volume": 334,
+        "exact_fires": 0,
+        "fire_viable_rate": null
+      },
+      "A4_state_dependent": {
+        "viability_rate": 0.40685,
+        "confirmed_pivots": 260,
+        "feasible_volume": 317,
+        "exact_fires": 5201,
+        "fire_viable_rate": 1.0
+      }
+    },
+    "44": {
+      "A0_random": 0.13265,
+      "A1_noop": 0.01665,
+      "A2_best_fixed": 0.3392,
+      "A2_best_action": 0,
+      "A3_bandit": {
+        "viability_rate": 0.3169,
+        "confirmed_pivots": 149,
+        "feasible_volume": 293,
+        "exact_fires": 0,
+        "fire_viable_rate": null
+      },
+      "A4_state_dependent": {
+        "viability_rate": 0.34495,
+        "confirmed_pivots": 191,
+        "feasible_volume": 291,
+        "exact_fires": 4394,
+        "fire_viable_rate": 1.0
+      }
+    },
+    "45": {
+      "A0_random": 0.13515,
+      "A1_noop": 0.01615,
+      "A2_best_fixed": 0.33455,
+      "A2_best_action": 1,
+      "A3_bandit": {
+        "viability_rate": 0.3102,
+        "confirmed_pivots": 92,
+        "feasible_volume": 260,
+        "exact_fires": 0,
+        "fire_viable_rate": null
+      },
+      "A4_state_dependent": {
+        "viability_rate": 0.36255,
+        "confirmed_pivots": 220,
+        "feasible_volume": 292,
+        "exact_fires": 4554,
+        "fire_viable_rate": 1.0
+      }
+    },
+    "46": {
+      "A0_random": 0.13885,
+      "A1_noop": 0.0173,
+      "A2_best_fixed": 0.3343,
+      "A2_best_action": 2,
+      "A3_bandit": {
+        "viability_rate": 0.3146,
+        "confirmed_pivots": 164,
+        "feasible_volume": 331,
+        "exact_fires": 0,
+        "fire_viable_rate": null
+      },
+      "A4_state_dependent": {
+        "viability_rate": 0.37915,
+        "confirmed_pivots": 290,
+        "feasible_volume": 358,
+        "exact_fires": 4657,
+        "fire_viable_rate": 1.0
+      }
+    }
+  },
+  "F1": {
+    "traj": [
+      135,
+      171,
+      179,
+      192,
+      218,
+      226,
+      229,
+      239,
+      240,
+      248,
+      260,
+      265,
+      274,
+      282,
+      292,
+      296,
+      299,
+      304,
+      313,
+      319
+    ],
+    "saturation_time": 18000
+  },
+  "flags": {
+    "P_HEADROOM": true,
+    "P_BANDIT_CEILING": false,
+    "P_ALL_BASELINES": false,
+    "P_EXCESS": true
+  },
+  "verdict": "H-NOADV"
+}

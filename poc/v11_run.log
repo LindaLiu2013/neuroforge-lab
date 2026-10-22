@@ -1,0 +1,64 @@
+======================================================================
+v1.1 STATE-DEPENDENT PIVOT vs STATE-BLIND BANDIT
+======================================================================
+
+[P-HEADROOM] task-design discriminability (oracle diagnostic, NOT an agent):
+  seed 42: headroom=0.665 (oracle state-conditional=1.000, best fixed=0.335)
+  HEADROOM_MIN=0.15 -> P-HEADROOM PASS
+
+--- seed 42 (20000 cycles) ---
+  A0 random          = 0.139
+  A1 no-op (id)      = 0.019
+  A2 best-fixed      = 0.336  (action sub)
+  A3 bandit (shipped)= 0.317  pivots=170
+  A4 state-dependent = 0.340  pivots=196 fires=4377 fire-viable=1.0
+
+--- seed 43 (20000 cycles) ---
+  A0 random          = 0.132
+  A1 no-op (id)      = 0.017
+  A2 best-fixed      = 0.335  (action add)
+  A3 bandit (shipped)= 0.318  pivots=218
+  A4 state-dependent = 0.407  pivots=260 fires=5201 fire-viable=1.0
+
+--- seed 44 (20000 cycles) ---
+  A0 random          = 0.133
+  A1 no-op (id)      = 0.017
+  A2 best-fixed      = 0.339  (action add)
+  A3 bandit (shipped)= 0.317  pivots=149
+  A4 state-dependent = 0.345  pivots=191 fires=4394 fire-viable=1.0
+
+--- seed 45 (20000 cycles) ---
+  A0 random          = 0.135
+  A1 no-op (id)      = 0.016
+  A2 best-fixed      = 0.335  (action sub)
+  A3 bandit (shipped)= 0.310  pivots=92
+  A4 state-dependent = 0.363  pivots=220 fires=4554 fire-viable=1.0
+
+--- seed 46 (20000 cycles) ---
+  A0 random          = 0.139
+  A1 no-op (id)      = 0.017
+  A2 best-fixed      = 0.334  (action mul)
+  A3 bandit (shipped)= 0.315  pivots=164
+  A4 state-dependent = 0.379  pivots=290 fires=4657 fire-viable=1.0
+
+[P-F1] A4 feasible-space volume trajectory (saturation check):
+  V(t) @1k steps: [135, 171, 179, 192, 218, 226, 229, 239, 240, 248, 260, 265, 274, 282, 292, 296, 299, 304, 313, 319]
+  saturation time: 18000  (None = still growing at horizon)
+
+======================================================================
+AGGREGATE (mean over 5 seeds)
+======================================================================
+  A0 random           = 0.136
+  A1 no-op            = 0.017
+  A2 best-fixed       = 0.336   <- state-blind CEILING
+  A3 bandit (shipped) = 0.315
+  A4 state-dependent  = 0.367 ¡À 0.024
+  A4 fire-viable      = 1.000 | OC-9 excess (rho=A0 0.136) = 0.864
+
+  P-BANDIT-CEILING (A4-A2 >= 0.1): FAIL
+  P-ALL-BASELINES  (A4 beats all by 0.1): FAIL
+  P-EXCESS (OC-9 >= 0.05): PASS
+
+  VERDICT: H-NOADV
+
+  wrote poc/v11_results.json
