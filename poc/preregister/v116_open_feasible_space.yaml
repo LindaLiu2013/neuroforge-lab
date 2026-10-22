@@ -1,0 +1,207 @@
+# PRE-REGISTRATION — v1.16 chemostat: does a combinatorially-OPEN feasible space lift F1?
+# COMMITTED BEFORE ANY RESULTS (anti-HARKing). Do not edit after running.
+#
+# Author frame: NON-TELEOLOGICAL, inherited verbatim from v1.13
+# (poc/preregister/v113_sustainable_crystallization.yaml). The agent has NO goal, NO
+# target, NO oracle, and does NOT know its future. viability = self-maintenance
+# (internal free-energy budget stays > 0), NOT task-goal achievement. capability
+# CRYSTALLIZES AS A BYPRODUCT of keeping itself coupled to a drifting flux. learning
+# signal = feasible-space dynamics, NOT reward [FS-C2]. Measured by OC-9 excess causal
+# validity + coverage + survival + minting continuity, NEVER by win-rate or gap-to-oracle.
+# The oracle arm is DELIBERATELY ABSENT.
+#
+# ===================== WHY THIS STUDY (the F1 attack) =====================
+# v1.13 result was H-NOBAND: sustainable endogenous crystallization did NOT occur.
+# Two blockers were identified (docs/tufe-research-retrospective-origin-vs-now.md §三):
+#   F1 SATURATION CEILING: the world was too small (N_CH=6). A handful of general
+#      single-channel couplers cover EVERY pattern, so once the repertoire saturates
+#      (<40 ops cover all 63 patterns) there is nothing genuinely new left to mint ->
+#      crystallization bursts, then FREEZES. Blueprint claim: sustainable crystallization
+#      needs a COMBINATORIALLY-OPEN feasible space (an "unlearnable"/学不完 environment).
+#   F2 mid-drift fragility resonance (U-shaped survival vs drift). NOT the target here.
+#
+# v1.16 attacks F1 ONLY, as a MINIMAL SINGLE-VARIABLE CONTRAST. The single causal
+# variable is FEASIBLE-SPACE OPENNESS, operationalized as world size N_CH:
+#   SMALL world (N_CH=8)  : the full coupler repertoire FITS in the op budget -> SATURABLE
+#                           -> predicted to reproduce F1 (coverage -> 1, minting -> 0, frozen).
+#   OPEN  world (N_CH=64) : the full coupler repertoire CANNOT fit -> UNSATURABLE
+#                           -> predicted to sustain minting (always something new to crystallize).
+# EVERY other v1.13 physical constant, the drift grid, and the seeds are held IDENTICAL.
+#
+# ===================== MECHANISM (what changes vs v1.13, and why) =====================
+# v1.13 used weight-1/2 couplers and dense any-weight patterns. That mechanism CANNOT
+# express openness: a single-channel (weight-1) coupler {a} couples to EVERY pattern
+# containing channel a, so ~N_CH general ops saturate any world, and cranking N_CH alone
+# either (a) still saturates via general ops, or (b) with sparse patterns makes the
+# bootstrap impossible. The coverage/bootstrap tension is structural under subset coupling
+# with general ops. To make OPENNESS the ONE thing that differs while keeping the world
+# bootstrap-able and trackable, v1.16 fixes THREE structural choices (design-time, applied
+# IDENTICALLY to both worlds — NOT tuned to results):
+#   1. OPS = weight-2 SPECIFIC couplers (a pair of channels). op.mask has exactly 2 bits.
+#      A weight-2 coupler {a,b} succeeds iff {a,b} ⊆ true_pattern (subset, as v1.13).
+#      Rationale: with weight-2 ops, saturation needs ALL C(N,2) pairs. C(8,2)=28 ≤ 40
+#      (saturable) but C(64,2)=2016 >> 40 (unsaturable). Openness = whether the pair-space
+#      fits the budget. No weight-1 op is allowed (it would trivially saturate any N).
+#   2. ENVIRONMENT patterns = weight-3 (exactly 3 active channels). Random walk = each step,
+#      w.p. DRIFT, swap ONE active channel for a random inactive channel (stays weight-3,
+#      walks LOCALLY). This is the v1.13 single-bit-flip walk restricted to the weight-3 shell.
+#   3. VARIATION preserves weight-2 and is LOCAL, matching the local drift:
+#        - w.p. 0.6: single-parent local swap — take parent {a,b}, replace ONE of its channels
+#          with a random different channel -> {a,c} or {b,c}. (tracks a one-channel drift)
+#        - w.p. 0.4: two-parent recombination — take {a,b},{c,d}, pick one channel from each
+#          -> {a,c}/{a,d}/{b,c}/{b,d}. (generic composition, stays weight-2)
+#      Both are GENERIC: no component encodes the drift direction or the pattern. [K-HUMAN-DOOR]
+# Because drift is local (one swap) and variation is local (one swap), the OPEN agent can
+# TRACK the walk by continuously re-minting the current neighborhood — but with N=64 it can
+# never HOLD all pairs, so it can never finish -> minting never freezes. In SMALL (N=8) it
+# CAN hold all 28 pairs -> finishes -> freezes. N_CH is the single knob: finite vs infinite
+# local-tracking task.
+#
+# COLD-START GUARANTEE (an INSTRUMENT, pre-registered, applied IDENTICALLY to both worlds):
+#   the initial repertoire = N_BASE_OPS random weight-2 masks, PLUS a guarantee that at least
+#   one couples to the INITIAL pattern (if none of the random base ops is a weight-2 subset of
+#   the initial weight-3 pattern, one base op is replaced by a random weight-2 SUBSET of that
+#   initial pattern). Rationale: without it, OPEN bootstrap probability is ~0.009 (random
+#   coupling 0.0015 over 6 draws) and 99% of OPEN seeds die before adapting — which would
+#   confound F1 (saturation) with a bootstrap failure. The cold-start gives ONE working
+#   coupler at t=0 (like LUCA arriving at a vent with a working metabolism); the pattern then
+#   DRIFTS and that coupler goes obsolete, so the agent MUST mint to survive. It does NOT
+#   encode the drift, the future, or any answer to the actual question (does minting SUSTAIN
+#   or FREEZE). [K-COLD-START-HONESTY guards this.]
+#
+# SENSING is made CONSTANT-DIFFICULTY across worlds (v1.13 used per-bit noise, whose error
+#   COUNT scales with N_CH and would confound openness with sensing difficulty). v1.16: sensed
+#   = true pattern, then w.p. SENSE_P introduce exactly ONE sensing error = swap one sensed
+#   channel for a random channel. Same rule, same expected error count, both worlds. Triggering
+#   (op.mask & sensed != 0) and success (op.mask ⊆ TRUE pattern) are as v1.13.
+#
+# ===================== K-NONSATURABLE-CHECK (pre-run combinatorial, FROZEN) =====================
+# Verified by combinatorics BEFORE running (design-time reasoning, zero runs, not tuning):
+#   survival threshold coupling = (DECAY+ACT_COST)/GAIN = (1.0+0.3)/3.0 = 0.4333  [UNCHANGED v1.13]
+#   SMALL N=8 : C(8,2)=28 couplers ≤ MAX_OPS=40 -> SATURABLE. coverage upper bound (hold 40)=1.00.
+#               random coupling = C(3,2)/C(8,2) = 3/28  = 0.1071 < 0.4333 -> random DIES, adaptation REQUIRED.
+#   OPEN  N=64: C(64,2)=2016 couplers >> 40 -> UNSATURABLE. coverage upper bound (hold 40)=0.0595 (≤6%).
+#               random coupling = C(3,2)/C(64,2) = 3/2016 = 0.0015 < 0.4333 -> random DIES, adaptation REQUIRED.
+# => In BOTH worlds a non-adapting agent dies (no free environmental rescue, P1.2 preserved),
+#    and the ONLY structural difference is whether the pair-space fits the op budget (openness).
+# If a post-run result contradicts these frozen combinatorial facts, treat as BUG-or-BIG-FINDING,
+#    report, DO NOT tune away.
+#
+# ========================= PRE-REGISTERED PREDICTIONS =========================
+# (metrics defined in METRICS below; judgments decided BEFORE seeing numbers)
+#
+# P-F1-SMALL-SATURATES (reproduce F1): in the SMALL world, at drift rates where the agent
+#   survives, coupling_coverage RISES to >= SATURATION_CUT (0.90) and PLATEAUS, AND minting
+#   FREEZES: second-half consolidated-new-op rate < FROZEN_TAIL_RATIO (0.2x) its first-productive-
+#   quarter rate. feasible volume V(t) reaches a static/near-static saturated value. This is the
+#   v1.13 F1 signature reproduced under the new mechanism (capability crystallized once, zero renewal).
+#
+# P-F1-OPEN-SUSTAINS (CORE): in the OPEN world there EXISTS a non-empty drift interval over which
+#   ALL THREE hold across the run:
+#     (a) survival_rate >= 0.9 (agent self-maintains to horizon), AND
+#     (b) coverage stays BELOW saturation: median coupling_coverage in the second half < SATURATION_CUT
+#         (0.90) — the repertoire NEVER fully covers the open pair-space (there is always something
+#         genuinely new to crystallize), AND
+#     (c) minting SUSTAINS: consolidated-new-op rate in the second half >= SUSTAIN_TAIL_RATIO (0.5x)
+#         its first-productive-quarter rate (does NOT decay to ~0), AND
+#     (d) OC-9 excess causal validity (live coupling rate - frozen_random rho) stays >= EXCESS_MARGIN
+#         (0.05) in the second half (the sustained minting is REAL, not a learning illusion).
+#
+# P-CONTRAST (isolation): at MATCHED drift inside the OPEN sustaining interval, OPEN minting-tail-ratio
+#   and OPEN (1 - coverage) are BOTH strictly greater than SMALL's. I.e. openness — not drift alone —
+#   is what lifts the freeze. If SMALL and OPEN look identical at matched drift, openness did nothing.
+#
+# P-OC12 (information accounting): OPEN at drift=0 STILL FREEZES (no environment door -> the pattern
+#   is fixed -> after the agent consolidates couplers for that one pattern, no genuinely new info
+#   arrives -> minting -> 0), even though the world is open. Openness ALONE is not sufficient; it needs
+#   drift>0 to keep injecting new patterns [OC-12]. If OPEN at drift=0 sustained minting with positive
+#   excess, OC-12 would be violated -> investigate as bug-or-big-finding, DO NOT tune away.
+#
+# ========================= KILL CONDITIONS / GUARDS =========================
+# K-NO-TUNE-TO-WIN (S4/G5): ALL v1.13 physical constants (DECAY, GAIN, ACT_COST, B0, BUDGET_MAX,
+#   HORIZON, WINDOW, CONC_*, MAX_OPS, VAR_P, MIN_N, VIABLE_RATIO), the drift grid, and the seeds are
+#   held IDENTICAL across both worlds. The ONLY swept structural variable is N_CH (world size), plus
+#   the three pre-registered mechanism choices above applied identically to both worlds. ONE drift grid,
+#   ONE seed set, ONE run. If OPEN dies at all drifts, report H-OPEN-DIES; do NOT re-tune the energy
+#   budget / cold-start / variation to manufacture survival.
+# K-NONTELEOLOGY: VOID if any result is reported by win-rate, VR-vs-oracle, or gap-to-ceiling. The
+#   oracle arm is ABSENT. Metrics are only: survival, coverage, feasible volume, minting continuity,
+#   OC-9 excess causal validity.
+# K-HUMAN-DOOR: VOID if the OPEN band appears ONLY because a hand-written op / curriculum encodes the
+#   drift pattern. Guard: base ops random, variation generic (local swap / recombination), drift
+#   random-walk, agent has no target, cold-start gives only an INITIAL-pattern coupler (never a future
+#   one). If I catch myself adding ANY component that could encode the answer -> stop, report, do not ship.
+# K-COLD-START-HONESTY: the cold-start guarantee must couple to the INITIAL pattern ONLY, be applied
+#   IDENTICALLY to both worlds, and never be refreshed after t=0. VOID if the cold-start is re-applied
+#   mid-run (that would be external propping = "no re-seeding" violated) or encodes the drift direction.
+# K-OC12: minting must be driven by the ENVIRONMENT DOOR (drift injecting new patterns). Predicted by
+#   P-OC12 (OPEN at drift=0 freezes). A sustained-minting-at-drift=0 result is a red flag, not a win.
+# K-BACKGROUND-HONESTY: background rho for OC-9 must come from a FROZEN_RANDOM control arm run under
+#   the SAME drift and SAME world, not a hand-picked constant. NOTE (frozen expectation): in OPEN the
+#   frozen control dies early by construction (random coupling 0.0015 << 0.433); its coupling rate over
+#   its short pre-death life is the honest background rho. This is expected and is itself evidence that
+#   adaptation is necessary — NOT a bug.
+#
+# ========================= ARMS =========================
+# worlds: SMALL (N_CH=8), OPEN (N_CH=64)   <- the single swept structural variable
+# drift grid (per-step swap prob), IDENTICAL to v1.13: [0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40]
+# seeds per cell: 4  [42,43,44,45]  (single-seed conclusions forbidden — v1.6 lesson)
+# horizon: 4000 steps/run
+# controls: frozen_random (fixed random weight-2 repertoire, uniform firing, no minting/consolidation/
+#   op-dissipation, NO cold-start refresh) at each (world, drift) -> supplies background rho for OC-9.
+# total runs: 2 worlds x 7 drifts x 4 seeds x 2 arms (adaptive + frozen control) = 112 runs.
+#
+# ========================= METRICS (feasibility, not optimality) =========================
+# survival_rate       : fraction of seeds alive at horizon (budget>0 throughout)
+# coupling_coverage   : over trailing window, fraction of steps where >=1 live op is a weight-2 SUBSET
+#                       of the TRUE pattern (can the repertoire sustain itself NOW). This is the direct
+#                       F1 saturation diagnostic (v1.13 logged it as `coverage`).
+# feasible_volume V   : count of live ops (conc >= CONC_MIN) — FS-C3 viable-space proxy
+# minting_rate(t)     : consolidated genuinely-new ops per window (new = couples to a weight-3 pattern
+#                       its parents could not — v1.13 is_novel semantics, restricted to the weight-3 shell)
+# excess_causal_validity (OC-9): live-repertoire coupling rate - frozen_random rho (same world, same drift)
+# steady_state class  : PLATEAU / COLLAPSE / FROZEN / UNBOUNDED from V(t) second-half slope + variance +
+#                       minting tail (v1.13 classifier)
+#
+# ========================= JUDGMENTS =========================
+# H-F1-LIFTED : P-F1-OPEN-SUSTAINS AND P-F1-SMALL-SATURATES AND P-CONTRAST all hold.
+#   -> F1 CONFIRMED as the v1.13 blocker and LIFTED: a combinatorially-open feasible space turns the
+#      frozen saturation into sustained endogenous crystallization. FIRST positive on leg (1) of the
+#      two legs the blueprint says sustainable growth needs (docs/...retrospective §三). Method: keep the
+#      pair-space larger than the op budget so the local-tracking task is never finite; match local
+#      variation to local drift.
+# H-OPEN-DIES : OPEN survival_rate <= 0.5 at ALL drifts (openness is bootstrap-able but NOT trackable —
+#   the agent cannot re-mint fast enough to follow the walk). Honest negative: openness is INSUFFICIENT;
+#   the real bottleneck is adaptation SPEED, which feeds directly into F2. Report, do NOT re-tune energy.
+# H-STILL-FROZEN : OPEN survives (>= 0.9) but minting -> 0 (second-half < 0.2x) with coverage < 0.90 —
+#   the agent holds a static partial repertoire and stops crystallizing despite an open world. F1
+#   diagnosis INCOMPLETE: openness of the pair-space is necessary but not sufficient; something else
+#   (consolidation dynamics? variation locality?) freezes minting. Report what.
+# H-NO-ISOLATION : SMALL does NOT saturate (coverage stays < 0.90 / minting sustains) OR OPEN saturates
+#   (coverage >= 0.90) — the design failed to isolate openness (calibration/implementation issue).
+#   Report as a design defect, do NOT claim F1 lifted or refuted.
+#
+# Thresholds (frozen now, IDENTICAL semantics to v1.13 where shared):
+#   EXCESS_MARGIN = 0.05          (OC-9 excess must stay positive by this margin — v1.13)
+#   SATURATION_CUT = 0.90         (coverage >= this = saturated; < this = open/unsaturated)
+#   SUSTAIN_TAIL_RATIO = 0.5      (band/sustained: 2nd-half minting >= 0.5x first productive quarter — v1.13)
+#   FROZEN_TAIL_RATIO = 0.2       (frozen: 2nd-half minting < 0.2x first productive quarter — v1.13)
+#   survival high >= 0.9 ; collapse <= 0.5 ; SLOPE_EPS = 0.10 (steady-state normalized slope — v1.13)
+# ============================================================================
+
+study: v116_open_feasible_space_f1_attack
+date_preregistered: 2026-10-22
+frame: non_teleological_dissipative_structure_inherited_v113
+target_blocker: F1_saturation_ceiling
+swept_structural_variable: world_size_N_CH
+worlds:
+  SMALL: {n_ch: 8,  saturable: true,  total_couplers_C_n_2: 28,   coverage_ub_hold40: 1.0000, random_coupling: 0.1071}
+  OPEN:  {n_ch: 64, saturable: false, total_couplers_C_n_2: 2016, coverage_ub_hold40: 0.0595, random_coupling: 0.0015}
+op_weight: 2
+pattern_weight: 3
+survival_threshold_coupling: 0.4333
+grid: [0.0, 0.005, 0.02, 0.05, 0.10, 0.20, 0.40]
+seeds: 4
+seed_values: [42, 43, 44, 45]
+horizon: 4000
+total_runs: 112
